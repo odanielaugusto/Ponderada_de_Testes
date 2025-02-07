@@ -107,7 +107,345 @@ _conteúdo_
   **Nota**: _Insira aqui informações sobre o que se trata o projeto e que valor ele vai entregar, Objetivos do Produto e O que o produto faz e não faz._
 
 ## 2.4 Personas e Jornada do Usuário
-_conteúdo_
+&emsp;Para garantir que a plataforma ApoiaEdu atenda de forma eficiente às necessidades de seus usuários, é fundamental entender quem são essas pessoas, quais desafios enfrentam e como interagem com o sistema.
+
+&emsp;A criação de personas e o mapeamento da jornada do usuário são práticas essenciais no desenvolvimento de produtos, pois ajudam a visualizar como diferentes perfis utilizam a solução no dia a dia.
+
+### Por que criamos personas?
+&emsp;As personas representam perfis fictícios baseados em usuários reais do sistema, descrevendo suas funções, desafios e expectativas. Elas nos ajudam a tomar decisões mais precisas no desenvolvimento da plataforma, garantindo que o sistema seja útil e acessível para aqueles que realmente precisam dele.
+
+### Por que mapear a jornada do usuário?
+&emsp;A jornada do usuário descreve o caminho que cada persona percorre ao interagir com o sistema. Isso permite identificar pontos de dor, oportunidades de melhoria e necessidades específicas, garantindo que o ApoiaEdu resolva problemas reais de forma eficiente.
+
+### O que você encontrará a seguir?
+&emsp;A seguir, apresentamos as principais personas que utilizarão o ApoiaEdu e suas respectivas jornadas de uso, detalhando passo a passo suas interações com a plataforma. Com isso, buscamos tornar a experiência mais fluida, eficiente e acessível para todos os envolvidos no processo de inclusão educacional.
+
+### Persona 1 - Ana Beatriz
+
+<div align="center">
+  <sub>Figura X - Persona Ana Beatriz</sub> <br>
+
+  <img src="img/PERSONA_1-ANA.jpg" alt="Persona 1 - Ana Beatriz">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+#### **Persona: Ana Beatriz – Gestora Local (de Unidade)**
+
+👤 **Nome:** Ana Beatriz
+
+🎂 **Idade:** 37 anos
+
+💼 **Cargo:** Coordenadora Pedagógica / Orientadora Educacional
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Média (consegue usar sistemas administrativos, mas prefere interfaces intuitivas)
+
+#### **Necessidades**
+
+Histórico dos alunos unificado, evitando a dificuldade na busca de informações.
+
+Obter um retorno rápido sobre os dados enviados, evitando informações desatualizadas.
+
+Padronização nos registros, evitando inconsistências.
+
+Identificar quais alunos precisam de profissionais.
+
+#### **Como é a Ana Beatriz?**
+
+Organizada e comprometida com a inclusão dos alunos PCD.
+
+Paciente e empática, pois lida diretamente com alunos e suas famílias.
+
+Gosta de processos claros e bem estruturados, mas **não tem tempo para sistemas burocráticos**.
+
+Se frustra com a **falta de retorno rápido sobre os dados enviados**.
+
+#### **O que Ana Beatriz faz?**
+
+Realiza entrevistas com as famílias dos alunos PCD para entender suas necessidades.
+
+Registra e acompanha atendimentos dentro da unidade escolar.
+
+Identifica alunos que precisam de atendimento e solicita profissionais para auxiliá-los.
+
+Atualiza informações sobre atendimentos e necessidades dos alunos na plataforma.
+
+### Jornada de Usuário da Ana Beatriz (Gestora Local de Unidade)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário da Ana Beatriz</sub> <br>
+
+  <img src="img/JORNADA_1-ANA.jpg" alt="Persona 1 - Ana Beatriz">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Garantir que os dados dos alunos estejam atualizados, vinculando profissionais e organizando atendimentos.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Receber novas informações sobre alunos PCD**
+
+Ana Beatriz recebe uma solicitação de atendimento de um aluno.
+
+Atualmente, o processo exige preenchimento de formulários e envio manual de e-mails.
+
+**Com a solução:** O sistema centraliza as informações e gera alertas para novos registros.
+
+2️⃣ **Acessar o sistema e buscar o aluno**
+
+Entra na plataforma ApoiaEdu e utiliza a busca para encontrar o aluno.
+
+Caso o aluno não esteja cadastrado, pode incluí-lo via API.
+
+**Com a solução:** A busca é rápida e permite filtros avançados.
+
+3️⃣ **Consultar o histórico e atualizar dados**
+
+Verifica o histórico de atendimentos do aluno.
+
+Se necessário, insere novas informações (exemplo: mudança de necessidade especial).
+
+**Com a solução:** O sistema permite edições rápidas e mantém logs de alterações.
+
+4️⃣ **Vincular o aluno a um profissional**
+
+Identifica se o aluno já tem um profissional de atendimento designado.
+
+Caso não tenha, busca na lista de profissionais cadastrados.
+
+**Com a solução:** O sistema sugere profissionais disponíveis e agiliza o processo de vinculação.
+
+5️⃣ **Registrar um novo atendimento**
+
+Caso o aluno já esteja sendo atendido, Ana Beatriz adiciona novos registros ao histórico.
+
+**Com a solução:** Os registros são salvos automaticamente, eliminando o risco de perda de dados.
+
+6️⃣ **Gerar relatórios e enviar para a gestão administrativa**
+
+Ao final do mês, precisa consolidar informações para a gestão administrativa.
+
+**Com a solução:** O sistema gera relatórios automáticos, economizando tempo.
+
+### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de gestão.
+
+**Desafio:** Antes, os registros eram feitos manualmente e demoravam para serem atualizados.
+
+**Solução:** O sistema centraliza e automatiza o fluxo de informações.
+<br><br>
+
+### Persona 2 - Carlos Mendes – Profissional de Atendimento
+
+<div align="center">
+  <sub>Figura X - Persona Carlos Mendes</sub> <br>
+
+  <img src="img/PERSONA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+👤 **Nome:** Carlos Mendes
+
+🎂 **Idade:** 42 anos
+
+💼 **Cargo:** Psicólogo da Assessoria de Inclusão
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Baixa a Média (usa apenas o necessário para registrar atendimentos)
+
+#### **Necessidades**
+
+Um sistema contendo o histórico do aluno, evitando retrabalho durante a consulta com o mesmo.
+
+Histórico com os atendimentos do aluno, evitando a dificuldade de dar continuidade nos acompanhamentos.
+
+Um sistema para registrar informações com facilidade, pois os processos atuais são manuais.
+
+#### **Como é o Carlos Mendes?**
+
+Atencioso e empático, pois lida diretamente com alunos com deficiência.
+
+Prático e objetivo, prefere **sistemas simples e rápidos** de usar.
+
+Se frustra com **processos burocráticos e sistemas complexos**.
+
+#### **O que Carlos Mendes faz?**
+
+Realiza atendimentos psicológicos e pedagógicos para alunos com deficiência.
+
+Consulta o histórico do aluno para entender o progresso e planejar atendimentos.
+
+Registra relatórios e observações sobre cada sessão.
+
+### Jornada de Usuário do Carlos Mendes (Profissional de Atendimento)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário do Carlos Mendes </sub> <br>
+
+  <img src="img/JORNADA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Realizar atendimentos eficientes, registrando informações de forma rápida e acessível.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Receber notificação de um novo aluno vinculado**
+
+O coordenador vincula um novo aluno ao profissional.
+
+**Com a solução:** O sistema notifica Carlos automaticamente sobre a nova atribuição.
+
+2️⃣ **Acessar o sistema e visualizar os alunos atendidos**
+
+Faz login na plataforma e acessa sua lista de alunos vinculados.
+
+**Com a solução:** O sistema apresenta um dashboard claro com filtros úteis.
+
+3️⃣ **Consultar o histórico do aluno antes do atendimento**
+
+Antes da sessão, acessa o perfil do aluno para entender suas necessidades.
+
+**Com a solução:** O sistema mostra um resumo prático do histórico e demandas do aluno.
+
+4️⃣ **Realizar o atendimento e registrar observações**
+
+Durante a sessão, anota informações relevantes sobre o atendimento.
+
+**Com a solução:** O sistema permite registros rápidos e autosave para evitar perda de dados.
+
+5️⃣ **Atualizar evolução do aluno**
+
+Com base no progresso, registra novas ações e próximos passos.
+
+**Com a solução:** O sistema organiza os registros em uma linha do tempo para facilitar consultas futuras.
+
+6️⃣ **Finalizar e revisar os atendimentos do dia**
+
+No final do dia, confere e revisa os atendimentos registrados.
+
+**Com a solução:** Garante que todas as informações foram salvas e podem ser acessadas pela equipe.
+
+### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de registro de atendimentos.
+
+**Desafio:** Antes, os profissionais precisavam armazenar informações manualmente ou usar documentos avulsos.
+
+**Solução:** O sistema padroniza e centraliza os registros, agilizando o processo.
+<br><br>
+
+### Persona 3 - Fernanda Rocha – Gestora Administrativa
+
+<div align="center">
+  <sub>Figura X - Persona Fernanda Rocha</sub> <br>
+
+  <img src="img/PERSONA_3-FERNANDA.jpg" alt="Persona 3 - Fernanda Rocha">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+👤 **Nome:** Fernanda Rocha
+
+🎂 **Idade:** 48 anos
+
+💼 **Cargo:** Coordenadora da Assessoria de Inclusão
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Média (usa sistemas administrativos, mas não tem conhecimento técnico avançado)
+
+#### **Necessidades**
+
+Um sistema para consolidar informações sobre os atendimentos prestados.
+
+Dados padronizados, evitando a dificuldade em analisar inclusões nas unidades.
+
+Um sistema contendo geração de relatórios.
+
+#### **Como é a Fernanda Rocha?**
+
+Estratégica e analítica, precisa de **métricas para tomar decisões**.
+
+Valoriza a **organização e eficiência** no trabalho.
+
+Se frustra com a falta de dados estruturados e tempo perdido com burocracia.
+
+#### **O que Fernanda Rocha faz?**
+
+Supervisiona a equipe da Assessoria de Inclusão.
+
+Gera relatórios e métricas sobre os atendimentos prestados.
+
+Define estratégias para melhorar a inclusão nas Fatecs e Etecs.
+
+Precisa de um sistema que organize os dados e facilite a geração de relatórios estratégicos.
+
+### Jornada de Usuário da Fernanda Rocha (Gestora Administrativa)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário do Carlos Mendes </sub> <br>
+
+  <img src="img/JORNADA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Realizar atendimentos eficientes, registrando informações de forma rápida e acessível.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Acessar o sistema para visualizar métricas gerais**
+
+Entra na plataforma e visualiza os principais indicadores de atendimento.
+
+**Com a solução:** O sistema exibe um dashboard intuitivo com gráficos e KPIs.
+
+2️⃣ **Filtrar relatórios por unidade, aluno ou profissional**
+
+Busca informações específicas, como número de alunos atendidos por unidade.
+
+**Com a solução:** Usa filtros personalizados para gerar relatórios detalhados.
+
+3️⃣ **Identificar alunos sem profissionais vinculados**
+
+Analisa se há alunos sem atendimento e direciona ações para resolver o problema.
+
+**Com a solução:** O sistema destaca alunos sem atendimento ativo.
+
+4️⃣ **Gerar relatórios estratégicos para planejamento**
+
+Precisa criar documentos para apresentar à diretoria e parceiros.
+
+**Com a solução:** O sistema permite exportação automática de relatórios.
+
+5️⃣ **Realizar ajustes na plataforma conforme necessidade**
+
+Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes de atendimento.
+
+**Com a solução:** Tem permissões avançadas para gerenciar configurações da plataforma.
+
+#### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de análise e planejamento.
+
+**Desafio:** Antes, os relatórios eram gerados manualmente e demandavam muito tempo.
+
+**Solução:** O sistema automatiza a extração e análise de dados.
+<br><br>
+
+### Conclusão
+&emsp;A definição das personas e o mapeamento da jornada do usuário garantem que o ApoiaEdu seja uma solução eficiente e acessível, alinhada às necessidades reais dos usuários.
+
+&emsp;Com essas informações, podemos desenvolver uma interface intuitiva, otimizar fluxos do sistema e priorizar funcionalidades essenciais. Esse mapeamento servirá como base para as próximas etapas do projeto, garantindo que o ApoiaEdu evolua de forma estruturada e focada na inclusão.
+<br><br>
 
 ## 2.5 Modelagem do Fluxo de Negócio
 _conteúdo_
