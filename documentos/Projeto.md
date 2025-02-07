@@ -119,7 +119,64 @@ _conteúdo_
 _conteúdo_
 
 ## 2.6 Matriz de Risco do Projeto
-_conteúdo_
+## Ameaças
+Nesta seção, apresentamos a Matriz de Risco do projeto, a matriz de risco tem como objetivo identificar, avaliar e priorizar as ameaças que podem impactar o desenvolvimento e a implementação do sistema. Ao mapear esses riscos, é possível definir estratégias e planos de ação para mitigá-los, garantindo uma gestão eficaz a para a continuidade e o sucesso do projeto.
+
+
+<div align="center">
+  <sub>Figura X - Matriz de riscos </sub> <br>
+
+  <img src="img/Matriz_de_Riscos.png" alt="Matriz de risco">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+- **Desvio de escopo**:  
+  Ocorre quando o escopo do projeto não está claramente definido, levando à entrega de uma solução que não atende as expectativas iniciais.
+
+- **Vazamento de dados sensíveis**:  
+  Exposição não autorizada de informações confidenciais, resultando em danos à privacidade e possíveis penalidades legais.
+
+- **Ciberataques que podem comprometer a segurança do local**:  
+  A invasão de sistemas por hackers pode comprometer a integridade dos dados e a segurança física das instalações.
+
+- **Dificuldade em garantir acessibilidade para usuários com deficiência visual**  
+  (compatibilidade com NVDA).
+
+- **Desafios na manutenção da base de dados dos alunos atualizada**:  
+  Se a base de dados governamental não for atualizada corretamente, pode haver informações desatualizadas sobre os alunos e seus recursos assistivos.
+
+### Plano de Ação - Ameaças
+
+- Implementar uma gestão rigorosa de requisitos, documentando e validando todas as alterações junto aos stakeholders.
+- Implementar políticas de controle de acesso baseadas em privilégios mínimos e realizar auditorias frequentes.
+- Utilizar ferramentas de segurança digital, como antivírus e firewall.
+- Garantir compatibilidade com leitores de tela, testar a aplicação com usuários reais e seguir as diretrizes WCAG.
+- Orientar os stakeholders periodicamente sobre a importância de manter a base de dados governamental atualizada.
+
+## Oportunidades
+A Matriz de Oportunidades destaca os potenciais benefícios que podem ser explorados ao longo do projeto ou em futuras atualizações.
+
+
+  <div align="center">
+  <sub>Figura X - Matriz de oportunidades </sub> <br>
+
+  <img src="img/Matriz_de_Oportunidades.png" alt="Matriz de Oportunidades do Projeto">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+- Se a plataforma for bem-sucedida no Centro Paula Souza, poderá ser replicada em outras instituições públicas para melhorar a gestão de alunos com deficiência.
+- **Aumento da eficiência operacional e redução de erros manuais**:  
+  A automação do processo de cadastro e gestão de alunos com deficiência reduz erros manuais e otimiza o tempo dos gestores, tornando a operação mais eficiente.
+- **Fortalecimento da comunicação entre gerentes e profissionais assistivos**:  
+  Melhorar a comunicação entre os usuários da aplicação e os alunos da instituição facilita a colaboração e a resolução rápida de problemas.
+- **Fortalecimento da comunicação entre gerentes e profissionais assistivos**:  
+  O aprimoramento na comunicação entre os envolvidos garante que os dados do sistema estejam sempre atualizados.
+
+
+---
+
 
 ## 2.7 Ideação
 _conteúdo_
