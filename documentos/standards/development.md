@@ -1,14 +1,16 @@
-<Table>
-  <tr>
-    <td><a href= "https://www.cps.sp.gov.br/"><img src="img/logo-CPS.jpg" alt="Centro Paula Souza" border="0"></td>
-    <td>
-      <a href= "https://www.inteli.edu.br/"><img src="img/logo-Inteli.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <a href="https://www.inteli.edu.br/">
+    <img src="../assets/logo_cps_inteli.png" 
+         alt="Imagem contendo a logotipo do Centro Paula Souza e do Inteli" 
+         border="0" 
+         style="max-width: 600px; width: 100%; height: auto;">
+  </a>
+</div>
+
+<br>
 
 # Nome do Projeto: <TODO>
-1290qwop
+
 ## Nome do Grupo: <TODO>
 
 ## Integrantes:
@@ -18,15 +20,14 @@
 - <a href="https://www.linkedin.com/in/joao-souza-campos/">João Victor de Souza Campos</a>  
 - <a href="https://www.linkedin.com/in/lucas-brasil9/">Lucas Paiva Brasil</a>  
 - <a href="https://www.linkedin.com/in/natalycunha/">Nataly de Souza Cunha</a>  
-- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio Vasconcelos</a>  
-- <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a> 
+- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio de Carvalho Vasconcelos</a>  
+- <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a>
+
+<br>
 
 # Sumário
 
-
-
 # 1. Introdução
-_conteúdo_
 
 ## 1.1 Objetivo do Documento
 
@@ -35,23 +36,22 @@ Este documento apresenta estabelecer padrões de codificação e práticas de de
 Nota: Explicar a importância de seguir padrões de desenvolvimento para facilitar a manutenção, melhorar a legibilidade e promover a colaboração.
 
 # 2. Padrões de Codificação
-_conteúdo_
 
 ## 2.1 Naming Conventions
 
 - Variáveis e Funções: Utilize camelCase
   - Exemplos:
-    - ```let userName = "John";``` 
-    - ```function calculateTotal() { ... } 
+    - `let userName = "John";` 
+    - `function calculateTotal() { ... }` 
 
 - Classes e Interfaces: Utilize PascalCase
   - Exemplos:
-    - ```class UserProfile { ... }``` 
-    - ```interface PaymentGateway { ... }```  
+    - `class UserProfile { ... }` 
+    - `interface PaymentGateway { ... }`  
 
 - Constantes: Utilize UPPER_CASE com underscores
   - Exemplo:
-    - const MAX_USERS = 100; 
+    - `const MAX_USERS = 100;` 
 
 ## 2.2 Formatação de Código
 
@@ -89,10 +89,9 @@ _conteúdo_
   - Configure uma rota, como /api-docs, para que a documentação gerada pelo Swagger seja facilmente acessível aos desenvolvedores e stakeholders.
 
 # 3. Padrões de Projeto
-_conteúdo_
 
 ## 3.1 Design Patterns
-
+<!-- <TODO> -->
 _Opcionalmente, o grupo pode definir um ou mais design patterns para serem adotados, como forma de exercitarem tipos de solução para problemas/situações recorrentes_
 _Sugestão de leitura: https://refactoring.guru/_
 
@@ -102,7 +101,6 @@ _Sugestão de leitura: https://refactoring.guru/_
   - Exemplo: Em uma aplicação Angular, utilize serviços para lógica de negócios, componentes para a interface e controladores para gerenciar a interação.
 
 # 4. Práticas de Desenvolvimento
-_conteúdo_
 
 ## 4.1 Testes Automatizados
 
