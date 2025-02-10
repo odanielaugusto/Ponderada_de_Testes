@@ -99,12 +99,85 @@ _conteúdo_
 _conteúdo_
 
 ## 2.2 Problema
-_conteúdo_
+_conteúdo_ 
 
-## 2.3 Visão do Projeto e do Produto
-  _conteúdo_
+## 2.3 Visão do Produto e do Projeto. 
 
-  **Nota**: _Insira aqui informações sobre o que se trata o projeto e que valor ele vai entregar, Objetivos do Produto e O que o produto faz e não faz._
+ &nbsp;&nbsp;&nbsp;&nbsp;Segue a Visão do Produto ApoiaEdu, além das definições do Produto, o que ele "faz", "não faz", "é", "não é" e também os seus benefícios. Além disso, segue também os objetivos de negócio do Projeto. 
+
+ ### 2.3.1 Visão do Produto
+
+**Para** gestores e assessores das Fatecs e Etecs;  
+**Que** precisam acompanhar e organizar o suporte aos alunos com deficiência;  
+**O** ApoiaEdu é um sistema de gestão assistiva;  
+**Que** automatiza a captação de dados dos alunos, facilita a alocação de profissionais e melhora o acompanhamento das necessidades assistivas;  
+**Diferente** de planilhas e processos manuais;  
+**Nosso produto** oferece um ambiente centralizado, acessível e integrado aos sistemas governamentais.
+
+---
+
+### 2.3.2 O Que é o Produto
+
+&nbsp;&nbsp;&nbsp;&nbsp;A solução desenvolvida tem como objetivo gerenciar os alunos com deficiência nas Fatecs e Etecs da cidade de São Paulo, garantindo que suas necessidades assistivas sejam atendidas e gerenciadas de maneira eficiente. Para isso, a plataforma **automatiza a captação de dados, permite a gestão de recursos assistivos e de profissionais de apoio, fornecendo também informações gerenciais para a tomada de decisão de gerentes dessas instituições**.
+
+---
+
+### 2.3.3 Características do Produto
+&nbsp;&nbsp;&nbsp;&nbsp;Segue as espeficicações do que o Produto "é" e "não é".
+
+| **É** | **Não É** |
+|---|---|
+| Um sistema de gestão de alunos com deficiência de Fatecs e Etecs | Um sistema genérico de gestão acadêmica |
+| Uma plataforma integrada à API governamental |  Um sistema manual de cadastro de alunos |
+| Uma ferramenta para alocar recursos assistivos e profissionais de apoio | Um software de ensino ou aprendizagem |
+| Uma solução acessível e compatível com o NVDA | Um sistema exclusivamente para alunos sem deficiência |
+| Um gerenciador de métricas e dados geográficos | Um CRM ou ferramenta de marketing |
+---
+
+### 2.3.4 Funcionalidades do Produto
+&nbsp;&nbsp;&nbsp;&nbsp;A seguir estão a definição do que o produto "Faz" e o que ele "Não Faz".
+| **Faz** | **Não Faz** |
+|---|---|
+| Importa automaticamente os dados de alunos com deficiência do sistema governamental | Criar ou modificar dados externos do governo |
+| Permite o cadastro e a gestão de profissionais de proporcionam apoio aos estudantes  | Realizar pagamentos ou gerenciar contratos financeiros |
+| Organiza e exibe recursos assistivos necessários para cada aluno | Monitorar desempenho acadêmico dos alunos |
+| Cria uma linha do tempo com eventos e necessidades que foram atendidas para cada aluno | Substituir totalmente a gestão presencial dos alunos |
+| Fornece métricas e dados geográficos via dashboard sobre os alunos que a assesoria de inclusão atendeu| Realizar diagnósticos médicos ou emitir laudos |
+---
+### 2.3.5 Benefícios do Produto (Comparação com a Situação Atual)
+
+&nbsp;&nbsp;&nbsp;&nbsp;No intuito de compreender os benefícios do produto, segue a comparação com a situação atual do CPS e a sua situação após a solução.
+
+| **Situação Atual** | **Com a Solução** |
+|---|---|
+| Processos manuais, demorados e sujeitos a erro | Cadastro automático dos alunos com deficiência via API |
+| Dificuldade em gerenciar profissionais de apoio e recursos assistivos | Plataforma que permite atribuir profissionais e recursos a cada aluno |
+| Falta de acompanhamento estruturado da evolução e necessidades dos alunos | Linha do tempo detalhada, registrando eventos e observações sobre cada aluno |
+| Ausência de dados centralizados para análises gerenciais | Dashboard com métricas estratégicas e dados geográficos para apoio na tomada de decisão |
+| Sistema não acessível para usuários com deficiência visual | Plataforma 100% compatível com o NVDA para garantir inclusão digital |
+---
+### 2.3.6 Objetivos de Negócio do Projeto
+&nbsp;&nbsp;&nbsp;&nbsp;Segue os objetivos de negócio do Projeto.
+
+#### 1. Centralizar a Gestão de Alunos com Deficiência  
+- Criar um ambiente único e acessível para visualizar dados dos alunos com deficiência, incluindo suas necessidades assistivas e histórico de atendimento.  
+
+#### 2. Automatizar a Importação de Dados  
+- Eliminar o trabalho manual de cadastro, integrando-se a um sistema governamental via API para obter automaticamente os dados dos alunos.  
+
+#### 3. Melhorar a Alocação de Recursos e Profissionais  
+- Permitir que gestores associem alunos a recursos assistivos e profissionais de apoio de forma organizada e rastreável, garantindo que cada aluno receba o suporte necessário.  
+
+#### 4. Facilitar a Tomada de Decisão Gerencial  
+- Oferecer dashboards e métricas para que gestores possam analisar dados estratégicos, como distribuição de alunos por tipo de deficiência e disponibilidade de recursos em diferentes unidades.  
+
+#### 5. Garantir Acessibilidade Digital  
+- Tornar o sistema compatível com leitores de tela (NVDA), garantindo inclusão digital e autonomia para usuários com deficiência visual.  
+
+
+---
+
+
 
 ## 2.4 Personas e Jornada do Usuário
 _conteúdo_
