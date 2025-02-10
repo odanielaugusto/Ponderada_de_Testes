@@ -441,12 +441,6 @@ Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes d
 **Solução:** O sistema automatiza a extração e análise de dados.
 <br><br>
 
-### Conclusão
-&emsp;A definição das personas e o mapeamento da jornada do usuário garantem que o ApoiaEdu seja uma solução eficiente e acessível, alinhada às necessidades reais dos usuários.
-
-&emsp;Com essas informações, podemos desenvolver uma interface intuitiva, otimizar fluxos do sistema e priorizar funcionalidades essenciais. Esse mapeamento servirá como base para as próximas etapas do projeto, garantindo que o ApoiaEdu evolua de forma estruturada e focada na inclusão.
-<br><br>
-
 ## 2.5 Modelagem do Fluxo de Negócio
 _conteúdo_
 
