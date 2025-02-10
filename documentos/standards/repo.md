@@ -186,7 +186,8 @@ Padrão de Nomenclatura das Branches:
 ---
 
 ## 4. Políticas de Commit
-- Seguir o padrão "Conventional Commits" para manter um histórico organizado.
+- Seguir o padrão "Conventional Commits" para manter um histórico organizado. *Foram adicionados scripts que validam se as mensagens possuem as tags do Conventional Commits.*
+- As mensagens devem ter no máximo 50 caracteres. *O script também valida isso.*
 - Commits devem ser frequentes e descritivos.
 - Proibido o uso de mensagens vagas como "melhorias".
 - Foram adicionadas restrições no GitHub para impedir commits diretos na main e develop.
