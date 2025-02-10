@@ -94,7 +94,7 @@ _conteúdo_
 
 # 2. Entendimento do Projeto e do Negócio
 
-&emsp;Esta seção busca detalhar o contexto de negócios do Centro Paula Sousa, bem como o problema apresentado pela empresa parceira que embasou o desenvolvimento deste projeto.
+&emsp;Esta seção busca detalhar o contexto de negócios do Centro Paula Sousa (CPS), bem como o problema apresentado pela empresa parceira que embasou o desenvolvimento deste projeto.
 
 ## 2.1 Contexto da Indústria do Parceiro
 &emsp;O Centro Paula Sousa é uma autarquia sediada e voltada para o estado de São Paulo, oferecendo ensino profissional para cerca de 317 mil discentes em 345 municípios, dentro de escolas técnicas, faculdades de tecnologia e salas de aulas descentralizadas. Muitas das atividades exercidas no CPS se relacionam com a administração pública do Governo do Estado, devido à sua vinculação com a Secretaria de Ciência, Tecnologia e Inovação, buscando oferecer serviços educacionais com qualidade, governança e inclusão social (CPS, c2025).<br>
