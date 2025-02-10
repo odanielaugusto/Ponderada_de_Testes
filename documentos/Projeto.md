@@ -131,7 +131,18 @@ _conteúdo_
 _conteúdo_
 
 ## 2.8 Canvas do Projeto
-_conteúdo_
+
+&emsp;Canvas MVP é uma ferramenta utilizada para alinhar ideias e definir estratégias. Durante sua elaboração, é discutido o entendimento da equipe sobre a proposta apresentada e, assim, as principais características da solução são dispostas em um quadro, colaborando para um alinhamento mais eficiente entre os integrantes da equipe. 
+
+&emsp;Nesse contexto, foi realizado um Canvas MVP com base na proposta trazida pelo Centro Paula Souza. Nele, estão identificados os pontos mais importantes levantados pela equipe sobre o projeto ApoiaEdu:
+
+<div align="center">
+  <sub>Figura X - Canvas MVP</sub> <br>
+
+  <img src="./img/section2/2.8_canvas_mvp/mvp_canvas.jpg" alt="Canvas MVP">
+
+  <sup>Fonte: Material produzido pelos autores (2024).</sup>
+</div>
 
 # 3. Requisitos do Projeto
 _conteúdo_
