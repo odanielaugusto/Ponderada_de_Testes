@@ -30,7 +30,6 @@
 # Sumário
 
 - [1. Introdução](#1-introdução)  
-  - [1.1 Objetivo do Documento](#11-objetivo-do-documento)  
 - [2. Padrões de Codificação](#2-padrões-de-codificação)  
   - [2.1 Naming Conventions](#21-naming-conventions)  
   - [2.2 Uso de Ferramentas para Padronização de Código](#22-uso-de-ferramentas-para-padronização-de-código)  

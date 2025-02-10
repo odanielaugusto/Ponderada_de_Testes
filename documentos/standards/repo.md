@@ -44,8 +44,8 @@
   - [4.1 Descrição de Commits](#41-descrição-de-commits)  
 - [5. Política de Push e Pull Requests](#5-política-de-push-e-pull-requests)  
   - [5.1 Políticas de Push](#51-políticas-de-push)  
-  - [5.2 Políticas de Pull Requests](#52-políticas-de-pull-requests)  
-    - [5.2.1 Nome de Pull Request (PR)](#521-nome-de-pull-request-pr)  
+  - [5.2 Políticas de Pull Requests (PR)](#52-políticas-de-pull-requests-pr)  
+    - [5.2.1 Nome de Pull Requests](#521-nome-de-pull-request)  
     - [5.2.2 Padrão de Escrita dos Pull Requests](#522-padrão-de-escrita-dos-pull-requests)  
 - [6. Padrão para Imagens](#6-padrão-para-imagens)  
 - [7. Referências](#7-referências)  
@@ -238,19 +238,19 @@ Padrão de Nomenclatura das Branches:
 - Todas as mudanças devem passar por Pull Request.
 - Foram adicionadas travas no GitHub para impedir push direto na main e develop, exigindo pull requests para qualquer mudança.
 
-### 5.2 Políticas Pull Requests
+### 5.2 Políticas de Pull Requests (PR)
 - Todo PR deve ser revisado por pelo menos um membro. *Foi adicionada uma configuração no Github que garante isso.*
 - Todas as discussões abertas devem ser resolvidas antes do merge. *Foi adicionada uma configuração no Github que garante isso.*
 - Todo PR deve passar por testes automatizados.
 
-#### 5.2,1 Nome de Pull Request (PR)
+#### 5.2.1 Nome de Pull Request
 - **Formato:** `[tipo]: [descrição breve] #[número-da-task]`
 - **Exemplo:**
   ```
   feat: adiciona filtro por data na listagem de clientes #21  
   ````
 
-#### 5.2.1 Padrão de Escrita dos Pull Requests
+#### 5.2.2 Padrão de Escrita dos Pull Requests
 &ensp; Cada Pull Request deve conter uma lista das mudanças implementadas. Exemplo:
 
 ```markdown
