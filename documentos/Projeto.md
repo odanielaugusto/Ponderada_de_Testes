@@ -149,6 +149,102 @@ Durante o brainstorming, foram consideradas features essenciais, como o **cadast
 
 ## 2.7.2 Sequenciamento/Priorização de entregas
 
+&nbsp;&nbsp;&nbsp; O sequenciamento e a priorização das entregas foram definidos com base em critérios claros e lógicos, como **impacto no problema central** e **dependências técnicas**. O objetivo foi garantir que o **MVP (Minimum Viable Product)** seja entregue dentro do prazo de **70 dias**, com funcionalidades que resolvam os problemas mais urgentes da Assessoria de Inclusão. As features foram organizadas em sprints, começando pela base do sistema (cadastros essenciais) e evoluindo para funcionalidades mais complexas, como a gestão de atendimentos e a geração de relatórios.
+
+A priorização também considerou a necessidade de garantir que a solução seja **acessível** e **em conformidade com a LGPD** desde as primeiras entregas. Dessa forma, features como o **registro de ações no sistema (logs)** e a **interface acessível** foram priorizadas para garantir segurança e usabilidade desde o início. O sequenciamento foi planejado para que cada sprint entregue valor incremental, preparando o terreno para as funcionalidades avançadas nas etapas finais.
+
+### **Critérios de Priorização**
+
+1. **Impacto no Problema Central**:
+   - Features que resolvem diretamente o problema de gestão de atendimentos e cadastro de alunos foram priorizadas.
+2. **Dependências Técnicas**:
+   - Features que dependem de outras para funcionar foram sequenciadas após a implementação das bases.
+3. **Conformidade Legal e Acessibilidade**:
+   - Features relacionadas à segurança, LGPD e acessibilidade foram priorizadas desde o início.
+4. **Valor Agregado**:
+   - Features que agregam valor ao produto, mas não são urgentes, foram deixadas para as sprints finais.
+5. **Complexidade de Implementação**:
+   - Features mais simples e de rápida implementação foram priorizadas para entregar valor rapidamente.
+
+
+### **Sequenciamento das Entregas**
+
+#### **Sprint 1 – Base do Sistema e Cadastros Essenciais**
+- **Features Prioritárias**:
+
+  1. **Cadastro de Gerente Geral e Gerente de Unidade**:
+     - Definição de níveis de acesso e responsabilidades.
+  2. **Cadastro de Unidade de Ensino**:
+     - Cadastro de unidades (Etecs, Fatecs) com informações básicas.
+  3. **Cadastro de Alunos via API + Validação de Dados**:
+     - Integração com sistemas acadêmicos para cadastro automático e validação de dados.
+
+- **Justificativa**:
+  - Essas features são a base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas.
+
+
+#### **Sprint 2 – Gestão de Dados e Visualização Inicial**
+- **Features Prioritárias**:
+
+  4. **Dashboard de Informações dos Alunos**:
+     - Visualização centralizada de dados dos alunos cadastrados.
+  5. **Filtros e Buscas Avançadas**:
+     - Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.
+  6. **Gestão de Profissionais**:
+     - Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.
+
+- **Justificativa**:
+  - Essas features permitem a visualização e organização dos dados, além de iniciar a gestão de profissionais, que é essencial para os atendimentos.
+
+
+#### **Sprint 3 – Gestão de Atendimentos e Logs**
+- **Features Prioritárias**:
+
+  7. **Gestão de Atendimentos**:
+     - Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.
+  8. **Registro de Ações no Sistema (Logs)**:
+     - Registro de quem fez, o que fez e quais dados foram alterados no sistema.
+
+- **Justificativa**:
+  - A gestão de atendimentos é o cerne do projeto, e os logs garantem conformidade com a LGPD e auditoria das ações.
+
+
+#### **Sprint 4 – Histórico e Tecnologias Assistivas**
+- **Features Prioritárias**:
+
+  9. **Histórico Completo do Aluno**:
+     - Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.
+  10. **Lista de Tecnologias Assistivas**:
+      - Lista organizada de tecnologias disponíveis, com descrições detalhadas.
+  11. **Status de Atendimento**:
+      - Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.
+
+- **Justificativa**:
+  - Essas features complementam a gestão de atendimentos, fornecendo informações detalhadas e status atualizados.
+
+
+#### **Sprint 5 – Funcionalidades Avançadas e Finalização**
+- **Features Prioritárias**:
+  12. **Timeline do Aluno**:
+      - Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.
+  13. **Notificações**:
+      - Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.
+
+- **Justificativa**:
+  - Essas features agregam valor ao produto, mas não são urgentes para o MVP. A Timeline melhora a experiência do usuário, e as notificações aumentam a eficiência da comunicação.
+
+
+
+### **Tabela de Sequenciamento de Entregas**
+
+| **Sprint** | **Features Prioritárias**                                                                 | **Justificativa**                                                                 |
+|------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| **Sprint 1** | Cadastro de Gerente Geral e Gerente de Unidade, Cadastro de Unidade de Ensino, Cadastro de Alunos via API + Validação de Dados | Base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. |
+| **Sprint 2** | Dashboard de Informações dos Alunos, Filtros e Buscas Avançadas, Gestão de Profissionais   | Visualização e organização dos dados, além de iniciar a gestão de profissionais.   |
+| **Sprint 3** | Gestão de Atendimentos, Registro de Ações no Sistema (Logs)                               | Cerne do projeto e garantia de conformidade com a LGPD.                           |
+| **Sprint 4** | Histórico Completo do Aluno, Lista de Tecnologias Assistivas, Status de Atendimento        | Complementam a gestão de atendimentos com informações detalhadas e status.        |
+| **Sprint 5** | Timeline do Aluno, Notificações                                                           | Agregam valor ao produto, melhorando a experiência do usuário e a comunicação.    |
+
 ## 2.8 Canvas do Projeto
 _conteúdo_
 
