@@ -167,14 +167,29 @@ _conteúdo_
 
 ### **Sequenciamento das Entregas**
 
+#### **Sprint 1 – Entendimento do Problema e Definição de Requisitos**
+- **Atividades**:
+  1. **Entendimento do Problema**:
+     - Reuniões com stakeholders para alinhamento de expectativas.
+     - Análise do problema atual da Assessoria de Inclusão.
+  2. **Definição de Personas**:
+     - Identificação das personas principais (servidores, alunos, responsáveis, profissionais).
+  3. **Definição de Requisitos Funcionais (RFs) e Não Funcionais (RNFs)**:
+     - Elaboração dos requisitos funcionais e não funcionais do sistema.
+  4. **Brainstorming de Features**:
+     - Identificação e priorização das features necessárias para o MVP.
+
+- **Justificativa**:
+  - A Sprint 1 é crucial para garantir que todos os envolvidos tenham um entendimento claro do problema, das necessidades do negócio e das expectativas dos usuários. A definição de personas, requisitos e features servirá como base para o desenvolvimento nas sprints seguintes.
+
 #### **Sprint 2 – Base do Sistema e Cadastros Essenciais**
 - **Features Prioritárias**:
 
-  1. **Cadastro de Gerente Geral e Gerente de Unidade**:
+  5. **Cadastro de Gerente Geral e Gerente de Unidade**:
      - Definição de níveis de acesso e responsabilidades.
-  2. **Cadastro de Unidade de Ensino**:
+  6. **Cadastro de Unidade de Ensino**:
      - Cadastro de unidades (Etecs, Fatecs) com informações básicas.
-  3. **Cadastro de Alunos via API + Validação de Dados**:
+  7. **Cadastro de Alunos via API + Validação de Dados**:
      - Integração com sistemas acadêmicos para cadastro automático e validação de dados.
 
 - **Justificativa**:
@@ -183,13 +198,13 @@ _conteúdo_
 #### **Sprint 3 – Gestão de Dados e Atendimentos**
 - **Features Prioritárias**:
 
-  4. **Dashboard de Informações dos Alunos**:
+  8. **Dashboard de Informações dos Alunos**:
      - Visualização centralizada de dados dos alunos cadastrados.
-  5. **Filtros e Buscas Avançadas**:
+  9. **Filtros e Buscas Avançadas**:
      - Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.
-  6. **Gestão de Profissionais**:
+  10. **Gestão de Profissionais**:
      - Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.
-  7. **Gestão de Atendimentos**:
+  11. **Gestão de Atendimentos**:
      - Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.
 
 - **Justificativa**:
@@ -198,13 +213,13 @@ _conteúdo_
 #### **Sprint 4 – Histórico, Tecnologias Assistivas e Logs**
 - **Features Prioritárias**:
 
-  8. **Histórico Completo do Aluno**:
+  12. **Histórico Completo do Aluno**:
      - Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.
-  9. **Lista de Tecnologias Assistivas**:
+  13. **Lista de Tecnologias Assistivas**:
      - Lista organizada de tecnologias disponíveis, com descrições detalhadas.
-  10. **Status de Atendimento**:
+  14. **Status de Atendimento**:
       - Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.
-  11. **Registro de Ações no Sistema (Logs)**:
+  15. **Registro de Ações no Sistema (Logs)**:
       - Registro de quem fez, o que fez e quais dados foram alterados no sistema.
 
 - **Justificativa**:
@@ -213,13 +228,13 @@ _conteúdo_
 #### **Sprint 5 – Funcionalidades Avançadas e Finalização**
 - **Features Prioritárias**:
 
-  12. **Timeline do Aluno**:
+  16. **Timeline do Aluno**:
       - Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.
-  13. **Notificações**:
+  17. **Notificações**:
       - Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.
-  14. **Relatórios e Estatísticas**:
+  18. **Relatórios e Estatísticas**:
       - Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc.
-  15. **Exportação de Dados de Alunos**:
+  19. **Exportação de Dados de Alunos**:
       - Exportação de dados de alunos para planilhas (CSV ou Excel).
 
 - **Justificativa**:
