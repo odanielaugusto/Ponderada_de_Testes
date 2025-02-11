@@ -151,8 +151,6 @@ Durante o brainstorming, foram consideradas features essenciais, como o **cadast
 
 &nbsp;&nbsp;&nbsp; O sequenciamento e a priorização das entregas foram definidos com base em critérios claros e lógicos, como **impacto no problema central** e **dependências técnicas**. O objetivo foi garantir que o **MVP (Minimum Viable Product)** seja entregue dentro do prazo de **70 dias**, com funcionalidades que resolvam os problemas mais urgentes da Assessoria de Inclusão. As features foram organizadas em sprints, começando pela base do sistema (cadastros essenciais) e evoluindo para funcionalidades mais complexas, como a gestão de atendimentos e a geração de relatórios.
 
-A priorização também considerou a necessidade de garantir que a solução seja **acessível** e **em conformidade com a LGPD** desde as primeiras entregas. Dessa forma, features como o **registro de ações no sistema (logs)** e a **interface acessível** foram priorizadas para garantir segurança e usabilidade desde o início. O sequenciamento foi planejado para que cada sprint entregue valor incremental, preparando o terreno para as funcionalidades avançadas nas etapas finais.
-
 ### **Critérios de Priorização**
 
 1. **Impacto no Problema Central**:
@@ -225,6 +223,7 @@ A priorização também considerou a necessidade de garantir que a solução sej
 
 #### **Sprint 5 – Funcionalidades Avançadas e Finalização**
 - **Features Prioritárias**:
+
   12. **Timeline do Aluno**:
       - Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.
   13. **Notificações**:
@@ -241,7 +240,7 @@ A priorização também considerou a necessidade de garantir que a solução sej
 |------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | **Sprint 1** | Cadastro de Gerente Geral e Gerente de Unidade, Cadastro de Unidade de Ensino, Cadastro de Alunos via API + Validação de Dados | Base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. |
 | **Sprint 2** | Dashboard de Informações dos Alunos, Filtros e Buscas Avançadas, Gestão de Profissionais   | Visualização e organização dos dados, além de iniciar a gestão de profissionais.   |
-| **Sprint 3** | Gestão de Atendimentos, Registro de Ações no Sistema (Logs)                               | Cerne do projeto e garantia de conformidade com a LGPD.                           |
+| **Sprint 3** | Gestão de Atendimentos, Registro de Ações no Sistema (Logs)                               | Centro do projeto e garantia de conformidade com a LGPD.                           |
 | **Sprint 4** | Histórico Completo do Aluno, Lista de Tecnologias Assistivas, Status de Atendimento        | Complementam a gestão de atendimentos com informações detalhadas e status.        |
 | **Sprint 5** | Timeline do Aluno, Notificações                                                           | Agregam valor ao produto, melhorando a experiência do usuário e a comunicação.    |
 
