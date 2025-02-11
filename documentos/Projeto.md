@@ -466,7 +466,16 @@ _conteúdo_
 _conteúdo_
 
 # 3. Requisitos do Projeto
-_conteúdo_
+
+Para garantir que o sistema **ApoiaEdu** atenda às necessidades dos usuários e funcione de maneira eficiente, é importante definir claramente seus requisitos.
+
+Os **Requisitos Funcionais (RFs)** descrevem o que o sistema deve fazer, ou seja, suas principais funcionalidades, como o cadastro de usuários, a gestão de atendimentos e a exibição de informações relevantes. Cada um desses requisitos está associado a testes que garantem sua correta implementação e funcionamento.
+
+Além dos RFs, temos os **Requisitos Não Funcionais (RNFs)**, que especificam como o sistema deve se comportar. Eles abordam aspectos como segurança, desempenho, usabilidade e conformidade com normas, garantindo que o sistema seja robusto, acessível e confiável.
+
+Por fim, há uma correlação entre RFs e RNFs, pois um requisito funcional pode depender de um requisito não funcional para ser eficaz. Por exemplo, um sistema pode permitir o cadastro de usuários (RF), mas precisa seguir regras de segurança e privacidade (RNF) para proteger os dados.
+
+A seguir, detalharemos todos esses requisitos, assegurando que o ApoiaEdu seja desenvolvido com qualidade, segurança e alinhado às expectativas dos usuários.
 
 ## 3.1 Requisitos Funcionais (RFs)
 
