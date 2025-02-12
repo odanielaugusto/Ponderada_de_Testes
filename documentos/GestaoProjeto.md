@@ -1,11 +1,13 @@
-<Table>
-  <tr>
-    <td><a href= "https://www.cps.sp.gov.br/"><img src="img/logo-CPS.jpg" alt="Centro Paula Souza" border="0"></td>
-    <td>
-      <a href= "https://www.inteli.edu.br/"><img src="img/logo-Inteli.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <a href="https://www.inteli.edu.br/">
+    <img src="./assets/logo_cps_inteli.png" 
+         alt="Imagem contendo a logotipo do Centro Paula Souza e do Inteli" 
+         border="0" 
+         style="max-width: 600px; width: 100%; height: auto;">
+  </a>
+</div>
+
+<br>
 
 # Nome do Projeto: <TODO>
 
@@ -18,8 +20,8 @@
 - <a href="https://www.linkedin.com/in/joao-souza-campos/">João Victor de Souza Campos</a>  
 - <a href="https://www.linkedin.com/in/lucas-brasil9/">Lucas Paiva Brasil</a>  
 - <a href="https://www.linkedin.com/in/natalycunha/">Nataly de Souza Cunha</a>  
-- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio Vasconcelos</a>  
-- <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a> 
+- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio de Carvalho Vasconcelos</a>  
+- <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a>
 
 
 # Sumário
