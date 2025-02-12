@@ -467,10 +467,129 @@ _conteúdo_
 _conteúdo_
 
 ## 2.7.1 Brainstorming de features
-_conteúdo_
+&nbsp;&nbsp;&nbsp; O brainstorming de features foi realizado com base no problema central do projeto: a necessidade de organizar e gerenciar os atendimentos da Assessoria de Inclusão do Centro Paula Souza (CPS). O objetivo foi identificar funcionalidades que não apenas resolvessem os problemas atuais, como a falta de organização e rastreabilidade dos atendimentos, mas também agregassem valor ao produto, como a geração de relatórios estatísticos e a integração com sistemas existentes. As features foram pensadas para garantir que a solução seja **acessível**, **escalável** e em **conformidade com a LGPD**, atendendo às **necessidades dos servidores, alunos e profissionais envolvidos**.
+
+&nbsp;&nbsp;&nbsp; Durante o brainstorming, foram consideradas features essenciais, como o **cadastro de alunos via API, a gestão de atendimentos e a lista de tecnologias assistivas**, além de funcionalidades complementares, como **notificações e dashboards de gestão**. A ideia foi cobrir todos os aspectos do problema, desde o registro básico de dados até a análise avançada e a comunicação eficiente entre os envolvidos. O resultado é uma lista abrangente de features que servirá como base para o desenvolvimento da solução.
+
+| **Feature**                                      | **Descrição**                                                                                   |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **Filtros e Buscas Avançadas**                   | Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.           |
+| **Dashboard de Informações dos Alunos**          | Visualização centralizada de dados dos alunos cadastrados.                                      |
+| **Cadastro de Gerente Geral e Gerente de Unidade**| Cadastro de gerentes com diferentes níveis de acesso e responsabilidades.                      |
+| **Cadastro de Alunos via API + Validação de Dados**| Integração com sistemas acadêmicos governamentais para cadastro automático, com validação dos dados.          |
+| **Cadastro de Unidade de Ensino**                | Cadastro de unidades de ensino (Etecs e Fatecs) com informações detalhadas.               |
+| **Registro de Ações no Sistema (Logs)**          | Registro de quem fez, o que fez e quais dados foram alterados no sistema.                       |
+| **Gestão de Profissionais**                      | Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.       |
+| **Gestão de Atendimentos**                       | Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.        |
+| **Histórico Completo do Aluno**                  | Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.     |
+| **Lista de Tecnologias Assistivas**              | Lista organizada de tecnologias disponíveis, com descrições detalhadas.                        |
+| **Notificações**                                 | Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.            |
+| **Status de Atendimento**                        | Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.               |
+| **Timeline do Aluno**                            | Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.                       |
+| **Relatórios e Estatísticas**                    | Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc. |
+| **Exportação de Dados de Alunos**                | Exportação de dados de alunos para planilhas (CSV ou Excel) para análise externa.               |
 
 ## 2.7.2 Sequenciamento/Priorização de entregas
-_conteúdo_
+
+&nbsp;&nbsp;&nbsp; O sequenciamento e a priorização das entregas foram definidos com base em critérios claros e lógicos, como **impacto no problema central** e **dependências técnicas**. O objetivo foi garantir que o **MVP (Minimum Viable Product)** seja entregue dentro do prazo de **70 dias**, com funcionalidades que resolvam os problemas mais urgentes da Assessoria de Inclusão. As features foram organizadas em sprints, começando pela base do sistema (cadastros essenciais) e evoluindo para funcionalidades mais complexas, como a gestão de atendimentos e a geração de relatórios.
+
+### **Critérios de Priorização**
+
+1. **Impacto no Problema Central**:
+   - Features que resolvem diretamente o problema de gestão de atendimentos e cadastro de alunos foram priorizadas.
+2. **Dependências Técnicas**:
+   - Features que dependem de outras para funcionar foram sequenciadas após a implementação das bases.
+3. **Conformidade Legal e Acessibilidade**:
+   - Features relacionadas à segurança, LGPD e acessibilidade foram priorizadas desde o início.
+4. **Valor Agregado**:
+   - Features que agregam valor ao produto, mas não são urgentes, foram deixadas para as sprints finais.
+5. **Complexidade de Implementação**:
+   - Features mais simples e de rápida implementação foram priorizadas para entregar valor rapidamente.
+
+
+### **Sequenciamento das Entregas**
+
+#### **Sprint 1 – Entendimento do Problema e Definição de Requisitos**
+- **Atividades**:
+  1. **Entendimento do Problema**:
+     - Reuniões com stakeholders para alinhamento de expectativas.
+     - Análise do problema atual da Assessoria de Inclusão.
+  2. **Definição de Personas**:
+     - Identificação das personas principais (servidores, alunos, responsáveis, profissionais).
+  3. **Definição de Requisitos Funcionais (RFs) e Não Funcionais (RNFs)**:
+     - Elaboração dos requisitos funcionais e não funcionais do sistema.
+  4. **Brainstorming de Features**:
+     - Identificação e priorização das features necessárias para o MVP.
+
+- **Justificativa**:
+  - A Sprint 1 é crucial para garantir que todos os envolvidos tenham um entendimento claro do problema, das necessidades do negócio e das expectativas dos usuários. A definição de personas, requisitos e features servirá como base para o desenvolvimento nas sprints seguintes.
+
+#### **Sprint 2 – Base do Sistema e Cadastros Essenciais**
+- **Features Prioritárias**:
+
+  5. **Cadastro de Gerente Geral e Gerente de Unidade**:
+     - Definição de níveis de acesso e responsabilidades.
+  6. **Cadastro de Unidade de Ensino**:
+     - Cadastro de unidades (Etecs, Fatecs) com informações básicas.
+  7. **Cadastro de Alunos via API + Validação de Dados**:
+     - Integração com sistemas acadêmicos para cadastro automático e validação de dados.
+
+- **Justificativa**:
+  - Essas features são a base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. O cadastro de alunos, unidades e gerentes é essencial para o funcionamento do sistema.
+
+#### **Sprint 3 – Gestão de Dados e Atendimentos**
+- **Features Prioritárias**:
+
+  8. **Dashboard de Informações dos Alunos**:
+     - Visualização centralizada de dados dos alunos cadastrados.
+  9. **Filtros e Buscas Avançadas**:
+     - Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.
+  10. **Gestão de Profissionais**:
+     - Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.
+  11. **Gestão de Atendimentos**:
+     - Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.
+
+- **Justificativa**:
+  - Essas features permitem a visualização e organização dos dados, além de iniciar a gestão de profissionais e atendimentos, que são o cerne do projeto. O dashboard e os filtros facilitam a navegação e a análise dos dados.
+
+#### **Sprint 4 – Histórico, Tecnologias Assistivas e Logs**
+- **Features Prioritárias**:
+
+  12. **Histórico Completo do Aluno**:
+     - Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.
+  13. **Lista de Tecnologias Assistivas**:
+     - Lista organizada de tecnologias disponíveis, com descrições detalhadas.
+  14. **Status de Atendimento**:
+      - Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.
+  15. **Registro de Ações no Sistema (Logs)**:
+      - Registro de quem fez, o que fez e quais dados foram alterados no sistema.
+
+- **Justificativa**:
+  - Essas features complementam a gestão de atendimentos, fornecendo informações detalhadas e status atualizados. Os logs garantem conformidade com a LGPD e auditoria das ações.
+
+#### **Sprint 5 – Funcionalidades Avançadas e Finalização**
+- **Features Prioritárias**:
+
+  16. **Timeline do Aluno**:
+      - Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.
+  17. **Notificações**:
+      - Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.
+  18. **Relatórios e Estatísticas**:
+      - Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc.
+  19. **Exportação de Dados de Alunos**:
+      - Exportação de dados de alunos para planilhas (CSV ou Excel).
+
+- **Justificativa**:
+  - Essas features agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. A timeline e as notificações trazem mais clareza e organização, enquanto os relatórios e a exportação de dados facilitam a análise e o compartilhamento de informações.
+
+### **Tabela de Sequenciamento de Entregas**
+
+| **Sprint** | **Features Prioritárias**                                                                 | **Justificativa**                                                                 |
+|------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| **Sprint 2** | Cadastro de Gerente Geral e Gerente de Unidade, Cadastro de Unidade de Ensino, Cadastro de Alunos via API + Validação de Dados | Base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. |
+| **Sprint 3** | Dashboard de Informações dos Alunos, Filtros e Buscas Avançadas, Gestão de Profissionais, Gestão de Atendimentos | Visualização e organização dos dados, além de iniciar a gestão de profissionais e atendimentos. |
+| **Sprint 4** | Histórico Completo do Aluno, Lista de Tecnologias Assistivas, Status de Atendimento, Registro de Ações no Sistema (Logs) | Complementam a gestão de atendimentos com informações detalhadas e garantem conformidade com a LGPD. |
+| **Sprint 5** | Timeline do Aluno, Notificações, Relatórios e Estatísticas, Exportação de Dados de Alunos | Agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. |
 
 ## 2.8 Canvas do Projeto
 _conteúdo_
