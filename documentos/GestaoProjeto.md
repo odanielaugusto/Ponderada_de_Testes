@@ -26,7 +26,6 @@
 
 # Sumário
 - [1. Introdução](#1-introdução)
-  - [1.1 Objetivo do Documento](#11-objetivo-do-documento)
 - [2. Backlog do Projeto](#2-backlog-do-projeto)
   - [2.2 Atualizações do Backlog](#22-atualizações-do-backlog)
     - [2.2.1 Sprint 1](#221-sprint-1)
@@ -43,22 +42,43 @@
   - [4.3 Lições Aprendidas](#43-lições-aprendidas)
 
 # 1. Introdução
-_conteúdo_
-
-## 1.1 Objetivo do Documento
+Este documento apresenta a gestão evolutiva do projeto, abordando as principais atividades desenvolvidas durante as Sprints e analisando os resultados obtidos. Aqui, o grupo busca garantir uma entrega consistente e alinhada às práticas ágeis e às diretrizes do Escritório de Projetos.  
 
 # 2. Backlog do Projeto
 _conteúdo_
+<!-- o que colocar aqui? -->
 
 ## 2.2 Análise de desempenho
 _conteúdo_
+<!-- o que colocar aqui? -->
 
 ## 2.2.1 Sprint 1
-_conteúdo_
- **Nota:** Insira informações sobre mudanças realizadas.
+Durante a Sprint 1, as seguintes atividades foram realizadas:  
+- Entendimento do negócio do cliente  
+- Entendimento do problema do cliente  
+- Criação de duas personas  
+- Definição das jornadas das personas  
+- Elaboração da arquitetura BPMN  
+- Configuração do GitHub com políticas de boas práticas:  
+  - Validador para analisar mensagens de commit  
+  - Travas para impedir commits diretos na `main` e `develop`  
+  - Necessidade de pull requests revisados por um reviewer  
+- Definição dos objetivos do produto  
+- Apresentação para o parceiro  
+- Elaboração do Canvas MVP  
+- Levantamento de requisitos  
+
 
 ## 2.2.2 Sprint 2
-_conteúdo_
+O planejamento da Sprint 2 inclui as seguintes tasks:  
+| Task                            | Descrição                                             | Tamanho | Prioridade |  
+|---------------------------------|-------------------------------------------------------|---------|------------|  
+| Refinamento de Requisitos        | Revisar e detalhar os requisitos levantados na Sprint 1 | P       | Alta       |  
+| Protótipo de baixa fidelidade   | Criar protótipo para validar a jornada das personas   | M       | Alta       |  
+| Ajustes na arquitetura BPMN     | Revisar a arquitetura e incorporar feedback          | M       | Média      |  
+| Continuidade na configuração do GitHub | Ajustar políticas de branches e deploy contínuo | G       | Média      |  
+| Planejamento de testes iniciais | Elaborar casos de teste para funcionalidades básicas | M       | Média      |  
+<!-- Seria necessário depoius colocar o que foi feito? Como seria isso? -->
 
 ## 2.2.3 Sprint 3
 _conteúdo_
@@ -70,13 +90,24 @@ _conteúdo_
 _conteúdo_
 
 # 3. Análise de Riscos
-_conteúdo_
+Durante o desenvolvimento do projeto, foi utilizada uma matriz de risco para identificar, avaliar e mitigar possíveis impactos no andamento das Sprints. A cada Sprint, os riscos serão atualizados e descritos de forma detalhada nesta seção.  
 
-## 3.1 Riscos identificados
-_conteúdo_
+## 3.1 Riscos Identificados  
+
+### Sprint 1 — Desvio de Escopo  
+- **Descrição**: Ocorre quando o escopo do projeto não está claramente definido, o que pode levar à entrega de uma solução desalinhada com as expectativas iniciais dos stakeholders.  
+- **Impacto**: Alto  
+- **Probabilidade**: Média  
+- **Comentário**: Esse risco foi bastante relevante durante a Sprint 1, já que o foco principal foi o entendimento do negócio e o levantamento de requisitos. Como esperado em uma Sprint de descoberta, houve momentos de incerteza sobre o escopo exato da solução e a melhor forma de atendê-lo. Esse risco é comum em etapas iniciais, mas exigiu ações específicas para assegurar um alinhamento contínuo.  
+
+*Nota:* Este risco foi controlado durante a Sprint 1 e continuará sendo monitorado nas próximas etapas para evitar impactos futuros.  
 
 ## 3.2 Mitigação de Riscos
-_conteúdo_
+### Sprint 1 — Desvio de Escopo  
+Para mitigar o risco identificado na Sprint 1, as seguintes ações foram realizadas:  
+- **Validação contínua do entendimento do problema** através de conversas frequentes com stakeholders, professores e outras equipes de desenvolvimento.  
+- **Participação ativa nas três oportunidades de interação direta com o cliente e demais envolvidos**, garantindo o alinhamento das expectativas e a clareza sobre os objetivos do projeto.  
+- **Revisão e refinamento constantes dos requisitos levantados**, ajustando o escopo conforme necessário para evitar desvios significativos.  
 
 # 4. Análise Post Mortem
 _conteúdo_
