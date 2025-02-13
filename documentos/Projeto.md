@@ -1,11 +1,13 @@
-<Table>
-  <tr>
-    <td><a href= "https://www.cps.sp.gov.br/"><img src="img/logo-CPS.jpg" alt="Centro Paula Souza" border="0"></td>
-    <td>
-      <a href= "https://www.inteli.edu.br/"><img src="img/logo-Inteli.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <a href="https://www.inteli.edu.br/">
+    <img src="./assets/logo_cps_inteli.png" 
+         alt="Imagem contendo a logotipo do Centro Paula Souza e do Inteli" 
+         border="0" 
+         style="max-width: 600px; width: 100%; height: auto;">
+  </a>
+</div>
+
+<br>
 
 # Nome do Projeto: <TODO>
 
@@ -18,8 +20,8 @@
 - <a href="https://www.linkedin.com/in/joao-souza-campos/">João Victor de Souza Campos</a>  
 - <a href="https://www.linkedin.com/in/lucas-brasil9/">Lucas Paiva Brasil</a>  
 - <a href="https://www.linkedin.com/in/natalycunha/">Nataly de Souza Cunha</a>  
-- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio Vasconcelos</a>  
-- <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a> 
+- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio de Carvalho Vasconcelos</a>  
+- <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a>
 
 # Sumário
 
@@ -93,13 +95,21 @@ _conteúdo_
 _conteúdo_
 
 # 2. Entendimento do Projeto e do Negócio
-_conteúdo_
+
+&emsp;Esta seção busca detalhar o contexto de negócios do Centro Paula Sousa (CPS), bem como o problema apresentado pela empresa parceira que embasou o desenvolvimento deste projeto.
 
 ## 2.1 Contexto da Indústria do Parceiro
-_conteúdo_
+&emsp;O Centro Paula Sousa é uma autarquia sediada e voltada para o estado de São Paulo, oferecendo ensino profissional para cerca de 317 mil discentes em 345 municípios, dentro de escolas técnicas, faculdades de tecnologia e salas de aulas descentralizadas. Muitas das atividades exercidas no CPS se relacionam com a administração pública do Governo do Estado, devido à sua vinculação com a Secretaria de Ciência, Tecnologia e Inovação, buscando oferecer serviços educacionais com qualidade, governança e inclusão social (CPS, c2025).<br>
+
+&emsp;Observando-se o organograma do Centro, cada escola/faculdade representa uma unidade, gerida por um gestor ou coordenador. As operações de todas as unidades, no entanto, são monitoradas pelo cargo de Gestão Administrativa, que detém a visão analítica e estratégica das atividades educacionais, seus alunos e profissionais. Considerável parte dos alunos do CPS são pessoas com deficiência, apontando necessidade de atendimentos específicos. Com isso, cabe ao time de Acessoria de Inclusão — também composto por um servidor com deficiência visual — a oficializar essas solicitações através de uma Ficha de Acompanhamento do Atendimento Educacional Especializado (FAE); preparada essa ficha, um profissional externo é contratado para prestar o atendimento para o respectivo aluno (CPS, c2025).<br>
+
+&emsp;Nesse contexto, vale ressaltar que, segundo a Lei Brasileira de Inclusão da Pessoa com Deficiência - Lei 13.146/2015, o acesso à educação, ao trabalho, à mobilidade e tecnologias assistivas deve ser garantido para essa população na sociedade. Felizmente, em ambiente escolares e profissionais, são cada vez mais disseminadas e evoluídas tanto tecnologias assistivas — como leitores de tela, tradutores de libras, recursos digitais — quanto atendimentos especializados, o que demonstra a crescente oferta e aprimoramento de soluções tecnológicas que auxiliem pessoas com deficiência em suas atividades cotidianas.
+
 
 ## 2.2 Problema
-_conteúdo_
+
+&emsp;Em relação à administração das informações pessoais dos alunos com deficiência do Centro Paula Sousa e dos atendimentos especializados, apesar da utilização de sistemas digitais para armazenar os dados dessas frentes, não se tem a centralização dos detalhes dos atendimentos em um único lugar, cabendo à Gestão de Administração realizar manualmente o levantamento e cruzamento dessas informações, através de formulários e planilhas digitais. Dessa forma, o presente projeto pretende erradicar esse problema de descentralização de dados, de forma a garantir eficiência e diminuição de erros manuais para o trabalho da administração central do CPS, integrando também recursos de acessibilidade, garantindo a inclusão dos profissionais da Acessoria de Inclusão, como apontado na lei Lei 13.146/2015.
+
 
 ## 2.3 Visão do Projeto e do Produto
   _conteúdo_
@@ -107,7 +117,339 @@ _conteúdo_
   **Nota**: _Insira aqui informações sobre o que se trata o projeto e que valor ele vai entregar, Objetivos do Produto e O que o produto faz e não faz._
 
 ## 2.4 Personas e Jornada do Usuário
-_conteúdo_
+&emsp;Para garantir que a plataforma ApoiaEdu atenda de forma eficiente às necessidades de seus usuários, é fundamental entender quem são essas pessoas, quais desafios enfrentam e como interagem com o sistema.
+
+&emsp;A criação de personas e o mapeamento da jornada do usuário são práticas essenciais no desenvolvimento de produtos, pois ajudam a visualizar como diferentes perfis utilizam a solução no dia a dia.
+
+### Por que criamos personas?
+&emsp;As personas representam perfis fictícios baseados em usuários reais do sistema, descrevendo suas funções, desafios e expectativas. Elas nos ajudam a tomar decisões mais precisas no desenvolvimento da plataforma, garantindo que o sistema seja útil e acessível para aqueles que realmente precisam dele.
+
+### Por que mapear a jornada do usuário?
+&emsp;A jornada do usuário descreve o caminho que cada persona percorre ao interagir com o sistema. Isso permite identificar pontos de dor, oportunidades de melhoria e necessidades específicas, garantindo que o ApoiaEdu resolva problemas reais de forma eficiente.
+
+### O que você encontrará a seguir?
+&emsp;A seguir, apresentamos as principais personas que utilizarão o ApoiaEdu e suas respectivas jornadas de uso, detalhando passo a passo suas interações com a plataforma. Com isso, buscamos tornar a experiência mais fluida, eficiente e acessível para todos os envolvidos no processo de inclusão educacional.
+
+### Persona 1 - Ana Beatriz
+
+<div align="center">
+  <sub>Figura X - Persona Ana Beatriz</sub> <br>
+
+  <img src="img/PERSONA_1-ANA.jpg" alt="Persona 1 - Ana Beatriz">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+#### **Persona: Ana Beatriz – Gestora Local (de Unidade)**
+
+👤 **Nome:** Ana Beatriz
+
+🎂 **Idade:** 37 anos
+
+💼 **Cargo:** Coordenadora Pedagógica / Orientadora Educacional
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Média (consegue usar sistemas administrativos, mas prefere interfaces intuitivas)
+
+#### **Necessidades**
+
+Histórico dos alunos unificado, evitando a dificuldade na busca de informações.
+
+Obter um retorno rápido sobre os dados enviados, evitando informações desatualizadas.
+
+Padronização nos registros, evitando inconsistências.
+
+Identificar quais alunos precisam de profissionais.
+
+#### **Como é a Ana Beatriz?**
+
+Organizada e comprometida com a inclusão dos alunos PCD.
+
+Paciente e empática, pois lida diretamente com alunos e suas famílias.
+
+Gosta de processos claros e bem estruturados, mas **não tem tempo para sistemas burocráticos**.
+
+Se frustra com a **falta de retorno rápido sobre os dados enviados**.
+
+#### **O que Ana Beatriz faz?**
+
+Realiza entrevistas com as famílias dos alunos PCD para entender suas necessidades.
+
+Registra e acompanha atendimentos dentro da unidade escolar.
+
+Identifica alunos que precisam de atendimento e solicita profissionais para auxiliá-los.
+
+Atualiza informações sobre atendimentos e necessidades dos alunos na plataforma.
+
+### Jornada de Usuário da Ana Beatriz (Gestora Local de Unidade)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário da Ana Beatriz</sub> <br>
+
+  <img src="img/JORNADA_1-ANA.jpg" alt="Persona 1 - Ana Beatriz">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Garantir que os dados dos alunos estejam atualizados, vinculando profissionais e organizando atendimentos.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Receber novas informações sobre alunos PCD**
+
+Ana Beatriz recebe uma solicitação de atendimento de um aluno.
+
+Atualmente, o processo exige preenchimento de formulários e envio manual de e-mails.
+
+**Com a solução:** O sistema centraliza as informações e gera alertas para novos registros.
+
+2️⃣ **Acessar o sistema e buscar o aluno**
+
+Entra na plataforma ApoiaEdu e utiliza a busca para encontrar o aluno.
+
+Caso o aluno não esteja cadastrado, pode incluí-lo via API.
+
+**Com a solução:** A busca é rápida e permite filtros avançados.
+
+3️⃣ **Consultar o histórico e atualizar dados**
+
+Verifica o histórico de atendimentos do aluno.
+
+Se necessário, insere novas informações (exemplo: mudança de necessidade especial).
+
+**Com a solução:** O sistema permite edições rápidas e mantém logs de alterações.
+
+4️⃣ **Vincular o aluno a um profissional**
+
+Identifica se o aluno já tem um profissional de atendimento designado.
+
+Caso não tenha, busca na lista de profissionais cadastrados.
+
+**Com a solução:** O sistema sugere profissionais disponíveis e agiliza o processo de vinculação.
+
+5️⃣ **Registrar um novo atendimento**
+
+Caso o aluno já esteja sendo atendido, Ana Beatriz adiciona novos registros ao histórico.
+
+**Com a solução:** Os registros são salvos automaticamente, eliminando o risco de perda de dados.
+
+6️⃣ **Gerar relatórios e enviar para a gestão administrativa**
+
+Ao final do mês, precisa consolidar informações para a gestão administrativa.
+
+**Com a solução:** O sistema gera relatórios automáticos, economizando tempo.
+
+### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de gestão.
+
+**Desafio:** Antes, os registros eram feitos manualmente e demoravam para serem atualizados.
+
+**Solução:** O sistema centraliza e automatiza o fluxo de informações.
+<br><br>
+
+### Persona 2 - Carlos Mendes – Profissional de Atendimento
+
+<div align="center">
+  <sub>Figura X - Persona Carlos Mendes</sub> <br>
+
+  <img src="img/PERSONA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+👤 **Nome:** Carlos Mendes
+
+🎂 **Idade:** 42 anos
+
+💼 **Cargo:** Psicólogo da Assessoria de Inclusão
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Baixa a Média (usa apenas o necessário para registrar atendimentos)
+
+#### **Necessidades**
+
+Um sistema contendo o histórico do aluno, evitando retrabalho durante a consulta com o mesmo.
+
+Histórico com os atendimentos do aluno, evitando a dificuldade de dar continuidade nos acompanhamentos.
+
+Um sistema para registrar informações com facilidade, pois os processos atuais são manuais.
+
+#### **Como é o Carlos Mendes?**
+
+Atencioso e empático, pois lida diretamente com alunos com deficiência.
+
+Prático e objetivo, prefere **sistemas simples e rápidos** de usar.
+
+Se frustra com **processos burocráticos e sistemas complexos**.
+
+#### **O que Carlos Mendes faz?**
+
+Realiza atendimentos psicológicos e pedagógicos para alunos com deficiência.
+
+Consulta o histórico do aluno para entender o progresso e planejar atendimentos.
+
+Registra relatórios e observações sobre cada sessão.
+
+### Jornada de Usuário do Carlos Mendes (Profissional de Atendimento)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário do Carlos Mendes </sub> <br>
+
+  <img src="img/JORNADA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Realizar atendimentos eficientes, registrando informações de forma rápida e acessível.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Receber notificação de um novo aluno vinculado**
+
+O coordenador vincula um novo aluno ao profissional.
+
+**Com a solução:** O sistema notifica Carlos automaticamente sobre a nova atribuição.
+
+2️⃣ **Acessar o sistema e visualizar os alunos atendidos**
+
+Faz login na plataforma e acessa sua lista de alunos vinculados.
+
+**Com a solução:** O sistema apresenta um dashboard claro com filtros úteis.
+
+3️⃣ **Consultar o histórico do aluno antes do atendimento**
+
+Antes da sessão, acessa o perfil do aluno para entender suas necessidades.
+
+**Com a solução:** O sistema mostra um resumo prático do histórico e demandas do aluno.
+
+4️⃣ **Realizar o atendimento e registrar observações**
+
+Durante a sessão, anota informações relevantes sobre o atendimento.
+
+**Com a solução:** O sistema permite registros rápidos e autosave para evitar perda de dados.
+
+5️⃣ **Atualizar evolução do aluno**
+
+Com base no progresso, registra novas ações e próximos passos.
+
+**Com a solução:** O sistema organiza os registros em uma linha do tempo para facilitar consultas futuras.
+
+6️⃣ **Finalizar e revisar os atendimentos do dia**
+
+No final do dia, confere e revisa os atendimentos registrados.
+
+**Com a solução:** Garante que todas as informações foram salvas e podem ser acessadas pela equipe.
+
+### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de registro de atendimentos.
+
+**Desafio:** Antes, os profissionais precisavam armazenar informações manualmente ou usar documentos avulsos.
+
+**Solução:** O sistema padroniza e centraliza os registros, agilizando o processo.
+<br><br>
+
+### Persona 3 - Fernanda Rocha – Gestora Administrativa
+
+<div align="center">
+  <sub>Figura X - Persona Fernanda Rocha</sub> <br>
+
+  <img src="img/PERSONA_3-FERNANDA.jpg" alt="Persona 3 - Fernanda Rocha">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+👤 **Nome:** Fernanda Rocha
+
+🎂 **Idade:** 48 anos
+
+💼 **Cargo:** Coordenadora da Assessoria de Inclusão
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Média (usa sistemas administrativos, mas não tem conhecimento técnico avançado)
+
+#### **Necessidades**
+
+Um sistema para consolidar informações sobre os atendimentos prestados.
+
+Dados padronizados, evitando a dificuldade em analisar inclusões nas unidades.
+
+Um sistema contendo geração de relatórios.
+
+#### **Como é a Fernanda Rocha?**
+
+Estratégica e analítica, precisa de **métricas para tomar decisões**.
+
+Valoriza a **organização e eficiência** no trabalho.
+
+Se frustra com a falta de dados estruturados e tempo perdido com burocracia.
+
+#### **O que Fernanda Rocha faz?**
+
+Supervisiona a equipe da Assessoria de Inclusão.
+
+Gera relatórios e métricas sobre os atendimentos prestados.
+
+Define estratégias para melhorar a inclusão nas Fatecs e Etecs.
+
+Precisa de um sistema que organize os dados e facilite a geração de relatórios estratégicos.
+
+### Jornada de Usuário da Fernanda Rocha (Gestora Administrativa)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário do Carlos Mendes </sub> <br>
+
+  <img src="img/JORNADA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Realizar atendimentos eficientes, registrando informações de forma rápida e acessível.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Acessar o sistema para visualizar métricas gerais**
+
+Entra na plataforma e visualiza os principais indicadores de atendimento.
+
+**Com a solução:** O sistema exibe um dashboard intuitivo com gráficos e KPIs.
+
+2️⃣ **Filtrar relatórios por unidade, aluno ou profissional**
+
+Busca informações específicas, como número de alunos atendidos por unidade.
+
+**Com a solução:** Usa filtros personalizados para gerar relatórios detalhados.
+
+3️⃣ **Identificar alunos sem profissionais vinculados**
+
+Analisa se há alunos sem atendimento e direciona ações para resolver o problema.
+
+**Com a solução:** O sistema destaca alunos sem atendimento ativo.
+
+4️⃣ **Gerar relatórios estratégicos para planejamento**
+
+Precisa criar documentos para apresentar à diretoria e parceiros.
+
+**Com a solução:** O sistema permite exportação automática de relatórios.
+
+5️⃣ **Realizar ajustes na plataforma conforme necessidade**
+
+Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes de atendimento.
+
+**Com a solução:** Tem permissões avançadas para gerenciar configurações da plataforma.
+
+#### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de análise e planejamento.
+
+**Desafio:** Antes, os relatórios eram gerados manualmente e demandavam muito tempo.
+
+**Solução:** O sistema automatiza a extração e análise de dados.
+<br><br>
 
 ## 2.5 Modelagem do Fluxo de Negócio
 _conteúdo_
@@ -120,13 +462,13 @@ _conteúdo_
 
 ## 2.6 Matriz de Risco do Projeto
 ## Ameaças
-Nesta seção, apresentamos a Matriz de Risco do projeto, a matriz de risco tem como objetivo identificar, avaliar e priorizar as ameaças que podem impactar o desenvolvimento e a implementação do sistema. Ao mapear esses riscos, é possível definir estratégias e planos de ação para mitigá-los, garantindo uma gestão eficaz a para a continuidade e o sucesso do projeto.
+&nbsp;&nbsp;&nbsp;Nesta seção, apresentamos a Matriz de Risco do projeto, a matriz de risco tem como objetivo identificar, avaliar e priorizar as ameaças que podem impactar o desenvolvimento e a implementação do sistema. Ao mapear esses riscos, é possível definir estratégias e planos de ação para mitigá-los, garantindo uma gestão eficaz a para a continuidade e o sucesso do projeto.
 
 
 <div align="center">
   <sub>Figura X - Matriz de riscos </sub> <br>
 
-  <img src="img/Matriz_de_Riscos.png" alt="Matriz de risco">
+  <img src="img/matriz_de_riscos.jpg" alt="Matriz de Riscos">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -140,11 +482,14 @@ Nesta seção, apresentamos a Matriz de Risco do projeto, a matriz de risco tem 
 - **Ciberataques que podem comprometer a segurança do local**:  
   A invasão de sistemas por hackers pode comprometer a integridade dos dados e a segurança física das instalações.
 
-- **Dificuldade em garantir acessibilidade para usuários com deficiência visual**  
-  (compatibilidade com NVDA).
+- **Dificuldade em garantir acessibilidade para usuários com deficiência visual**:  
+  O desenvolvimento realizando todas as implementações capazes de atender usuários com dificuldades em engexar pode ser muito complexo.
 
 - **Desafios na manutenção da base de dados dos alunos atualizada**:  
   Se a base de dados governamental não for atualizada corretamente, pode haver informações desatualizadas sobre os alunos e seus recursos assistivos.
+
+- **Falha na integração da API com sistemas acadêmicos**:
+  Como não temos acesso ao banco de dados governamental de forma direta, haverá a criação de um banco de dados e uma API simulando o acesso ao banco governamental. Podendo ter uma dificuldade em uma integração genuína.
 
 ### Plano de Ação - Ameaças
 
@@ -153,15 +498,16 @@ Nesta seção, apresentamos a Matriz de Risco do projeto, a matriz de risco tem 
 - Utilizar ferramentas de segurança digital, como antivírus e firewall.
 - Garantir compatibilidade com leitores de tela, testar a aplicação com usuários reais e seguir as diretrizes WCAG.
 - Orientar os stakeholders periodicamente sobre a importância de manter a base de dados governamental atualizada.
+- Alinhar com a equipe técnica do Centro Paula Souza todos os critérios para que ocorra um acesso correto do banco de dados real do governo.
 
 ## Oportunidades
-A Matriz de Oportunidades destaca os potenciais benefícios que podem ser explorados ao longo do projeto ou em futuras atualizações.
+&nbsp;&nbsp;&nbsp;A Matriz de Oportunidades destaca os potenciais benefícios que podem ser explorados ao longo do projeto ou em futuras atualizações.
 
 
   <div align="center">
   <sub>Figura X - Matriz de oportunidades </sub> <br>
 
-  <img src="img/Matriz_de_Oportunidades.png" alt="Matriz de Oportunidades do Projeto">
+  <img src="img/matriz_de_oportunidades.jpg" alt="Matriz de Oportunidades do Projeto">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -171,8 +517,7 @@ A Matriz de Oportunidades destaca os potenciais benefícios que podem ser explor
   A automação do processo de cadastro e gestão de alunos com deficiência reduz erros manuais e otimiza o tempo dos gestores, tornando a operação mais eficiente.
 - **Fortalecimento da comunicação entre gerentes e profissionais assistivos**:  
   Melhorar a comunicação entre os usuários da aplicação e os alunos da instituição facilita a colaboração e a resolução rápida de problemas.
-- **Fortalecimento da comunicação entre gerentes e profissionais assistivos**:  
-  O aprimoramento na comunicação entre os envolvidos garante que os dados do sistema estejam sempre atualizados.
+
 
 
 ---
@@ -182,10 +527,129 @@ A Matriz de Oportunidades destaca os potenciais benefícios que podem ser explor
 _conteúdo_
 
 ## 2.7.1 Brainstorming de features
-_conteúdo_
+&nbsp;&nbsp;&nbsp; O brainstorming de features foi realizado com base no problema central do projeto: a necessidade de organizar e gerenciar os atendimentos da Assessoria de Inclusão do Centro Paula Souza (CPS). O objetivo foi identificar funcionalidades que não apenas resolvessem os problemas atuais, como a falta de organização e rastreabilidade dos atendimentos, mas também agregassem valor ao produto, como a geração de relatórios estatísticos e a integração com sistemas existentes. As features foram pensadas para garantir que a solução seja **acessível**, **escalável** e em **conformidade com a LGPD**, atendendo às **necessidades dos servidores, alunos e profissionais envolvidos**.
+
+&nbsp;&nbsp;&nbsp; Durante o brainstorming, foram consideradas features essenciais, como o **cadastro de alunos via API, a gestão de atendimentos e a lista de tecnologias assistivas**, além de funcionalidades complementares, como **notificações e dashboards de gestão**. A ideia foi cobrir todos os aspectos do problema, desde o registro básico de dados até a análise avançada e a comunicação eficiente entre os envolvidos. O resultado é uma lista abrangente de features que servirá como base para o desenvolvimento da solução.
+
+| **Feature**                                      | **Descrição**                                                                                   |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **Filtros e Buscas Avançadas**                   | Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.           |
+| **Dashboard de Informações dos Alunos**          | Visualização centralizada de dados dos alunos cadastrados.                                      |
+| **Cadastro de Gerente Geral e Gerente de Unidade**| Cadastro de gerentes com diferentes níveis de acesso e responsabilidades.                      |
+| **Cadastro de Alunos via API + Validação de Dados**| Integração com sistemas acadêmicos governamentais para cadastro automático, com validação dos dados.          |
+| **Cadastro de Unidade de Ensino**                | Cadastro de unidades de ensino (Etecs e Fatecs) com informações detalhadas.               |
+| **Registro de Ações no Sistema (Logs)**          | Registro de quem fez, o que fez e quais dados foram alterados no sistema.                       |
+| **Gestão de Profissionais**                      | Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.       |
+| **Gestão de Atendimentos**                       | Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.        |
+| **Histórico Completo do Aluno**                  | Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.     |
+| **Lista de Tecnologias Assistivas**              | Lista organizada de tecnologias disponíveis, com descrições detalhadas.                        |
+| **Notificações**                                 | Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.            |
+| **Status de Atendimento**                        | Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.               |
+| **Timeline do Aluno**                            | Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.                       |
+| **Relatórios e Estatísticas**                    | Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc. |
+| **Exportação de Dados de Alunos**                | Exportação de dados de alunos para planilhas (CSV ou Excel) para análise externa.               |
 
 ## 2.7.2 Sequenciamento/Priorização de entregas
-_conteúdo_
+
+&nbsp;&nbsp;&nbsp; O sequenciamento e a priorização das entregas foram definidos com base em critérios claros e lógicos, como **impacto no problema central** e **dependências técnicas**. O objetivo foi garantir que o **MVP (Minimum Viable Product)** seja entregue dentro do prazo de **70 dias**, com funcionalidades que resolvam os problemas mais urgentes da Assessoria de Inclusão. As features foram organizadas em sprints, começando pela base do sistema (cadastros essenciais) e evoluindo para funcionalidades mais complexas, como a gestão de atendimentos e a geração de relatórios.
+
+### **Critérios de Priorização**
+
+1. **Impacto no Problema Central**:
+   - Features que resolvem diretamente o problema de gestão de atendimentos e cadastro de alunos foram priorizadas.
+2. **Dependências Técnicas**:
+   - Features que dependem de outras para funcionar foram sequenciadas após a implementação das bases.
+3. **Conformidade Legal e Acessibilidade**:
+   - Features relacionadas à segurança, LGPD e acessibilidade foram priorizadas desde o início.
+4. **Valor Agregado**:
+   - Features que agregam valor ao produto, mas não são urgentes, foram deixadas para as sprints finais.
+5. **Complexidade de Implementação**:
+   - Features mais simples e de rápida implementação foram priorizadas para entregar valor rapidamente.
+
+
+### **Sequenciamento das Entregas**
+
+#### **Sprint 1 – Entendimento do Problema e Definição de Requisitos**
+- **Atividades**:
+  1. **Entendimento do Problema**:
+     - Reuniões com stakeholders para alinhamento de expectativas.
+     - Análise do problema atual da Assessoria de Inclusão.
+  2. **Definição de Personas**:
+     - Identificação das personas principais (servidores, alunos, responsáveis, profissionais).
+  3. **Definição de Requisitos Funcionais (RFs) e Não Funcionais (RNFs)**:
+     - Elaboração dos requisitos funcionais e não funcionais do sistema.
+  4. **Brainstorming de Features**:
+     - Identificação e priorização das features necessárias para o MVP.
+
+- **Justificativa**:
+  - A Sprint 1 é crucial para garantir que todos os envolvidos tenham um entendimento claro do problema, das necessidades do negócio e das expectativas dos usuários. A definição de personas, requisitos e features servirá como base para o desenvolvimento nas sprints seguintes.
+
+#### **Sprint 2 – Base do Sistema e Cadastros Essenciais**
+- **Features Prioritárias**:
+
+  5. **Cadastro de Gerente Geral e Gerente de Unidade**:
+     - Definição de níveis de acesso e responsabilidades.
+  6. **Cadastro de Unidade de Ensino**:
+     - Cadastro de unidades (Etecs, Fatecs) com informações básicas.
+  7. **Cadastro de Alunos via API + Validação de Dados**:
+     - Integração com sistemas acadêmicos para cadastro automático e validação de dados.
+
+- **Justificativa**:
+  - Essas features são a base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. O cadastro de alunos, unidades e gerentes é essencial para o funcionamento do sistema.
+
+#### **Sprint 3 – Gestão de Dados e Atendimentos**
+- **Features Prioritárias**:
+
+  8. **Dashboard de Informações dos Alunos**:
+     - Visualização centralizada de dados dos alunos cadastrados.
+  9. **Filtros e Buscas Avançadas**:
+     - Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.
+  10. **Gestão de Profissionais**:
+     - Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.
+  11. **Gestão de Atendimentos**:
+     - Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.
+
+- **Justificativa**:
+  - Essas features permitem a visualização e organização dos dados, além de iniciar a gestão de profissionais e atendimentos, que são o cerne do projeto. O dashboard e os filtros facilitam a navegação e a análise dos dados.
+
+#### **Sprint 4 – Histórico, Tecnologias Assistivas e Logs**
+- **Features Prioritárias**:
+
+  12. **Histórico Completo do Aluno**:
+     - Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.
+  13. **Lista de Tecnologias Assistivas**:
+     - Lista organizada de tecnologias disponíveis, com descrições detalhadas.
+  14. **Status de Atendimento**:
+      - Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.
+  15. **Registro de Ações no Sistema (Logs)**:
+      - Registro de quem fez, o que fez e quais dados foram alterados no sistema.
+
+- **Justificativa**:
+  - Essas features complementam a gestão de atendimentos, fornecendo informações detalhadas e status atualizados. Os logs garantem conformidade com a LGPD e auditoria das ações.
+
+#### **Sprint 5 – Funcionalidades Avançadas e Finalização**
+- **Features Prioritárias**:
+
+  16. **Timeline do Aluno**:
+      - Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.
+  17. **Notificações**:
+      - Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.
+  18. **Relatórios e Estatísticas**:
+      - Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc.
+  19. **Exportação de Dados de Alunos**:
+      - Exportação de dados de alunos para planilhas (CSV ou Excel).
+
+- **Justificativa**:
+  - Essas features agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. A timeline e as notificações trazem mais clareza e organização, enquanto os relatórios e a exportação de dados facilitam a análise e o compartilhamento de informações.
+
+### **Tabela de Sequenciamento de Entregas**
+
+| **Sprint** | **Features Prioritárias**                                                                 | **Justificativa**                                                                 |
+|------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| **Sprint 2** | Cadastro de Gerente Geral e Gerente de Unidade, Cadastro de Unidade de Ensino, Cadastro de Alunos via API + Validação de Dados | Base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. |
+| **Sprint 3** | Dashboard de Informações dos Alunos, Filtros e Buscas Avançadas, Gestão de Profissionais, Gestão de Atendimentos | Visualização e organização dos dados, além de iniciar a gestão de profissionais e atendimentos. |
+| **Sprint 4** | Histórico Completo do Aluno, Lista de Tecnologias Assistivas, Status de Atendimento, Registro de Ações no Sistema (Logs) | Complementam a gestão de atendimentos com informações detalhadas e garantem conformidade com a LGPD. |
+| **Sprint 5** | Timeline do Aluno, Notificações, Relatórios e Estatísticas, Exportação de Dados de Alunos | Agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. |
 
 ## 2.8 Canvas do Projeto
 _conteúdo_
