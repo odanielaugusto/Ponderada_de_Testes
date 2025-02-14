@@ -1,8 +1,8 @@
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/logo_cps_inteli.png" 
-         alt="Imagem contendo a logotipo do Centro Paula Souza e do Inteli" 
-         border="0" 
+    <img src="./assets/logo_cps_inteli.png"
+         alt="Imagem contendo a logotipo do Centro Paula Souza e do Inteli"
+         border="0"
          style="max-width: 600px; width: 100%; height: auto;">
   </a>
 </div>
@@ -15,12 +15,12 @@
 
 ## Integrantes:
 
-- <a href="https://www.linkedin.com/in/anna-riciopo/">Anna Giulia Marques Riciopo</a>  
-- <a href="https://www.linkedin.com/in/danielaraujogonncalves/">Daniel Augusto de Araujo Gonçalves</a>  
-- <a href="https://www.linkedin.com/in/joao-souza-campos/">João Victor de Souza Campos</a>  
-- <a href="https://www.linkedin.com/in/lucas-brasil9/">Lucas Paiva Brasil</a>  
-- <a href="https://www.linkedin.com/in/natalycunha/">Nataly de Souza Cunha</a>  
-- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio de Carvalho Vasconcelos</a>  
+- <a href="https://www.linkedin.com/in/anna-riciopo/">Anna Giulia Marques Riciopo</a>
+- <a href="https://www.linkedin.com/in/danielaraujogonncalves/">Daniel Augusto de Araujo Gonçalves</a>
+- <a href="https://www.linkedin.com/in/joao-souza-campos/">João Victor de Souza Campos</a>
+- <a href="https://www.linkedin.com/in/lucas-brasil9/">Lucas Paiva Brasil</a>
+- <a href="https://www.linkedin.com/in/natalycunha/">Nataly de Souza Cunha</a>
+- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio de Carvalho Vasconcelos</a>
 - <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a>
 
 # Sumário
@@ -595,10 +595,53 @@ _conteúdo_
 _conteúdo_
 
 # 3. Requisitos do Projeto
-_conteúdo_
+
+Para garantir que o sistema **ApoiaEdu** atenda às necessidades dos usuários e funcione de maneira eficiente, é importante definir claramente seus requisitos.
+
+Os **Requisitos Funcionais (RFs)** descrevem o que o sistema deve fazer, ou seja, suas principais funcionalidades, como o cadastro de usuários, a gestão de atendimentos e a exibição de informações relevantes. Cada um desses requisitos está associado a testes que garantem sua correta implementação e funcionamento.
+
+Além dos RFs, temos os **Requisitos Não Funcionais (RNFs)**, que especificam como o sistema deve se comportar. Eles abordam aspectos como segurança, desempenho, usabilidade e conformidade com normas, garantindo que o sistema seja robusto, acessível e confiável.
+
+Por fim, há uma correlação entre RFs e RNFs, pois um requisito funcional pode depender de um requisito não funcional para ser eficaz. Por exemplo, um sistema pode permitir o cadastro de usuários (RF), mas precisa seguir regras de segurança e privacidade (RNF) para proteger os dados.
+
+A seguir, detalharemos todos esses requisitos, assegurando que o ApoiaEdu seja desenvolvido com qualidade, segurança e alinhado às expectativas dos usuários.
 
 ## 3.1 Requisitos Funcionais (RFs)
-_conteúdo_ 
+
+| ID   | Título                               | Descrição do Requisito Funcional                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RF01 | Cadastro de Gerentes                 | O sistema deve permitir o cadastro de Gerente Geral e Gerente de Unidade.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Apenas administradores podem cadastrar novos gerentes.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Deve haver validação dos dados obrigatórios (CPF, e-mail, etc.). |
+| RF02 | Cadastro de Unidade de Ensino        | O sistema deve permitir o cadastro de Unidade de Ensino.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Cadastro com informações como nome, endereço e contato.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Essencial para vincular alunos à unidade correta.                                                                                                                                |
+| RF03 | Cadastro de Alunos via API           | O sistema deve permitir o cadastro de alunos via API, garantindo a validação de dados.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Validação de campos obrigatórios (CPF, e-mail, nome).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Retorno de mensagens de erro específicas em caso de falhas na validação.                                                                                                                     |
+| RF04 | Dashboard de Alunos                  | O sistema deve apresentar um dashboard com informações dos alunos, incluindo filtros e buscas avançadas.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Exibição de gráficos e indicadores visuais.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Filtros por data, status e outras categorias para facilitar a análise dos dados.                                                                                                        |
+| RF05 | Gestão de Profissionais              | O sistema deve permitir a gestão de profissionais, incluindo cadastro, edição e exclusão de dados.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Registro de informações relevantes (especialidade, contato, etc.).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Operações de edição e exclusão devem ser auditadas.                                                                                                            |
+| RF06 | Gestão de Atendimentos               | O sistema deve permitir a gestão de atendimentos, com inclusão, edição e exclusão de registros.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Cada atendimento deve registrar data, hora, responsável e descrição.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Histórico dos atendimentos deve ser mantido para auditoria.                                                                                  |
+| RF07 | Registro de Logs                     | O sistema deve registrar logs das ações dos usuários.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Registra data, hora, usuário e ação realizada.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Essencial para rastreabilidade e auditoria das operações.                                                                                                                     |
+| RF08 | Histórico Completo do Aluno          | O sistema deve permitir a visualização do histórico completo do aluno.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Consolida todas as interações, atendimentos e alterações no perfil do aluno.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Facilita a análise do percurso e evolução do aluno.                                                                                                                  |
+| RF09 | Consulta de Tecnologias Assistivas   | O sistema deve permitir a listagem e consulta de tecnologias assistivas disponíveis para os alunos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Permite busca por categoria ou características específicas.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Auxilia na seleção da tecnologia mais adequada às necessidades do aluno.                                                             |
+| RF10 | Atualização de Status de Atendimento | O sistema deve permitir a atualização do status de atendimento dos alunos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Possibilita alteração do status (ex: em andamento, concluído, cancelado).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Atualização deve ser refletida no histórico e, se necessário, notificada aos usuários.                                                                              |
+| RF11 | Exibição da Timeline do Aluno        | O sistema deve exibir uma timeline do aluno com todos os registros de atendimentos e evoluções.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Apresenta os registros de forma cronológica.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Permite visualização detalhada de cada evento mediante seleção.                                                                                                          |
+| RF12 | Envio de Notificações                | O sistema deve enviar notificações aos usuários sobre eventos relevantes, como novos atendimentos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Notificações podem ser enviadas por e-mail, push ou outro meio configurável.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Mantém os usuários informados para ações imediatas em eventos críticos.                                                                       |
+
+
+### Testes de Validação dos Requisitos Funcionais
+
+
+| ID   | Teste | Pré-condição | Procedimento | Resultado Esperado | Pós-condição |
+| ---- | ----- | ----------- | ------------ | ------------------ | ------------ |
+| RF01 | Criar Gerente | O usuário deve ter permissões de administrador. | Acessar a tela de cadastro, preencher os dados obrigatórios e confirmar. | O gerente é cadastrado e aparece na listagem. | O novo gerente pode acessar o sistema conforme suas permissões. |
+| RF02 | Criar Unidade de Ensino | O usuário deve estar autenticado e ter permissões adequadas. | Acessar a tela de cadastro, inserir os dados necessários e confirmar. | A unidade é cadastrada e aparece na listagem. | A unidade pode ser associada a alunos. |
+| RF03 | Cadastro de Aluno via API | O serviço de API deve estar disponível. | Enviar uma requisição POST com dados válidos. | O aluno é cadastrado e pode ser recuperado via API. | O aluno fica disponível para consulta e edição. |
+| RF04 | Consulta no Dashboard | O banco de dados deve conter registros de alunos. | Acessar o dashboard e aplicar filtros de pesquisa. | O sistema retorna os dados corretos conforme os filtros aplicados. | O usuário pode visualizar e interagir com os dados retornados. |
+| RF05 | Gestão de Profissionais | O usuário deve ter permissões para gerenciar profissionais. | Acessar a tela de gestão, cadastrar um profissional e salvar. | O profissional é cadastrado e listado no sistema. | O profissional pode ser editado ou excluído posteriormente. |
+| RF06 | Gestão de Atendimentos | O aluno e o profissional devem estar cadastrados no sistema. | Criar um novo atendimento, preencher os dados e salvar. | O atendimento fica registrado e pode ser acessado posteriormente. | O atendimento pode ser editado ou excluído. |
+| RF07 | Registro de Logs | O sistema deve estar operando normalmente. | Executar ações como cadastro, edição ou exclusão de registros. | O sistema armazena os logs corretamente com data, usuário e ação realizada. | Os logs podem ser consultados por usuários autorizados. |
+| RF08 | Histórico do Aluno | O aluno deve possuir atendimentos registrados. | Acessar o perfil do aluno e visualizar o histórico. | O histórico exibe todas as interações e atendimentos registrados. | O usuário pode utilizar as informações do histórico para futuras ações. |
+| RF09 | Consulta de Tecnologias Assistivas | O sistema deve ter tecnologias cadastradas. | Acessar a listagem e realizar buscas por tecnologia. | O sistema exibe as tecnologias disponíveis corretamente. | As tecnologias podem ser associadas a alunos conforme necessário. |
+| RF10 | Atualização de Status de Atendimento | O aluno deve ter um atendimento registrado. | Editar um atendimento e alterar seu status. | O novo status é salvo e reflete no atendimento do aluno. | O status atualizado pode ser consultado no histórico do aluno. |
+| RF11 | Exibição da Timeline | O aluno deve possuir registros de atendimento. | Acessar o perfil do aluno e visualizar a timeline. | A timeline exibe os registros de forma cronológica. | O usuário pode utilizar os dados para análise e acompanhamento. |
+| RF12 | Envio de Notificações | O usuário deve estar cadastrado e com notificações ativadas. | Criar um novo atendimento ou evento relevante. | O sistema dispara uma notificação para os usuários envolvidos. | Os usuários são informados e podem tomar ações necessárias. |
+
 
 ## 3.2 Requisitos Não Funcionais (RNFs)
 &emsp;Os requisitos não funcionais descrevem as características do sistema que não estão diretamente relacionadas às funcionalidades, mas são essenciais para o desempenho, segurança, usabilidade e conformidade com normas e leis. Cada RNF está alinhado com a **ISO 25010**, que define critérios de qualidade para software.
@@ -778,4 +821,3 @@ _conteúdo_
 
 # Referências
 _conteúdo_
-
