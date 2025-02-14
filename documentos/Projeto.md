@@ -135,11 +135,11 @@ _conteúdo_
 ---
 
 ### 2.3.4 Funcionalidades do Produto
-&nbsp;&nbsp;&nbsp;&nbsp;A seguir estão a definição do que o produto "Faz" e o que ele "Não Faz".
+&nbsp;A seguir estão a definição do que o produto "Faz" e o que ele "Não Faz".
 | **Faz** | **Não Faz** |
 |---|---|
 | Importa automaticamente os dados de alunos com deficiência do sistema governamental | Criar ou modificar dados externos do governo |
-| Permite o cadastro e a gestão de profissionais de proporcionam apoio aos estudantes  | Realizar pagamentos ou gerenciar contratos financeiros |
+| Permite o cadastro e a gestão de profissionais proporcionam apoio aos estudantes  | Realizar pagamentos ou gerenciar contratos financeiros |
 | Organiza e exibe recursos assistivos necessários para cada aluno | Monitorar desempenho acadêmico dos alunos |
 | Cria uma linha do tempo com eventos e necessidades que foram atendidas para cada aluno | Substituir totalmente a gestão presencial dos alunos |
 | Fornece métricas e dados geográficos via dashboard sobre os alunos que a assesoria de inclusão atendeu| Realizar diagnósticos médicos ou emitir laudos |
