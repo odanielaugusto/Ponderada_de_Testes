@@ -34,8 +34,6 @@
   - [2.3 Visão do Projeto e do Produto](#23-visão-do-projeto-e-do-produto)
   - [2.4 Personas e Jornada do Usuário](#24-personas-e-jornada-do-usuário)
   - [2.5 Modelagem do Fluxo de Negócio](#25-modelagem-do-fluxo-de-negócio)
-    - [2.5.1 Fluxo de Negócio Atual (AS-IS)](#251-fluxo-de-negócio-atual-as-is)
-    - [2.5.2 Fluxo de Negócio Proposto (TO-BE)](#252-fluxo-de-negócio-proposto-to-be)
   - [2.6 Matriz de Risco do Projeto](#26-matriz-de-risco-do-projeto)
   - [2.7 Ideação](#27-ideação)
     - [2.7.1 Brainstorming de features](#271-brainstorming-de-features)
@@ -452,13 +450,20 @@ Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes d
 <br><br>
 
 ## 2.5 Modelagem do Fluxo de Negócio
-_conteúdo_
 
-## 2.5.1 Fluxo de Negócio Atual (AS-IS)
-_conteúdo_
+&emsp;Fluxo de nogócio consiste em um conjunto de atividades e decisões que uma organização executa para atingir seus objetivos estratégicos. Ao definir o fluxo de negócio, a equipe consegue entender e otimizar processos, identificar obstáculos e melhorar a comunicação entre os envolvidos.
 
-## 2.5.2 Fluxo de Negócio Proposto (TO-BE)
-_conteúdo_
+&emsp;Nesse contexto, a seguir há, em formato de fluxograma, o fluxo de negócio identificado para o presente projeto:
+
+<div align="center">
+  <sub>Figura X - Fluxo de Negócio </sub> <br>
+
+  <img src="img/section2/2.5_fluxo_do_negocio/business_flow.png" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Em comparação com o fluxo atual, o proposto modifica apenas a forma como os históricos dos alunos são registrados. Enquanto, atualmente, essa informação é armazenada em diferentes planilhas, com o Sistema Gallaudet o registro de novos atendimentos se torna mais simples e eficiente, além de centralizado. Essa mudança na ferramenta de gestão impactaria tanto os profissionais envolvidos quanto os alunos atendidos pela Assessoria de Inclusão, uma vez que evitaria a perda de dados, facilitando análises e reduzindo erros. 
 
 ## 2.6 Matriz de Risco do Projeto
 _conteúdo_
@@ -592,16 +597,125 @@ _conteúdo_
 | **Sprint 5** | Timeline do Aluno, Notificações, Relatórios e Estatísticas, Exportação de Dados de Alunos | Agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. |
 
 ## 2.8 Canvas do Projeto
-_conteúdo_
+
+&emsp;Canvas MVP é uma ferramenta utilizada para alinhar ideias e definir estratégias. Durante sua elaboração, é discutido o entendimento da equipe sobre a proposta apresentada e, assim, as principais características da solução são dispostas em um quadro, colaborando para um alinhamento mais eficiente entre os integrantes da equipe. 
+
+&emsp;Nesse contexto, foi realizado um Canvas MVP com base na proposta trazida pelo Centro Paula Souza. Nele, estão identificados os pontos mais importantes levantados pela equipe sobre o projeto ApoiaEdu:
+
+<div align="center">
+  <sub>Figura X - Canvas MVP</sub> <br>
+
+  <img src="./img/section2/2.8_canvas_mvp/mvp_canvas.jpg" alt="Canvas MVP">
+
+  <sup>Fonte: Material produzido pelos autores (2024).</sup>
+</div>
 
 # 3. Requisitos do Projeto
-_conteúdo_
+
+Para garantir que o sistema **ApoiaEdu** atenda às necessidades dos usuários e funcione de maneira eficiente, é importante definir claramente seus requisitos.
+
+Os **Requisitos Funcionais (RFs)** descrevem o que o sistema deve fazer, ou seja, suas principais funcionalidades, como o cadastro de usuários, a gestão de atendimentos e a exibição de informações relevantes. Cada um desses requisitos está associado a testes que garantem sua correta implementação e funcionamento.
+
+Além dos RFs, temos os **Requisitos Não Funcionais (RNFs)**, que especificam como o sistema deve se comportar. Eles abordam aspectos como segurança, desempenho, usabilidade e conformidade com normas, garantindo que o sistema seja robusto, acessível e confiável.
+
+Por fim, há uma correlação entre RFs e RNFs, pois um requisito funcional pode depender de um requisito não funcional para ser eficaz. Por exemplo, um sistema pode permitir o cadastro de usuários (RF), mas precisa seguir regras de segurança e privacidade (RNF) para proteger os dados.
+
+A seguir, detalharemos todos esses requisitos, assegurando que o ApoiaEdu seja desenvolvido com qualidade, segurança e alinhado às expectativas dos usuários.
 
 ## 3.1 Requisitos Funcionais (RFs)
-_conteúdo_
+
+| ID   | Título                               | Descrição do Requisito Funcional                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RF01 | Cadastro de Gerentes                 | O sistema deve permitir o cadastro de Gerente Geral e Gerente de Unidade.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Apenas administradores podem cadastrar novos gerentes.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Deve haver validação dos dados obrigatórios (CPF, e-mail, etc.). |
+| RF02 | Cadastro de Unidade de Ensino        | O sistema deve permitir o cadastro de Unidade de Ensino.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Cadastro com informações como nome, endereço e contato.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Essencial para vincular alunos à unidade correta.                                                                                                                                |
+| RF03 | Cadastro de Alunos via API           | O sistema deve permitir o cadastro de alunos via API, garantindo a validação de dados.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Validação de campos obrigatórios (CPF, e-mail, nome).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Retorno de mensagens de erro específicas em caso de falhas na validação.                                                                                                                     |
+| RF04 | Dashboard de Alunos                  | O sistema deve apresentar um dashboard com informações dos alunos, incluindo filtros e buscas avançadas.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Exibição de gráficos e indicadores visuais.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Filtros por data, status e outras categorias para facilitar a análise dos dados.                                                                                                        |
+| RF05 | Gestão de Profissionais              | O sistema deve permitir a gestão de profissionais, incluindo cadastro, edição e exclusão de dados.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Registro de informações relevantes (especialidade, contato, etc.).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Operações de edição e exclusão devem ser auditadas.                                                                                                            |
+| RF06 | Gestão de Atendimentos               | O sistema deve permitir a gestão de atendimentos, com inclusão, edição e exclusão de registros.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Cada atendimento deve registrar data, hora, responsável e descrição.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Histórico dos atendimentos deve ser mantido para auditoria.                                                                                  |
+| RF07 | Registro de Logs                     | O sistema deve registrar logs das ações dos usuários.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Registra data, hora, usuário e ação realizada.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Essencial para rastreabilidade e auditoria das operações.                                                                                                                     |
+| RF08 | Histórico Completo do Aluno          | O sistema deve permitir a visualização do histórico completo do aluno.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Consolida todas as interações, atendimentos e alterações no perfil do aluno.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Facilita a análise do percurso e evolução do aluno.                                                                                                                  |
+| RF09 | Consulta de Tecnologias Assistivas   | O sistema deve permitir a listagem e consulta de tecnologias assistivas disponíveis para os alunos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Permite busca por categoria ou características específicas.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Auxilia na seleção da tecnologia mais adequada às necessidades do aluno.                                                             |
+| RF10 | Atualização de Status de Atendimento | O sistema deve permitir a atualização do status de atendimento dos alunos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Possibilita alteração do status (ex: em andamento, concluído, cancelado).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Atualização deve ser refletida no histórico e, se necessário, notificada aos usuários.                                                                              |
+| RF11 | Exibição da Timeline do Aluno        | O sistema deve exibir uma timeline do aluno com todos os registros de atendimentos e evoluções.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Apresenta os registros de forma cronológica.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Permite visualização detalhada de cada evento mediante seleção.                                                                                                          |
+| RF12 | Envio de Notificações                | O sistema deve enviar notificações aos usuários sobre eventos relevantes, como novos atendimentos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Notificações podem ser enviadas por e-mail, push ou outro meio configurável.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Mantém os usuários informados para ações imediatas em eventos críticos.                                                                       |
+
+
+### Testes de Validação dos Requisitos Funcionais
+
+
+| ID   | Teste | Pré-condição | Procedimento | Resultado Esperado | Pós-condição |
+| ---- | ----- | ----------- | ------------ | ------------------ | ------------ |
+| RF01 | Criar Gerente | O usuário deve ter permissões de administrador. | Acessar a tela de cadastro, preencher os dados obrigatórios e confirmar. | O gerente é cadastrado e aparece na listagem. | O novo gerente pode acessar o sistema conforme suas permissões. |
+| RF02 | Criar Unidade de Ensino | O usuário deve estar autenticado e ter permissões adequadas. | Acessar a tela de cadastro, inserir os dados necessários e confirmar. | A unidade é cadastrada e aparece na listagem. | A unidade pode ser associada a alunos. |
+| RF03 | Cadastro de Aluno via API | O serviço de API deve estar disponível. | Enviar uma requisição POST com dados válidos. | O aluno é cadastrado e pode ser recuperado via API. | O aluno fica disponível para consulta e edição. |
+| RF04 | Consulta no Dashboard | O banco de dados deve conter registros de alunos. | Acessar o dashboard e aplicar filtros de pesquisa. | O sistema retorna os dados corretos conforme os filtros aplicados. | O usuário pode visualizar e interagir com os dados retornados. |
+| RF05 | Gestão de Profissionais | O usuário deve ter permissões para gerenciar profissionais. | Acessar a tela de gestão, cadastrar um profissional e salvar. | O profissional é cadastrado e listado no sistema. | O profissional pode ser editado ou excluído posteriormente. |
+| RF06 | Gestão de Atendimentos | O aluno e o profissional devem estar cadastrados no sistema. | Criar um novo atendimento, preencher os dados e salvar. | O atendimento fica registrado e pode ser acessado posteriormente. | O atendimento pode ser editado ou excluído. |
+| RF07 | Registro de Logs | O sistema deve estar operando normalmente. | Executar ações como cadastro, edição ou exclusão de registros. | O sistema armazena os logs corretamente com data, usuário e ação realizada. | Os logs podem ser consultados por usuários autorizados. |
+| RF08 | Histórico do Aluno | O aluno deve possuir atendimentos registrados. | Acessar o perfil do aluno e visualizar o histórico. | O histórico exibe todas as interações e atendimentos registrados. | O usuário pode utilizar as informações do histórico para futuras ações. |
+| RF09 | Consulta de Tecnologias Assistivas | O sistema deve ter tecnologias cadastradas. | Acessar a listagem e realizar buscas por tecnologia. | O sistema exibe as tecnologias disponíveis corretamente. | As tecnologias podem ser associadas a alunos conforme necessário. |
+| RF10 | Atualização de Status de Atendimento | O aluno deve ter um atendimento registrado. | Editar um atendimento e alterar seu status. | O novo status é salvo e reflete no atendimento do aluno. | O status atualizado pode ser consultado no histórico do aluno. |
+| RF11 | Exibição da Timeline | O aluno deve possuir registros de atendimento. | Acessar o perfil do aluno e visualizar a timeline. | A timeline exibe os registros de forma cronológica. | O usuário pode utilizar os dados para análise e acompanhamento. |
+| RF12 | Envio de Notificações | O usuário deve estar cadastrado e com notificações ativadas. | Criar um novo atendimento ou evento relevante. | O sistema dispara uma notificação para os usuários envolvidos. | Os usuários são informados e podem tomar ações necessárias. |
+
 
 ## 3.2 Requisitos Não Funcionais (RNFs)
-_conteúdo_
+&emsp;Os requisitos não funcionais descrevem as características do sistema que não estão diretamente relacionadas às funcionalidades, mas são essenciais para o desempenho, segurança, usabilidade e conformidade com normas e leis. Cada RNF está alinhado com a **ISO 25010**, que define critérios de qualidade para software.
+
+| **ID**    | **Descrição**                                                                                                                                                                                                                   | **Teste Associado** |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
+| **RNF01** | **Acessibilidade**: O sistema deve ser acessível, com suporte a leitores de tela, para garantir que usuários com deficiência visual possam utilizar todas as funcionalidades sem dificuldades. (Conformidade com ISO 25010 - Usabilidade). | Teste de Acessibilidade |
+| **RNF02** | **Portabilidade**: O sistema deve ser desenvolvido em nuvem e ser agnóstico de provedor, permitindo que ele seja implantado em diferentes ambientes de nuvem (ex: AWS, Azure, Google Cloud) sem necessidade de alterações significativas. (Conformidade com ISO 25010 - Portabilidade). | Teste de Implantação em Nuvem |
+| **RNF03** | **Segurança de Dados**: O sistema deve garantir o tratamento de dados em conformidade com a **Lei Geral de Proteção de Dados (LGPD)**, incluindo criptografia de dados sensíveis, controle de acesso e auditoria de operações. (Conformidade com ISO 25010 - Segurança). | Teste de Segurança de Dados |
+| **RNF04** | **Confiabilidade**: O sistema deve registrar logs de todas as ações realizadas, incluindo informações sobre o usuário, a ação realizada e os dados alterados. Esses logs devem ser armazenados de forma segura e estar disponíveis para auditoria. (Conformidade com ISO 25010 - Confiabilidade). | Teste de Logs |
+| **RNF05** | **Desempenho**: O sistema deve ter um tempo de resposta inferior a **2 segundos** para **95% das requisições**, mesmo sob carga normal de uso. Isso inclui operações como cadastro de alunos, consulta de histórico e geração de relatórios. (Conformidade com ISO 25010 - Desempenho). | Teste de Desempenho |
+| **RNF06** | **Disponibilidade**: O sistema deve garantir uma disponibilidade de **99,9%**, com mecanismos de redundância e recuperação de falhas para evitar tempo de inatividade não planejado. (Conformidade com ISO 25010 - Confiabilidade). | Teste de Disponibilidade |
+| **RNF07** | **Escalabilidade**: O sistema deve ser capaz de escalar horizontalmente para suportar um aumento no número de usuários e requisições sem degradação do desempenho. (Conformidade com ISO 25010 - Desempenho). | Teste de Escalabilidade |
+| **RNF08** | **Manutenibilidade**: O código do sistema deve ser modular e bem documentado, seguindo boas práticas de desenvolvimento (ex: Clean Code, SOLID), para facilitar a manutenção e a evolução do software. (Conformidade com ISO 25010 - Manutenibilidade). | Teste de Revisão de Código |
+| **RNF09** | **Interoperabilidade**: O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs), garantindo a troca de dados de forma eficiente e segura. (Conformidade com ISO 25010 - Funcionalidade). | Teste de Integração de APIs |
+| **RNF10** | **Usabilidade**: A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile). (Conformidade com ISO 25010 - Usabilidade). | Teste de Usabilidade |
+
+### **Detalhamento dos RNFs**
+
+#### **RNF01 – Acessibilidade**
+- **Descrição**: O sistema deve ser compatível com leitores de tela, como NVDA ou JAWS, para garantir que usuários com deficiência visual possam navegar e utilizar todas as funcionalidades sem dificuldades.
+- **Teste Associado**: Realizar testes de navegação com leitores de tela para garantir que todos os elementos da interface sejam descritos corretamente.
+
+#### **RNF02 – Portabilidade**
+- **Descrição**: O sistema deve ser desenvolvido para ser implantado em qualquer ambiente de nuvem (AWS, Azure, Google Cloud) sem necessidade de alterações significativas. Isso inclui o uso de containers (ex: Docker) e orquestração (ex: Kubernetes).
+- **Teste Associado**: Realizar a implantação do sistema em diferentes provedores de nuvem e verificar se ele funciona corretamente.
+
+#### **RNF03 – Segurança de Dados**
+- **Descrição**: O sistema deve seguir as diretrizes da LGPD, incluindo criptografia de dados sensíveis (ex: dados pessoais de alunos), controle de acesso baseado em roles (RBAC) e auditoria de todas as operações realizadas no sistema.
+- **Teste Associado**: Realizar testes de segurança para verificar a criptografia de dados, o controle de acesso e a geração de logs de auditoria.
+
+#### **RNF04 – Confiabilidade**
+- **Descrição**: O sistema deve registrar logs detalhados de todas as ações realizadas, incluindo informações sobre o usuário, a ação realizada e os dados alterados. Esses logs devem ser armazenados de forma segura e estar disponíveis para auditoria.
+- **Teste Associado**: Verificar se os logs são gerados corretamente e se estão armazenados de forma segura.
+
+#### **RNF05 – Desempenho**
+- **Descrição**: O sistema deve garantir um tempo de resposta inferior a 2 segundos para 95% das requisições, mesmo sob carga normal de uso. Isso inclui operações como cadastro de alunos, consulta de histórico e geração de relatórios.
+- **Teste Associado**: Realizar testes de carga para medir o tempo de resposta das requisições sob diferentes cenários de uso.
+
+#### **RNF06 – Disponibilidade**
+- **Descrição**: O sistema deve garantir uma disponibilidade alta, com mecanismos de redundância e recuperação de falhas para evitar tempo de inatividade não planejado.
+- **Teste Associado**: Simular falhas no sistema e verificar se ele se recupera automaticamente sem perda de dados.
+
+#### **RNF07 – Escalabilidade**
+- **Descrição**: O sistema deve ser capaz de escalar horizontalmente para suportar um aumento no número de usuários e requisições sem degradação do desempenho.
+- **Teste Associado**: Realizar testes de escalabilidade para verificar se o sistema suporta um aumento na carga de trabalho.
+
+#### **RNF08 – Manutenibilidade**
+- **Descrição**: O código do sistema deve ser modular e bem documentado, seguindo boas práticas de desenvolvimento (ex: Clean Code, SOLID), para facilitar a manutenção e a evolução do software.
+- **Teste Associado**: Realizar revisões de código para garantir que as boas práticas de desenvolvimento sejam seguidas.
+
+#### **RNF09 – Interoperabilidade**
+- **Descrição**: O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs), garantindo a troca de dados de forma eficiente e segura.
+- **Teste Associado**: Realizar testes de integração com APIs externas para garantir a troca de dados.
+
+#### **RNF10 – Usabilidade**
+- **Descrição**: A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile).
+- **Teste Associado**: Realizar testes de usabilidade com usuários reais para garantir que a interface seja intuitiva e funcional.
 
 ## 3.3 Correlação RFs e RNFs
 
