@@ -467,10 +467,129 @@ _conteúdo_
 _conteúdo_
 
 ## 2.7.1 Brainstorming de features
-_conteúdo_
+&nbsp;&nbsp;&nbsp; O brainstorming de features foi realizado com base no problema central do projeto: a necessidade de organizar e gerenciar os atendimentos da Assessoria de Inclusão do Centro Paula Souza (CPS). O objetivo foi identificar funcionalidades que não apenas resolvessem os problemas atuais, como a falta de organização e rastreabilidade dos atendimentos, mas também agregassem valor ao produto, como a geração de relatórios estatísticos e a integração com sistemas existentes. As features foram pensadas para garantir que a solução seja **acessível**, **escalável** e em **conformidade com a LGPD**, atendendo às **necessidades dos servidores, alunos e profissionais envolvidos**.
+
+&nbsp;&nbsp;&nbsp; Durante o brainstorming, foram consideradas features essenciais, como o **cadastro de alunos via API, a gestão de atendimentos e a lista de tecnologias assistivas**, além de funcionalidades complementares, como **notificações e dashboards de gestão**. A ideia foi cobrir todos os aspectos do problema, desde o registro básico de dados até a análise avançada e a comunicação eficiente entre os envolvidos. O resultado é uma lista abrangente de features que servirá como base para o desenvolvimento da solução.
+
+| **Feature**                                      | **Descrição**                                                                                   |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **Filtros e Buscas Avançadas**                   | Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.           |
+| **Dashboard de Informações dos Alunos**          | Visualização centralizada de dados dos alunos cadastrados.                                      |
+| **Cadastro de Gerente Geral e Gerente de Unidade**| Cadastro de gerentes com diferentes níveis de acesso e responsabilidades.                      |
+| **Cadastro de Alunos via API + Validação de Dados**| Integração com sistemas acadêmicos governamentais para cadastro automático, com validação dos dados.          |
+| **Cadastro de Unidade de Ensino**                | Cadastro de unidades de ensino (Etecs e Fatecs) com informações detalhadas.               |
+| **Registro de Ações no Sistema (Logs)**          | Registro de quem fez, o que fez e quais dados foram alterados no sistema.                       |
+| **Gestão de Profissionais**                      | Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.       |
+| **Gestão de Atendimentos**                       | Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.        |
+| **Histórico Completo do Aluno**                  | Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.     |
+| **Lista de Tecnologias Assistivas**              | Lista organizada de tecnologias disponíveis, com descrições detalhadas.                        |
+| **Notificações**                                 | Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.            |
+| **Status de Atendimento**                        | Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.               |
+| **Timeline do Aluno**                            | Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.                       |
+| **Relatórios e Estatísticas**                    | Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc. |
+| **Exportação de Dados de Alunos**                | Exportação de dados de alunos para planilhas (CSV ou Excel) para análise externa.               |
 
 ## 2.7.2 Sequenciamento/Priorização de entregas
-_conteúdo_
+
+&nbsp;&nbsp;&nbsp; O sequenciamento e a priorização das entregas foram definidos com base em critérios claros e lógicos, como **impacto no problema central** e **dependências técnicas**. O objetivo foi garantir que o **MVP (Minimum Viable Product)** seja entregue dentro do prazo de **70 dias**, com funcionalidades que resolvam os problemas mais urgentes da Assessoria de Inclusão. As features foram organizadas em sprints, começando pela base do sistema (cadastros essenciais) e evoluindo para funcionalidades mais complexas, como a gestão de atendimentos e a geração de relatórios.
+
+### **Critérios de Priorização**
+
+1. **Impacto no Problema Central**:
+   - Features que resolvem diretamente o problema de gestão de atendimentos e cadastro de alunos foram priorizadas.
+2. **Dependências Técnicas**:
+   - Features que dependem de outras para funcionar foram sequenciadas após a implementação das bases.
+3. **Conformidade Legal e Acessibilidade**:
+   - Features relacionadas à segurança, LGPD e acessibilidade foram priorizadas desde o início.
+4. **Valor Agregado**:
+   - Features que agregam valor ao produto, mas não são urgentes, foram deixadas para as sprints finais.
+5. **Complexidade de Implementação**:
+   - Features mais simples e de rápida implementação foram priorizadas para entregar valor rapidamente.
+
+
+### **Sequenciamento das Entregas**
+
+#### **Sprint 1 – Entendimento do Problema e Definição de Requisitos**
+- **Atividades**:
+  1. **Entendimento do Problema**:
+     - Reuniões com stakeholders para alinhamento de expectativas.
+     - Análise do problema atual da Assessoria de Inclusão.
+  2. **Definição de Personas**:
+     - Identificação das personas principais (servidores, alunos, responsáveis, profissionais).
+  3. **Definição de Requisitos Funcionais (RFs) e Não Funcionais (RNFs)**:
+     - Elaboração dos requisitos funcionais e não funcionais do sistema.
+  4. **Brainstorming de Features**:
+     - Identificação e priorização das features necessárias para o MVP.
+
+- **Justificativa**:
+  - A Sprint 1 é crucial para garantir que todos os envolvidos tenham um entendimento claro do problema, das necessidades do negócio e das expectativas dos usuários. A definição de personas, requisitos e features servirá como base para o desenvolvimento nas sprints seguintes.
+
+#### **Sprint 2 – Base do Sistema e Cadastros Essenciais**
+- **Features Prioritárias**:
+
+  5. **Cadastro de Gerente Geral e Gerente de Unidade**:
+     - Definição de níveis de acesso e responsabilidades.
+  6. **Cadastro de Unidade de Ensino**:
+     - Cadastro de unidades (Etecs, Fatecs) com informações básicas.
+  7. **Cadastro de Alunos via API + Validação de Dados**:
+     - Integração com sistemas acadêmicos para cadastro automático e validação de dados.
+
+- **Justificativa**:
+  - Essas features são a base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. O cadastro de alunos, unidades e gerentes é essencial para o funcionamento do sistema.
+
+#### **Sprint 3 – Gestão de Dados e Atendimentos**
+- **Features Prioritárias**:
+
+  8. **Dashboard de Informações dos Alunos**:
+     - Visualização centralizada de dados dos alunos cadastrados.
+  9. **Filtros e Buscas Avançadas**:
+     - Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.
+  10. **Gestão de Profissionais**:
+     - Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.
+  11. **Gestão de Atendimentos**:
+     - Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.
+
+- **Justificativa**:
+  - Essas features permitem a visualização e organização dos dados, além de iniciar a gestão de profissionais e atendimentos, que são o cerne do projeto. O dashboard e os filtros facilitam a navegação e a análise dos dados.
+
+#### **Sprint 4 – Histórico, Tecnologias Assistivas e Logs**
+- **Features Prioritárias**:
+
+  12. **Histórico Completo do Aluno**:
+     - Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.
+  13. **Lista de Tecnologias Assistivas**:
+     - Lista organizada de tecnologias disponíveis, com descrições detalhadas.
+  14. **Status de Atendimento**:
+      - Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.
+  15. **Registro de Ações no Sistema (Logs)**:
+      - Registro de quem fez, o que fez e quais dados foram alterados no sistema.
+
+- **Justificativa**:
+  - Essas features complementam a gestão de atendimentos, fornecendo informações detalhadas e status atualizados. Os logs garantem conformidade com a LGPD e auditoria das ações.
+
+#### **Sprint 5 – Funcionalidades Avançadas e Finalização**
+- **Features Prioritárias**:
+
+  16. **Timeline do Aluno**:
+      - Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.
+  17. **Notificações**:
+      - Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.
+  18. **Relatórios e Estatísticas**:
+      - Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc.
+  19. **Exportação de Dados de Alunos**:
+      - Exportação de dados de alunos para planilhas (CSV ou Excel).
+
+- **Justificativa**:
+  - Essas features agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. A timeline e as notificações trazem mais clareza e organização, enquanto os relatórios e a exportação de dados facilitam a análise e o compartilhamento de informações.
+
+### **Tabela de Sequenciamento de Entregas**
+
+| **Sprint** | **Features Prioritárias**                                                                 | **Justificativa**                                                                 |
+|------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| **Sprint 2** | Cadastro de Gerente Geral e Gerente de Unidade, Cadastro de Unidade de Ensino, Cadastro de Alunos via API + Validação de Dados | Base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. |
+| **Sprint 3** | Dashboard de Informações dos Alunos, Filtros e Buscas Avançadas, Gestão de Profissionais, Gestão de Atendimentos | Visualização e organização dos dados, além de iniciar a gestão de profissionais e atendimentos. |
+| **Sprint 4** | Histórico Completo do Aluno, Lista de Tecnologias Assistivas, Status de Atendimento, Registro de Ações no Sistema (Logs) | Complementam a gestão de atendimentos com informações detalhadas e garantem conformidade com a LGPD. |
+| **Sprint 5** | Timeline do Aluno, Notificações, Relatórios e Estatísticas, Exportação de Dados de Alunos | Agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. |
 
 ## 2.8 Canvas do Projeto
 _conteúdo_
@@ -525,7 +644,62 @@ A seguir, detalharemos todos esses requisitos, assegurando que o ApoiaEdu seja d
 
 
 ## 3.2 Requisitos Não Funcionais (RNFs)
-_conteúdo_
+&emsp;Os requisitos não funcionais descrevem as características do sistema que não estão diretamente relacionadas às funcionalidades, mas são essenciais para o desempenho, segurança, usabilidade e conformidade com normas e leis. Cada RNF está alinhado com a **ISO 25010**, que define critérios de qualidade para software.
+
+| **ID**    | **Descrição**                                                                                                                                                                                                                   | **Teste Associado** |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
+| **RNF01** | **Acessibilidade**: O sistema deve ser acessível, com suporte a leitores de tela, para garantir que usuários com deficiência visual possam utilizar todas as funcionalidades sem dificuldades. (Conformidade com ISO 25010 - Usabilidade). | Teste de Acessibilidade |
+| **RNF02** | **Portabilidade**: O sistema deve ser desenvolvido em nuvem e ser agnóstico de provedor, permitindo que ele seja implantado em diferentes ambientes de nuvem (ex: AWS, Azure, Google Cloud) sem necessidade de alterações significativas. (Conformidade com ISO 25010 - Portabilidade). | Teste de Implantação em Nuvem |
+| **RNF03** | **Segurança de Dados**: O sistema deve garantir o tratamento de dados em conformidade com a **Lei Geral de Proteção de Dados (LGPD)**, incluindo criptografia de dados sensíveis, controle de acesso e auditoria de operações. (Conformidade com ISO 25010 - Segurança). | Teste de Segurança de Dados |
+| **RNF04** | **Confiabilidade**: O sistema deve registrar logs de todas as ações realizadas, incluindo informações sobre o usuário, a ação realizada e os dados alterados. Esses logs devem ser armazenados de forma segura e estar disponíveis para auditoria. (Conformidade com ISO 25010 - Confiabilidade). | Teste de Logs |
+| **RNF05** | **Desempenho**: O sistema deve ter um tempo de resposta inferior a **2 segundos** para **95% das requisições**, mesmo sob carga normal de uso. Isso inclui operações como cadastro de alunos, consulta de histórico e geração de relatórios. (Conformidade com ISO 25010 - Desempenho). | Teste de Desempenho |
+| **RNF06** | **Disponibilidade**: O sistema deve garantir uma disponibilidade de **99,9%**, com mecanismos de redundância e recuperação de falhas para evitar tempo de inatividade não planejado. (Conformidade com ISO 25010 - Confiabilidade). | Teste de Disponibilidade |
+| **RNF07** | **Escalabilidade**: O sistema deve ser capaz de escalar horizontalmente para suportar um aumento no número de usuários e requisições sem degradação do desempenho. (Conformidade com ISO 25010 - Desempenho). | Teste de Escalabilidade |
+| **RNF08** | **Manutenibilidade**: O código do sistema deve ser modular e bem documentado, seguindo boas práticas de desenvolvimento (ex: Clean Code, SOLID), para facilitar a manutenção e a evolução do software. (Conformidade com ISO 25010 - Manutenibilidade). | Teste de Revisão de Código |
+| **RNF09** | **Interoperabilidade**: O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs), garantindo a troca de dados de forma eficiente e segura. (Conformidade com ISO 25010 - Funcionalidade). | Teste de Integração de APIs |
+| **RNF10** | **Usabilidade**: A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile). (Conformidade com ISO 25010 - Usabilidade). | Teste de Usabilidade |
+
+### **Detalhamento dos RNFs**
+
+#### **RNF01 – Acessibilidade**
+- **Descrição**: O sistema deve ser compatível com leitores de tela, como NVDA ou JAWS, para garantir que usuários com deficiência visual possam navegar e utilizar todas as funcionalidades sem dificuldades.
+- **Teste Associado**: Realizar testes de navegação com leitores de tela para garantir que todos os elementos da interface sejam descritos corretamente.
+
+#### **RNF02 – Portabilidade**
+- **Descrição**: O sistema deve ser desenvolvido para ser implantado em qualquer ambiente de nuvem (AWS, Azure, Google Cloud) sem necessidade de alterações significativas. Isso inclui o uso de containers (ex: Docker) e orquestração (ex: Kubernetes).
+- **Teste Associado**: Realizar a implantação do sistema em diferentes provedores de nuvem e verificar se ele funciona corretamente.
+
+#### **RNF03 – Segurança de Dados**
+- **Descrição**: O sistema deve seguir as diretrizes da LGPD, incluindo criptografia de dados sensíveis (ex: dados pessoais de alunos), controle de acesso baseado em roles (RBAC) e auditoria de todas as operações realizadas no sistema.
+- **Teste Associado**: Realizar testes de segurança para verificar a criptografia de dados, o controle de acesso e a geração de logs de auditoria.
+
+#### **RNF04 – Confiabilidade**
+- **Descrição**: O sistema deve registrar logs detalhados de todas as ações realizadas, incluindo informações sobre o usuário, a ação realizada e os dados alterados. Esses logs devem ser armazenados de forma segura e estar disponíveis para auditoria.
+- **Teste Associado**: Verificar se os logs são gerados corretamente e se estão armazenados de forma segura.
+
+#### **RNF05 – Desempenho**
+- **Descrição**: O sistema deve garantir um tempo de resposta inferior a 2 segundos para 95% das requisições, mesmo sob carga normal de uso. Isso inclui operações como cadastro de alunos, consulta de histórico e geração de relatórios.
+- **Teste Associado**: Realizar testes de carga para medir o tempo de resposta das requisições sob diferentes cenários de uso.
+
+#### **RNF06 – Disponibilidade**
+- **Descrição**: O sistema deve garantir uma disponibilidade alta, com mecanismos de redundância e recuperação de falhas para evitar tempo de inatividade não planejado.
+- **Teste Associado**: Simular falhas no sistema e verificar se ele se recupera automaticamente sem perda de dados.
+
+#### **RNF07 – Escalabilidade**
+- **Descrição**: O sistema deve ser capaz de escalar horizontalmente para suportar um aumento no número de usuários e requisições sem degradação do desempenho.
+- **Teste Associado**: Realizar testes de escalabilidade para verificar se o sistema suporta um aumento na carga de trabalho.
+
+#### **RNF08 – Manutenibilidade**
+- **Descrição**: O código do sistema deve ser modular e bem documentado, seguindo boas práticas de desenvolvimento (ex: Clean Code, SOLID), para facilitar a manutenção e a evolução do software.
+- **Teste Associado**: Realizar revisões de código para garantir que as boas práticas de desenvolvimento sejam seguidas.
+
+#### **RNF09 – Interoperabilidade**
+- **Descrição**: O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs), garantindo a troca de dados de forma eficiente e segura.
+- **Teste Associado**: Realizar testes de integração com APIs externas para garantir a troca de dados.
+
+#### **RNF10 – Usabilidade**
+- **Descrição**: A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile).
+- **Teste Associado**: Realizar testes de usabilidade com usuários reais para garantir que a interface seja intuitiva e funcional.
 
 ## 3.3 Correlação RFs e RNFs
 _conteúdo_
