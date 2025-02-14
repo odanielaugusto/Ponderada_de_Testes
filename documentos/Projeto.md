@@ -1,11 +1,13 @@
-<Table>
-  <tr>
-    <td><a href= "https://www.cps.sp.gov.br/"><img src="img/logo-CPS.jpg" alt="Centro Paula Souza" border="0"></td>
-    <td>
-      <a href= "https://www.inteli.edu.br/"><img src="img/logo-Inteli.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <a href="https://www.inteli.edu.br/">
+    <img src="./assets/logo_cps_inteli.png"
+         alt="Imagem contendo a logotipo do Centro Paula Souza e do Inteli"
+         border="0"
+         style="max-width: 600px; width: 100%; height: auto;">
+  </a>
+</div>
+
+<br>
 
 # Nome do Projeto: <TODO>
 
@@ -13,13 +15,13 @@
 
 ## Integrantes:
 
-- <a href="https://www.linkedin.com/in/anna-riciopo/">Anna Giulia Marques Riciopo</a>  
-- <a href="https://www.linkedin.com/in/danielaraujogonncalves/">Daniel Augusto de Araujo Gonçalves</a>  
-- <a href="https://www.linkedin.com/in/joao-souza-campos/">João Victor de Souza Campos</a>  
-- <a href="https://www.linkedin.com/in/lucas-brasil9/">Lucas Paiva Brasil</a>  
-- <a href="https://www.linkedin.com/in/natalycunha/">Nataly de Souza Cunha</a>  
-- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio Vasconcelos</a>  
-- <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a> 
+- <a href="https://www.linkedin.com/in/anna-riciopo/">Anna Giulia Marques Riciopo</a>
+- <a href="https://www.linkedin.com/in/danielaraujogonncalves/">Daniel Augusto de Araujo Gonçalves</a>
+- <a href="https://www.linkedin.com/in/joao-souza-campos/">João Victor de Souza Campos</a>
+- <a href="https://www.linkedin.com/in/lucas-brasil9/">Lucas Paiva Brasil</a>
+- <a href="https://www.linkedin.com/in/natalycunha/">Nataly de Souza Cunha</a>
+- <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio de Carvalho Vasconcelos</a>
+- <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a>
 
 # Sumário
 
@@ -32,8 +34,6 @@
   - [2.3 Visão do Projeto e do Produto](#23-visão-do-projeto-e-do-produto)
   - [2.4 Personas e Jornada do Usuário](#24-personas-e-jornada-do-usuário)
   - [2.5 Modelagem do Fluxo de Negócio](#25-modelagem-do-fluxo-de-negócio)
-    - [2.5.1 Fluxo de Negócio Atual (AS-IS)](#251-fluxo-de-negócio-atual-as-is)
-    - [2.5.2 Fluxo de Negócio Proposto (TO-BE)](#252-fluxo-de-negócio-proposto-to-be)
   - [2.6 Matriz de Risco do Projeto](#26-matriz-de-risco-do-projeto)
   - [2.7 Ideação](#27-ideação)
     - [2.7.1 Brainstorming de features](#271-brainstorming-de-features)
@@ -93,13 +93,21 @@ _conteúdo_
 _conteúdo_
 
 # 2. Entendimento do Projeto e do Negócio
-_conteúdo_
+
+&emsp;Esta seção busca detalhar o contexto de negócios do Centro Paula Sousa (CPS), bem como o problema apresentado pela empresa parceira que embasou o desenvolvimento deste projeto.
 
 ## 2.1 Contexto da Indústria do Parceiro
-_conteúdo_
+&emsp;O Centro Paula Sousa é uma autarquia sediada e voltada para o estado de São Paulo, oferecendo ensino profissional para cerca de 317 mil discentes em 345 municípios, dentro de escolas técnicas, faculdades de tecnologia e salas de aulas descentralizadas. Muitas das atividades exercidas no CPS se relacionam com a administração pública do Governo do Estado, devido à sua vinculação com a Secretaria de Ciência, Tecnologia e Inovação, buscando oferecer serviços educacionais com qualidade, governança e inclusão social (CPS, c2025).<br>
+
+&emsp;Observando-se o organograma do Centro, cada escola/faculdade representa uma unidade, gerida por um gestor ou coordenador. As operações de todas as unidades, no entanto, são monitoradas pelo cargo de Gestão Administrativa, que detém a visão analítica e estratégica das atividades educacionais, seus alunos e profissionais. Considerável parte dos alunos do CPS são pessoas com deficiência, apontando necessidade de atendimentos específicos. Com isso, cabe ao time de Acessoria de Inclusão — também composto por um servidor com deficiência visual — a oficializar essas solicitações através de uma Ficha de Acompanhamento do Atendimento Educacional Especializado (FAE); preparada essa ficha, um profissional externo é contratado para prestar o atendimento para o respectivo aluno (CPS, c2025).<br>
+
+&emsp;Nesse contexto, vale ressaltar que, segundo a Lei Brasileira de Inclusão da Pessoa com Deficiência - Lei 13.146/2015, o acesso à educação, ao trabalho, à mobilidade e tecnologias assistivas deve ser garantido para essa população na sociedade. Felizmente, em ambiente escolares e profissionais, são cada vez mais disseminadas e evoluídas tanto tecnologias assistivas — como leitores de tela, tradutores de libras, recursos digitais — quanto atendimentos especializados, o que demonstra a crescente oferta e aprimoramento de soluções tecnológicas que auxiliem pessoas com deficiência em suas atividades cotidianas.
+
 
 ## 2.2 Problema
-_conteúdo_ 
+
+&emsp;Em relação à administração das informações pessoais dos alunos com deficiência do Centro Paula Sousa e dos atendimentos especializados, apesar da utilização de sistemas digitais para armazenar os dados dessas frentes, não se tem a centralização dos detalhes dos atendimentos em um único lugar, cabendo à Gestão de Administração realizar manualmente o levantamento e cruzamento dessas informações, através de formulários e planilhas digitais. Dessa forma, o presente projeto pretende erradicar esse problema de descentralização de dados, de forma a garantir eficiência e diminuição de erros manuais para o trabalho da administração central do CPS, integrando também recursos de acessibilidade, garantindo a inclusão dos profissionais da Acessoria de Inclusão, como apontado na lei Lei 13.146/2015.
+
 
 ## 2.3 Visão do Produto e do Projeto. 
 
@@ -180,43 +188,685 @@ _conteúdo_
 
 
 ## 2.4 Personas e Jornada do Usuário
-_conteúdo_
+&emsp;Para garantir que a plataforma ApoiaEdu atenda de forma eficiente às necessidades de seus usuários, é fundamental entender quem são essas pessoas, quais desafios enfrentam e como interagem com o sistema.
+
+&emsp;A criação de personas e o mapeamento da jornada do usuário são práticas essenciais no desenvolvimento de produtos, pois ajudam a visualizar como diferentes perfis utilizam a solução no dia a dia.
+
+### Por que criamos personas?
+&emsp;As personas representam perfis fictícios baseados em usuários reais do sistema, descrevendo suas funções, desafios e expectativas. Elas nos ajudam a tomar decisões mais precisas no desenvolvimento da plataforma, garantindo que o sistema seja útil e acessível para aqueles que realmente precisam dele.
+
+### Por que mapear a jornada do usuário?
+&emsp;A jornada do usuário descreve o caminho que cada persona percorre ao interagir com o sistema. Isso permite identificar pontos de dor, oportunidades de melhoria e necessidades específicas, garantindo que o ApoiaEdu resolva problemas reais de forma eficiente.
+
+### O que você encontrará a seguir?
+&emsp;A seguir, apresentamos as principais personas que utilizarão o ApoiaEdu e suas respectivas jornadas de uso, detalhando passo a passo suas interações com a plataforma. Com isso, buscamos tornar a experiência mais fluida, eficiente e acessível para todos os envolvidos no processo de inclusão educacional.
+
+### Persona 1 - Ana Beatriz
+
+<div align="center">
+  <sub>Figura X - Persona Ana Beatriz</sub> <br>
+
+  <img src="img/PERSONA_1-ANA.jpg" alt="Persona 1 - Ana Beatriz">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+#### **Persona: Ana Beatriz – Gestora Local (de Unidade)**
+
+👤 **Nome:** Ana Beatriz
+
+🎂 **Idade:** 37 anos
+
+💼 **Cargo:** Coordenadora Pedagógica / Orientadora Educacional
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Média (consegue usar sistemas administrativos, mas prefere interfaces intuitivas)
+
+#### **Necessidades**
+
+Histórico dos alunos unificado, evitando a dificuldade na busca de informações.
+
+Obter um retorno rápido sobre os dados enviados, evitando informações desatualizadas.
+
+Padronização nos registros, evitando inconsistências.
+
+Identificar quais alunos precisam de profissionais.
+
+#### **Como é a Ana Beatriz?**
+
+Organizada e comprometida com a inclusão dos alunos PCD.
+
+Paciente e empática, pois lida diretamente com alunos e suas famílias.
+
+Gosta de processos claros e bem estruturados, mas **não tem tempo para sistemas burocráticos**.
+
+Se frustra com a **falta de retorno rápido sobre os dados enviados**.
+
+#### **O que Ana Beatriz faz?**
+
+Realiza entrevistas com as famílias dos alunos PCD para entender suas necessidades.
+
+Registra e acompanha atendimentos dentro da unidade escolar.
+
+Identifica alunos que precisam de atendimento e solicita profissionais para auxiliá-los.
+
+Atualiza informações sobre atendimentos e necessidades dos alunos na plataforma.
+
+### Jornada de Usuário da Ana Beatriz (Gestora Local de Unidade)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário da Ana Beatriz</sub> <br>
+
+  <img src="img/JORNADA_1-ANA.jpg" alt="Persona 1 - Ana Beatriz">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Garantir que os dados dos alunos estejam atualizados, vinculando profissionais e organizando atendimentos.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Receber novas informações sobre alunos PCD**
+
+Ana Beatriz recebe uma solicitação de atendimento de um aluno.
+
+Atualmente, o processo exige preenchimento de formulários e envio manual de e-mails.
+
+**Com a solução:** O sistema centraliza as informações e gera alertas para novos registros.
+
+2️⃣ **Acessar o sistema e buscar o aluno**
+
+Entra na plataforma ApoiaEdu e utiliza a busca para encontrar o aluno.
+
+Caso o aluno não esteja cadastrado, pode incluí-lo via API.
+
+**Com a solução:** A busca é rápida e permite filtros avançados.
+
+3️⃣ **Consultar o histórico e atualizar dados**
+
+Verifica o histórico de atendimentos do aluno.
+
+Se necessário, insere novas informações (exemplo: mudança de necessidade especial).
+
+**Com a solução:** O sistema permite edições rápidas e mantém logs de alterações.
+
+4️⃣ **Vincular o aluno a um profissional**
+
+Identifica se o aluno já tem um profissional de atendimento designado.
+
+Caso não tenha, busca na lista de profissionais cadastrados.
+
+**Com a solução:** O sistema sugere profissionais disponíveis e agiliza o processo de vinculação.
+
+5️⃣ **Registrar um novo atendimento**
+
+Caso o aluno já esteja sendo atendido, Ana Beatriz adiciona novos registros ao histórico.
+
+**Com a solução:** Os registros são salvos automaticamente, eliminando o risco de perda de dados.
+
+6️⃣ **Gerar relatórios e enviar para a gestão administrativa**
+
+Ao final do mês, precisa consolidar informações para a gestão administrativa.
+
+**Com a solução:** O sistema gera relatórios automáticos, economizando tempo.
+
+### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de gestão.
+
+**Desafio:** Antes, os registros eram feitos manualmente e demoravam para serem atualizados.
+
+**Solução:** O sistema centraliza e automatiza o fluxo de informações.
+<br><br>
+
+### Persona 2 - Carlos Mendes – Profissional de Atendimento
+
+<div align="center">
+  <sub>Figura X - Persona Carlos Mendes</sub> <br>
+
+  <img src="img/PERSONA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+👤 **Nome:** Carlos Mendes
+
+🎂 **Idade:** 42 anos
+
+💼 **Cargo:** Psicólogo da Assessoria de Inclusão
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Baixa a Média (usa apenas o necessário para registrar atendimentos)
+
+#### **Necessidades**
+
+Um sistema contendo o histórico do aluno, evitando retrabalho durante a consulta com o mesmo.
+
+Histórico com os atendimentos do aluno, evitando a dificuldade de dar continuidade nos acompanhamentos.
+
+Um sistema para registrar informações com facilidade, pois os processos atuais são manuais.
+
+#### **Como é o Carlos Mendes?**
+
+Atencioso e empático, pois lida diretamente com alunos com deficiência.
+
+Prático e objetivo, prefere **sistemas simples e rápidos** de usar.
+
+Se frustra com **processos burocráticos e sistemas complexos**.
+
+#### **O que Carlos Mendes faz?**
+
+Realiza atendimentos psicológicos e pedagógicos para alunos com deficiência.
+
+Consulta o histórico do aluno para entender o progresso e planejar atendimentos.
+
+Registra relatórios e observações sobre cada sessão.
+
+### Jornada de Usuário do Carlos Mendes (Profissional de Atendimento)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário do Carlos Mendes </sub> <br>
+
+  <img src="img/JORNADA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Realizar atendimentos eficientes, registrando informações de forma rápida e acessível.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Receber notificação de um novo aluno vinculado**
+
+O coordenador vincula um novo aluno ao profissional.
+
+**Com a solução:** O sistema notifica Carlos automaticamente sobre a nova atribuição.
+
+2️⃣ **Acessar o sistema e visualizar os alunos atendidos**
+
+Faz login na plataforma e acessa sua lista de alunos vinculados.
+
+**Com a solução:** O sistema apresenta um dashboard claro com filtros úteis.
+
+3️⃣ **Consultar o histórico do aluno antes do atendimento**
+
+Antes da sessão, acessa o perfil do aluno para entender suas necessidades.
+
+**Com a solução:** O sistema mostra um resumo prático do histórico e demandas do aluno.
+
+4️⃣ **Realizar o atendimento e registrar observações**
+
+Durante a sessão, anota informações relevantes sobre o atendimento.
+
+**Com a solução:** O sistema permite registros rápidos e autosave para evitar perda de dados.
+
+5️⃣ **Atualizar evolução do aluno**
+
+Com base no progresso, registra novas ações e próximos passos.
+
+**Com a solução:** O sistema organiza os registros em uma linha do tempo para facilitar consultas futuras.
+
+6️⃣ **Finalizar e revisar os atendimentos do dia**
+
+No final do dia, confere e revisa os atendimentos registrados.
+
+**Com a solução:** Garante que todas as informações foram salvas e podem ser acessadas pela equipe.
+
+### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de registro de atendimentos.
+
+**Desafio:** Antes, os profissionais precisavam armazenar informações manualmente ou usar documentos avulsos.
+
+**Solução:** O sistema padroniza e centraliza os registros, agilizando o processo.
+<br><br>
+
+### Persona 3 - Fernanda Rocha – Gestora Administrativa
+
+<div align="center">
+  <sub>Figura X - Persona Fernanda Rocha</sub> <br>
+
+  <img src="img/PERSONA_3-FERNANDA.jpg" alt="Persona 3 - Fernanda Rocha">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+👤 **Nome:** Fernanda Rocha
+
+🎂 **Idade:** 48 anos
+
+💼 **Cargo:** Coordenadora da Assessoria de Inclusão
+
+🏢 **Local de Trabalho:** Fatec/Etec – Centro Paula Souza
+
+💻 **Proficiência em Tecnologia:** Média (usa sistemas administrativos, mas não tem conhecimento técnico avançado)
+
+#### **Necessidades**
+
+Um sistema para consolidar informações sobre os atendimentos prestados.
+
+Dados padronizados, evitando a dificuldade em analisar inclusões nas unidades.
+
+Um sistema contendo geração de relatórios.
+
+#### **Como é a Fernanda Rocha?**
+
+Estratégica e analítica, precisa de **métricas para tomar decisões**.
+
+Valoriza a **organização e eficiência** no trabalho.
+
+Se frustra com a falta de dados estruturados e tempo perdido com burocracia.
+
+#### **O que Fernanda Rocha faz?**
+
+Supervisiona a equipe da Assessoria de Inclusão.
+
+Gera relatórios e métricas sobre os atendimentos prestados.
+
+Define estratégias para melhorar a inclusão nas Fatecs e Etecs.
+
+Precisa de um sistema que organize os dados e facilite a geração de relatórios estratégicos.
+
+### Jornada de Usuário da Fernanda Rocha (Gestora Administrativa)
+
+<div align="center">
+  <sub>Figura X - Jornada de Usuário do Carlos Mendes </sub> <br>
+
+  <img src="img/JORNADA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+**Objetivo:** Realizar atendimentos eficientes, registrando informações de forma rápida e acessível.
+
+#### Jornada Passo a Passo
+
+1️⃣ **Acessar o sistema para visualizar métricas gerais**
+
+Entra na plataforma e visualiza os principais indicadores de atendimento.
+
+**Com a solução:** O sistema exibe um dashboard intuitivo com gráficos e KPIs.
+
+2️⃣ **Filtrar relatórios por unidade, aluno ou profissional**
+
+Busca informações específicas, como número de alunos atendidos por unidade.
+
+**Com a solução:** Usa filtros personalizados para gerar relatórios detalhados.
+
+3️⃣ **Identificar alunos sem profissionais vinculados**
+
+Analisa se há alunos sem atendimento e direciona ações para resolver o problema.
+
+**Com a solução:** O sistema destaca alunos sem atendimento ativo.
+
+4️⃣ **Gerar relatórios estratégicos para planejamento**
+
+Precisa criar documentos para apresentar à diretoria e parceiros.
+
+**Com a solução:** O sistema permite exportação automática de relatórios.
+
+5️⃣ **Realizar ajustes na plataforma conforme necessidade**
+
+Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes de atendimento.
+
+**Com a solução:** Tem permissões avançadas para gerenciar configurações da plataforma.
+
+#### **Pontos de Contato e Desafios**
+
+**Ponto de contato:** Sistema ApoiaEdu como ferramenta principal de análise e planejamento.
+
+**Desafio:** Antes, os relatórios eram gerados manualmente e demandavam muito tempo.
+
+**Solução:** O sistema automatiza a extração e análise de dados.
+<br><br>
 
 ## 2.5 Modelagem do Fluxo de Negócio
-_conteúdo_
 
-## 2.5.1 Fluxo de Negócio Atual (AS-IS)
-_conteúdo_
+&emsp;Fluxo de nogócio consiste em um conjunto de atividades e decisões que uma organização executa para atingir seus objetivos estratégicos. Ao definir o fluxo de negócio, a equipe consegue entender e otimizar processos, identificar obstáculos e melhorar a comunicação entre os envolvidos.
 
-## 2.5.2 Fluxo de Negócio Proposto (TO-BE)
-_conteúdo_
+&emsp;Nesse contexto, a seguir há, em formato de fluxograma, o fluxo de negócio identificado para o presente projeto:
+
+<div align="center">
+  <sub>Figura X - Fluxo de Negócio </sub> <br>
+
+  <img src="img/section2/2.5_fluxo_do_negocio/business_flow.png" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Em comparação com o fluxo atual, o proposto modifica apenas a forma como os históricos dos alunos são registrados. Enquanto, atualmente, essa informação é armazenada em diferentes planilhas, com o Sistema Gallaudet o registro de novos atendimentos se torna mais simples e eficiente, além de centralizado. Essa mudança na ferramenta de gestão impactaria tanto os profissionais envolvidos quanto os alunos atendidos pela Assessoria de Inclusão, uma vez que evitaria a perda de dados, facilitando análises e reduzindo erros. 
 
 ## 2.6 Matriz de Risco do Projeto
-_conteúdo_
+## Ameaças
+&nbsp;&nbsp;&nbsp;Nesta seção, apresentamos a Matriz de Risco do projeto, a matriz de risco tem como objetivo identificar, avaliar e priorizar as ameaças que podem impactar o desenvolvimento e a implementação do sistema. Ao mapear esses riscos, é possível definir estratégias e planos de ação para mitigá-los, garantindo uma gestão eficaz a para a continuidade e o sucesso do projeto.
+
+
+<div align="center">
+  <sub>Figura X - Matriz de riscos </sub> <br>
+
+  <img src="img/matriz_de_riscos.jpg" alt="Matriz de Riscos">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+- **Desvio de escopo**:  
+  Ocorre quando o escopo do projeto não está claramente definido, levando à entrega de uma solução que não atende as expectativas iniciais.
+
+- **Vazamento de dados sensíveis**:  
+  Exposição não autorizada de informações confidenciais, resultando em danos à privacidade e possíveis penalidades legais.
+
+- **Ciberataques que podem comprometer a segurança do local**:  
+  A invasão de sistemas por hackers pode comprometer a integridade dos dados e a segurança física das instalações.
+
+- **Dificuldade em garantir acessibilidade para usuários com deficiência visual**:  
+  O desenvolvimento realizando todas as implementações capazes de atender usuários com dificuldades em engexar pode ser muito complexo.
+
+- **Desafios na manutenção da base de dados dos alunos atualizada**:  
+  Se a base de dados governamental não for atualizada corretamente, pode haver informações desatualizadas sobre os alunos e seus recursos assistivos.
+
+- **Falha na integração da API com sistemas acadêmicos**:
+  Como não temos acesso ao banco de dados governamental de forma direta, haverá a criação de um banco de dados e uma API simulando o acesso ao banco governamental. Podendo ter uma dificuldade em uma integração genuína.
+
+### Plano de Ação - Ameaças
+
+- Implementar uma gestão rigorosa de requisitos, documentando e validando todas as alterações junto aos stakeholders.
+- Implementar políticas de controle de acesso baseadas em privilégios mínimos e realizar auditorias frequentes.
+- Utilizar ferramentas de segurança digital, como antivírus e firewall.
+- Garantir compatibilidade com leitores de tela, testar a aplicação com usuários reais e seguir as diretrizes WCAG.
+- Orientar os stakeholders periodicamente sobre a importância de manter a base de dados governamental atualizada.
+- Alinhar com a equipe técnica do Centro Paula Souza todos os critérios para que ocorra um acesso correto do banco de dados real do governo.
+
+## Oportunidades
+&nbsp;&nbsp;&nbsp;A Matriz de Oportunidades destaca os potenciais benefícios que podem ser explorados ao longo do projeto ou em futuras atualizações.
+
+
+  <div align="center">
+  <sub>Figura X - Matriz de oportunidades </sub> <br>
+
+  <img src="img/matriz_de_oportunidades.jpg" alt="Matriz de Oportunidades do Projeto">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+- Se a plataforma for bem-sucedida no Centro Paula Souza, poderá ser replicada em outras instituições públicas para melhorar a gestão de alunos com deficiência.
+- **Aumento da eficiência operacional e redução de erros manuais**:  
+  A automação do processo de cadastro e gestão de alunos com deficiência reduz erros manuais e otimiza o tempo dos gestores, tornando a operação mais eficiente.
+- **Fortalecimento da comunicação entre gerentes e profissionais assistivos**:  
+  Melhorar a comunicação entre os usuários da aplicação e os alunos da instituição facilita a colaboração e a resolução rápida de problemas.
+
+
+
+---
+
 
 ## 2.7 Ideação
 _conteúdo_
 
 ## 2.7.1 Brainstorming de features
-_conteúdo_
+&nbsp;&nbsp;&nbsp; O brainstorming de features foi realizado com base no problema central do projeto: a necessidade de organizar e gerenciar os atendimentos da Assessoria de Inclusão do Centro Paula Souza (CPS). O objetivo foi identificar funcionalidades que não apenas resolvessem os problemas atuais, como a falta de organização e rastreabilidade dos atendimentos, mas também agregassem valor ao produto, como a geração de relatórios estatísticos e a integração com sistemas existentes. As features foram pensadas para garantir que a solução seja **acessível**, **escalável** e em **conformidade com a LGPD**, atendendo às **necessidades dos servidores, alunos e profissionais envolvidos**.
+
+&nbsp;&nbsp;&nbsp; Durante o brainstorming, foram consideradas features essenciais, como o **cadastro de alunos via API, a gestão de atendimentos e a lista de tecnologias assistivas**, além de funcionalidades complementares, como **notificações e dashboards de gestão**. A ideia foi cobrir todos os aspectos do problema, desde o registro básico de dados até a análise avançada e a comunicação eficiente entre os envolvidos. O resultado é uma lista abrangente de features que servirá como base para o desenvolvimento da solução.
+
+| **Feature**                                      | **Descrição**                                                                                   |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **Filtros e Buscas Avançadas**                   | Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.           |
+| **Dashboard de Informações dos Alunos**          | Visualização centralizada de dados dos alunos cadastrados.                                      |
+| **Cadastro de Gerente Geral e Gerente de Unidade**| Cadastro de gerentes com diferentes níveis de acesso e responsabilidades.                      |
+| **Cadastro de Alunos via API + Validação de Dados**| Integração com sistemas acadêmicos governamentais para cadastro automático, com validação dos dados.          |
+| **Cadastro de Unidade de Ensino**                | Cadastro de unidades de ensino (Etecs e Fatecs) com informações detalhadas.               |
+| **Registro de Ações no Sistema (Logs)**          | Registro de quem fez, o que fez e quais dados foram alterados no sistema.                       |
+| **Gestão de Profissionais**                      | Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.       |
+| **Gestão de Atendimentos**                       | Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.        |
+| **Histórico Completo do Aluno**                  | Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.     |
+| **Lista de Tecnologias Assistivas**              | Lista organizada de tecnologias disponíveis, com descrições detalhadas.                        |
+| **Notificações**                                 | Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.            |
+| **Status de Atendimento**                        | Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.               |
+| **Timeline do Aluno**                            | Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.                       |
+| **Relatórios e Estatísticas**                    | Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc. |
+| **Exportação de Dados de Alunos**                | Exportação de dados de alunos para planilhas (CSV ou Excel) para análise externa.               |
 
 ## 2.7.2 Sequenciamento/Priorização de entregas
-_conteúdo_
+
+&nbsp;&nbsp;&nbsp; O sequenciamento e a priorização das entregas foram definidos com base em critérios claros e lógicos, como **impacto no problema central** e **dependências técnicas**. O objetivo foi garantir que o **MVP (Minimum Viable Product)** seja entregue dentro do prazo de **70 dias**, com funcionalidades que resolvam os problemas mais urgentes da Assessoria de Inclusão. As features foram organizadas em sprints, começando pela base do sistema (cadastros essenciais) e evoluindo para funcionalidades mais complexas, como a gestão de atendimentos e a geração de relatórios.
+
+### **Critérios de Priorização**
+
+1. **Impacto no Problema Central**:
+   - Features que resolvem diretamente o problema de gestão de atendimentos e cadastro de alunos foram priorizadas.
+2. **Dependências Técnicas**:
+   - Features que dependem de outras para funcionar foram sequenciadas após a implementação das bases.
+3. **Conformidade Legal e Acessibilidade**:
+   - Features relacionadas à segurança, LGPD e acessibilidade foram priorizadas desde o início.
+4. **Valor Agregado**:
+   - Features que agregam valor ao produto, mas não são urgentes, foram deixadas para as sprints finais.
+5. **Complexidade de Implementação**:
+   - Features mais simples e de rápida implementação foram priorizadas para entregar valor rapidamente.
+
+
+### **Sequenciamento das Entregas**
+
+#### **Sprint 1 – Entendimento do Problema e Definição de Requisitos**
+- **Atividades**:
+  1. **Entendimento do Problema**:
+     - Reuniões com stakeholders para alinhamento de expectativas.
+     - Análise do problema atual da Assessoria de Inclusão.
+  2. **Definição de Personas**:
+     - Identificação das personas principais (servidores, alunos, responsáveis, profissionais).
+  3. **Definição de Requisitos Funcionais (RFs) e Não Funcionais (RNFs)**:
+     - Elaboração dos requisitos funcionais e não funcionais do sistema.
+  4. **Brainstorming de Features**:
+     - Identificação e priorização das features necessárias para o MVP.
+
+- **Justificativa**:
+  - A Sprint 1 é crucial para garantir que todos os envolvidos tenham um entendimento claro do problema, das necessidades do negócio e das expectativas dos usuários. A definição de personas, requisitos e features servirá como base para o desenvolvimento nas sprints seguintes.
+
+#### **Sprint 2 – Base do Sistema e Cadastros Essenciais**
+- **Features Prioritárias**:
+
+  5. **Cadastro de Gerente Geral e Gerente de Unidade**:
+     - Definição de níveis de acesso e responsabilidades.
+  6. **Cadastro de Unidade de Ensino**:
+     - Cadastro de unidades (Etecs, Fatecs) com informações básicas.
+  7. **Cadastro de Alunos via API + Validação de Dados**:
+     - Integração com sistemas acadêmicos para cadastro automático e validação de dados.
+
+- **Justificativa**:
+  - Essas features são a base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. O cadastro de alunos, unidades e gerentes é essencial para o funcionamento do sistema.
+
+#### **Sprint 3 – Gestão de Dados e Atendimentos**
+- **Features Prioritárias**:
+
+  8. **Dashboard de Informações dos Alunos**:
+     - Visualização centralizada de dados dos alunos cadastrados.
+  9. **Filtros e Buscas Avançadas**:
+     - Filtros por unidade, curso, tipo de necessidade especial, status de atendimento, etc.
+  10. **Gestão de Profissionais**:
+     - Cadastro de profissionais e vínculo com alunos, com datas de início e fim de atendimento.
+  11. **Gestão de Atendimentos**:
+     - Registro de data e hora de início e fim, tipo de atendimento e profissional responsável.
+
+- **Justificativa**:
+  - Essas features permitem a visualização e organização dos dados, além de iniciar a gestão de profissionais e atendimentos, que são o cerne do projeto. O dashboard e os filtros facilitam a navegação e a análise dos dados.
+
+#### **Sprint 4 – Histórico, Tecnologias Assistivas e Logs**
+- **Features Prioritárias**:
+
+  12. **Histórico Completo do Aluno**:
+     - Visualização de atendimentos, tecnologias assistivas utilizadas e profissionais vinculados.
+  13. **Lista de Tecnologias Assistivas**:
+     - Lista organizada de tecnologias disponíveis, com descrições detalhadas.
+  14. **Status de Atendimento**:
+      - Indicador visual (ativo, em espera, concluído) do status do atendimento do aluno.
+  15. **Registro de Ações no Sistema (Logs)**:
+      - Registro de quem fez, o que fez e quais dados foram alterados no sistema.
+
+- **Justificativa**:
+  - Essas features complementam a gestão de atendimentos, fornecendo informações detalhadas e status atualizados. Os logs garantem conformidade com a LGPD e auditoria das ações.
+
+#### **Sprint 5 – Funcionalidades Avançadas e Finalização**
+- **Features Prioritárias**:
+
+  16. **Timeline do Aluno**:
+      - Linha do tempo com todos os eventos e atendimentos relacionados ao aluno.
+  17. **Notificações**:
+      - Envio de notificações para responsáveis e profissionais sobre atendimentos e prazos.
+  18. **Relatórios e Estatísticas**:
+      - Geração de relatórios sobre tipos de atendimentos, necessidades atendidas, origem dos alunos, etc.
+  19. **Exportação de Dados de Alunos**:
+      - Exportação de dados de alunos para planilhas (CSV ou Excel).
+
+- **Justificativa**:
+  - Essas features agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. A timeline e as notificações trazem mais clareza e organização, enquanto os relatórios e a exportação de dados facilitam a análise e o compartilhamento de informações.
+
+### **Tabela de Sequenciamento de Entregas**
+
+| **Sprint** | **Features Prioritárias**                                                                 | **Justificativa**                                                                 |
+|------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| **Sprint 2** | Cadastro de Gerente Geral e Gerente de Unidade, Cadastro de Unidade de Ensino, Cadastro de Alunos via API + Validação de Dados | Base do sistema, permitindo que outras funcionalidades sejam construídas sobre elas. |
+| **Sprint 3** | Dashboard de Informações dos Alunos, Filtros e Buscas Avançadas, Gestão de Profissionais, Gestão de Atendimentos | Visualização e organização dos dados, além de iniciar a gestão de profissionais e atendimentos. |
+| **Sprint 4** | Histórico Completo do Aluno, Lista de Tecnologias Assistivas, Status de Atendimento, Registro de Ações no Sistema (Logs) | Complementam a gestão de atendimentos com informações detalhadas e garantem conformidade com a LGPD. |
+| **Sprint 5** | Timeline do Aluno, Notificações, Relatórios e Estatísticas, Exportação de Dados de Alunos | Agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. |
 
 ## 2.8 Canvas do Projeto
-_conteúdo_
+
+&emsp;Canvas MVP é uma ferramenta utilizada para alinhar ideias e definir estratégias. Durante sua elaboração, é discutido o entendimento da equipe sobre a proposta apresentada e, assim, as principais características da solução são dispostas em um quadro, colaborando para um alinhamento mais eficiente entre os integrantes da equipe. 
+
+&emsp;Nesse contexto, foi realizado um Canvas MVP com base na proposta trazida pelo Centro Paula Souza. Nele, estão identificados os pontos mais importantes levantados pela equipe sobre o projeto ApoiaEdu:
+
+<div align="center">
+  <sub>Figura X - Canvas MVP</sub> <br>
+
+  <img src="./img/section2/2.8_canvas_mvp/mvp_canvas.jpg" alt="Canvas MVP">
+
+  <sup>Fonte: Material produzido pelos autores (2024).</sup>
+</div>
 
 # 3. Requisitos do Projeto
-_conteúdo_
+
+Para garantir que o sistema **ApoiaEdu** atenda às necessidades dos usuários e funcione de maneira eficiente, é importante definir claramente seus requisitos.
+
+Os **Requisitos Funcionais (RFs)** descrevem o que o sistema deve fazer, ou seja, suas principais funcionalidades, como o cadastro de usuários, a gestão de atendimentos e a exibição de informações relevantes. Cada um desses requisitos está associado a testes que garantem sua correta implementação e funcionamento.
+
+Além dos RFs, temos os **Requisitos Não Funcionais (RNFs)**, que especificam como o sistema deve se comportar. Eles abordam aspectos como segurança, desempenho, usabilidade e conformidade com normas, garantindo que o sistema seja robusto, acessível e confiável.
+
+Por fim, há uma correlação entre RFs e RNFs, pois um requisito funcional pode depender de um requisito não funcional para ser eficaz. Por exemplo, um sistema pode permitir o cadastro de usuários (RF), mas precisa seguir regras de segurança e privacidade (RNF) para proteger os dados.
+
+A seguir, detalharemos todos esses requisitos, assegurando que o ApoiaEdu seja desenvolvido com qualidade, segurança e alinhado às expectativas dos usuários.
 
 ## 3.1 Requisitos Funcionais (RFs)
-_conteúdo_ 
+
+| ID   | Título                               | Descrição do Requisito Funcional                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RF01 | Cadastro de Gerentes                 | O sistema deve permitir o cadastro de Gerente Geral e Gerente de Unidade.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Apenas administradores podem cadastrar novos gerentes.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Deve haver validação dos dados obrigatórios (CPF, e-mail, etc.). |
+| RF02 | Cadastro de Unidade de Ensino        | O sistema deve permitir o cadastro de Unidade de Ensino.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Cadastro com informações como nome, endereço e contato.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Essencial para vincular alunos à unidade correta.                                                                                                                                |
+| RF03 | Cadastro de Alunos via API           | O sistema deve permitir o cadastro de alunos via API, garantindo a validação de dados.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Validação de campos obrigatórios (CPF, e-mail, nome).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Retorno de mensagens de erro específicas em caso de falhas na validação.                                                                                                                     |
+| RF04 | Dashboard de Alunos                  | O sistema deve apresentar um dashboard com informações dos alunos, incluindo filtros e buscas avançadas.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Exibição de gráficos e indicadores visuais.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Filtros por data, status e outras categorias para facilitar a análise dos dados.                                                                                                        |
+| RF05 | Gestão de Profissionais              | O sistema deve permitir a gestão de profissionais, incluindo cadastro, edição e exclusão de dados.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Registro de informações relevantes (especialidade, contato, etc.).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Operações de edição e exclusão devem ser auditadas.                                                                                                            |
+| RF06 | Gestão de Atendimentos               | O sistema deve permitir a gestão de atendimentos, com inclusão, edição e exclusão de registros.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Cada atendimento deve registrar data, hora, responsável e descrição.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Histórico dos atendimentos deve ser mantido para auditoria.                                                                                  |
+| RF07 | Registro de Logs                     | O sistema deve registrar logs das ações dos usuários.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Registra data, hora, usuário e ação realizada.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Essencial para rastreabilidade e auditoria das operações.                                                                                                                     |
+| RF08 | Histórico Completo do Aluno          | O sistema deve permitir a visualização do histórico completo do aluno.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Consolida todas as interações, atendimentos e alterações no perfil do aluno.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Facilita a análise do percurso e evolução do aluno.                                                                                                                  |
+| RF09 | Consulta de Tecnologias Assistivas   | O sistema deve permitir a listagem e consulta de tecnologias assistivas disponíveis para os alunos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Permite busca por categoria ou características específicas.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Auxilia na seleção da tecnologia mais adequada às necessidades do aluno.                                                             |
+| RF10 | Atualização de Status de Atendimento | O sistema deve permitir a atualização do status de atendimento dos alunos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Possibilita alteração do status (ex: em andamento, concluído, cancelado).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Atualização deve ser refletida no histórico e, se necessário, notificada aos usuários.                                                                              |
+| RF11 | Exibição da Timeline do Aluno        | O sistema deve exibir uma timeline do aluno com todos os registros de atendimentos e evoluções.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Apresenta os registros de forma cronológica.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Permite visualização detalhada de cada evento mediante seleção.                                                                                                          |
+| RF12 | Envio de Notificações                | O sistema deve enviar notificações aos usuários sobre eventos relevantes, como novos atendimentos.<br>&nbsp;&nbsp;&nbsp;&nbsp;**Detalhamento:**<br>&nbsp;&nbsp;&nbsp;&nbsp;- Notificações podem ser enviadas por e-mail, push ou outro meio configurável.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Mantém os usuários informados para ações imediatas em eventos críticos.                                                                       |
+
+
+### Testes de Validação dos Requisitos Funcionais
+
+
+| ID   | Teste | Pré-condição | Procedimento | Resultado Esperado | Pós-condição |
+| ---- | ----- | ----------- | ------------ | ------------------ | ------------ |
+| RF01 | Criar Gerente | O usuário deve ter permissões de administrador. | Acessar a tela de cadastro, preencher os dados obrigatórios e confirmar. | O gerente é cadastrado e aparece na listagem. | O novo gerente pode acessar o sistema conforme suas permissões. |
+| RF02 | Criar Unidade de Ensino | O usuário deve estar autenticado e ter permissões adequadas. | Acessar a tela de cadastro, inserir os dados necessários e confirmar. | A unidade é cadastrada e aparece na listagem. | A unidade pode ser associada a alunos. |
+| RF03 | Cadastro de Aluno via API | O serviço de API deve estar disponível. | Enviar uma requisição POST com dados válidos. | O aluno é cadastrado e pode ser recuperado via API. | O aluno fica disponível para consulta e edição. |
+| RF04 | Consulta no Dashboard | O banco de dados deve conter registros de alunos. | Acessar o dashboard e aplicar filtros de pesquisa. | O sistema retorna os dados corretos conforme os filtros aplicados. | O usuário pode visualizar e interagir com os dados retornados. |
+| RF05 | Gestão de Profissionais | O usuário deve ter permissões para gerenciar profissionais. | Acessar a tela de gestão, cadastrar um profissional e salvar. | O profissional é cadastrado e listado no sistema. | O profissional pode ser editado ou excluído posteriormente. |
+| RF06 | Gestão de Atendimentos | O aluno e o profissional devem estar cadastrados no sistema. | Criar um novo atendimento, preencher os dados e salvar. | O atendimento fica registrado e pode ser acessado posteriormente. | O atendimento pode ser editado ou excluído. |
+| RF07 | Registro de Logs | O sistema deve estar operando normalmente. | Executar ações como cadastro, edição ou exclusão de registros. | O sistema armazena os logs corretamente com data, usuário e ação realizada. | Os logs podem ser consultados por usuários autorizados. |
+| RF08 | Histórico do Aluno | O aluno deve possuir atendimentos registrados. | Acessar o perfil do aluno e visualizar o histórico. | O histórico exibe todas as interações e atendimentos registrados. | O usuário pode utilizar as informações do histórico para futuras ações. |
+| RF09 | Consulta de Tecnologias Assistivas | O sistema deve ter tecnologias cadastradas. | Acessar a listagem e realizar buscas por tecnologia. | O sistema exibe as tecnologias disponíveis corretamente. | As tecnologias podem ser associadas a alunos conforme necessário. |
+| RF10 | Atualização de Status de Atendimento | O aluno deve ter um atendimento registrado. | Editar um atendimento e alterar seu status. | O novo status é salvo e reflete no atendimento do aluno. | O status atualizado pode ser consultado no histórico do aluno. |
+| RF11 | Exibição da Timeline | O aluno deve possuir registros de atendimento. | Acessar o perfil do aluno e visualizar a timeline. | A timeline exibe os registros de forma cronológica. | O usuário pode utilizar os dados para análise e acompanhamento. |
+| RF12 | Envio de Notificações | O usuário deve estar cadastrado e com notificações ativadas. | Criar um novo atendimento ou evento relevante. | O sistema dispara uma notificação para os usuários envolvidos. | Os usuários são informados e podem tomar ações necessárias. |
+
 
 ## 3.2 Requisitos Não Funcionais (RNFs)
-_conteúdo_
+&emsp;Os requisitos não funcionais descrevem as características do sistema que não estão diretamente relacionadas às funcionalidades, mas são essenciais para o desempenho, segurança, usabilidade e conformidade com normas e leis. Cada RNF está alinhado com a **ISO 25010**, que define critérios de qualidade para software.
+
+| **ID**    | **Descrição**                                                                                                                                                                                                                   | **Teste Associado** |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
+| **RNF01** | **Acessibilidade**: O sistema deve ser acessível, com suporte a leitores de tela, para garantir que usuários com deficiência visual possam utilizar todas as funcionalidades sem dificuldades. (Conformidade com ISO 25010 - Usabilidade). | Teste de Acessibilidade |
+| **RNF02** | **Portabilidade**: O sistema deve ser desenvolvido em nuvem e ser agnóstico de provedor, permitindo que ele seja implantado em diferentes ambientes de nuvem (ex: AWS, Azure, Google Cloud) sem necessidade de alterações significativas. (Conformidade com ISO 25010 - Portabilidade). | Teste de Implantação em Nuvem |
+| **RNF03** | **Segurança de Dados**: O sistema deve garantir o tratamento de dados em conformidade com a **Lei Geral de Proteção de Dados (LGPD)**, incluindo criptografia de dados sensíveis, controle de acesso e auditoria de operações. (Conformidade com ISO 25010 - Segurança). | Teste de Segurança de Dados |
+| **RNF04** | **Confiabilidade**: O sistema deve registrar logs de todas as ações realizadas, incluindo informações sobre o usuário, a ação realizada e os dados alterados. Esses logs devem ser armazenados de forma segura e estar disponíveis para auditoria. (Conformidade com ISO 25010 - Confiabilidade). | Teste de Logs |
+| **RNF05** | **Desempenho**: O sistema deve ter um tempo de resposta inferior a **2 segundos** para **95% das requisições**, mesmo sob carga normal de uso. Isso inclui operações como cadastro de alunos, consulta de histórico e geração de relatórios. (Conformidade com ISO 25010 - Desempenho). | Teste de Desempenho |
+| **RNF06** | **Disponibilidade**: O sistema deve garantir uma disponibilidade de **99,9%**, com mecanismos de redundância e recuperação de falhas para evitar tempo de inatividade não planejado. (Conformidade com ISO 25010 - Confiabilidade). | Teste de Disponibilidade |
+| **RNF07** | **Escalabilidade**: O sistema deve ser capaz de escalar horizontalmente para suportar um aumento no número de usuários e requisições sem degradação do desempenho. (Conformidade com ISO 25010 - Desempenho). | Teste de Escalabilidade |
+| **RNF08** | **Manutenibilidade**: O código do sistema deve ser modular e bem documentado, seguindo boas práticas de desenvolvimento (ex: Clean Code, SOLID), para facilitar a manutenção e a evolução do software. (Conformidade com ISO 25010 - Manutenibilidade). | Teste de Revisão de Código |
+| **RNF09** | **Interoperabilidade**: O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs), garantindo a troca de dados de forma eficiente e segura. (Conformidade com ISO 25010 - Funcionalidade). | Teste de Integração de APIs |
+| **RNF10** | **Usabilidade**: A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile). (Conformidade com ISO 25010 - Usabilidade). | Teste de Usabilidade |
+
+### **Detalhamento dos RNFs**
+
+#### **RNF01 – Acessibilidade**
+- **Descrição**: O sistema deve ser compatível com leitores de tela, como NVDA ou JAWS, para garantir que usuários com deficiência visual possam navegar e utilizar todas as funcionalidades sem dificuldades.
+- **Teste Associado**: Realizar testes de navegação com leitores de tela para garantir que todos os elementos da interface sejam descritos corretamente.
+
+#### **RNF02 – Portabilidade**
+- **Descrição**: O sistema deve ser desenvolvido para ser implantado em qualquer ambiente de nuvem (AWS, Azure, Google Cloud) sem necessidade de alterações significativas. Isso inclui o uso de containers (ex: Docker) e orquestração (ex: Kubernetes).
+- **Teste Associado**: Realizar a implantação do sistema em diferentes provedores de nuvem e verificar se ele funciona corretamente.
+
+#### **RNF03 – Segurança de Dados**
+- **Descrição**: O sistema deve seguir as diretrizes da LGPD, incluindo criptografia de dados sensíveis (ex: dados pessoais de alunos), controle de acesso baseado em roles (RBAC) e auditoria de todas as operações realizadas no sistema.
+- **Teste Associado**: Realizar testes de segurança para verificar a criptografia de dados, o controle de acesso e a geração de logs de auditoria.
+
+#### **RNF04 – Confiabilidade**
+- **Descrição**: O sistema deve registrar logs detalhados de todas as ações realizadas, incluindo informações sobre o usuário, a ação realizada e os dados alterados. Esses logs devem ser armazenados de forma segura e estar disponíveis para auditoria.
+- **Teste Associado**: Verificar se os logs são gerados corretamente e se estão armazenados de forma segura.
+
+#### **RNF05 – Desempenho**
+- **Descrição**: O sistema deve garantir um tempo de resposta inferior a 2 segundos para 95% das requisições, mesmo sob carga normal de uso. Isso inclui operações como cadastro de alunos, consulta de histórico e geração de relatórios.
+- **Teste Associado**: Realizar testes de carga para medir o tempo de resposta das requisições sob diferentes cenários de uso.
+
+#### **RNF06 – Disponibilidade**
+- **Descrição**: O sistema deve garantir uma disponibilidade alta, com mecanismos de redundância e recuperação de falhas para evitar tempo de inatividade não planejado.
+- **Teste Associado**: Simular falhas no sistema e verificar se ele se recupera automaticamente sem perda de dados.
+
+#### **RNF07 – Escalabilidade**
+- **Descrição**: O sistema deve ser capaz de escalar horizontalmente para suportar um aumento no número de usuários e requisições sem degradação do desempenho.
+- **Teste Associado**: Realizar testes de escalabilidade para verificar se o sistema suporta um aumento na carga de trabalho.
+
+#### **RNF08 – Manutenibilidade**
+- **Descrição**: O código do sistema deve ser modular e bem documentado, seguindo boas práticas de desenvolvimento (ex: Clean Code, SOLID), para facilitar a manutenção e a evolução do software.
+- **Teste Associado**: Realizar revisões de código para garantir que as boas práticas de desenvolvimento sejam seguidas.
+
+#### **RNF09 – Interoperabilidade**
+- **Descrição**: O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs), garantindo a troca de dados de forma eficiente e segura.
+- **Teste Associado**: Realizar testes de integração com APIs externas para garantir a troca de dados.
+
+#### **RNF10 – Usabilidade**
+- **Descrição**: A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile).
+- **Teste Associado**: Realizar testes de usabilidade com usuários reais para garantir que a interface seja intuitiva e funcional.
 
 ## 3.3 Correlação RFs e RNFs
-_conteúdo_
+
+A correlação entre RNFs e RFs garante que os aspectos de qualidade essenciais estejam integrados às funcionalidades, promovendo um sistema robusto e confiável.
+
+| RNF   | Descrição                                                                 | RFs Correlacionados                       | Justificativa                                                                                       |
+|-------|---------------------------------------------------------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| RNF01 | Acessibilidade: Suporte a leitores de tela.                               | RF01, RF02, RF04, RF05, RF06, RF08, RF09, RF10, RF11, RF12 | Interfaces gráficas devem ser acessíveis a todos os usuários, inclusive os com deficiência visual.   |
+| RNF02 | Portabilidade: Implantação em nuvem independente de provedor.             | RF03, RF04, RF05, RF06, RF12                | Funcionalidades via API e dashboards necessitam de uma infraestrutura flexível e adaptável.          |
+| RNF03 | Segurança de Dados: Criptografia, controle de acesso e auditoria.         | RF01, RF02, RF03, RF05, RF06, RF07, RF08, RF10, RF12 | Protege dados sensíveis durante cadastros, consultas e atualizações.                                |
+| RNF04 | Confiabilidade (Logs): Registro seguro de todas as ações dos usuários.     | RF07                                      | Logs detalhados possibilitam rastrear e auditar as ações realizadas no sistema.                     |
+| RNF05 | Desempenho: Resposta em menos de 2 segundos para 95% das requisições.       | RF03, RF04, RF05, RF06                      | Operações intensivas, como APIs e consultas, exigem alta performance para manter a experiência do usuário. |
+| RNF06 | Disponibilidade: 99,9% de uptime com redundância e recuperação de falhas.   | Todos os RFs                              | Garante que todas as funcionalidades estejam sempre acessíveis e operacionais.                     |
+| RNF07 | Escalabilidade: Suporte ao aumento de usuários sem perda de desempenho.     | RF03, RF04, RF05, RF06, RF12                | Permite a manutenção da performance mesmo com o crescimento do uso do sistema.                     |
+| RNF08 | Manutenibilidade: Código modular e bem documentado.                       | Aplicável a todos os RFs                   | Facilita a manutenção, correção de falhas e evolução do sistema.                                   |
+| RNF09 | Interoperabilidade: Integração via APIs padronizadas com outros sistemas.   | RF03                                      | Assegura troca de dados eficiente e segura com sistemas externos.                                  |
+| RNF10 | Usabilidade: Interface intuitiva e responsiva em diversos dispositivos.     | RF01, RF02, RF04, RF05, RF06, RF08, RF09, RF10, RF11, RF12 | Melhora a experiência do usuário, facilitando a interação com todas as funcionalidades.             |
+
 
 # 4. Modelagem de Dados
 _conteúdo_
@@ -335,4 +985,3 @@ _conteúdo_
 
 # Referências
 _conteúdo_
-
