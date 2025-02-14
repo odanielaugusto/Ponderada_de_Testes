@@ -34,8 +34,6 @@
   - [2.3 Visão do Projeto e do Produto](#23-visão-do-projeto-e-do-produto)
   - [2.4 Personas e Jornada do Usuário](#24-personas-e-jornada-do-usuário)
   - [2.5 Modelagem do Fluxo de Negócio](#25-modelagem-do-fluxo-de-negócio)
-    - [2.5.1 Fluxo de Negócio Atual (AS-IS)](#251-fluxo-de-negócio-atual-as-is)
-    - [2.5.2 Fluxo de Negócio Proposto (TO-BE)](#252-fluxo-de-negócio-proposto-to-be)
   - [2.6 Matriz de Risco do Projeto](#26-matriz-de-risco-do-projeto)
   - [2.7 Ideação](#27-ideação)
     - [2.7.1 Brainstorming de features](#271-brainstorming-de-features)
