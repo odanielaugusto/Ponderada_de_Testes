@@ -34,8 +34,6 @@
   - [2.3 Visão do Projeto e do Produto](#23-visão-do-projeto-e-do-produto)
   - [2.4 Personas e Jornada do Usuário](#24-personas-e-jornada-do-usuário)
   - [2.5 Modelagem do Fluxo de Negócio](#25-modelagem-do-fluxo-de-negócio)
-    - [2.5.1 Fluxo de Negócio Atual (AS-IS)](#251-fluxo-de-negócio-atual-as-is)
-    - [2.5.2 Fluxo de Negócio Proposto (TO-BE)](#252-fluxo-de-negócio-proposto-to-be)
   - [2.6 Matriz de Risco do Projeto](#26-matriz-de-risco-do-projeto)
   - [2.7 Ideação](#27-ideação)
     - [2.7.1 Brainstorming de features](#271-brainstorming-de-features)
@@ -452,13 +450,20 @@ Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes d
 <br><br>
 
 ## 2.5 Modelagem do Fluxo de Negócio
-_conteúdo_
 
-## 2.5.1 Fluxo de Negócio Atual (AS-IS)
-_conteúdo_
+&emsp;Fluxo de nogócio consiste em um conjunto de atividades e decisões que uma organização executa para atingir seus objetivos estratégicos. Ao definir o fluxo de negócio, a equipe consegue entender e otimizar processos, identificar obstáculos e melhorar a comunicação entre os envolvidos.
 
-## 2.5.2 Fluxo de Negócio Proposto (TO-BE)
-_conteúdo_
+&emsp;Nesse contexto, a seguir há, em formato de fluxograma, o fluxo de negócio identificado para o presente projeto:
+
+<div align="center">
+  <sub>Figura X - Fluxo de Negócio </sub> <br>
+
+  <img src="img/section2/2.5_fluxo_do_negocio/business_flow.png" alt="Persona 2 - Carlos Mendes">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Em comparação com o fluxo atual, o proposto modifica apenas a forma como os históricos dos alunos são registrados. Enquanto, atualmente, essa informação é armazenada em diferentes planilhas, com o Sistema Gallaudet o registro de novos atendimentos se torna mais simples e eficiente, além de centralizado. Essa mudança na ferramenta de gestão impactaria tanto os profissionais envolvidos quanto os alunos atendidos pela Assessoria de Inclusão, uma vez que evitaria a perda de dados, facilitando análises e reduzindo erros. 
 
 ## 2.6 Matriz de Risco do Projeto
 _conteúdo_
