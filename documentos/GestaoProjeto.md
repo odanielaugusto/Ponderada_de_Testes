@@ -23,16 +23,14 @@
 - <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio de Carvalho Vasconcelos</a>  
 - <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a>
 
-
 # Sumário
 - [1. Introdução](#1-introdução)
-- [2. Backlog do Projeto](#2-backlog-do-projeto)
-  - [2.2 Atualizações do Backlog](#22-atualizações-do-backlog)
-    - [2.2.1 Sprint 1](#221-sprint-1)
-    - [2.2.2 Sprint 2](#222-sprint-2)
-    - [2.2.3 Sprint 3](#223-sprint-3)
-    - [2.2.4 Sprint 4](#224-sprint-4)
-    - [2.2.5 Sprint 5](#225-sprint-5)
+- [2. Avaliação das Sprints](#2-avaliação-das-sprints)
+  - [2.1 Sprint 1](#21-sprint-1)
+  - [2.2 Sprint 2](#22-sprint-2)
+  - [2.3 Sprint 3](#23-sprint-3)
+  - [2.4 Sprint 4](#24-sprint-4)
+  - [2.5 Sprint 5](#25-sprint-5)
 - [3. Análise de Riscos](#3-análise-de-riscos)
   - [3.1 Riscos identificados](#31-riscos-identificados)
   - [3.2 Mitigação de Riscos](#32-mitigação-de-riscos)
@@ -42,51 +40,29 @@
   - [4.3 Lições Aprendidas](#43-lições-aprendidas)
 
 # 1. Introdução
-Este documento apresenta a gestão evolutiva do projeto, abordando as principais atividades desenvolvidas durante as Sprints e analisando os resultados obtidos. Aqui, o grupo busca garantir uma entrega consistente e alinhada às práticas ágeis e às diretrizes do Escritório de Projetos.  
+&ensp; Este documento apresenta a gestão evolutiva do projeto, abordando as principais atividades desenvolvidas durante as Sprints e analisando os resultados obtidos. Aqui, o grupo busca garantir uma entrega consistente e alinhada às práticas ágeis e às diretrizes do Escritório de Projetos.  
 
-# 2. Backlog do Projeto
-_conteúdo_
-<!-- o que colocar aqui? -->
+# 2. Avaliação das Sprints
+&ensp; Nesta seção, apresentamos uma análise das Sprints realizadas durante o projeto, destacando as principais atividades desenvolvidas, os resultados obtidos, e os aprendizados ao longo do processo. O objetivo é avaliar o desempenho da equipe, identificando pontos fortes, dificuldades encontradas e ações de melhoria para otimizar o fluxo de trabalho nas próximas etapas.
 
-## 2.2 Análise de desempenho
-_conteúdo_
-<!-- o que colocar aqui? -->
+## 2.1 Sprint 1
+&ensp; A Sprint 1 foi bastante produtiva, com o grupo conseguindo finalizar as atividades dentro do prazo e mantendo uma boa organização. Todos os integrantes se envolveram ativamente no projeto, o que garantiu uma colaboração consistente e uma distribuição equilibrada das tarefas. A comunicação interna funcionou bem, e a gestão de atividades foi eficiente, facilitando o acompanhamento do progresso. O uso de boas práticas no GitHub, como validação de commits e revisão obrigatória de pull requests, contribuiu para a qualidade do trabalho realizado.
 
-## 2.2.1 Sprint 1
-Durante a Sprint 1, as seguintes atividades foram realizadas:  
-- Entendimento do negócio do cliente  
-- Entendimento do problema do cliente  
-- Criação de duas personas  
-- Definição das jornadas das personas  
-- Elaboração da arquitetura BPMN  
-- Configuração do GitHub com políticas de boas práticas:  
-  - Validador para analisar mensagens de commit  
-  - Travas para impedir commits diretos na `main` e `develop`  
-  - Necessidade de pull requests revisados por um reviewer  
-- Definição dos objetivos do produto  
-- Apresentação para o parceiro  
-- Elaboração do Canvas MVP  
-- Levantamento de requisitos  
+&ensp; Apesar do sucesso geral, enfrentamos alguns desafios. A principal dificuldade foi a adaptação ao uso do Trello para gestão das tarefas no Kanban. Como a ferramenta era nova para o grupo e foi disponibilizada com atraso, houve uma curva de aprendizado que impactou o acompanhamento das atividades no início. Além disso, planejamos desenvolver um wireframe para facilitar o entendimento do problema e melhorar a apresentação do projeto ao cliente. Contudo, devido ao tempo necessário para revisar e ajustar tarefas já em andamento, não conseguimos concluir essa entrega adicional.
+
+&ensp; Para as próximas Sprints, definimos algumas ações de melhoria. Vamos realizar uma sessão de alinhamento para aprimorar o uso do Trello e garantir maior fluidez no gerenciamento das atividades. Também vamos priorizar melhor as tarefas, ajustando o planejamento para evitar acúmulo de atividades não previstas e assegurar que entregas adicionais sejam devidamente organizadas.
 
 
-## 2.2.2 Sprint 2
-O planejamento da Sprint 2 inclui as seguintes tasks:  
-| Task                            | Descrição                                             | Tamanho | Prioridade |  
-|---------------------------------|-------------------------------------------------------|---------|------------|  
-| Refinamento de Requisitos        | Revisar e detalhar os requisitos levantados na Sprint 1 | P       | Alta       |  
-| Protótipo de baixa fidelidade   | Criar protótipo para validar a jornada das personas   | M       | Alta       |  
-| Ajustes na arquitetura BPMN     | Revisar a arquitetura e incorporar feedback          | M       | Média      |  
-| Continuidade na configuração do GitHub | Ajustar políticas de branches e deploy contínuo | G       | Média      |  
-| Planejamento de testes iniciais | Elaborar casos de teste para funcionalidades básicas | M       | Média      |  
-<!-- Seria necessário depoius colocar o que foi feito? Como seria isso? -->
-
-## 2.2.3 Sprint 3
+## 2.2 Sprint 2
 _conteúdo_
 
-## 2.2.4 Sprint 4
+## 2.3 Sprint 3
 _conteúdo_
 
-## 2.2.5 Sprint 5
+## 2.4 Sprint 4
+_conteúdo_
+
+## 2.5 Sprint 5
 _conteúdo_
 
 # 3. Análise de Riscos
