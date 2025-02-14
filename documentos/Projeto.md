@@ -466,7 +466,67 @@ Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes d
 &emsp;Em comparação com o fluxo atual, o proposto modifica apenas a forma como os históricos dos alunos são registrados. Enquanto, atualmente, essa informação é armazenada em diferentes planilhas, com o Sistema Gallaudet o registro de novos atendimentos se torna mais simples e eficiente, além de centralizado. Essa mudança na ferramenta de gestão impactaria tanto os profissionais envolvidos quanto os alunos atendidos pela Assessoria de Inclusão, uma vez que evitaria a perda de dados, facilitando análises e reduzindo erros. 
 
 ## 2.6 Matriz de Risco do Projeto
-_conteúdo_
+## Ameaças
+&nbsp;&nbsp;&nbsp;Nesta seção, apresentamos a Matriz de Risco do projeto, a matriz de risco tem como objetivo identificar, avaliar e priorizar as ameaças que podem impactar o desenvolvimento e a implementação do sistema. Ao mapear esses riscos, é possível definir estratégias e planos de ação para mitigá-los, garantindo uma gestão eficaz a para a continuidade e o sucesso do projeto.
+
+
+<div align="center">
+  <sub>Figura X - Matriz de riscos </sub> <br>
+
+  <img src="img/matriz_de_riscos.jpg" alt="Matriz de Riscos">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+- **Desvio de escopo**:  
+  Ocorre quando o escopo do projeto não está claramente definido, levando à entrega de uma solução que não atende as expectativas iniciais.
+
+- **Vazamento de dados sensíveis**:  
+  Exposição não autorizada de informações confidenciais, resultando em danos à privacidade e possíveis penalidades legais.
+
+- **Ciberataques que podem comprometer a segurança do local**:  
+  A invasão de sistemas por hackers pode comprometer a integridade dos dados e a segurança física das instalações.
+
+- **Dificuldade em garantir acessibilidade para usuários com deficiência visual**:  
+  O desenvolvimento realizando todas as implementações capazes de atender usuários com dificuldades em engexar pode ser muito complexo.
+
+- **Desafios na manutenção da base de dados dos alunos atualizada**:  
+  Se a base de dados governamental não for atualizada corretamente, pode haver informações desatualizadas sobre os alunos e seus recursos assistivos.
+
+- **Falha na integração da API com sistemas acadêmicos**:
+  Como não temos acesso ao banco de dados governamental de forma direta, haverá a criação de um banco de dados e uma API simulando o acesso ao banco governamental. Podendo ter uma dificuldade em uma integração genuína.
+
+### Plano de Ação - Ameaças
+
+- Implementar uma gestão rigorosa de requisitos, documentando e validando todas as alterações junto aos stakeholders.
+- Implementar políticas de controle de acesso baseadas em privilégios mínimos e realizar auditorias frequentes.
+- Utilizar ferramentas de segurança digital, como antivírus e firewall.
+- Garantir compatibilidade com leitores de tela, testar a aplicação com usuários reais e seguir as diretrizes WCAG.
+- Orientar os stakeholders periodicamente sobre a importância de manter a base de dados governamental atualizada.
+- Alinhar com a equipe técnica do Centro Paula Souza todos os critérios para que ocorra um acesso correto do banco de dados real do governo.
+
+## Oportunidades
+&nbsp;&nbsp;&nbsp;A Matriz de Oportunidades destaca os potenciais benefícios que podem ser explorados ao longo do projeto ou em futuras atualizações.
+
+
+  <div align="center">
+  <sub>Figura X - Matriz de oportunidades </sub> <br>
+
+  <img src="img/matriz_de_oportunidades.jpg" alt="Matriz de Oportunidades do Projeto">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+- Se a plataforma for bem-sucedida no Centro Paula Souza, poderá ser replicada em outras instituições públicas para melhorar a gestão de alunos com deficiência.
+- **Aumento da eficiência operacional e redução de erros manuais**:  
+  A automação do processo de cadastro e gestão de alunos com deficiência reduz erros manuais e otimiza o tempo dos gestores, tornando a operação mais eficiente.
+- **Fortalecimento da comunicação entre gerentes e profissionais assistivos**:  
+  Melhorar a comunicação entre os usuários da aplicação e os alunos da instituição facilita a colaboração e a resolução rápida de problemas.
+
+
+
+---
+
 
 ## 2.7 Ideação
 _conteúdo_
