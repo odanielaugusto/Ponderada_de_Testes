@@ -11,7 +11,7 @@
 
 # Nome do Projeto: Gallaudet
 
-# Nome do Projeto: ApoiaEdu
+# Nome do Grupo: ApoiaEdu
 
 Este documento tem como objetivo elucidar o conteúdo da pasta docs/, explicando a finalidade de cada arquivo e fornecendo um guia para facilitar a navegação.
 

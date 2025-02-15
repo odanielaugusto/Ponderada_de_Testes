@@ -11,7 +11,7 @@
 
 # Nome do Projeto: Gallaudet
 
-# Nome do Projeto: ApoiaEdu
+# Nome do Grupo: ApoiaEdu
 
 ## Integrantes:
 
