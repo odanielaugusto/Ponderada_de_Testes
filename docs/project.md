@@ -84,7 +84,11 @@
 
 
 # 1. Introdução
-_conteúdo_
+&emsp; Este documento apresenta a estrutura, requisitos e diretrizes para o desenvolvimento de uma solução destinada à Assessoria de Inclusão do Centro Paula Souza (CPS). O objetivo do projeto é organizar e otimizar o registro e acompanhamento dos atendimentos prestados aos alunos com necessidades especiais, substituindo o atual controle baseado em formulários e planilhas.
+
+&emsp; A solução proposta inclui uma interface acessível, uma API para integração com os sistemas acadêmicos do CPS e uma camada de persistência de dados. O projeto segue boas práticas de desenvolvimento, garantindo acessibilidade, segurança e conformidade com a LGPD.
+
+&emsp; A seguir, são detalhados os aspectos do projeto, incluindo o entendimento do negócio, requisitos técnicos, modelagem de dados, arquitetura da solução, desenvolvimento e implantação.
 
 ## 1.1 Termos e Abreviações
 
