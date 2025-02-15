@@ -111,9 +111,9 @@ _conteúdo_
 &emsp;Esta seção busca detalhar o contexto de negócios do Centro Paula Sousa (CPS), bem como o problema apresentado pela empresa parceira que embasou o desenvolvimento deste projeto.
 
 ## 2.1 Contexto da Indústria do Parceiro
-&emsp;O Centro Paula Sousa é uma autarquia sediada e voltada para o estado de São Paulo, oferecendo ensino profissional para cerca de 317 mil discentes em 345 municípios, dentro de escolas técnicas, faculdades de tecnologia e salas de aulas descentralizadas. Muitas das atividades exercidas no CPS se relacionam com a administração pública do Governo do Estado, devido à sua vinculação com a Secretaria de Ciência, Tecnologia e Inovação, buscando oferecer serviços educacionais com qualidade, governança e inclusão social (CPS, c2025).<br>
+&emsp;O Centro Paula Sousa é uma autarquia sediada e voltada para o estado de São Paulo, oferecendo ensino profissional para cerca de 317 mil discentes em 345 municípios, dentro de escolas técnicas, faculdades de tecnologia e salas de aulas descentralizadas. Muitas das atividades exercidas no CPS se relacionam com a administração pública do Governo do Estado, devido à sua vinculação com a Secretaria de Ciência, Tecnologia e Inovação, buscando oferecer serviços educacionais com qualidade, governança e inclusão social (CPS, c2025).
 
-&emsp;Observando-se o organograma do Centro, cada escola/faculdade representa uma unidade, gerida por um gestor ou coordenador. As operações de todas as unidades, no entanto, são monitoradas pelo cargo de Gestão Administrativa, que detém a visão analítica e estratégica das atividades educacionais, seus alunos e profissionais. Considerável parte dos alunos do CPS são pessoas com deficiência, apontando necessidade de atendimentos específicos. Com isso, cabe ao time de Acessoria de Inclusão — também composto por um servidor com deficiência visual — a oficializar essas solicitações através de uma Ficha de Acompanhamento do Atendimento Educacional Especializado (FAE); preparada essa ficha, um profissional externo é contratado para prestar o atendimento para o respectivo aluno (CPS, c2025).<br>
+&emsp;Observando-se o organograma do Centro, cada escola/faculdade representa uma unidade, gerida por um gestor ou coordenador. As operações de todas as unidades, no entanto, são monitoradas pelo cargo de Gestão Administrativa, que detém a visão analítica e estratégica das atividades educacionais, seus alunos e profissionais. Considerável parte dos alunos do CPS são pessoas com deficiência, apontando necessidade de atendimentos específicos. Com isso, cabe ao time de Acessoria de Inclusão — também composto por um servidor com deficiência visual — a oficializar essas solicitações através de uma Ficha de Acompanhamento do Atendimento Educacional Especializado (FAE); preparada essa ficha, um profissional externo é contratado para prestar o atendimento para o respectivo aluno (CPS, c2025).
 
 &emsp;Nesse contexto, vale ressaltar que, segundo a Lei Brasileira de Inclusão da Pessoa com Deficiência - Lei 13.146/2015, o acesso à educação, ao trabalho, à mobilidade e tecnologias assistivas deve ser garantido para essa população na sociedade. Felizmente, em ambiente escolares e profissionais, são cada vez mais disseminadas e evoluídas tanto tecnologias assistivas — como leitores de tela, tradutores de libras, recursos digitais — quanto atendimentos especializados, o que demonstra a crescente oferta e aprimoramento de soluções tecnológicas que auxiliem pessoas com deficiência em suas atividades cotidianas.
 
@@ -125,13 +125,13 @@ _conteúdo_
 
 ## 2.3 Visão do Produto e do Projeto. 
 
- &nbsp;&nbsp;&nbsp;&nbsp;Segue a Visão do Produto ApoiaEdu, além das definições do Produto, o que ele "faz", "não faz", "é", "não é" e também os seus benefícios. Além disso, segue também os objetivos de negócio do Projeto. 
+ &nbsp;&nbsp;&nbsp;&nbsp;Segue a Visão do Produto Gallaudet, além das definições do Produto, o que ele "faz", "não faz", "é", "não é" e também os seus benefícios. Além disso, segue também os objetivos de negócio do Projeto. 
 
  ### 2.3.1 Visão do Produto
 
 **Para** gestores e assessores das Fatecs e Etecs;  
 **Que** precisam acompanhar e organizar o suporte aos alunos com deficiência;  
-**O** ApoiaEdu é um sistema de gestão assistiva;  
+**O** Gallaudet é um sistema de gestão assistiva;  
 **Que** automatiza a captação de dados dos alunos, facilita a alocação de profissionais e melhora o acompanhamento das necessidades assistivas;  
 **Diferente** de planilhas e processos manuais;  
 **Nosso produto** oferece um ambiente centralizado, acessível e integrado aos sistemas governamentais.
@@ -220,7 +220,7 @@ _conteúdo_
 <div align="center">
   <sub>Figura X - Persona Ana Beatriz</sub> <br>
 
-  <img src="img/PERSONA_1-ANA.jpg" alt="Persona 1 - Ana Beatriz">
+  <img src="assets/section2/2.4_personas_and_journeys/personas/ana.jpg" alt="Persona 1 - Ana Beatriz">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -272,7 +272,7 @@ Atualiza informações sobre atendimentos e necessidades dos alunos na plataform
 <div align="center">
   <sub>Figura X - Jornada de Usuário da Ana Beatriz</sub> <br>
 
-  <img src="img/JORNADA_1-ANA.jpg" alt="Persona 1 - Ana Beatriz">
+  <img src="assets/section2/2.4_personas_and_journeys/journeys/ana.jpg" alt="Persona 1 - Ana Beatriz">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -339,7 +339,7 @@ Ao final do mês, precisa consolidar informações para a gestão administrativa
 <div align="center">
   <sub>Figura X - Persona Carlos Mendes</sub> <br>
 
-  <img src="img/PERSONA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+  <img src="assets/section2/2.4_personas_and_journeys/personas/carlos.jpg" alt="Persona 2 - Carlos Mendes">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -383,7 +383,7 @@ Registra relatórios e observações sobre cada sessão.
 <div align="center">
   <sub>Figura X - Jornada de Usuário do Carlos Mendes </sub> <br>
 
-  <img src="img/JORNADA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+  <img src="assets/section2/2.4_personas_and_journeys/journeys/carlos.jpg" alt="Persona 2 - Carlos Mendes">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -442,7 +442,7 @@ No final do dia, confere e revisa os atendimentos registrados.
 <div align="center">
   <sub>Figura X - Persona Fernanda Rocha</sub> <br>
 
-  <img src="img/PERSONA_3-FERNANDA.jpg" alt="Persona 3 - Fernanda Rocha">
+  <img src="assets/section2/2.4_personas_and_journeys/personas/fernanda.jpg" alt="Persona 3 - Fernanda Rocha">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -488,7 +488,7 @@ Precisa de um sistema que organize os dados e facilite a geração de relatório
 <div align="center">
   <sub>Figura X - Jornada de Usuário do Carlos Mendes </sub> <br>
 
-  <img src="img/JORNADA_2-CARLOS.jpg" alt="Persona 2 - Carlos Mendes">
+  <img src="assets/section2/2.4_personas_and_journeys/journeys/fernanda.jpg" alt="Persona 2 - Carlos Mendes">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -545,7 +545,7 @@ Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes d
 <div align="center">
   <sub>Figura X - Fluxo de Negócio </sub> <br>
 
-  <img src="img/section2/2.5_fluxo_do_negocio/business_flow.png" alt="Persona 2 - Carlos Mendes">
+  <img src="assets/section2/business_flow.png" alt="Fluxo de Negócio">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -556,11 +556,10 @@ Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes d
 ## Ameaças
 &nbsp;&nbsp;&nbsp;Nesta seção, apresentamos a Matriz de Risco do projeto, a matriz de risco tem como objetivo identificar, avaliar e priorizar as ameaças que podem impactar o desenvolvimento e a implementação do sistema. Ao mapear esses riscos, é possível definir estratégias e planos de ação para mitigá-los, garantindo uma gestão eficaz a para a continuidade e o sucesso do projeto.
 
-
 <div align="center">
   <sub>Figura X - Matriz de riscos </sub> <br>
 
-  <img src="img/matriz_de_riscos.jpg" alt="Matriz de Riscos">
+  <img src="assets/section2/2.6_risks_and_opportunities/risks_matrix.jpg" alt="Matriz de Riscos">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -596,10 +595,10 @@ Pode modificar parâmetros administrativos ou sugerir mudanças nas diretrizes d
 &nbsp;&nbsp;&nbsp;A Matriz de Oportunidades destaca os potenciais benefícios que podem ser explorados ao longo do projeto ou em futuras atualizações.
 
 
-  <div align="center">
+<div align="center">
   <sub>Figura X - Matriz de oportunidades </sub> <br>
 
-  <img src="img/matriz_de_oportunidades.jpg" alt="Matriz de Oportunidades do Projeto">
+  <img src="assets/section2/2.6_risks_and_opportunities/opportunities_matrix.jpg" alt="Matriz de Oportunidades do Projeto">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -752,7 +751,7 @@ _conteúdo_
 <div align="center">
   <sub>Figura X - Canvas MVP</sub> <br>
 
-  <img src="./img/section2/2.8_canvas_mvp/mvp_canvas.jpg" alt="Canvas MVP">
+  <img src="assets/section2/mvp_canvas.jpg" alt="Canvas MVP">
 
   <sup>Fonte: Material produzido pelos autores (2024).</sup>
 </div>
