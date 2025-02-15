@@ -9,9 +9,9 @@
 
 <br>
 
-# Nome do Projeto: <TODO>
+# Nome do Projeto: Gallaudet
 
-## Nome do Grupo: <TODO>
+# Nome do Grupo: ApoiaEdu
 
 ## Integrantes:
 
