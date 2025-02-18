@@ -810,13 +810,117 @@ _conteúdo_
 | RNF10 | Usabilidade: Interface intuitiva e responsiva em diversos dispositivos.     | RF01, RF02, RF04, RF05, RF06, RF08, RF09, RF10, RF11, RF12 | Melhora a experiência do usuário, facilitando a interação com todas as funcionalidades.             |
 
 # 4. Modelagem de Dados
-_conteúdo_
+&emsp; A modelagem de dados é um dos principais pontos da solução para a Assessoria de Inclusão do Centro Paula Souza. Com ela, será organizado de forma clara e segura informações essenciais — como alunos, responsáveis, profissionais e tecnologias assistivas — para transformar o atendimento em algo ágil, rastreável e acessível. Desde o respeito à privacidade (LGPD) até a integração com leitores de tela, garantindo que todos os servidores, inclusive aqueles com deficiência visual, possam usar o sistema com autonomia. O modelo foi desenhado para crescer junto com as necessidades do CPS, evitando gargalos e mantendo a simplicidade mesmo com novas demandas.
 
 ## 4.1 Modelo Conceitual de Dados
-_conteúdo_
 
-## 4.2 Modelo Lógico de Dados
-_conteúdo_
+### Entidades, Atributos e Relações  
+
+#### 1. **Aluno**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Nome`  
+  - `DataNascimento`  
+  - `Unidade_ID` (Chave Estrangeira para `Unidade`)  
+  - `Curso_ID` (Chave Estrangeira para `Curso`)  
+  - `AnoMatricula`  
+  - `DataMatricula`  
+  - `DataPrevisaoFim`  
+  - `Turno` (Manhã/Tarde/Noite/Integral/EaD)  
+  - `NecessitaTecnologia` (Sim/Não)  
+  - `NecessitaAcompanhamento` (Sim/Não)  
+  - `Observacoes`  
+- **Descrição**: Armazena informações acadêmicas e necessidades específicas dos alunos. Suporta **filtros por unidade, curso e status de atendimento**.  
+
+#### 2. **Responsavel**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Nome`  
+  - `Tipo` (Mãe/Pai/Irmão/etc.)  
+  - `Email`  
+  - `Telefone1`  
+  - `Telefone2` (Opcional)  
+- **Descrição**: Responsáveis legais vinculados aos alunos. Usado para **notificações automáticas**.  
+
+#### 3. **Profissional**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Nome`  
+  - `Email`  
+  - `Telefone`  
+  - `WhatsApp`  
+  - `Unidade_ID` (Chave Estrangeira para `Unidade`)  
+- **Descrição**: Profissionais que realizam atendimentos. Vinculados a unidades para **gestão de acesso por gerentes**.  
+
+#### 4. **Atendimento**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Aluno_ID` (Chave Estrangeira para `Aluno`)  
+  - `Profissional_ID` (Chave Estrangeira para `Profissional`)  
+  - `DataInicio`  
+  - `DataFimPrevisto`  
+  - `Status` (Ativo/Em Espera/Concluído)  
+  - `Observacoes`  
+- **Descrição**: Registra atendimentos e **status visual**. Base para **Timeline do Aluno** e **relatórios estatísticos**.  
+
+#### 5. **TecnologiaAssistiva**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Tipo` (Comunicação Alternativa/Leitor de Tela/etc.)  
+  - `Descricao`  
+  - `DataCadastro`  
+- **Descrição**: Suporta **cadastro flexível de tecnologias** e vinculação a alunos.  
+
+#### 6. **NecessidadeEspecial**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Tipo` (Ex.: Deficiência Visual)  
+- **Descrição**: Categorias editáveis para **filtros avançados**.  
+
+#### 7. **Unidade**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Nome`  
+  - `Tipo` (ETEC/FATEC)  
+- **Descrição**: Unidades administrativas do CPS. Usado em **cadastro de unidades** e dashboards.  
+
+#### 8. **Curso**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Nome`  
+  - `Tipo` (Nível Médio/Superior)  
+- **Descrição**: Cursos ofertados. Base para **filtros por curso**.  
+
+#### 9. **Usuario**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Nome`  
+  - `Email`  
+  - `Perfil` (Gerente Geral/Gerente de Unidade/Servidor)  
+  - `Unidade_ID` (Chave Estrangeira para `Unidade` - obrigatório para Gerentes de Unidade)  
+- **Descrição**: Gerencia **níveis de acesso** para **cadastro de gerentes**.  
+
+#### 10. **LogUso**  
+- **Atributos**:  
+  - `ID` (Chave Primária)  
+  - `Usuario_ID` (Chave Estrangeira para `Usuario`)  
+  - `Acao` (Ex.: "Cadastrou aluno")  
+  - `DadosAlterados` (JSON)  
+  - `DataHora`  
+- **Descrição**: Registra **ações no sistema** para auditoria.  
+
+
+### Relações  
+| **Entidade 1**      | **Entidade 2**          | **Tipo**      | **Descrição**                                                                 |  
+|----------------------|-------------------------|---------------|-------------------------------------------------------------------------------|  
+| Aluno                | Responsavel             | 1:1           | Cada aluno tem um responsável principal.                                      |  
+| Aluno                | Atendimento             | 1:N           | Um aluno pode ter múltiplos atendimentos.                                     |  
+| Profissional         | Atendimento             | 1:N           | Um profissional pode realizar vários atendimentos.                            |  
+| Aluno                | TecnologiaAssistiva     | M:N           | Tecnologias podem ser vinculadas a múltiplos alunos (via `AlunoTecnologia`). |  
+| Aluno                | NecessidadeEspecial     | M:N           | Alunos podem ter múltiplas necessidades (via `AlunoNecessidade`).             |  
+| Usuario              | Unidade                 | 1:N           | Gerentes de Unidade são vinculados a uma unidade específica.                  |     
+
+## 4.2 Modelo Lógico de Dados 
 
 ## 4.3 Modelo Físico de Dados
 _conteúdo_
