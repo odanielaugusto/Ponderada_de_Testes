@@ -830,7 +830,11 @@ _conteúdo_
 _conteúdo_
 
 ## 5.2 Diagramas de Sequência da UML
-_conteúdo_
+Nesta seção, são apresentados os diagramas UML de sequência, um tipo de diagrama de interação que descreve como um grupo de objetos trabalha em conjunto e em qual ordem as interações ocorrem. A elaboração desses diagramas foi baseada nas funcionalidades que agregam mais valor ao cliente, tornando sua explicação essencial. Por esse motivo, essa abordagem foi adotada na construção dos diagramas de sequência.
+
+A seguir, são listadas as funcionalidades acompanhadas de seus respectivos diagramas.
+
+### Funcionalidade tal
 
 ## 5.3 Descrição Textual dos Diagramas
 _conteúdo_
