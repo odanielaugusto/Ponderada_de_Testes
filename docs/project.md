@@ -848,7 +848,6 @@ _conteúdo_
   - `Nome`  
   - `Email`  
   - `Telefone`  
-  - `WhatsApp`  
   - `Unidade_ID` (Chave Estrangeira para `Unidade`)  
 - **Descrição**: Profissionais que realizam atendimentos. Vinculados a unidades para **gestão de acesso por gerentes**.  
 
@@ -918,7 +917,9 @@ _conteúdo_
 | Profissional         | Atendimento             | 1:N           | Um profissional pode realizar vários atendimentos.                            |  
 | Aluno                | TecnologiaAssistiva     | M:N           | Tecnologias podem ser vinculadas a múltiplos alunos (via `AlunoTecnologia`). |  
 | Aluno                | NecessidadeEspecial     | M:N           | Alunos podem ter múltiplas necessidades (via `AlunoNecessidade`).             |  
-| Usuario              | Unidade                 | 1:N           | Gerentes de Unidade são vinculados a uma unidade específica.                  |     
+| Usuario              | Unidade                 | 1:N           | Gerentes de Unidade são vinculados a uma unidade específica.                  |  
+| Aluno                | Curso                   | N:1           | Múltiplos alunos estão vinculados a um curso específico.                      |  
+| Usuario              | LogUso                  | 1:N           | Um usuário pode gerar múltiplos registros de log de ações no sistema.         |  
 
 ## 4.2 Modelo Lógico de Dados 
 
