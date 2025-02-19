@@ -654,7 +654,11 @@ _conteúdo_
 _conteúdo_
 
 ## 7.3 Guia Visual
-_conteúdo_
+
+&emsp;	Para a construção de sistemas escaláveis e consistentes, é essencial estabelecer padrões a serem seguidos por todas as plataformas. Segundo SCHUHMACHER (1998), “a  eficácia da interação está intimamente ligada a forma como a informação é apresentada ou requerida do usuário”, ou seja, a experiência do usuário é diretamente influenciada pela forma como os elementos são exibidos. 
+
+&emsp;Assim, foram elaborados um guia de estilo e um design system para o presente projeto. Nesta seção, será possível encontrar a definição e explicação dos padrões criados, sendo eles: grid, paleta de cores, tipografia, iconografia, ilustrações e opções de acessibilidade. 
+
 
 # 8. Desenvolvimento do Projeto
 _conteúdo_
