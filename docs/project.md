@@ -830,11 +830,35 @@ _conteúdo_
 _conteúdo_
 
 ## 5.2 Diagramas de Sequência da UML
-Nesta seção, são apresentados os diagramas UML de sequência, um tipo de diagrama de interação que descreve como um grupo de objetos trabalha em conjunto e em qual ordem as interações ocorrem. A elaboração desses diagramas foi baseada nas funcionalidades que agregam mais valor ao cliente, tornando sua explicação essencial. Por esse motivo, essa abordagem foi adotada na construção dos diagramas de sequência.
+&emsp;Nesta seção, são apresentados os diagramas UML de sequência, um tipo de diagrama de interação que descreve como um grupo de objetos trabalha em conjunto e em qual ordem as interações ocorrem. A elaboração desses diagramas foi baseada nas funcionalidades que agregam mais valor ao cliente, tornando sua explicação essencial. Por esse motivo, essa abordagem foi adotada na construção dos diagramas de sequência. A seguir, são listadas as funcionalidades acompanhadas de seus respectivos diagramas.
 
-A seguir, são listadas as funcionalidades acompanhadas de seus respectivos diagramas.
+### 1. Cadastro e Gestão de Atendimentos (RF06, RF10)
+&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. Os diagramas ilustram esses processos, assegurando a correta gestão dos atendimentos. 
+- **Cenários para diagramas de sequência**:  
+  1. **Criação de um novo atendimento** (incluindo aluno, profissional e detalhes da assistência).  
+  2. **Edição ou cancelamento de um atendimento**.  
+  3. **Atualização do status do atendimento** (ex: em andamento, concluído, cancelado).  
 
-### Funcionalidade tal
+### 2. Registro de Histórico e Logs (RF07, RF08, RF11)
+&emsp;O Registro de Histórico e Logs garante rastreabilidade e auditoria das ações realizadas no sistema. Como o acompanhamento dos alunos envolve múltiplas interações, manter um histórico detalhado permite um melhor monitoramento e análise. Os diagramas representam o registro de ações no log, a consulta ao histórico do aluno e a exibição de sua timeline.
+- **Cenários para diagramas de sequência**:  
+  1. **Registro de uma ação do usuário no log** (qualquer operação relevante realizada no sistema).  
+  2. **Visualização do histórico de um aluno** (todas as assistências, atendimentos e alterações feitas).  
+  3. **Exibição da timeline do aluno**, mostrando a evolução dos atendimentos de forma cronológica.  
+
+### 3. Dashboard e Visualização de Dados Importantes (RF04, RF09, RF12)
+&emsp;A Visualização de Dados Estratégicos via Dashboard é essencial para uma gestão eficiente. Ter um panorama rápido sobre alunos, atendimentos e problemas mais comuns facilita a tomada de decisões. Além disso, a busca por tecnologias assistivas e o envio de notificações mantêm os usuários informados. Os diagramas mostram como essas funcionalidades são processadas.
+- **Cenários para diagramas de sequência**:  
+  1. **Carregamento do Dashboard** (consulta e exibição de gráficos sobre alunos, atendimentos e problemas).  
+  2. **Busca e consulta de tecnologias assistivas disponíveis** para alunos.  
+  3. **Envio de notificações aos usuários sobre eventos importantes** (exemplo: um novo atendimento registrado).  
+
+### 4. Cadastro e Gestão de Usuários e Unidades (RF01, RF02, RF05)
+&emsp;A Gestão de Usuários e Unidades estrutura o funcionamento do sistema, permitindo o cadastro de gerentes, unidades de ensino e profissionais. Isso garante a correta vinculação dos alunos e mantém a consistência das informações. Os diagramas detalham os processos de cadastro, edição e exclusão desses elementos. 
+- **Cenários para diagramas de sequência**:  
+  1. **Cadastro de um novo gerente** (com validação de dados e restrição de acesso).  
+  2. **Cadastro de uma unidade de ensino** e vinculação a alunos.  
+  3. **Cadastro, edição e exclusão de profissionais**, garantindo auditoria das alterações.  
 
 ## 5.3 Descrição Textual dos Diagramas
 _conteúdo_
