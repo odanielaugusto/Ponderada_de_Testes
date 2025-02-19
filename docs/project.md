@@ -943,15 +943,15 @@ _conteúdo_
 
 - *Visão geral de métricas*: analytics em relação a alunos, atendimentos especializados, instituições de ensino, entre outros dados;
 - *Listagem de instituições*: a partir das métricas em relação a todas as faculdades, é possível filtrar uma específica;
-- *Listagem de alunos*: com relação a todas as instituições ou a partir de uma em específico, é possível visualizar os alunos;
+- *Listagem de alunos*: a partir da listagem de instituições, é possível visualizar os alunos de uma faculdade específica;
 - *Cadastro de usuários*: adição de demais gerentes com tipo de acesso administrativo;
 
 2. **Coordenação de Acessoria de Inclusão ou Gerência de Unidades de Ensino**
 
 - *Login*: autenticação do perfil de usuário para o acesso às funcionalidades específicas.
 - *Visão do aluno*: apresentação dos dados pessoais e histórico do aluno;
-- *Atendimento*: componente responsável pelas definições do atendimento;
-- *Associação de profissional*: responsável pela listagem de profissionais e associação com alunos que necessitam de atendimento especializado.
+- *Atendimento*: a partir da visão do aluno, é possível fazer as definições do atendimento especializado;
+- *Associação de profissional*: a partir do componente de atendimento, tem-se listagem de profissionais e associação com alunos que necessitam de atendimento especializado.
 
 ## 5.2 Diagramas de Sequência da UML
 _conteúdo_
