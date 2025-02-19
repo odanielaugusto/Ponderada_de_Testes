@@ -932,7 +932,26 @@ _conteúdo_
 _conteúdo_
 
 ## 5.1 Diagrama de Componentes da UML
-_conteúdo_
+
+&emsp;Entendendo-se a importância do Diagrama de Componentes UML para a identificação de elementos de uma aplicação que encapsulam classes, artefatos, dependências, bibliotecas ou demais, bem como suas inter-relações (IBM, 2021), elaborou-se o diagrama a ser apresentado na presente subseção.
+
+### Identificação de componentes do sistema
+
+&emsp;Considerando que as personas definidas pela equipe terão diferentes acessos e interações com o sistema, a identificação dos componentes foi baseada nos fluxos de usabilidade dos stakeholders mais envolvidos com o sistema: Fernanda Rocha, coordenadora da Acessoria de Inclusão; Ana Beatriz, gerente de unidade de ensino.
+
+1. **Restritos apenas à Coordenação de Acessoria de Inclusão, ou gerência geral**
+
+- *Visão geral de métricas*: analytics em relação a alunos, atendimentos especializados, instituições de ensino, entre outros dados;
+- *Listagem de instituições*: a partir das métricas em relação a todas as faculdades, é possível filtrar uma específica;
+- *Listagem de alunos*: com relação a todas as instituições ou a partir de uma em específico, é possível visualizar os alunos;
+- *Cadastro de usuários*: adição de demais gerentes com tipo de acesso administrativo;
+
+2. **Coordenação de Acessoria de Inclusão ou Gerência de Unidades de Ensino**
+
+- *Login*: autenticação do perfil de usuário para o acesso às funcionalidades específicas.
+- *Visão do aluno*: apresentação dos dados pessoais e histórico do aluno;
+- *Atendimento*: componente responsável pelas definições do atendimento;
+- *Associação de profissional*: responsável pela listagem de profissionais e associação com alunos que necessitam de atendimento especializado.
 
 ## 5.2 Diagramas de Sequência da UML
 _conteúdo_
