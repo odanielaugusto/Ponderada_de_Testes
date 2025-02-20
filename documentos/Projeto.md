@@ -655,10 +655,40 @@ _conteúdo_
 
 ## 7.3 Guia Visual
 
-&emsp;	Para a construção de sistemas escaláveis e consistentes, é essencial estabelecer padrões a serem seguidos por todas as plataformas. Segundo SCHUHMACHER (1998), “a  eficácia da interação está intimamente ligada a forma como a informação é apresentada ou requerida do usuário”, ou seja, a experiência do usuário é diretamente influenciada pela forma como os elementos são exibidos. 
+&emsp;Para a construção de sistemas escaláveis e consistentes, é essencial estabelecer padrões a serem seguidos por todas as plataformas. Segundo SCHUHMACHER (1998), “a  eficácia da interação está intimamente ligada a forma como a informação é apresentada ou requerida do usuário”, ou seja, a experiência do usuário é diretamente influenciada pela forma como os elementos são exibidos. 
 
 &emsp;Assim, foram elaborados um guia de estilo e um design system para o presente projeto. Nesta seção, será possível encontrar a definição e explicação dos padrões criados, sendo eles: grid, paleta de cores, tipografia, iconografia, ilustrações e opções de acessibilidade. 
 
+### Grid e Baseline Grid
+
+&emsp;Definir um *grid* ajuda a organizar o conteúdo de uma página, de forma que se torna suporte para a criação de uma estrutura consistente, repetível e responsiva para o design. Nesse sentido, o Sistema Gallaudet segue uma orientação vertical feita em colunas, as quais se alteram conforme a largura do dispositivo. 
+
+&emsp;Para um melhor entendimento desta seção, abaixo há uma ilustração que indica alguns conceitos básicos de *grid*:
+
+<div align="center">
+  <sub>Figura X - Conceitos de Grid </sub> <br>
+
+  <img src="img/grid_example.png" alt="Conceitos de Grid">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Conforme ilustrado, enquanto a margem é o espaçamento dos limites da tela até as colunas, os *gutters* consistem na distância entre uma coluna e outra. Para a definição da largura das divisões, será levado em conta uma distribuição igualitária de espaço após serem definidos os outros parâmetros. 
+
+&emsp;Além disso, também foi exibido o que é o *baseline grid*, o qual pode ser entendido como o espaçamento entre os componentes. Seguindo a mesma analogia, foi definido que, para o Sistema Gallaudet, essa medida deve ser sempre múltipla de 4 em *pixels*.
+
+&emsp;O *grid* desta solução foi pensado principalmente para *notebooks* e *desktops*, pois serão os aparelhos alvo. Neles, deverão ser impostas 12 colunas de mesma espessura, com margens de 56 *pixels* e *gutters* de 32 *pixels*.  
+
+&emsp;A seguir, há as especificações de *grid* para diferentes tipos de aparelhos que poderiam ser usados para acessar o sistema:
+
+
+<div align="center">
+  <sub>Figura X - Definição do Grid</sub> <br>
+
+  <img src="img/grid_definition.png" alt="Definição do Grid">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
 
 # 8. Desenvolvimento do Projeto
 _conteúdo_
