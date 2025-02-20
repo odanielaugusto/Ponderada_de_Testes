@@ -933,25 +933,16 @@ _conteúdo_
 
 ## 5.1 Diagrama de Componentes da UML
 
-&emsp;Entendendo-se a importância do Diagrama de Componentes UML para a identificação de elementos de uma aplicação que encapsulam classes, artefatos, dependências, bibliotecas ou demais, bem como suas inter-relações (IBM, 2021), elaborou-se o diagrama a ser apresentado na presente subseção.
+&emsp;Um Diagrama de Componentes UML é essencial para a identificação de elementos de uma aplicação que encapsulam classes, artefatos, dependências, bibliotecas ou demais, de maneira modular ao sistema — em que, o mesmo componente pode ser desenvolvido de diferentes formas e, ainda assim, ser acoplado à aplicação de forma funcional — e possuindo relações com outros componentes (IBM, 2021). Assim, elaborou-se o diagrama a ser apresentado na presente subseção.
 
 ### Identificação de componentes do sistema
 
-&emsp;Considerando que as personas definidas pela equipe terão diferentes acessos e interações com o sistema, a identificação dos componentes foi baseada nos fluxos de usabilidade dos stakeholders mais envolvidos com o sistema: Fernanda Rocha, coordenadora da Acessoria de Inclusão; Ana Beatriz, gerente de unidade de ensino.
-
-1. **Restritos apenas à Coordenação de Acessoria de Inclusão, ou gerência geral**
-
-- *Visão geral de métricas*: analytics em relação a alunos, atendimentos especializados, instituições de ensino, entre outros dados;
-- *Listagem de instituições*: a partir das métricas em relação a todas as faculdades, é possível filtrar uma específica;
-- *Listagem de alunos*: a partir da listagem de instituições, é possível visualizar os alunos de uma faculdade específica;
-- *Cadastro de usuários*: adição de demais gerentes com tipo de acesso administrativo;
-
-2. **Coordenação de Acessoria de Inclusão ou Gerência de Unidades de Ensino**
-
-- *Login*: autenticação do perfil de usuário para o acesso às funcionalidades específicas.
-- *Visão do aluno*: apresentação dos dados pessoais e histórico do aluno;
-- *Atendimento*: a partir da visão do aluno, é possível fazer as definições do atendimento especializado;
-- *Associação de profissional*: a partir do componente de atendimento, tem-se listagem de profissionais e associação com alunos que necessitam de atendimento especializado.
+- **Autenticação de usuário**: é o primeiro componente de contato com o usuário, responsável pelo gerenciamento de acesso ao sistema de acordo com o perfil. Cada perfil terá acesso a diferentes funcionalidades;
+- **Front-end**: possui interação direta com o usuário em todo o sistema, desde a primeira seção de autenticação, integrando a usabilidade, layout e *design*. Pode ser construído com diferentes stacks, bibliotecas e frameworks;
+- **Services**: relacionada ao back-end da aplicação, contendo a lógica do negócio. É responsável por realizar chamadas a DAO's e validar regras antes de persistir dados. Também pode ser construída com diferentes stacks, bibliotecas e frameworks;
+- **Banco de dados**: faz o armazenamento e manipulação dos dados e, independentemente da plataforma escolhida, faz a alimentação de informações do sistema;
+- **DAO's** (Data Access Objects): a partir de Services, intermedia e controla o acesso ao banco de dados. Integra os métodos para buscar, inserir, atualizar e excluir registros.
+- **Application Programming Interface (API)**: faz a intermediação entre os dados de sistemas contidos pela empresa parceira, através de Services e DAO's, bem como faz a alimentação do Sistema Gallaudet.
 
 ## 5.2 Diagramas de Sequência da UML
 _conteúdo_
