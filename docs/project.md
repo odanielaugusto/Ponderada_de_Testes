@@ -846,6 +846,42 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div> 
 
+<!-- 
+Código PlantUML que gera o diagrama acima:
+@startuml
+
+actor Usuário
+participant "Front-End" as FE
+participant "API Gallaudet" as API
+participant "Banco de Dados" as DB
+participant "API (externa) dos Alunos CPS" as AlunosAPI
+
+== Agendamento de Atendimento ==
+Usuário -> FE: Acessa página do aluno
+FE -> AlunosAPI: Solicita dados detalhados do aluno
+AlunosAPI -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE: Retorna dados do aluno
+
+Usuário -> FE: Clica em "Agendar Atendimento"
+FE -> API: Envia dados do atendimento
+API -> DB: Armazena atendimento
+API -> DB: Armazena profissional vinculado
+API -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE: Confirmação do agendamento
+
+== Edição ou Cancelamento de Atendimento ==
+Usuário -> FE: Acessa página do aluno
+FE -> API: Solicita atendimentos do aluno
+API -> DB: Busca atendimentos vinculados
+DB -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) API: Retorna lista de atendimentos
+API -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE: Retorna atendimentos
+
+Usuário -> FE: Seleciona atendimento para edição ou cancelamento
+FE -> API: Envia solicitação de edição/cancelamento
+API -> DB: Atualiza atendimento
+API -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE: Confirmação da ação
+
+@enduml
+-->
+
 &emsp;Os diagramas de sequência foram elaborados para elucidar as interações entre usuário e sistema em cada funcionalidade. No processo de agendamento de um atendimento, detalha-se desde o acesso à página do aluno até a confirmação do registro no banco de dados.  
 
 &emsp;No caso da edição ou cancelamento de um atendimento, o fluxo segue etapas semelhantes ao agendamento. A interação se inicia com o acesso à página do aluno, onde os dados são buscados na API externa. No entanto, como essa etapa já foi explorada no fluxo de agendamento e não revela mudanças no contexto da edição ou cancelamento, ela não foi explicitada no diagrama.  
@@ -875,6 +911,8 @@ _conteúdo_
   1. **Cadastro de um novo gerente** (com validação de dados e restrição de acesso).  
   2. **Cadastro de uma unidade de ensino** e vinculação a alunos.  
   3. **Cadastro, edição e exclusão de profissionais**, garantindo auditoria das alterações.  
+
+&emsp; A criação dos diagramas presentes nesta seção foi realizada através da linguagem de marcação PlantUML, que permite gerar diagramas UML a partir de código texto, garantindo precisão e facilidade de manutenção. A renderização dos diagramas foi efetuada utilizando a ferramenta online https://plantuml.mseiche.de/, assegurando que os diagramas sigam os padrões estabelecidos pela UML. Além disso, para facilitar a compreensão e a reprodução dos diagramas, os códigos PlantUML de cada um foram disponibilizados em forma de comentários Markdown logo após a imagem correspondente.
 
 ## 5.3 Descrição Textual dos Diagramas
 _conteúdo_
