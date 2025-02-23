@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./documentos/assets/logo_cps_inteli.png" 
+    <img src="./docs/assets/logo_cps_inteli.png" 
          alt="Imagem contendo a logotipo do Centro Paula Souza e do Inteli" 
          border="0" 
          style="max-width: 600px; width: 100%; height: auto;">

@@ -832,28 +832,44 @@ _conteúdo_
 ## 5.2 Diagramas de Sequência da UML
 &emsp;Nesta seção, são apresentados os diagramas UML de sequência, um tipo de diagrama de interação que descreve como um grupo de objetos trabalha em conjunto e em qual ordem as interações ocorrem. A elaboração desses diagramas foi baseada nas funcionalidades que agregam mais valor ao cliente, tornando sua explicação essencial. Por esse motivo, essa abordagem foi adotada na construção dos diagramas de sequência. A seguir, são listadas as funcionalidades acompanhadas de seus respectivos diagramas.
 
-### 1. Cadastro e Gestão de Atendimentos (RF06, RF10)
-&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. Os diagramas ilustram esses processos, assegurando a correta gestão dos atendimentos. 
-- **Cenários para diagramas de sequência**:  
-  1. **Criação de um novo atendimento** (incluindo aluno, profissional e detalhes da assistência).  
-  2. **Edição ou cancelamento de um atendimento**.  
-  3. **Atualização do status do atendimento** (ex: em andamento, concluído, cancelado).  
+**1. Cadastro e Gestão de Atendimentos (RF06, RF10)**
 
-### 2. Registro de Histórico e Logs (RF07, RF08, RF11)
+&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. Os diagramas ilustram esses processos, assegurando a correta gestão dos atendimentos. 
+
+<div align="center">
+  <sub>Figura X - Sequências do agendamento e edição de um atendimento</sub> <br>
+
+  <img 
+    src="./assets/section5/5.2_sequencies_diagrams/scheduling_appointment.jpg" alt="Sequências do agendamento e edição de um atendimento" 
+    style="max-width: 1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div> 
+
+&emsp;Os diagramas de sequência foram elaborados para elucidar as interações entre usuário e sistema em cada funcionalidade. No processo de agendamento de um atendimento, detalha-se desde o acesso à página do aluno até a confirmação do registro no banco de dados.  
+
+&emsp;No caso da edição ou cancelamento de um atendimento, o fluxo segue etapas semelhantes ao agendamento. A interação se inicia com o acesso à página do aluno, onde os dados são buscados na API externa. No entanto, como essa etapa já foi explorada no fluxo de agendamento e não revela mudanças no contexto da edição ou cancelamento, ela não foi explicitada no diagrama.  
+
+&emsp;Dessa forma, o diagrama foca nas interações diretamente relacionadas à criação, edição e remoção dos atendimentos, garantindo uma visão clara dos processos e suas implicações dentro do sistema.  
+
+**2. Registro de Histórico e Logs (RF07, RF08, RF11)**
+
 &emsp;O Registro de Histórico e Logs garante rastreabilidade e auditoria das ações realizadas no sistema. Como o acompanhamento dos alunos envolve múltiplas interações, manter um histórico detalhado permite um melhor monitoramento e análise. Os diagramas representam o registro de ações no log, a consulta ao histórico do aluno e a exibição de sua timeline.
 - **Cenários para diagramas de sequência**:  
   1. **Registro de uma ação do usuário no log** (qualquer operação relevante realizada no sistema).  
   2. **Visualização do histórico de um aluno** (todas as assistências, atendimentos e alterações feitas).  
   3. **Exibição da timeline do aluno**, mostrando a evolução dos atendimentos de forma cronológica.  
 
-### 3. Dashboard e Visualização de Dados Importantes (RF04, RF09, RF12)
+**3. Dashboard e Visualização de Dados Importantes (RF04, RF09, RF12)**
+
 &emsp;A Visualização de Dados Estratégicos via Dashboard é essencial para uma gestão eficiente. Ter um panorama rápido sobre alunos, atendimentos e problemas mais comuns facilita a tomada de decisões. Além disso, a busca por tecnologias assistivas e o envio de notificações mantêm os usuários informados. Os diagramas mostram como essas funcionalidades são processadas.
 - **Cenários para diagramas de sequência**:  
   1. **Carregamento do Dashboard** (consulta e exibição de gráficos sobre alunos, atendimentos e problemas).  
   2. **Busca e consulta de tecnologias assistivas disponíveis** para alunos.  
   3. **Envio de notificações aos usuários sobre eventos importantes** (exemplo: um novo atendimento registrado).  
 
-### 4. Cadastro e Gestão de Usuários e Unidades (RF01, RF02, RF05)
+**4. Cadastro e Gestão de Usuários e Unidades (RF01, RF02, RF05)**
+
 &emsp;A Gestão de Usuários e Unidades estrutura o funcionamento do sistema, permitindo o cadastro de gerentes, unidades de ensino e profissionais. Isso garante a correta vinculação dos alunos e mantém a consistência das informações. Os diagramas detalham os processos de cadastro, edição e exclusão desses elementos. 
 - **Cenários para diagramas de sequência**:  
   1. **Cadastro de um novo gerente** (com validação de dados e restrição de acesso).  
