@@ -1052,7 +1052,7 @@ frontend -> usuario : Exibe dashboard e permite filtros
 
 actor Usuário as user
 participant "Front-End" as FE
-participant "API" as API
+participant "API Gallaudet" as API
 database "Banco de Dados" as DB
 
 == Acesso à lista de usuários e a visualização de suas ações ==
