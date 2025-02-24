@@ -834,13 +834,13 @@ _conteúdo_
 
 **1. Cadastro e Gestão de Atendimentos (RF06, RF10)**
 
-&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. Os diagramas ilustram esses processos, assegurando a correta gestão dos atendimentos. 
+&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. O diagrama a seguir ilustra esses processos, assegurando a correta gestão dos atendimentos. 
 
 <div align="center">
-  <sub>Figura X - Sequências do agendamento e edição de um atendimento</sub> <br>
+  <sub>Figura X - Sequências do agendamento e edição de um assistência</sub> <br>
 
   <img 
-    src="./assets/section5/5.2_sequencies_diagrams/scheduling_appointment.jpg" alt="Sequências do agendamento e edição de um atendimento" 
+    src="./assets/section5/5.2_sequencies_diagrams/scheduling_appointment.jpg" alt="Sequências do agendamento e edição de um assistência" 
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
@@ -853,7 +853,7 @@ Código PlantUML que gera o diagrama acima:
 actor Usuário
 participant "Front-End" as FE
 participant "API Gallaudet" as API
-participant "Banco de Dados" as DB
+database "Banco de Dados" as DB
 participant "API (externa) dos Alunos CPS" as AlunosAPI
 
 == Agendamento de Atendimento ==
@@ -890,11 +890,98 @@ API -- > (Observação: foi adicionado um espaço antes te ">", senão o coment�
 
 **2. Registro de Histórico e Logs (RF07, RF08, RF11)**
 
-&emsp;O Registro de Histórico e Logs garante rastreabilidade e auditoria das ações realizadas no sistema. Como o acompanhamento dos alunos envolve múltiplas interações, manter um histórico detalhado permite um melhor monitoramento e análise. Os diagramas representam o registro de ações no log, a consulta ao histórico do aluno e a exibição de sua timeline.
-- **Cenários para diagramas de sequência**:  
-  1. **Registro de uma ação do usuário no log** (qualquer operação relevante realizada no sistema).  
-  2. **Visualização do histórico de um aluno** (todas as assistências, atendimentos e alterações feitas).  
-  3. **Exibição da timeline do aluno**, mostrando a evolução dos atendimentos de forma cronológica.  
+&emsp;O Registro de Histórico e Logs garante rastreabilidade e auditoria das ações realizadas no sistema. Como o acompanhamento dos alunos envolve múltiplas interações, manter um histórico detalhado permite um melhor monitoramento e análise. Os diagramas a seguir representam o registro de ações no log, a consulta ao histórico do aluno e a exibição de sua timeline.
+
+<div align="center">
+  <sub>Figura X - Sequências do resgistro de logs no agendamento de uma assistência</sub> <br>
+
+  <img 
+    src="./assets/section5/5.2_sequencies_diagrams/log_record.jpg" alt="Sequências do agendamento e edição de um assistência" 
+    style="max-width: 1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>  
+
+<!-- 
+Código PlantUML que gera o diagrama acima:
+@startuml
+
+actor Usuario
+participant "Front-End" as FE
+
+box "API Gallaudet"
+    participant "Controller" as Controller
+    participant "Business" as Business
+    participant "Repository" as Repo
+end box
+
+database "Banco de Dados" as DB
+
+Usuario -> FE : Executa ação (Criar, Editar, Excluir Atendimento)
+FE -> Controller : Envia requisição com ação realizada
+Controller -> Business : Processa a ação e regras de negócio
+Business -> Repo : Persiste alteração no atendimento
+Repo -> DB : Atualiza tabela de atendimentos
+Business -> Repo : Registra ação na tabela de logs
+Repo -> DB : Insere registro na tabela logs_atendimentos
+Repo -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Business : Confirmação
+Business -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Controller : Resposta da ação
+Controller -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE : Notificação de sucesso (ou erro) ao usuário
+
+@enduml
+-->
+
+&emsp;No fluxo acima, o sistema registra automaticamente as ações do usuário ao criar, editar ou excluir um atendimento. Esse processo envolve a comunicação entre o Front-End e a API, que realiza o processamento da requisição e, posteriormente, armazena tanto a alteração do atendimento quanto um log detalhado da ação.
+
+&emsp;Diferente do diagrama de agendamento de assistência, em que a API era tratada como um único componente, agora o processo foi detalhado em camadas (Controller, Business e Repository). Essa divisão foi feita para esclarecer a lógica do registro de logs, que envolve múltiplas etapas antes da persistência dos dados.
+
+<div align="center">
+  <sub>Figura X - Sequências da Visualização do log de agendamento de assistência</sub> <br>
+
+  <img 
+    src="./assets/section5/5.2_sequencies_diagrams/log_view.jpg" alt="Sequências da Visualização do log de agendamento de assistência" 
+    style="max-width: 1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>  
+
+<!-- 
+Código PlantUML que gera o diagrama acima:
+Código PlantUML que gera o diagrama acima:
+@startuml
+
+actor Usuario
+participant "Front-End" as FE
+
+box "API Gallaudet"
+    participant "Controller" as Controller
+    participant "Business" as Business
+    participant "Repository" as Repo
+end box
+
+database "Banco de Dados" as DB
+
+Usuario -> FE : Acessa página do aluno
+FE -> Controller : Solicita histórico do aluno
+Controller -> Business : Processa requisição
+Business -> Repo : Busca atendimentos do aluno
+Repo -> DB : Consulta tabela de atendimentos
+DB -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Repo : Retorna registros
+Repo -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Business : Retorna dados
+Business -> Repo : Busca logs relacionados
+Repo -> DB : Consulta tabela logs_atendimentos
+DB -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Repo : Retorna logs
+Repo -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Business : Retorna dados
+Business -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Controller : Envia registros consolidados
+Controller -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE : Retorna dados
+FE -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Usuario : Exibe timeline do aluno
+
+@enduml
+-->
+
+&emsp;O diagrama acima representa a consulta ao histórico de um aluno. Quando o usuário acessa a página do aluno, a API busca registros de atendimentos e logs associados, consolidando essas informações antes de enviá-las ao Front-End. Esse processo permite que o sistema exiba uma timeline detalhada, facilitando a análise do histórico do aluno.
+
+&emsp;Ambos os diagramas apresentados – o primeiro, que detalha o registro de logs no agendamento de atendimentos, e o segundo, que descreve a exibição desses registros – são aplicáveis a outras funcionalidades do Gallaudet. Por exemplo, na gestão de usuários, onde é necessário registrar e exibir ações realizadas pelos administradores, a estrutura do processo será bastante semelhante.
 
 **3. Dashboard e Visualização de Dados Importantes (RF04, RF09, RF12)**
 
