@@ -893,10 +893,10 @@ API -- > (Observação: foi adicionado um espaço antes te ">", senão o coment�
 &emsp;O Registro de Histórico e Logs garante rastreabilidade e auditoria das ações realizadas no sistema. Como o acompanhamento dos alunos envolve múltiplas interações, manter um histórico detalhado permite um melhor monitoramento e análise. Os diagramas a seguir representam o registro de ações no log, a consulta ao histórico do aluno e a exibição de sua timeline.
 
 <div align="center">
-  <sub>Figura X - Sequências do resgistro de logs no agendamento de uma assistência</sub> <br>
+  <sub>Figura X - Sequências do registro de logs no agendamento de uma assistência</sub> <br>
 
   <img 
-    src="./assets/section5/5.2_sequencies_diagrams/log_record.jpg" alt="Sequências do agendamento e edição de um assistência" 
+    src="./assets/section5/5.2_sequencies_diagrams/log_record.jpg" alt="Sequências do registro de logs no agendamento de uma assistência" 
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
@@ -985,19 +985,61 @@ FE -- > (Observação: foi adicionado um espaço antes te ">", senão o comentá
 
 **3. Dashboard e Visualização de Dados Importantes (RF04, RF09, RF12)**
 
-&emsp;A Visualização de Dados Estratégicos via Dashboard é essencial para uma gestão eficiente. Ter um panorama rápido sobre alunos, atendimentos e problemas mais comuns facilita a tomada de decisões. Além disso, a busca por tecnologias assistivas e o envio de notificações mantêm os usuários informados. Os diagramas mostram como essas funcionalidades são processadas.
-- **Cenários para diagramas de sequência**:  
-  1. **Carregamento do Dashboard** (consulta e exibição de gráficos sobre alunos, atendimentos e problemas).  
-  2. **Busca e consulta de tecnologias assistivas disponíveis** para alunos.  
-  3. **Envio de notificações aos usuários sobre eventos importantes** (exemplo: um novo atendimento registrado).  
+&emsp;A Visualização de Dados Estratégicos via Dashboard é essencial para uma gestão eficiente. Ter um panorama rápido sobre alunos, atendimentos e problemas mais comuns facilita a tomada de decisões. O seguinte diagrama mostra como essa funcionalidade é processada.
+
+<div align="center">
+  <sub>Figura X - Sequências do carregamento das dashboards do Gallaudet</sub> <br>
+
+  <img 
+    src="./assets/section5/5.2_sequencies_diagrams/dashboard_load.jpg" alt="Sequências do carregamento das dashboards do Gallaudet" 
+    style="max-width: 1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>  
+
+<!-- 
+Código PlantUML que gera o diagrama acima:
+@startuml
+
+actor "Usuário" as usuario
+participant "Front-End" as frontend
+participant "API Gallaudet" as api
+database "Banco de Dados" as db
+participant "API (externa) dos Alunos CPS" as apiAlunos
+
+usuario -> frontend : Abre o Gallaudet
+frontend -> api : Requisição para carregar Dashboard
+api -> api : Verifica role do usuário
+alt Gestora Administrativa
+    api -> apiAlunos : Buscar dados de todos os alunos
+    apiAlunos -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) api : retornta todos os alunos
+else Gestora Local de Unidade
+    api -> db : Buscar unidade vinculada ao usuário
+    db -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) api : Retorna unidade
+    api -> apiAlunos : Buscar dados apenas da unidade vinculada
+    apiAlunos -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) api : Retorna dados filtrados
+end
+
+api -> db : Buscar dados de assistências
+db -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) api : Retorna dados
+api -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) frontend : Retorna dados processados (insights, gráficos)
+
+frontend -> usuario : Exibe dashboard e permite filtros
+
+@enduml
+-->
+
+&emsp;Uma característica notável desse diagrama é a mensagem recursiva dentro da API, utilizada para a verificação da role do usuário. Além da verificação de role, o sistema também valida a unidade vinculada ao usuário, especialmente para as Gestoras Locais de Unidade, garantindo que os dados apresentados no dashboard sejam filtrados de acordo com os acessos permitidos. Esse comportamento impede que usuários sem permissão visualizem informações de unidades às quais não pertencem.
+
+&emsp;É importante destacar que essas verificações de autorização e autenticação ocorrem em praticamente todos os endpoints do sistema, sendo implementadas por um middleware de autenticação e autorização. No entanto, neste diagrama de sequência específico, optamos por evidenciar essas verificações porque são essenciais para a funcionalidade do dashboard. Diferente de outras interações onde essa verificação é uma rotina padrão e repetitiva, aqui ela define completamente o comportamento do sistema, garantindo que as informações carregadas estejam de acordo com as permissões do usuário.
 
 **4. Cadastro e Gestão de Usuários e Unidades (RF01, RF02, RF05)**
 
-&emsp;A Gestão de Usuários e Unidades estrutura o funcionamento do sistema, permitindo o cadastro de gerentes, unidades de ensino e profissionais. Isso garante a correta vinculação dos alunos e mantém a consistência das informações. Os diagramas detalham os processos de cadastro, edição e exclusão desses elementos. 
+&emsp;A Gestão de Usuários estrutura o funcionamento do sistema, permitindo o cadastro de novos agentes dentro da solução. Isso garante a correta vinculação dos alunos e mantém a consistência das informações. Os diagramas detalham os processos de cadastro, edição e exclusão desses elementos. 
 - **Cenários para diagramas de sequência**:  
   1. **Cadastro de um novo gerente** (com validação de dados e restrição de acesso).  
-  2. **Cadastro de uma unidade de ensino** e vinculação a alunos.  
-  3. **Cadastro, edição e exclusão de profissionais**, garantindo auditoria das alterações.  
+
+<br>
 
 &emsp; A criação dos diagramas presentes nesta seção foi realizada através da linguagem de marcação PlantUML, que permite gerar diagramas UML a partir de código texto, garantindo precisão e facilidade de manutenção. A renderização dos diagramas foi efetuada utilizando a ferramenta online https://plantuml.mseiche.de/, assegurando que os diagramas sigam os padrões estabelecidos pela UML. Além disso, para facilitar a compreensão e a reprodução dos diagramas, os códigos PlantUML de cada um foram disponibilizados em forma de comentários Markdown logo após a imagem correspondente.
 
