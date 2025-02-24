@@ -859,25 +859,25 @@ participant "API (externa) dos Alunos CPS" as AlunosAPI
 == Agendamento de Atendimento ==
 Usuário -> FE: Acessa página do aluno
 FE -> AlunosAPI: Solicita dados detalhados do aluno
-AlunosAPI -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE: Retorna dados do aluno
+AlunosAPI -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE: Retorna dados do aluno
 
 Usuário -> FE: Clica em "Agendar Atendimento"
 FE -> API: Envia dados do atendimento
 API -> DB: Armazena atendimento
 API -> DB: Armazena profissional vinculado
-API -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE: Confirmação do agendamento
+API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE: Confirmação do agendamento
 
 == Edição ou Cancelamento de Atendimento ==
 Usuário -> FE: Acessa página do aluno
 FE -> API: Solicita atendimentos do aluno
 API -> DB: Busca atendimentos vinculados
-DB -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) API: Retorna lista de atendimentos
-API -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE: Retorna atendimentos
+DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) API: Retorna lista de atendimentos
+API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE: Retorna atendimentos
 
 Usuário -> FE: Seleciona atendimento para edição ou cancelamento
 FE -> API: Envia solicitação de edição/cancelamento
 API -> DB: Atualiza atendimento
-API -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE: Confirmação da ação
+API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE: Confirmação da ação
 
 @enduml
 -->
@@ -924,9 +924,9 @@ Business -> Repo : Persiste alteração no atendimento
 Repo -> DB : Atualiza tabela de atendimentos
 Business -> Repo : Registra ação na tabela de logs
 Repo -> DB : Insere registro na tabela logs_atendimentos
-Repo -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Business : Confirmação
-Business -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Controller : Resposta da ação
-Controller -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE : Notificação de sucesso (ou erro) ao usuário
+Repo -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Business : Confirmação
+Business -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Controller : Resposta da ação
+Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Notificação de sucesso (ou erro) ao usuário
 
 @enduml
 -->
@@ -966,15 +966,15 @@ FE -> Controller : Solicita histórico do aluno
 Controller -> Business : Processa requisição
 Business -> Repo : Busca atendimentos do aluno
 Repo -> DB : Consulta tabela de atendimentos
-DB -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Repo : Retorna registros
-Repo -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Business : Retorna dados
+DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Repo : Retorna registros
+Repo -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Business : Retorna dados
 Business -> Repo : Busca logs relacionados
 Repo -> DB : Consulta tabela logs_atendimentos
-DB -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Repo : Retorna logs
-Repo -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Business : Retorna dados
-Business -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Controller : Envia registros consolidados
-Controller -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) FE : Retorna dados
-FE -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) Usuario : Exibe timeline do aluno
+DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Repo : Retorna logs
+Repo -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Business : Retorna dados
+Business -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Controller : Envia registros consolidados
+Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Retorna dados
+FE -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Usuario : Exibe timeline do aluno
 
 @enduml
 -->
@@ -1012,17 +1012,17 @@ frontend -> api : Requisição para carregar Dashboard
 api -> api : Verifica role do usuário
 alt Gestora Administrativa
     api -> apiAlunos : Buscar dados de todos os alunos
-    apiAlunos -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) api : retornta todos os alunos
+    apiAlunos -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : retornta todos os alunos
 else Gestora Local de Unidade
     api -> db : Buscar unidade vinculada ao usuário
-    db -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) api : Retorna unidade
+    db -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna unidade
     api -> apiAlunos : Buscar dados apenas da unidade vinculada
-    apiAlunos -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) api : Retorna dados filtrados
+    apiAlunos -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna dados filtrados
 end
 
 api -> db : Buscar dados de assistências
-db -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) api : Retorna dados
-api -- > (Observação: foi adicionado um espaço antes te ">", senão o comentário seria quebrado) frontend : Retorna dados processados (insights, gráficos)
+db -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna dados
+api -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) frontend : Retorna dados processados (insights, gráficos)
 
 frontend -> usuario : Exibe dashboard e permite filtros
 
@@ -1033,11 +1033,69 @@ frontend -> usuario : Exibe dashboard e permite filtros
 
 &emsp;É importante destacar que essas verificações de autorização e autenticação ocorrem em praticamente todos os endpoints do sistema, sendo implementadas por um middleware de autenticação e autorização. No entanto, neste diagrama de sequência específico, optamos por evidenciar essas verificações porque são essenciais para a funcionalidade do dashboard. Diferente de outras interações onde essa verificação é uma rotina padrão e repetitiva, aqui ela define completamente o comportamento do sistema, garantindo que as informações carregadas estejam de acordo com as permissões do usuário.
 
-**4. Cadastro e Gestão de Usuários e Unidades (RF01, RF02, RF05)**
+**4. Cadastro e Gestão de Usuários (RF01, RF02, RF05)**
 
-&emsp;A Gestão de Usuários estrutura o funcionamento do sistema, permitindo o cadastro de novos agentes dentro da solução. Isso garante a correta vinculação dos alunos e mantém a consistência das informações. Os diagramas detalham os processos de cadastro, edição e exclusão desses elementos. 
-- **Cenários para diagramas de sequência**:  
-  1. **Cadastro de um novo gerente** (com validação de dados e restrição de acesso).  
+&emsp;A gestão de usuários é um elemento essencial do sistema, permitindo o controle e a administração dos agentes cadastrados. Esse processo envolve a criação de novos usuários, a visualização e o gerenciamento de suas informações e ações dentro do sistema. O diagrama a seguir detalham este fluxo:
+
+<div align="center">
+  <sub>Figura X - Sequências do gerenciamento de usuários</sub> <br>
+
+  <img 
+    src="./assets/section5/5.2_sequencies_diagrams/user_management.jpg" alt="Sequências do gerenciamento de usuários" 
+    style="max-width: 1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>  
+
+<!-- 
+@startuml
+
+actor Usuário as user
+participant "Front-End" as FE
+participant "API" as API
+database "Banco de Dados" as DB
+
+== Acesso à lista de usuários e a visualização de suas ações ==
+
+user -> FE : Acessa página de gestão de usuários
+FE -> API : Solicita lista de usuários cadastrados
+API -> DB : Consulta usuários armazenados no sistema
+DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) API : Retorna a lista de usuários disponíves
+API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Envia os dados para exibição
+FE -> user : Exibe lista com opções de filtragem
+user -> FE : Clica em um usuário para visualizar histórico de ações
+FE -> API : Solicita os registros de ações do usuário selecionado
+API -> DB : Recupera os logs de atividades associadas ao usuário
+DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) API : Retorna os registros de ações realizadas
+API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Envia os logs do usuário
+FE -> user : Exibe a lista completa de logs do usuário
+
+== Cadastro de um novo usuário ==
+
+user -> FE : (na página de gestão de usuários) Clica em "Novo Usuário"
+FE -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) user : Formulário de criação de usuário é retornado ao usuário
+user -> FE : Preenche e envia o formulário de cadastro
+FE -> API : Envia os dados do novo usuário
+API -> DB : Verifica se já existe um usuário com o mesmo e-mail cadastrado
+DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) API : Retorna o resultado da verificação
+alt Usuário já cadastrado
+    API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Exibe mensagem de erro informando duplicidade
+else Usuário não cadastrado
+    API -> DB : Armazena os dados do novo usuário no sistema
+    DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) API : Confirmação do cadastro realizado
+    API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Exibe notificação de sucesso
+end
+
+@enduml
+-->
+
+&emsp;O diagrama de sequência acima descreve o fluxo de interação no gerenciamento de usuários, abordando duas operações principais:
+
+1. Acesso à lista de usuários e visualização de ações – Esta primeira etapa detalha como o usuário pode visualizar a lista de usuários cadastrados no sistema e consultar o histórico de ações de um usuário específico. O processo envolve a requisição ao banco de dados por meio da API, retornando as informações necessárias para a interface.
+
+2. Cadastro de um novo usuário – A segunda parte do diagrama descreve o fluxo para criação de um novo usuário. O sistema verifica a existência de um cadastro com o mesmo e-mail antes de armazenar os dados, prevenindo duplicidades. Dependendo do resultado da verificação, o usuário recebe uma mensagem de erro ou uma confirmação do cadastro bem-sucedido.
+
+&emsp;Este diagrama enfatiza a troca de informações entre os diferentes componentes do sistema e propõe uma abordagem estruturada e intuitiva para a gestão de usuários.
 
 <br>
 
