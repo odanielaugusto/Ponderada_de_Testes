@@ -957,6 +957,9 @@ _conteúdo_
 
 ## 7.1 Desenvolvimento de Wireframes
 
+### Para maior detalhamento acesse o link abaixo:
+<a href="https://www.figma.com/design/z3c7lKFlAWCB6t0RVsn6Qp/Wireframe---Gallaudet?node-id=0-1&p=f&t=B4oUE6Y67l6pC1Ua-0">FIGMA</a>
+
 <div align="center">
   <a href="https://www.inteli.edu.br/">
     <img src="./assets/section7/wireframe_login.png"
@@ -981,6 +984,8 @@ _conteúdo_
    Ao clicar, o sistema valida as credenciais fornecidas (e-mail e senha) e redireciona o gerente para a próxima tela, caso os dados estejam corretos.
 
 ---
+### Descrição dos Elementos Numerados (Navbar)
+
 <div align="center">
   <a href="https://www.inteli.edu.br/">
     <img src="./assets/section7/wireframe_navbar.png"
@@ -989,8 +994,6 @@ _conteúdo_
          style="max-width: 600px; width: 100%; height: auto;">
   </a>
 </div>
-
-### Descrição dos Elementos Numerados (Navbar)
 
 5. **Área para logotipo**
    Espaço reservado para inserir o logotipo ou nome da marca, mantendo a identidade visual do sistema.
@@ -1002,16 +1005,16 @@ _conteúdo_
    Ícone que representa o usuário, geralmente localizado à direita da barra de navegação. Pode exibir um menu ao ser clicado, permitindo acesso a configurações, perfil ou logout.
 
 ---
+
+### Descrição dos Elementos Numerados (Dashboard Em Branco)
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/wireframe_dashboard.png"
+    <img src="./assets/section7/wireframe_dashboard_blank.png"
          alt="Wireframe do Dashboard"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
   </a>
 </div>
-
-### Descrição dos Elementos Numerados (Dashboard)
 
 8. **Filtro de Instituição de Ensino (School)**
    Área para selecionar a instituição de ensino desejada(Só aparece para Gerente Geral). Pode influenciar as listas e relatórios exibidos na tela.
@@ -1028,18 +1031,88 @@ _conteúdo_
 12. **Barra de Filtros**
     Localizada na parte superior da coluna central. Permite filtrar ou refinar a lista que está sendo exibida (alunos, profissionais, gerentes, etc.).
 
-13. **Área de Listagem / Conteúdo**
-    Exibe o resultado selecionado na primeira coluna (alunos, profissionais ou gerentes). Contem informações detalhadas, e quando clicada, leva para a tela de detalhes e gerenciamento.
+13. **Lista de objetos**
+    Espaço dedicado para listar Alunos, Profissionais ou gerentes, dependendo de qual botão foi clicado préviamente.
+
+---
+### Descrição dos Elementos Numerados (Dashboard / Lista informações)
+
+<div align="center">
+  <a href="https://www.inteli.edu.br/">
+    <img src="./assets/section7/wireframe_dashboard.png"
+         alt="Wireframe do Dashboard"
+         border="0"
+         style="max-width: 600px; width: 100%; height: auto;">
+  </a>
+</div>
 
 14. **Barra de Scroll**
     Ilustra que a lista é "scrollavel".
 
-15. **Gráficos de Barras (Analytics)**
+15. **Área de Listagem / Conteúdo**
+    Exibe o resultado selecionado na primeira coluna (alunos, profissionais ou gerentes). Contem informações detalhadas, e quando clicada, leva para a tela de detalhes e gerenciamento.
+
+---
+### Descrição dos Elementos Numerados (Grafícos sobre os alunos)
+<div align="center">
+  <a href="https://www.inteli.edu.br/">
+    <img src="./assets/section7/wireframe_analytics.png"
+         alt="Wireframe do analytics"
+         border="0"
+         style="max-width: 600px; width: 100%; height: auto;">
+  </a>
+</div>
+
+- Observação: Analytics só aparecem na listagem de *Alunos*
+
+16. **Gráficos de Barras (Analytics)**
     Mostra dados analíticos referentes aos alunos/profissionais selecionados, possibilitando uma visualização rápida de métricas (por exemplo, atendimentos realizados, condição por escola etc).
 
-16. **Gráficos de Pizza (Analytics)**
+17. **Gráficos de Pizza (Analytics)**
     Apresenta dados complementares aos gráficos de barras, permitindo comparar proporções de forma visual, de acordo com o contexto escolhido no dashboard.
 
+---
+### Descrição dos Elementos Numerados (Pagina do Aluno)
+<div align="center">
+  <a href="https://www.inteli.edu.br/">
+    <img src="./assets/section7/wireframe_show_aluno.png"
+         alt="Wireframe da Pagina de Aluno"
+         border="0"
+         style="max-width: 600px; width: 100%; height: auto;">
+  </a>
+</div>
+
+18. **Informações basicas do Aluno**
+    Apresenta dados basicos, como nome, email, tecnologias assistivas etc.
+19. **Observação**
+    Observações gerais daquele aluno, cabe ao Gerente escreve-las.
+20. **Informações de Curso**
+    Dados como, cursos cursados, data de inicio e fim, turno etc.
+21. **Timeline do Aluno**
+    Atendimentos e atualizações sobre o aluno aparecerão aqui..
+22. **Detalhamento da Timeline**
+    Quando clicado em algum elemento da timeline, essa seção irá atualizar com informações complementares.
+
+---
+### Descrição dos Elementos Numerados (Pagina do Gerente)
+<div align="center">
+  <a href="https://www.inteli.edu.br/">
+    <img src="./assets/section7/wireframe_show_gerente.png"
+         alt="Wireframe da Pagina de Gerente"
+         border="0"
+         style="max-width: 600px; width: 100%; height: auto;">
+  </a>
+</div>
+
+23. **Informações do Gerente**
+    Nome, Telefone, email, etc. Tambem incluí um botão para editar informações relacionadas.
+
+24. **Unidade de Atuação**
+    Incluí onde aquele Gerente está trabalhando e informação de quantos profissionais estão atuando naquela unidade.
+
+25. **Campo de Observações**
+    Serve para adicionar qualquer detalhamento necessário sobre aquele Gerente.
+    
 ## 7.2 Desenvolvimento de Mockups
 _conteúdo_
 
