@@ -41,11 +41,12 @@
   - [4.1 Descrição de Commits](#41-descrição-de-commits)  
 - [4.1 Descrição de Commits](#41-descrição-de-commits)
 - [5. Validadores de Commit e Nome de Branch](#5-validadores-de-commit-e-nome-de-branch)  
-- [6. Política de Push e Pull Requests](#5-política-de-push-e-pull-requests)  
-  - [6.1 Políticas de Push](#51-políticas-de-push)  
-  - [6.2 Políticas de Pull Requests (PR)](#52-políticas-de-pull-requests-pr)  
-    - [6.2.1 Nome de Pull Requests](#521-nome-de-pull-request)  
-    - [6.2.2 Padrão de Escrita dos Pull Requests](#522-padrão-de-escrita-dos-pull-requests)  
+- [6. Política de Push e Pull Requests](#6-política-de-push-e-pull-requests)  
+  - [6.1 Políticas de Push](#61-políticas-de-push)  
+  - [6.2 Políticas de Pull Requests (PR)](#62-políticas-de-pull-requests-pr)  
+    - [6.2.1 Nome de Pull Requests](#621-nome-de-pull-request)  
+    - [6.2.2 Padrão de Escrita dos Pull Requests](#622-padrão-de-escrita-dos-pull-requests)  
+    - [6.2.3 Resolução de Conflitos](#623-resolução-de-conflitos)  
 - [7. Padrão para Imagens](#6-padrão-para-imagens)  
 - [8. Referências](#7-referências)  
 
@@ -266,7 +267,7 @@ O uso desses validadores ajuda a manter a consistência e a qualidade do código
 ## 6. Política de Push e Pull Requests
 
 ### 6.1 Políticas de Push
-- Push direto para `main` e `dev` é proibido.
+- Push direto para `main` e `dev` é proibido. *Observação: os vallidadores impedem isso, mas também exitem pipelines para evitar.*
 - Todas as mudanças devem passar por Pull Request.
 - Foram adicionadas travas no GitHub para impedir push direto na main e develop, exigindo pull requests para qualquer mudança.
 
@@ -274,13 +275,14 @@ O uso desses validadores ajuda a manter a consistência e a qualidade do código
 - Todo PR deve ser revisado por pelo menos um membro. *Foi adicionada uma configuração no Github que garante isso.*
 - Todas as discussões abertas devem ser resolvidas antes do merge. *Foi adicionada uma configuração no Github que garante isso.*
 - Todo PR deve passar por testes automatizados.
+- Após o merge de um PR, a branch correspondente deve ser excluída para manter o repositório organizado e evitar acúmulo de branches obsoletas.
 
 #### 6.2.1 Nome de Pull Request
 - **Formato:** `[tipo]: [descrição breve] #[número-da-task]`
 - **Exemplo:**
   ```
   feat: adiciona filtro por data na listagem de clientes #21  
-  ````
+  ```
 
 #### 6.2.2 Padrão de Escrita dos Pull Requests
 &ensp; Cada Pull Request deve conter uma lista das mudanças implementadas. Exemplo:
@@ -295,6 +297,17 @@ O uso desses validadores ajuda a manter a consistência e a qualidade do código
 
 closes: [#123](link da task no trello), [#124](link da task no trello).
 ```
+
+#### 6.2.3 Resolução de Conflitos
+&ensp; Caso existam conflitos entre branches, recomenda-se que a resolução seja feita localmente no VS Code, utilizando a ferramenta nativa de resolução de conflitos, que é mais intuitiva e eficiente do que a do GitHub. O processo recomendado é o seguinte:
+
+1. Antes do PR ser aceito, caso haja conflitos, realizar um `git pull` para garantir que a branch local está atualizada com as últimas mudanças.
+2. Certificar-se de que está na branch em que o PR foi aberto e executar `git merge [branch-de-destino]` para trazer as alterações mais recentes e verificar os conflitos.
+3. Utilizar a ferramenta de resolução de conflitos do VS Code para resolver as diferenças de forma visual e simplificada.
+4. Após resolver os conflitos, concluir o merge e realizar um commit confirmando as alterações.
+5. Subir as mudanças (`git push`) para que o PR possa ser revisado e aceito sem conflitos.
+
+Essa abordagem facilita a resolução de conflitos e evita complicações ao tentar resolver diretamente na interface do GitHub.
 
 ---
 
