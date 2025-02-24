@@ -668,7 +668,7 @@ _conteúdo_
 <div align="center">
   <sub>Figura X - Conceitos de Grid </sub> <br>
 
-  <img src="img/grid_example.png" alt="Conceitos de Grid">
+  <img src="img/section7/grid_example.png" alt="Conceitos de Grid">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -681,11 +681,53 @@ _conteúdo_
 
 &emsp;A seguir, há as especificações de *grid* para diferentes tipos de aparelhos que poderiam ser usados para acessar o sistema:
 
-
 <div align="center">
   <sub>Figura X - Definição do Grid</sub> <br>
 
-  <img src="img/grid_definition.png" alt="Definição do Grid">
+  <img src="img/section7/grid_definition.png" alt="Definição do Grid">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+### Tipografia 
+
+&emsp;Seguindo padrões estabelecidos pelo guia de estilos para sites do Centro Paula Souza, as principais fontes a serem utilzadas são: Roboto e Roboto Slab, sendo que essa será utilizada em títulos e aquela para principalmente em corpo de texto. 
+
+<div align="center">
+  <sub>Figura X - Fontes</sub> <br>
+
+  <img src="img/section7/fonts.png" alt="Fontes do Sistema">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Como é possível observar, o peso da fonte poderá ser de 300 a 700 (*bold*), dependendo do seu uso. Abaixo, há as configurações para a escrita de quatro tipos de título, considerando o H1 como o nível mais alto da hierarquia:
+
+<div align="center">
+  <sub>Figura X - Fonte para Títulos</sub> <br>
+
+  <img src="img/section7/titles_pattern.png" alt="Tamanhos e pesos da fonte em títulos">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Quanto ao tamanho da fonte, é recomendado, mas não obrigatório, que ele seja escalado por múltiplos de 4 *pixels*. Além disso, deve se dar prioridade para que o texto padrão esteja em 16px, para casos específicos pode ser que esse padrão mude, mas deve sempre estar dentro da régua abaixo:
+
+<div align="center">
+  <sub>Figura X - Tamanho da Fonte</sub> <br>
+
+  <img src="img/section7/font_sizes.png" alt="Tamanhos padrões para fonte">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Também, foram selecionadas alturas padrões para as linhas, as quais devem ser sempre múltiplas de 4px, como sugerido abaixo:
+
+
+<div align="center">
+  <sub>Figura X - Altura de Linha</sub> <br>
+
+  <img src="img/section7/line_height.png" alt="Alturas para linhas">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
