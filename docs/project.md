@@ -937,12 +937,31 @@ _conteúdo_
 
 ### Identificação de componentes do sistema
 
-- **Autenticação de usuário**: é o primeiro componente de contato com o usuário, responsável pelo gerenciamento de usuários e o controle de permissões de acordo com o perfil. Cada perfil terá acesso a diferentes funcionalidades;
 - **Interface Web**: contida do *front-end*, possui interação direta com o usuário em todo o sistema, desde a primeira seção de autenticação; integra a usabilidade, layout e *design*. Pode ser construído com diferentes stacks, bibliotecas e frameworks;
-- **Services**: relacionada ao back-end da aplicação, contendo a lógica do negócio. É responsável por realizar chamadas a DAO's e validar regras antes de persistir dados. Também pode ser construída com diferentes stacks, bibliotecas e frameworks;
+- **Autenticação de usuário**:  como parte do *middleware*, faz o gerenciamento de usuários, garantindo que apenas cadastrados utilizem o sistema e também permitindo a adição de novos utilizadores.
+- **Autorização de usuário**:  também como parte do *middleware*, a cada requisição, realiza o controle de permissões de acordo com o perfil. Cada perfil terá acesso a diferentes funcionalidades;
+- **Controllers**: relacionados ao back-end da aplicação (API interna), fazem o transporte das requisições do usuário para as camadas de Services e DAO's;
+- **Services**: também relacionada ao back-end da aplicação (API interna), contém a lógica do negócio. É responsável por realizar chamadas a DAO's e validar regras antes de persistir dados;
 - **Banco de dados**: faz o armazenamento e manipulação dos dados e, independentemente da plataforma escolhida, faz a alimentação de informações do sistema. É contida de diferentes tabelas, como Alunos, Profissionais, Atendimentos, Usuários, etc.
 - **DAO's** (Data Access Objects): a partir de Services, intermedia e controla o acesso ao banco de dados. Integra os métodos para buscar, inserir, atualizar e excluir registros.
-- **Application Programming Interface (API)**: faz a intermediação entre os dados de sistemas contidos pela empresa parceira, através de Services e DAO's, bem como faz a alimentação do Sistema Gallaudet.
+- **Application Programming Interfaces (API's) interna e externa**: trafegam e processam as requisições de todo o sistema, através de Controllers, Services e DAO's, tanto internamente — através da alimentação dos dados intrínsecos ao sistema — quanto externamente — pela integração do Centro Paula Souza para a consulta de alunos.
+
+&emsp;Dessa forma, foi elaborado o seguinte Diagrama UML, o qual demonstra a ordem de atividades e as associações entre esses componentes:
+
+<div align="center">
+  <sub>Figura X - Diagrama de Componentes UML</sub> <br>
+
+  <img 
+    src="./assets/diagrama_componentes.png" alt="Sequências do gerenciamento de usuários" 
+    style="max-width: 1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div> 
+
+&emsp;A partir do diagrama, é possível notar que o principal ponto de contato com o usuário é a Interface Web, pela qual ele executará as suas funcionalidades, assim enviando requisições para o sistema. Cada requisição é intermediada por um *middleware*, o qual faz a autenticação do usuário específico através do login e verificação de seu papel — de um gerente de unidade ou um gerente administrativo, por exemplo —, garantindo que as atividades no sistema ocorram conforme o permitido para cada tipo de usuário. Ao se obter sucesso na autenticação, as requisições são recebidas pela API interna, através dos Controllers, Services e DAO's, que fazem as operações com o banco de dados, caso necessário. Também através da API externa, há a conexão com os sistemas internos do Centro Paula Sousa, permitindo a consulta de dados dos alunos das instituições de ensino.
+
+&emsp;O recurso apresentado foi elaborado com a plataforma online [PlantUML](https://www.plantuml.com/plantuml), e demonstra de forma visualmente intuitiva tanto as interações entre os elementos principais do sistema, quanto quais sistemas são de controle interno (como a Interface Web) e externo (a API externa do CPS). Elaborar um diagrama de Componentes é extremamente importante para o entendimento fundamental da arquitetura de um sistema, evitando, dessa forma, episódios de retrabalho devido a ruídos de comunicação.
+
 
 ## 5.2 Diagramas de Sequência da UML
 _conteúdo_
