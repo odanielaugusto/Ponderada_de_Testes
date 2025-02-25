@@ -23,9 +23,6 @@
 - <a href="https://www.linkedin.com/in/otavio-vasc/">Otávio de Carvalho Vasconcelos</a>  
 - <a href="https://www.linkedin.com/in/thiagogomesalmeida/">Thiago Gomes de Almeida</a>
 
-
-## Sumário
-
 ## Sumário
 
 - [1. Introdução](#1-introdução)  
@@ -42,14 +39,16 @@
     - [3.2.2 Diretrizes de Uso das Branches](#322-diretrizes-de-uso-das-branches)  
 - [4. Políticas de Commit](#4-políticas-de-commit)  
   - [4.1 Descrição de Commits](#41-descrição-de-commits)  
-- [5. Política de Push e Pull Requests](#5-política-de-push-e-pull-requests)  
-  - [5.1 Políticas de Push](#51-políticas-de-push)  
-  - [5.2 Políticas de Pull Requests (PR)](#52-políticas-de-pull-requests-pr)  
-    - [5.2.1 Nome de Pull Requests](#521-nome-de-pull-request)  
-    - [5.2.2 Padrão de Escrita dos Pull Requests](#522-padrão-de-escrita-dos-pull-requests)  
-- [6. Padrão para Imagens](#6-padrão-para-imagens)  
-- [7. Referências](#7-referências)  
-
+- [4.1 Descrição de Commits](#41-descrição-de-commits)
+- [5. Validadores de Commit e Nome de Branch](#5-validadores-de-commit-e-nome-de-branch)  
+- [6. Política de Push e Pull Requests](#6-política-de-push-e-pull-requests)  
+  - [6.1 Políticas de Push](#61-políticas-de-push)  
+  - [6.2 Políticas de Pull Requests (PR)](#62-políticas-de-pull-requests-pr)  
+    - [6.2.1 Nome de Pull Requests](#621-nome-de-pull-request)  
+    - [6.2.2 Padrão de Escrita dos Pull Requests](#622-padrão-de-escrita-dos-pull-requests)  
+    - [6.2.3 Resolução de Conflitos](#623-resolução-de-conflitos)  
+- [7. Padrão para Imagens](#6-padrão-para-imagens)  
+- [8. Referências](#7-referências)  
 
 ---
 
@@ -232,26 +231,60 @@ Padrão de Nomenclatura das Branches:
 
 ---
 
-## 5. Política de Push e Pull Requests
+## 5. Validadores de Commit e Nome de Branch
 
-### 5.1 Políticas de Push
-- Push direto para `main` e `dev` é proibido.
+Para garantir a conformidade com as boas práticas de commits e nomenclatura de branches, utilizamos quatro scripts que realizam validações antes de permitir um commit, merge ou push:
+
+- **`commit-msg`**: Valida se a mensagem de commit segue o padrão semântico estabelecido e se respeita o limite de caracteres.
+- **`pre-push`**: Valida se o nome da branch segue o padrão definido pela política de branches.
+- **`pre-commit`**: Impede commits diretos nas branches protegidas (`main` e `develop`).
+- **`pre-merge-commit`**: Bloqueia merges diretos para `main` e `develop`, garantindo que a integração de código ocorra apenas via Pull Request.
+
+### Como configurar os validadores
+1. Copie os arquivos `commit-msg`, `pre-push`, `pre-commit` e `pre-merge-commit` da pasta `git_validators`. *Observação: estes arquivos estão disponíveis na pasta `git_validators`, esta, por sua vez, está presente no mesmo diretório que este presente arquivo.*
+2. Cole-os na pasta `.git/hooks` do repositório local.
+3. Dê permissão de execução aos arquivos:
+   ```sh
+   chmod +x .git/hooks/commit-msg
+   chmod +x .git/hooks/pre-push
+   chmod +x .git/hooks/pre-commit
+   chmod +x .git/hooks/pre-merge-commit
+   ```
+
+### Importância dos validadores
+Esses validadores garantem que:
+- Todas as mensagens de commit sigam um padrão claro e padronizado.
+- Nenhuma branch com um nome fora do padrão seja empurrada para o repositório remoto.
+- Nenhum commit seja feito diretamente nas branches protegidas (`main` e `develop`).
+- Nenhum merge direto seja realizado para `main` e `develop` sem passar por um Pull Request.
+- O histórico do repositório permaneça organizado e de fácil leitura.
+- As boas práticas do GitFlow sejam seguidas rigorosamente, garantindo um fluxo de trabalho eficiente e seguro.
+
+O uso desses validadores ajuda a manter a consistência e a qualidade do código, além de evitar problemas futuros na gestão do projeto.
+
+---
+
+## 6. Política de Push e Pull Requests
+
+### 6.1 Políticas de Push
+- Push direto para `main` e `dev` é proibido. *Observação: os vallidadores impedem isso, mas também exitem pipelines para evitar.*
 - Todas as mudanças devem passar por Pull Request.
 - Foram adicionadas travas no GitHub para impedir push direto na main e develop, exigindo pull requests para qualquer mudança.
 
-### 5.2 Políticas de Pull Requests (PR)
+### 6.2 Políticas de Pull Requests (PR)
 - Todo PR deve ser revisado por pelo menos um membro. *Foi adicionada uma configuração no Github que garante isso.*
 - Todas as discussões abertas devem ser resolvidas antes do merge. *Foi adicionada uma configuração no Github que garante isso.*
 - Todo PR deve passar por testes automatizados.
+- Após o merge de um PR, a branch correspondente deve ser excluída para manter o repositório organizado e evitar acúmulo de branches obsoletas.
 
-#### 5.2.1 Nome de Pull Request
+#### 6.2.1 Nome de Pull Request
 - **Formato:** `[tipo]: [descrição breve] #[número-da-task]`
 - **Exemplo:**
   ```
   feat: adiciona filtro por data na listagem de clientes #21  
-  ````
+  ```
 
-#### 5.2.2 Padrão de Escrita dos Pull Requests
+#### 6.2.2 Padrão de Escrita dos Pull Requests
 &ensp; Cada Pull Request deve conter uma lista das mudanças implementadas. Exemplo:
 
 ```markdown
@@ -265,9 +298,20 @@ Padrão de Nomenclatura das Branches:
 closes: [#123](link da task no trello), [#124](link da task no trello).
 ```
 
+#### 6.2.3 Resolução de Conflitos
+&ensp; Caso existam conflitos entre branches, recomenda-se que a resolução seja feita localmente no VS Code, utilizando a ferramenta nativa de resolução de conflitos, que é mais intuitiva e eficiente do que a do GitHub. O processo recomendado é o seguinte:
+
+1. Antes do PR ser aceito, caso haja conflitos, realizar um `git pull` para garantir que a branch local está atualizada com as últimas mudanças.
+2. Certificar-se de que está na branch em que o PR foi aberto e executar `git merge [branch-de-destino]` para trazer as alterações mais recentes e verificar os conflitos.
+3. Utilizar a ferramenta de resolução de conflitos do VS Code para resolver as diferenças de forma visual e simplificada.
+4. Após resolver os conflitos, concluir o merge e realizar um commit confirmando as alterações.
+5. Subir as mudanças (`git push`) para que o PR possa ser revisado e aceito sem conflitos.
+
+Essa abordagem facilita a resolução de conflitos e evita complicações ao tentar resolver diretamente na interface do GitHub.
+
 ---
 
-## 6. Padrão para Imagens
+## 7. Padrão para Imagens
 - Evitar imagens grandes desnecessariamente.
 - Sempre tilizar JPG para imagens que nãp precisam de camada de transparência.
 - Imagens acima de 1MB devem ser comprimidas (salvo em casos de casos de GIF).
@@ -275,7 +319,7 @@ closes: [#123](link da task no trello), [#124](link da task no trello).
 
 ---
 
-## 7. Referências
+## 8. Referências
 - Conventional Commits: https://www.conventionalcommits.org/en/v1.0.0/
 - GitFlow: https://nvie.com/posts/a-successful-git-branching-model/
 - GitHub/iuricode: https://github.com/iuricode/padroes-de-commits
