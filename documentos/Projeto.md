@@ -732,6 +732,50 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
+### Paleta de Cores
+
+&emsp;Com o objetivo de fazer com que o Sistema Gallaudet represente ao máximo o Centro Paula Souza, as cores utilizadas foram encontradas no guia de estilos da própria instituição. Nele, há diversas classificações de paletas de cores, as quais serão explicadas ao decorrer dessa seção.
+
+&emsp;A seguir, há as cores principais. Elas serão responsáveis por identificar a marca, ou seja, o usuário deverá conseguir identificar que o site pertence ao Centro Paula Souza a partir delas.
+
+<div align="center">
+  <sub>Figura X - Cores Principais</sub> <br>
+
+  <img src="img/section7/cores_principais.png" alt="Cores Principais">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Já para contextos em que se precisa de destaque ou significado para elementos fora das cores institucionais, devem ser usadas as cores auxiliares. A título de exemplo, podem ser colocadas em gráficos ou similares. 
+
+<div align="center">
+  <sub>Figura X - Cores Auxiliares</sub> <br>
+
+  <img src="img/section7/cores_auxiliares.png" alt="Cores Auxiliares">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Para compor os fundos e áreas neutras do site, serão utilizadas escalas de cinza. Abaixo, há os tons permitidos para esses casos:
+
+<div align="center">
+  <sub>Figura X - Cores Neutras</sub> <br>
+
+  <img src="img/section7/cores_neutras.png" alt="Cores Neutras">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Quando for necessário fornecer um *feedback* visual sobre o andamento de um conteúdo, deve-se avaliar qual é a mensagem que se deseja transmitir e usar uma das cores a seguir para transmiti-la:
+
+<div align="center">
+  <sub>Figura X - Cores de Feedback</sub> <br>
+
+  <img src="img/section7/cores_feedback.png" alt="Cores de Feedback">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
 # 8. Desenvolvimento do Projeto
 _conteúdo_
 
