@@ -54,7 +54,8 @@
 
 
 ## 2.2 Sprint 2
-_conteúdo_
+
+&ensp;Os artefatos da Sprint 2 representaram a base estrutural, ou seja, o alicerce do sistema a ser desenvolvido; isso evidenciou a necessidade um desenvolvimento bastante colaborativo e refinado. Nesse contexto, a equipe obteve sucesso em revisar os feedbacks da Sprint passada, finalizar os entregáveis sem tempo hábil e com o uso dos recursos externos disponíveis — como os conteúdos das aulas, pesquisas externas e reuniões com professores —  para o apoio nas tasks. Obteve-se uma certa evolução quanto ao aprendizado do Kanban no Trello e a utilização da ferramenta para metrificação do trabalho, entretanto, teve-se dificuldade na delimitação de processos de revisão para tasks muito granulares, que não seriam disponibilizadas em forma de Pull Requests. Para isso, a equipe decidiu utilizar os comentários da tarefa no Trello para fazer avaliações e revisões.
 
 ## 2.3 Sprint 3
 _conteúdo_
