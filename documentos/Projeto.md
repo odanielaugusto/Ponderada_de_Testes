@@ -723,7 +723,6 @@ _conteúdo_
 
 &emsp;Também, foram selecionadas alturas padrões para as linhas, as quais devem ser sempre múltiplas de 4px, como sugerido abaixo:
 
-
 <div align="center">
   <sub>Figura X - Altura de Linha</sub> <br>
 
@@ -772,6 +771,26 @@ _conteúdo_
   <sub>Figura X - Cores de Feedback</sub> <br>
 
   <img src="img/section7/cores_feedback.png" alt="Cores de Feedback">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+### Iconografia
+
+&emsp;Ícones são elementos indispensáveis no design digital, uma vez que ajudam a ilustrar conceitos de forma universal, facilitam a acessibilidade e podem decorar páginas. Dentro do guia de estilos do Centro Paula Souza, há regras de uso para esses elementos:
+
+- Ao utilizar ícones, é importante avaliar a compatibilidade deles com a mensagem que se deseja transmitir. 
+- Reservar o uso de ícones para botões ou links que precisam de destaque. Isso ajuda a direcionar a atenção do usuário para ações importantes, como chamadas para ação ou links relevantes.
+- Não sobrecarregar a interface com muitos ícones. Quando utilizados em excesso, podem confundir o usuário e diminuir a eficácia do uso desses elementos.
+- Ícones sem um contexto claro ou sem um texto de apoio devem ser evitados. Isso pode levar à confusão e diminuir a acessibilidade da página.
+- Embora ícones possam decorar páginas e melhorar a estética, devem ser usados com moderação. O uso excessivo pode desviar a atenção do conteúdo principal e comprometer a clareza da mensagem.
+
+&emsp;Além disso, a instituição impõe a utilização de ícones do site [Font Awesome](https://fontawesome.com/icons). A padronização da fonte desses elementos garante manter a consistência de design em todo o site.Nesse sentido, foram selecionados alguns desses elementos que podem ser úteis durante o desenvolvimento do Sistema Gallaudet:
+
+<div align="center">
+  <sub>Figura X - Ícones</sub> <br>
+
+  <img src="img/section7/icones.png" alt="Cores de Feedback">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
