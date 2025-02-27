@@ -50,7 +50,6 @@
 - [5. Solução Técnica (Design)](#5-solução-técnica-design)
   - [5.1 Diagrama de Componentes da UML](#51-diagrama-de-componentes-da-uml)
   - [5.2 Diagramas de Sequência da UML](#52-diagramas-de-sequência-da-uml)
-  - [5.3 Descrição Textual dos Diagramas](#53-descrição-textual-dos-diagramas)
 - [6. Mapeamento Técnico de Infraestrutura e Implantação](#6-mapeamento-técnico-de-infraestrutura-e-implantação)
   - [6.1 Diagrama de Implantação da UML](#61-diagrama-de-implantação-da-uml)
   - [6.2 Justificativa das Escolhas de Implantação](#62-justificativa-das-escolhas-de-implantação)
@@ -1167,8 +1166,6 @@ frontend -> usuario : Exibe dashboard e permite filtros
 
 &emsp;Além disso, esse middleware assegura que todas as requisições que chegam à API já passaram por uma camada de validação. Embora essa camada esteja presente em todo o sistema, optamos por não exibi-la em outros diagramas de sequência onde sua presença era menos relevante. No entanto, neste fluxo específico, o middleware tem um papel quase central, pois os dados trazidos para a dashboard dependem inteiramente do tipo de usuário autenticado. Isso reforça a importância da autenticação e autorização na filtragem das informações apresentadas, garantindo que os usuários acessem apenas os dados aos quais têm permissão. Vale ressaltar que esse middleware já havia sido representado no diagrama de componentes. Aqui, sua exibição explícita é essencial para demonstrar como ele impacta diretamente o carregamento dos dados do dashboard.
 
-
-
 **4. Cadastro e Gestão de Usuários (RF01, RF02, RF05)**
 
 &emsp;A gestão de usuários é um elemento essencial do sistema, permitindo o controle e a administração dos agentes cadastrados. Esse processo envolve a criação de novos usuários, a visualização e o gerenciamento de suas informações e ações dentro do sistema. O diagrama a seguir detalham este fluxo:
@@ -1237,9 +1234,6 @@ end
 <br>
 
 &emsp; A criação dos diagramas presentes nesta seção foi realizada através da linguagem de marcação PlantUML, que permite gerar diagramas UML a partir de código texto, garantindo precisão e facilidade de manutenção. A renderização dos diagramas foi efetuada utilizando a ferramenta online https://plantuml.mseiche.de/, assegurando que os diagramas sigam os padrões estabelecidos pela UML. Além disso, para facilitar a compreensão e a reprodução dos diagramas, os códigos PlantUML de cada um foram disponibilizados em forma de comentários Markdown logo após a imagem correspondente.
-
-## 5.3 Descrição Textual dos Diagramas
-_conteúdo_
 
 # 6. Mapeamento Técnico de Infraestrutura e Implantação
 _conteúdo_
