@@ -806,12 +806,24 @@ _conteúdo_
 &emsp;Durante o desenvolvimento do Sistema Gallaudet, poderão ser utilizados gráficos e o grafismo abaixo, ambos reforçando a identidade visual do Centro Paula Souza:
 
 <div align="center">
-  <sub>Figura X - Grafismo</sub> <br>
+  <sub>Figura X - Grafismo do Centro Paula Souza</sub> <br>
 
   <img src="img/section7/grafismo.png" alt="Grafismo do Centro Paula Souza">
 
-  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+  <sup>Fonte: [Guia de Estilos do Centro Paula Souza](https://cps.sp.gov.br/guia-estilo/index.php).</sup>
 </div>
+
+### Opções de Acessibilidade
+
+&emsp;O Design System do software foi desenvolvido com foco em acessibilidade, garantindo uma experiência intuitiva e inclusiva para todos os usuários. Para isso, foram adotadas práticas alinhadas com as recomendações das Web Content Accessibility Guidelines (WCAG), abrangendo aspectos como contraste de cores, tipografia acessível, suporte a leitores de tela e navegação por teclado, além de um eficiente sistema de feedback visual.
+
+&emsp;A acessibilidade das cores foi priorizada para garantir um contraste adequado entre os elementos da interface. Todos os textos seguem uma proporção mínima de 4.5:1 em relação ao fundo para textos normais e 3:1 para textos grandes, garatindo boa legibilidade. Além disso, elementos interativos como botões e links possuem uma clara diferenciação visual, combinando variações de cor com indicadores adicionais, como sublinhados e ícones.
+
+&emsp;A escolha tipográfica prioriza fontes de fácil leitura, como Roboto e Roboto Slab, assegurando clareza e acessibilidade. O espaçamento entre letras, linhas e parágrafos foi ajustado.
+
+&emsp;O suporte a leitores de tela foi estruturado para garantir que todas as funcionalidades sejam acessíveis. A interface aplica tags como <h1>, <h2> e <p> para estruturar o conteúdo de forma compreensível para leitores de tela. Além disso, todas as imagens incluem descrições alternativas, permitindo que usuários com deficiência visual possam compreender os elementos gráficos da interface.
+
+&emsp;O sistema de feedback visual foi projetado para tornar a interação com o software mais intuitiva. Elementos interativos apresentam destaques visuais para indicar estados como carregamento, ação em andamento ou seleção de itens. As mensagens de erro e validação são exibidas de forma clara, utilizando cores, ícones e textos explicativos para orientar o usuário sobre os próximos passos.
 
 # 8. Desenvolvimento do Projeto
 _conteúdo_
