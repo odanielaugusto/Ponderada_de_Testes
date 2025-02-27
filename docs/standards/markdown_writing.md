@@ -9,9 +9,9 @@
 
 <br>
 
-# Nome do Projeto: <TODO>
+# Nome do Projeto: Gallaudet
 
-## Nome do Grupo: <TODO>
+# Nome do Grupo: ApoiaEdu
 
 ## Integrantes:
 
@@ -85,12 +85,10 @@
   <sub>Figura X - Título Descritivo da Imagem</sub> <br>
 
   <img 
-    src="../assets/documentation/section4/4.1.1_industry_context/porters_five_forces.png" 
-    alt="Descrição da imagem"
-    style="max-width: 600px; width: 100%; height: auto;"
-  >
+    src="./assets/section5/5.2_sequencies_diagrams/scheduling_appointment.png" alt="Descrição da imagem" 
+    style="max-width: 600px; width: 100%; height: auto;">
 
-  <sup>Fonte: Material produzido pelos autores (2024).</sup>
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 ```
 

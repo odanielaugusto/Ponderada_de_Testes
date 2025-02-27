@@ -1,0 +1,28 @@
+name: Validar título do PR
+
+on:
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  check-pr-title:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Verificar nome do Pull Request
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          echo "Título do PR: $PR_TITLE"
+
+          PR_PATTERN="^(feat|fix|chore|docs|style|refactor|test|perf): .*"
+          
+          if [[ ! "$PR_TITLE" =~ $PR_PATTERN ]]; then
+            echo "🚨 O título do PR não segue o padrão semântico. O título deve começar com 'feat:', 'fix:', etc."
+            exit 1
+          fi
+
+    status:
+      if: failure()
+      description: "Título do PR não segue o padrão semântico"
+      state: failure
