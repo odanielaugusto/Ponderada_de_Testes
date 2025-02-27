@@ -953,23 +953,87 @@ _conteúdo_
 _conteúdo_
 
 # 7. Projeto Visual da Solução
+
 &emsp;Esta seção abrange o desenvolvimento dos wireframes e mockups de alta fidelidade, que representam a estrutura e o design visual da solução. Os wireframes estabelecem a organização dos elementos da interface, enquanto os mockups de alta fidelidade detalham o aspecto final da aplicação, incluindo cores, tipografia e componentes visuais.
 
 ## 7.1 Desenvolvimento de Wireframes
 
-### Para maior detalhamento acesse o link abaixo:
-<a href="https://www.figma.com/design/z3c7lKFlAWCB6t0RVsn6Qp/Wireframe---Gallaudet?node-id=0-1&p=f&t=B4oUE6Y67l6pC1Ua-0">FIGMA</a>
+&emsp; Para discorrer detalhadamente a respeito do wireframe, esta subseção foi divida em 2 partes: os fluxos e os elementos enumerados. a parte de fluxos tem como objetivo elaborar sobre quais telas a solução vai ter, quais as funções delas e principalmente quais são os fluxos existentes, tudo isso de modo mais geral, de uma perspectiva mais macro, enquanto que na parte de elementos enumerados, a perspectiva será mais granular, para entender quais são os elementos de cada página, quais são suas funções, etc.
+
+### Fluxos
+o fluxio começa no login..
+<div align="center">
+  <sub>Figura X - Página de Login</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/flows/login.jpg"
+         alt="Wireframe do Página de Login"
+         border="0"
+         style="max-width:900px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+depois segue para a configuração de lista em que há a s telas tais que servem para tal coisa e primeiro voce entra nessa e faz tal coisa depois vai para tal fazer tal coisa,etc
+<div align="center">
+  <sub>Figura X - FLuxo de Configurações de Listas</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/flows/list_configs.jpg"
+         alt="FLuxo de Configurações de Listas"
+         border="0"
+         style="max-width:600px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
 
 <div align="center">
-  <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/7.1_wireframe/login.jpg"
+  <sub>Figura X - Fluxo de Alunos</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/flows/students.jpg"
+         alt="fluxo de Alunos"
+         border="0"
+         style="max-width:1100px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+<div align="center">
+  <sub>Figura X - Fluxo de Profissionais</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/flows/professionals.jpg"
+         alt="Fluxo de Profissionais"
+         border="0"
+         style="max-width:1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+<div align="center">
+  <sub>Figura X - Fluxo de Usuários</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/flows/users.jpg"
+         alt="Fluxo de Usuários"
+         border="0"
+         style="max-width:1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp; Para uma análise completa de todo o fluxo em detalhes, com a liberdade de aproximação e tal, acesse o [documento em PDF](./assets/section7/7.1_wireframe/complete_wireframe.pdf) disponível neste repositório.
+
+### Descrição Enumerada dos Elementos 
+
+#### Login
+
+<div align="center">
+  <sub>Figura X - Wireframe da tela de login</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/login.jpg"
          alt="Wireframe da tela de login"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
-  </a>
-</div>
 
-### Descrição dos Elementos Numerados (Login)
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
 
 1. **Área de destaque (imagem ou ilustração)**
    Espaço destinado para inserir uma imagem de identidade visual do Centro Paula Sousa.
@@ -984,15 +1048,18 @@ _conteúdo_
    Ao clicar, o sistema valida as credenciais fornecidas (e-mail e senha) e redireciona o gerente para a próxima tela, caso os dados estejam corretos.
 
 ---
-### Descrição dos Elementos Numerados (Navbar)
+
+#### Navbar
 
 <div align="center">
-  <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/7.1_wireframe/navbar.jpg"
+  <sub>Figura X - Wireframe da Navbar</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/navbar.jpg"
          alt="Wireframe da Navbar"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
-  </a>
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
 5. **Área para logotipo**
@@ -1006,14 +1073,17 @@ _conteúdo_
 
 ---
 
-### Descrição dos Elementos Numerados (Dashboard Em Branco)
+#### Lista não Preenchida
+
 <div align="center">
-  <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/7.1_wireframe/dashboard_blank.jpg"
-         alt="Wireframe do Dashboard"
-         border="0"
-         style="max-width: 600px; width: 100%; height: auto;">
-  </a>
+  <sub>Figura X - Wireframe da Lista não Preenchida</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/dashboard_blank.jpg"
+        alt="Wireframe da Lista não Preenchida"
+        border="0"
+        style="max-width: 600px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
 8. **Filtro de Instituição de Ensino (School)**
@@ -1035,15 +1105,18 @@ _conteúdo_
     Espaço dedicado para listar Alunos, Profissionais ou gerentes, dependendo de qual botão foi clicado préviamente.
 
 ---
-### Descrição dos Elementos Numerados (Dashboard / Lista informações)
+
+#### Lista informações
 
 <div align="center">
-  <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/7.1_wireframe/dashboard.jpg"
-         alt="Wireframe do Dashboard"
+  <sub>Figura X - Wireframe da lista preenchida</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/dashboard.jpg"
+         alt="Wireframe da lista preenchida"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
-  </a>
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
 14. **Barra de Scroll**
@@ -1053,14 +1126,18 @@ _conteúdo_
     Exibe o resultado selecionado na primeira coluna (alunos, profissionais ou gerentes). Contem informações detalhadas, e quando clicada, leva para a tela de detalhes e gerenciamento.
 
 ---
-### Descrição dos Elementos Numerados (Grafícos sobre os alunos)
+
+#### Dashboard de Alunos
+
 <div align="center">
-  <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/7.1_wireframe/analytics.jpg"
-         alt="Wireframe do analytics"
+  <sub>Figura X - Wireframe do dashboard dos alunos</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/analytics.jpg"
+         alt="Wireframe do dashboard dos alunos"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
-  </a>
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
 - Observação: Analytics só aparecem na listagem de *Alunos*
@@ -1072,14 +1149,18 @@ _conteúdo_
     Apresenta dados complementares aos gráficos de barras, permitindo comparar proporções de forma visual, de acordo com o contexto escolhido no dashboard.
 
 ---
-### Descrição dos Elementos Numerados (Pagina do Aluno)
+
+#### Página do Aluno
+
 <div align="center">
-  <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/7.1_wireframe/show_aluno.jpg"
+  <sub>Figura X - Wireframe da Pagina de Aluno</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/show_student.jpg"
          alt="Wireframe da Pagina de Aluno"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
-  </a>
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
 18. **Informações basicas do Aluno**
@@ -1094,14 +1175,18 @@ _conteúdo_
     Quando clicado em algum elemento da timeline, essa seção irá atualizar com informações complementares.
 
 ---
-### Descrição dos Elementos Numerados (Pagina do Gerente)
+
+#### Página do Gerente
+
 <div align="center">
-  <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/7.1_wireframe/show_gerente.jpg"
+  <sub>Figura X - Wireframe da Pagina de Gerente</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/show_manager.jpg"
          alt="Wireframe da Pagina de Gerente"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
-  </a>
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
 23. **Informações do Gerente**
