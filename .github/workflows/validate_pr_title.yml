@@ -1,4 +1,4 @@
-name: Validar título do PR
+name: Validar nome da branch
 
 on:
   pull_request:
@@ -6,23 +6,19 @@ on:
       - "*"
 
 jobs:
-  check-pr-title:
+  check-branch-name:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Verificar nome do Pull Request
+      - name: Verificar nome da branch
         run: |
-          PR_TITLE="${{ github.event.pull_request.title }}"
-          echo "Título do PR: $PR_TITLE"
-
-          PR_PATTERN="^(feat|fix|chore|docs|style|refactor|test|perf): .*"
+          BRANCH_NAME="${{ github.head_ref }}"
+          echo "Nome da branch: $BRANCH_NAME"
           
-          if [[ ! "$PR_TITLE" =~ $PR_PATTERN ]]; then
-            echo "🚨 O título do PR não segue o padrão semântico. O título deve começar com 'feat:', 'fix:', etc."
+          # Defina seu padrão aqui, considerando os tipos permitidos: feature, bugfix, release, hotfix, docs, dev
+          PATTERN="^(feature|bugfix|release|hotfix|docs|dev)/.*$"
+          
+          if [[ ! "$BRANCH_NAME" =~ $PATTERN ]]; then
+            echo "🚨 Nome de branch inválido: $BRANCH_NAME. O nome da branch deve seguir o padrão: [tipo]/[finalidade]/[nome-da-branch], onde [tipo] é 'feature', 'bugfix', 'release', 'hotfix', 'docs' ou 'dev'."
             exit 1
           fi
-
-    status:
-      if: failure()
-      description: "Título do PR não segue o padrão semântico"
-      state: failure

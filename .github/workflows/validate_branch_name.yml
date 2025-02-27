@@ -22,8 +22,3 @@ jobs:
             echo "🚨 Nome de branch inválido: $BRANCH_NAME. O nome da branch deve seguir o padrão: [tipo]/[finalidade]/[nome-da-branch], onde [tipo] é 'feature', 'bugfix', 'release', 'hotfix', 'docs' ou 'dev'."
             exit 1
           fi
-
-    status:
-      if: failure()
-      description: "Nome da branch não segue o padrão do Gitflow"
-      state: failure
