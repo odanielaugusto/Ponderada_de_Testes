@@ -972,7 +972,7 @@ _conteúdo_
   <img src="./assets/section7/7.1_wireframe/flows/login.jpg"
          alt="Wireframe do Página de Login"
          border="0"
-         style="max-width:900px; width: 100%; height: auto;">
+         style="max-width:800px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1015,7 +1015,7 @@ _conteúdo_
   <img src="./assets/section7/7.1_wireframe/flows/professionals.jpg"
          alt="Fluxo de Profissionais"
          border="0"
-         style="max-width:1000px; width: 100%; height: auto;">
+         style="max-width:950px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1030,7 +1030,7 @@ _conteúdo_
   <img src="./assets/section7/7.1_wireframe/flows/users.jpg"
          alt="Fluxo de Usuários"
          border="0"
-         style="max-width:1000px; width: 100%; height: auto;">
+         style="max-width:950px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
