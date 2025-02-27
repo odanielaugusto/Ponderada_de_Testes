@@ -953,7 +953,7 @@ _conteúdo_
 _conteúdo_
 
 # 7. Projeto Visual da Solução
-_conteúdo_
+&emsp;Esta seção abrange o desenvolvimento dos wireframes e mockups de alta fidelidade, que representam a estrutura e o design visual da solução. Os wireframes estabelecem a organização dos elementos da interface, enquanto os mockups de alta fidelidade detalham o aspecto final da aplicação, incluindo cores, tipografia e componentes visuais.
 
 ## 7.1 Desenvolvimento de Wireframes
 
