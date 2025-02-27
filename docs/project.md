@@ -962,7 +962,7 @@ _conteúdo_
 
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/wireframe_login.png"
+    <img src="./assets/section7/7.1_wireframe/login.jpg"
          alt="Wireframe da tela de login"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
@@ -988,7 +988,7 @@ _conteúdo_
 
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/wireframe_navbar.png"
+    <img src="./assets/section7/7.1_wireframe/navbar.jpg"
          alt="Wireframe da Navbar"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
@@ -1009,7 +1009,7 @@ _conteúdo_
 ### Descrição dos Elementos Numerados (Dashboard Em Branco)
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/wireframe_dashboard_blank.png"
+    <img src="./assets/section7/7.1_wireframe/dashboard_blank.jpg"
          alt="Wireframe do Dashboard"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
@@ -1039,7 +1039,7 @@ _conteúdo_
 
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/wireframe_dashboard.png"
+    <img src="./assets/section7/7.1_wireframe/dashboard.jpg"
          alt="Wireframe do Dashboard"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
@@ -1056,7 +1056,7 @@ _conteúdo_
 ### Descrição dos Elementos Numerados (Grafícos sobre os alunos)
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/wireframe_analytics.png"
+    <img src="./assets/section7/7.1_wireframe/analytics.jpg"
          alt="Wireframe do analytics"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
@@ -1075,7 +1075,7 @@ _conteúdo_
 ### Descrição dos Elementos Numerados (Pagina do Aluno)
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/wireframe_show_aluno.png"
+    <img src="./assets/section7/7.1_wireframe/show_aluno.jpg"
          alt="Wireframe da Pagina de Aluno"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
@@ -1097,7 +1097,7 @@ _conteúdo_
 ### Descrição dos Elementos Numerados (Pagina do Gerente)
 <div align="center">
   <a href="https://www.inteli.edu.br/">
-    <img src="./assets/section7/wireframe_show_gerente.png"
+    <img src="./assets/section7/7.1_wireframe/show_gerente.jpg"
          alt="Wireframe da Pagina de Gerente"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
