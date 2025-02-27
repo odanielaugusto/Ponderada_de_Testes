@@ -1104,8 +1104,7 @@ Repo -> DB : Consulta tabela logs_atendimentos
 DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Repo : Retorna logs
 Repo -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Business : Retorna dados
 Business -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Controller : Envia registros consolidados
-Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Retorna dados
-FE -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Usuario : Exibe timeline do aluno
+Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Exibe timeline do aluno
 
 @enduml
 -->
@@ -1157,8 +1156,6 @@ api -> db : Buscar dados de assistências
 db -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna dados
 api -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) frontend : Retorna dados processados (insights, gráficos)
 
-frontend -> usuario : Exibe dashboard e permite filtros
-
 @enduml
 -->
 
@@ -1202,7 +1199,6 @@ FE -> API : Solicita os registros de ações do usuário selecionado
 API -> DB : Recupera os logs de atividades associadas ao usuário
 DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) API : Retorna os registros de ações realizadas
 API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Envia os logs do usuário
-FE -> user : Exibe a lista completa de logs do usuário
 
 == Cadastro de um novo usuário ==
 
