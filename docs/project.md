@@ -1081,7 +1081,6 @@ Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o 
 
 <!-- 
 Código PlantUML que gera o diagrama acima:
-Código PlantUML que gera o diagrama acima:
 @startuml
 
 actor Usuario
@@ -1126,7 +1125,7 @@ FE -- > (Observação: foi adicionado um espaço antes de ">", senão o comentá
 
   <img 
     src="./assets/section5/5.2_sequencies_diagrams/dashboard_load.jpg" alt="Sequências do carregamento das dashboards do Gallaudet" 
-    style="max-width: 1000px; width: 100%; height: auto;">
+    style="max-width: 1100px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>  
@@ -1137,16 +1136,18 @@ Código PlantUML que gera o diagrama acima:
 
 actor "Usuário" as usuario
 participant "Front-End" as frontend
+participant "Middleware de Autenticação" as middleware
 participant "API Gallaudet" as api
 database "Banco de Dados" as db
 participant "API (externa) dos Alunos CPS" as apiAlunos
 
 usuario -> frontend : Abre o Gallaudet
-frontend -> api : Requisição para carregar Dashboard
-api -> api : Verifica role do usuário
+frontend -> middleware : Requisição para autenticação
+middleware -> middleware : Verifica credenciais e role do usuário
+middleware -> api : Encaminha requisição com role do usuário
 alt Gestora Administrativa
     api -> apiAlunos : Buscar dados de todos os alunos
-    apiAlunos -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : retornta todos os alunos
+    apiAlunos -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna todos os alunos
 else Gestora Local de Unidade
     api -> db : Buscar unidade vinculada ao usuário
     db -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna unidade
@@ -1163,9 +1164,11 @@ frontend -> usuario : Exibe dashboard e permite filtros
 @enduml
 -->
 
-&emsp;Uma característica notável desse diagrama é a mensagem recursiva dentro da API, utilizada para a verificação da role do usuário. Além da verificação de role, o sistema também valida a unidade vinculada ao usuário, especialmente para as Gestoras Locais de Unidade, garantindo que os dados apresentados no dashboard sejam filtrados de acordo com os acessos permitidos. Esse comportamento impede que usuários sem permissão visualizem informações de unidades às quais não pertencem.
+&emsp;Uma característica notável desse diagrama é a introdução de um middleware de autenticação, que agora centraliza a verificação de credenciais e a determinação da role do usuário antes que a requisição chegue à API. Isso garante uma separação clara entre autenticação e a lógica de negócios, melhorando a segurança e organização do sistema. Com essa abordagem, a API já recebe a requisição sabendo a role do usuário, eliminando a necessidade de uma verificação recursiva interna.
 
-&emsp;É importante destacar que essas verificações de autorização e autenticação ocorrem em praticamente todos os endpoints do sistema, sendo implementadas por um middleware de autenticação e autorização. No entanto, neste diagrama de sequência específico, optamos por evidenciar essas verificações porque são essenciais para a funcionalidade do dashboard. Diferente de outras interações onde essa verificação é uma rotina padrão e repetitiva, aqui ela define completamente o comportamento do sistema, garantindo que as informações carregadas estejam de acordo com as permissões do usuário.
+&emsp;Além disso, esse middleware assegura que todas as requisições que chegam à API já passaram por uma camada de validação. Embora essa camada esteja presente em todo o sistema, optamos por não exibi-la em outros diagramas de sequência onde sua presença era menos relevante. No entanto, neste fluxo específico, o middleware tem um papel quase central, pois os dados trazidos para a dashboard dependem inteiramente do tipo de usuário autenticado. Isso reforça a importância da autenticação e autorização na filtragem das informações apresentadas, garantindo que os usuários acessem apenas os dados aos quais têm permissão. Vale ressaltar que esse middleware já havia sido representado no diagrama de componentes. Aqui, sua exibição explícita é essencial para demonstrar como ele impacta diretamente o carregamento dos dados do dashboard.
+
+
 
 **4. Cadastro e Gestão de Usuários (RF01, RF02, RF05)**
 
@@ -1182,6 +1185,7 @@ frontend -> usuario : Exibe dashboard e permite filtros
 </div>  
 
 <!-- 
+Código PlantUML que gera o diagrama acima:
 @startuml
 
 actor Usuário as user
