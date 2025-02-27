@@ -795,6 +795,24 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
+### Ilustrações 
+
+&emsp;Ilustrações são representações visuais que complementam o conteúdo textual, facilitando a compreensão de conceitos e funcionalidades do software. Elas transmitem ideias de forma visual, tornando o design mais acessível e intuitivo. No projeto, serão utilizadas ilustrações na forma de gráficos, que permitem visualizar e analisar dados de maneira clara e objetiva, contribuindo para a interpretação de informações complexas.
+
+&emsp;Também, poderão ser inseridos grafismos, ou seja, elementos gráficos que compõem a identidade estética. Diferentemente das ilustrações, eles atuam de maneira decorativa, reforçando a marca sem necessariamente transmitir informações diretas.
+
+&emsp;A uso tanto de ilustrações quanto de grafismos é essencial para criar uma experiência de usuário agrdável. Enquanto as ilustrações simplificam a explicação de conteúdos complexos, os grafismos promovem a coerência estética, resultando em uma interface agradável, intuitiva e que fortalece a identidade da marca.
+
+&emsp;Durante o desenvolvimento do Sistema Gallaudet, poderão ser utilizados gráficos e o grafismo abaixo, ambos reforçando a identidade visual do Centro Paula Souza:
+
+<div align="center">
+  <sub>Figura X - Grafismo</sub> <br>
+
+  <img src="img/section7/grafismo.png" alt="Grafismo do Centro Paula Souza">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
 # 8. Desenvolvimento do Projeto
 _conteúdo_
 
