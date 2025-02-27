@@ -118,15 +118,15 @@ Esta seção apresenta os principais termos e abreviações utilizados no projet
 ## 2.2 Problema
 &emsp;Em relação à administração das informações pessoais dos alunos com deficiência do Centro Paula Sousa e dos atendimentos especializados, apesar da utilização de sistemas digitais para armazenar os dados dessas frentes, não se tem a centralização dos detalhes dos atendimentos em um único lugar, cabendo à Gestão de Administração realizar manualmente o levantamento e cruzamento dessas informações, através de formulários e planilhas digitais. Dessa forma, o presente projeto pretende erradicar esse problema de descentralização de dados, de forma a garantir eficiência e diminuição de erros manuais para o trabalho da administração central do CPS, integrando também recursos de acessibilidade, garantindo a inclusão dos profissionais da Acessoria de Inclusão, como apontado na lei Lei 13.146/2015.
 
-## 2.3 Visão do Produto e do Projeto. 
-&emsp;Segue a Visão do Produto Gallaudet, além das definições do Produto, o que ele "faz", "não faz", "é", "não é" e também os seus benefícios. Além disso, segue também os objetivos de negócio do Projeto. 
+## 2.3 Visão do Produto e do Projeto.
+&emsp;Segue a Visão do Produto Gallaudet, além das definições do Produto, o que ele "faz", "não faz", "é", "não é" e também os seus benefícios. Além disso, segue também os objetivos de negócio do Projeto.
 
 ### 2.3.1 Visão do Produto
-- **Para** gestores e assessores das Fatecs e Etecs;  
-- **Que** precisam acompanhar e organizar o suporte aos alunos com deficiência;  
-- **O** Gallaudet é um sistema de gestão assistiva;  
-- **Que** automatiza a captação de dados dos alunos, facilita a alocação de profissionais e melhora o acompanhamento das necessidades assistivas;  
-- **Diferente** de planilhas e processos manuais;  
+- **Para** gestores e assessores das Fatecs e Etecs;
+- **Que** precisam acompanhar e organizar o suporte aos alunos com deficiência;
+- **O** Gallaudet é um sistema de gestão assistiva;
+- **Que** automatiza a captação de dados dos alunos, facilita a alocação de profissionais e melhora o acompanhamento das necessidades assistivas;
+- **Diferente** de planilhas e processos manuais;
 - **Nosso produto** oferece um ambiente centralizado, acessível e integrado aos sistemas governamentais.
 
 ### 2.3.2 O Que é o Produto
@@ -166,15 +166,15 @@ Esta seção apresenta os principais termos e abreviações utilizados no projet
 | Sistema não acessível para usuários com deficiência visual | Plataforma 100% compatível com o NVDA para garantir inclusão digital |
 
 ### 2.3.6 Objetivos de Negócio do Projeto
-1. **Centralizar a Gestão de Alunos com Deficiência**: Criar um ambiente único e acessível para visualizar dados dos alunos com deficiência, incluindo suas necessidades assistivas e histórico de atendimento.  
+1. **Centralizar a Gestão de Alunos com Deficiência**: Criar um ambiente único e acessível para visualizar dados dos alunos com deficiência, incluindo suas necessidades assistivas e histórico de atendimento.
 
-2. **Automatizar a Importação de Dados**: Eliminar o trabalho manual de cadastro, integrando-se a um sistema governamental via API para obter automaticamente os dados dos alunos.  
+2. **Automatizar a Importação de Dados**: Eliminar o trabalho manual de cadastro, integrando-se a um sistema governamental via API para obter automaticamente os dados dos alunos.
 
-3. **Melhorar a Alocação de Recursos e Profissionais**: Permitir que gestores associem alunos a recursos assistivos e profissionais de apoio de forma organizada e rastreável, garantindo que cada aluno receba o suporte necessário.  
+3. **Melhorar a Alocação de Recursos e Profissionais**: Permitir que gestores associem alunos a recursos assistivos e profissionais de apoio de forma organizada e rastreável, garantindo que cada aluno receba o suporte necessário.
 
-4. **Facilitar a Tomada de Decisão Gerencial**: Oferecer dashboards e métricas para que gestores possam analisar dados estratégicos, como distribuição de alunos por tipo de deficiência e disponibilidade de recursos em diferentes unidades.  
+4. **Facilitar a Tomada de Decisão Gerencial**: Oferecer dashboards e métricas para que gestores possam analisar dados estratégicos, como distribuição de alunos por tipo de deficiência e disponibilidade de recursos em diferentes unidades.
 
-5. **Garantir Acessibilidade Digital**: Tornar o sistema compatível com leitores de tela (NVDA), garantindo inclusão digital e autonomia para usuários com deficiência visual.  
+5. **Garantir Acessibilidade Digital**: Tornar o sistema compatível com leitores de tela (NVDA), garantindo inclusão digital e autonomia para usuários com deficiência visual.
 
 ## 2.4 Personas e Jornada do Usuário
 &emsp;Para garantir que a plataforma Gallaudet atenda de forma eficiente às necessidades de seus usuários, é fundamental entender quem são essas pessoas, quais desafios enfrentam e como interagem com o sistema.
@@ -496,7 +496,7 @@ Esta seção apresenta os principais termos e abreviações utilizados no projet
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-&emsp;Em comparação com o fluxo atual, o proposto modifica apenas a forma como os históricos dos alunos são registrados. Enquanto, atualmente, essa informação é armazenada em diferentes planilhas, com o Sistema Gallaudet o registro de novos atendimentos se torna mais simples e eficiente, além de centralizado. Essa mudança na ferramenta de gestão impactaria tanto os profissionais envolvidos quanto os alunos atendidos pela Assessoria de Inclusão, uma vez que evitaria a perda de dados, facilitando análises e reduzindo erros. 
+&emsp;Em comparação com o fluxo atual, o proposto modifica apenas a forma como os históricos dos alunos são registrados. Enquanto, atualmente, essa informação é armazenada em diferentes planilhas, com o Sistema Gallaudet o registro de novos atendimentos se torna mais simples e eficiente, além de centralizado. Essa mudança na ferramenta de gestão impactaria tanto os profissionais envolvidos quanto os alunos atendidos pela Assessoria de Inclusão, uma vez que evitaria a perda de dados, facilitando análises e reduzindo erros.
 
 ## 2.6 Matriz de Risco do Projeto
 ## Ameaças
@@ -510,19 +510,19 @@ Esta seção apresenta os principais termos e abreviações utilizados no projet
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-- **Desvio de escopo**:  
+- **Desvio de escopo**:
   Ocorre quando o escopo do projeto não está claramente definido, levando à entrega de uma solução que não atende as expectativas iniciais.
 
-- **Vazamento de dados sensíveis**:  
+- **Vazamento de dados sensíveis**:
   Exposição não autorizada de informações confidenciais, resultando em danos à privacidade e possíveis penalidades legais.
 
-- **Ciberataques que podem comprometer a segurança do local**:  
+- **Ciberataques que podem comprometer a segurança do local**:
   A invasão de sistemas por hackers pode comprometer a integridade dos dados e a segurança física das instalações.
 
-- **Dificuldade em garantir acessibilidade para usuários com deficiência visual**:  
+- **Dificuldade em garantir acessibilidade para usuários com deficiência visual**:
   O desenvolvimento realizando todas as implementações capazes de atender usuários com dificuldades em engexar pode ser muito complexo.
 
-- **Desafios na manutenção da base de dados dos alunos atualizada**:  
+- **Desafios na manutenção da base de dados dos alunos atualizada**:
   Se a base de dados governamental não for atualizada corretamente, pode haver informações desatualizadas sobre os alunos e seus recursos assistivos.
 
 - **Falha na integração da API com sistemas acadêmicos**:
@@ -548,9 +548,9 @@ Esta seção apresenta os principais termos e abreviações utilizados no projet
 </div>
 
 - Se a plataforma for bem-sucedida no Centro Paula Souza, poderá ser replicada em outras instituições públicas para melhorar a gestão de alunos com deficiência.
-- **Aumento da eficiência operacional e redução de erros manuais**:  
+- **Aumento da eficiência operacional e redução de erros manuais**:
   A automação do processo de cadastro e gestão de alunos com deficiência reduz erros manuais e otimiza o tempo dos gestores, tornando a operação mais eficiente.
-- **Fortalecimento da comunicação entre gerentes e profissionais assistivos**:  
+- **Fortalecimento da comunicação entre gerentes e profissionais assistivos**:
   Melhorar a comunicação entre os usuários da aplicação e os alunos da instituição facilita a colaboração e a resolução rápida de problemas.
 
 ## 2.7 Ideação
@@ -679,7 +679,7 @@ _conteúdo_
 | **Sprint 5** | Timeline do Aluno, Notificações, Relatórios e Estatísticas, Exportação de Dados de Alunos | Agregam valor ao produto, melhorando a experiência do usuário e a eficiência da comunicação. |
 
 ## 2.8 Canvas do Projeto
-&emsp;Canvas MVP é uma ferramenta utilizada para alinhar ideias e definir estratégias. Durante sua elaboração, é discutido o entendimento da equipe sobre a proposta apresentada e, assim, as principais características da solução são dispostas em um quadro, colaborando para um alinhamento mais eficiente entre os integrantes da equipe. 
+&emsp;Canvas MVP é uma ferramenta utilizada para alinhar ideias e definir estratégias. Durante sua elaboração, é discutido o entendimento da equipe sobre a proposta apresentada e, assim, as principais características da solução são dispostas em um quadro, colaborando para um alinhamento mais eficiente entre os integrantes da equipe.
 
 &emsp;Nesse contexto, foi realizado um Canvas MVP com base na proposta trazida pelo Centro Paula Souza. Nele, estão identificados os pontos mais importantes levantados pela equipe sobre o projeto Gallaudet:
 
@@ -814,114 +814,114 @@ _conteúdo_
 
 ## 4.1 Modelo Conceitual de Dados
 
-### Entidades, Atributos e Relações  
+### Entidades, Atributos e Relações
 
-#### 1. **Aluno**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Nome`  
-  - `DataNascimento`  
-  - `Unidade_ID` (Chave Estrangeira para `Unidade`)  
-  - `Curso_ID` (Chave Estrangeira para `Curso`)  
-  - `AnoMatricula`  
-  - `DataMatricula`  
-  - `DataPrevisaoFim`  
-  - `Turno` (Manhã/Tarde/Noite/Integral/EaD)  
-  - `NecessitaTecnologia` (Sim/Não)  
-  - `NecessitaAcompanhamento` (Sim/Não)  
-  - `Observacoes`  
-- **Descrição**: Armazena informações acadêmicas e necessidades específicas dos alunos. Suporta **filtros por unidade, curso e status de atendimento**.  
+#### 1. **Aluno**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Nome`
+  - `DataNascimento`
+  - `Unidade_ID` (Chave Estrangeira para `Unidade`)
+  - `Curso_ID` (Chave Estrangeira para `Curso`)
+  - `AnoMatricula`
+  - `DataMatricula`
+  - `DataPrevisaoFim`
+  - `Turno` (Manhã/Tarde/Noite/Integral/EaD)
+  - `NecessitaTecnologia` (Sim/Não)
+  - `NecessitaAcompanhamento` (Sim/Não)
+  - `Observacoes`
+- **Descrição**: Armazena informações acadêmicas e necessidades específicas dos alunos. Suporta **filtros por unidade, curso e status de atendimento**.
 
-#### 2. **Responsavel**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Nome`  
-  - `Tipo` (Mãe/Pai/Irmão/etc.)  
-  - `Email`  
-  - `Telefone1`  
-  - `Telefone2` (Opcional)  
-- **Descrição**: Responsáveis legais vinculados aos alunos. Usado para **notificações automáticas**.  
+#### 2. **Responsavel**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Nome`
+  - `Tipo` (Mãe/Pai/Irmão/etc.)
+  - `Email`
+  - `Telefone1`
+  - `Telefone2` (Opcional)
+- **Descrição**: Responsáveis legais vinculados aos alunos. Usado para **notificações automáticas**.
 
-#### 3. **Profissional**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Nome`  
-  - `Email`  
-  - `Telefone`  
-  - `Unidade_ID` (Chave Estrangeira para `Unidade`)  
-- **Descrição**: Profissionais que realizam atendimentos. Vinculados a unidades para **gestão de acesso por gerentes**.  
+#### 3. **Profissional**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Nome`
+  - `Email`
+  - `Telefone`
+  - `Unidade_ID` (Chave Estrangeira para `Unidade`)
+- **Descrição**: Profissionais que realizam atendimentos. Vinculados a unidades para **gestão de acesso por gerentes**.
 
-#### 4. **Atendimento**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Aluno_ID` (Chave Estrangeira para `Aluno`)  
-  - `Profissional_ID` (Chave Estrangeira para `Profissional`)  
-  - `DataInicio`  
-  - `DataFimPrevisto`  
-  - `Status` (Ativo/Em Espera/Concluído)  
-  - `Observacoes`  
-- **Descrição**: Registra atendimentos e **status visual**. Base para **Timeline do Aluno** e **relatórios estatísticos**.  
+#### 4. **Atendimento**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Aluno_ID` (Chave Estrangeira para `Aluno`)
+  - `Profissional_ID` (Chave Estrangeira para `Profissional`)
+  - `DataInicio`
+  - `DataFimPrevisto`
+  - `Status` (Ativo/Em Espera/Concluído)
+  - `Observacoes`
+- **Descrição**: Registra atendimentos e **status visual**. Base para **Timeline do Aluno** e **relatórios estatísticos**.
 
-#### 5. **TecnologiaAssistiva**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Tipo` (Comunicação Alternativa/Leitor de Tela/etc.)  
-  - `Descricao`  
-  - `DataCadastro`  
-- **Descrição**: Suporta **cadastro flexível de tecnologias** e vinculação a alunos.  
+#### 5. **TecnologiaAssistiva**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Tipo` (Comunicação Alternativa/Leitor de Tela/etc.)
+  - `Descricao`
+  - `DataCadastro`
+- **Descrição**: Suporta **cadastro flexível de tecnologias** e vinculação a alunos.
 
-#### 6. **NecessidadeEspecial**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Tipo` (Ex.: Deficiência Visual)  
-- **Descrição**: Categorias editáveis para **filtros avançados**.  
+#### 6. **NecessidadeEspecial**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Tipo` (Ex.: Deficiência Visual)
+- **Descrição**: Categorias editáveis para **filtros avançados**.
 
-#### 7. **Unidade**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Nome`  
-  - `Tipo` (ETEC/FATEC)  
-- **Descrição**: Unidades administrativas do CPS. Usado em **cadastro de unidades** e dashboards.  
+#### 7. **Unidade**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Nome`
+  - `Tipo` (ETEC/FATEC)
+- **Descrição**: Unidades administrativas do CPS. Usado em **cadastro de unidades** e dashboards.
 
-#### 8. **Curso**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Nome`  
-  - `Tipo` (Nível Médio/Superior)  
-- **Descrição**: Cursos ofertados. Base para **filtros por curso**.  
+#### 8. **Curso**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Nome`
+  - `Tipo` (Nível Médio/Superior)
+- **Descrição**: Cursos ofertados. Base para **filtros por curso**.
 
-#### 9. **Usuario**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Nome`  
-  - `Email`  
-  - `Perfil` (Gerente Geral/Gerente de Unidade/Servidor)  
-  - `Unidade_ID` (Chave Estrangeira para `Unidade` - obrigatório para Gerentes de Unidade)  
-- **Descrição**: Gerencia **níveis de acesso** para **cadastro de gerentes**.  
+#### 9. **Usuario**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Nome`
+  - `Email`
+  - `Perfil` (Gerente Geral/Gerente de Unidade/Servidor)
+  - `Unidade_ID` (Chave Estrangeira para `Unidade` - obrigatório para Gerentes de Unidade)
+- **Descrição**: Gerencia **níveis de acesso** para **cadastro de gerentes**.
 
-#### 10. **LogUso**  
-- **Atributos**:  
-  - `ID` (Chave Primária)  
-  - `Usuario_ID` (Chave Estrangeira para `Usuario`)  
-  - `Acao` (Ex.: "Cadastrou aluno")  
-  - `DadosAlterados` (JSON)  
-  - `DataHora`  
-- **Descrição**: Registra **ações no sistema** para auditoria.  
+#### 10. **LogUso**
+- **Atributos**:
+  - `ID` (Chave Primária)
+  - `Usuario_ID` (Chave Estrangeira para `Usuario`)
+  - `Acao` (Ex.: "Cadastrou aluno")
+  - `DadosAlterados` (JSON)
+  - `DataHora`
+- **Descrição**: Registra **ações no sistema** para auditoria.
 
 
-### Relações  
-| **Entidade 1**      | **Entidade 2**          | **Tipo**      | **Descrição**                                                                 |  
-|----------------------|-------------------------|---------------|-------------------------------------------------------------------------------|  
-| Aluno                | Responsavel             | 1:1           | Cada aluno tem um responsável principal.                                      |  
-| Aluno                | Atendimento             | 1:N           | Um aluno pode ter múltiplos atendimentos.                                     |  
-| Profissional         | Atendimento             | 1:N           | Um profissional pode realizar vários atendimentos.                            |  
-| Aluno                | TecnologiaAssistiva     | M:N           | Tecnologias podem ser vinculadas a múltiplos alunos (via `AlunoTecnologia`). |  
-| Aluno                | NecessidadeEspecial     | M:N           | Alunos podem ter múltiplas necessidades (via `AlunoNecessidade`).             |  
-| Usuario              | Unidade                 | 1:N           | Gerentes de Unidade são vinculados a uma unidade específica.                  |  
-| Aluno                | Curso                   | N:1           | Múltiplos alunos estão vinculados a um curso específico.                      |  
-| Usuario              | LogUso                  | 1:N           | Um usuário pode gerar múltiplos registros de log de ações no sistema.         |  
+### Relações
+| **Entidade 1**      | **Entidade 2**          | **Tipo**      | **Descrição**                                                                 |
+|----------------------|-------------------------|---------------|-------------------------------------------------------------------------------|
+| Aluno                | Responsavel             | 1:1           | Cada aluno tem um responsável principal.                                      |
+| Aluno                | Atendimento             | 1:N           | Um aluno pode ter múltiplos atendimentos.                                     |
+| Profissional         | Atendimento             | 1:N           | Um profissional pode realizar vários atendimentos.                            |
+| Aluno                | TecnologiaAssistiva     | M:N           | Tecnologias podem ser vinculadas a múltiplos alunos (via `AlunoTecnologia`). |
+| Aluno                | NecessidadeEspecial     | M:N           | Alunos podem ter múltiplas necessidades (via `AlunoNecessidade`).             |
+| Usuario              | Unidade                 | 1:N           | Gerentes de Unidade são vinculados a uma unidade específica.                  |
+| Aluno                | Curso                   | N:1           | Múltiplos alunos estão vinculados a um curso específico.                      |
+| Usuario              | LogUso                  | 1:N           | Um usuário pode gerar múltiplos registros de log de ações no sistema.         |
 
-## 4.2 Modelo Lógico de Dados 
+## 4.2 Modelo Lógico de Dados
 
 ## 4.3 Modelo Físico de Dados
 _conteúdo_
@@ -951,12 +951,12 @@ _conteúdo_
 <div align="center">
   <sub>Figura X - Diagrama de Componentes UML</sub> <br>
 
-  <img 
-    src="./assets/diagrama_componentes.png" alt="Sequências do gerenciamento de usuários" 
+  <img
+    src="./assets/diagrama_componentes.png" alt="Sequências do gerenciamento de usuários"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div> 
+</div>
 
 &emsp;A partir do diagrama, é possível notar que o principal ponto de contato com o usuário é a Interface Web, pela qual ele executará as suas funcionalidades, assim enviando requisições para o sistema. Cada requisição é intermediada por um *middleware*, o qual faz a autenticação do usuário específico através do login e verificação de seu papel — de um gerente de unidade ou um gerente administrativo, por exemplo —, garantindo que as atividades no sistema ocorram conforme o permitido para cada tipo de usuário. Ao se obter sucesso na autenticação, as requisições são recebidas pela API interna, através dos Controllers, Services e DAO's, que fazem as operações com o banco de dados, caso necessário. Também através da API externa, há a conexão com os sistemas internos do Centro Paula Sousa, permitindo a consulta de dados dos alunos das instituições de ensino.
 
@@ -968,19 +968,19 @@ _conteúdo_
 
 **1. Cadastro e Gestão de Atendimentos (RF06, RF10)**
 
-&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. O diagrama a seguir ilustra esses processos, assegurando a correta gestão dos atendimentos. 
+&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. O diagrama a seguir ilustra esses processos, assegurando a correta gestão dos atendimentos.
 
 <div align="center">
   <sub>Figura X - Sequências do agendamento e edição de um assistência</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/scheduling_appointment.jpg" alt="Sequências do agendamento e edição de um assistência" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/scheduling_appointment.jpg" alt="Sequências do agendamento e edição de um assistência"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div> 
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 @startuml
 
@@ -1016,11 +1016,11 @@ API -- > (Observação: foi adicionado um espaço antes de ">", senão o coment�
 @enduml
 -->
 
-&emsp;Os diagramas de sequência foram elaborados para elucidar as interações entre usuário e sistema em cada funcionalidade. No processo de agendamento de um atendimento, detalha-se desde o acesso à página do aluno até a confirmação do registro no banco de dados.  
+&emsp;Os diagramas de sequência foram elaborados para elucidar as interações entre usuário e sistema em cada funcionalidade. No processo de agendamento de um atendimento, detalha-se desde o acesso à página do aluno até a confirmação do registro no banco de dados.
 
-&emsp;No caso da edição ou cancelamento de um atendimento, o fluxo segue etapas semelhantes ao agendamento. A interação se inicia com o acesso à página do aluno, onde os dados são buscados na API externa. No entanto, como essa etapa já foi explorada no fluxo de agendamento e não revela mudanças no contexto da edição ou cancelamento, ela não foi explicitada no diagrama.  
+&emsp;No caso da edição ou cancelamento de um atendimento, o fluxo segue etapas semelhantes ao agendamento. A interação se inicia com o acesso à página do aluno, onde os dados são buscados na API externa. No entanto, como essa etapa já foi explorada no fluxo de agendamento e não revela mudanças no contexto da edição ou cancelamento, ela não foi explicitada no diagrama.
 
-&emsp;Dessa forma, o diagrama foca nas interações diretamente relacionadas à criação, edição e remoção dos atendimentos, garantindo uma visão clara dos processos e suas implicações dentro do sistema.  
+&emsp;Dessa forma, o diagrama foca nas interações diretamente relacionadas à criação, edição e remoção dos atendimentos, garantindo uma visão clara dos processos e suas implicações dentro do sistema.
 
 **2. Registro de Histórico e Logs (RF07, RF08, RF11)**
 
@@ -1029,14 +1029,14 @@ API -- > (Observação: foi adicionado um espaço antes de ">", senão o coment�
 <div align="center">
   <sub>Figura X - Sequências do registro de logs no agendamento de uma assistência</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/log_record.jpg" alt="Sequências do registro de logs no agendamento de uma assistência" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/log_record.jpg" alt="Sequências do registro de logs no agendamento de uma assistência"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div>  
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 @startuml
 
@@ -1072,14 +1072,14 @@ Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o 
 <div align="center">
   <sub>Figura X - Sequências da Visualização do log de agendamento de assistência</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/log_view.jpg" alt="Sequências da Visualização do log de agendamento de assistência" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/log_view.jpg" alt="Sequências da Visualização do log de agendamento de assistência"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div>  
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 Código PlantUML que gera o diagrama acima:
 @startuml
@@ -1124,14 +1124,14 @@ FE -- > (Observação: foi adicionado um espaço antes de ">", senão o comentá
 <div align="center">
   <sub>Figura X - Sequências do carregamento das dashboards do Gallaudet</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/dashboard_load.jpg" alt="Sequências do carregamento das dashboards do Gallaudet" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/dashboard_load.jpg" alt="Sequências do carregamento das dashboards do Gallaudet"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div>  
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 @startuml
 
@@ -1174,14 +1174,14 @@ frontend -> usuario : Exibe dashboard e permite filtros
 <div align="center">
   <sub>Figura X - Sequências do gerenciamento de usuários</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/user_management.jpg" alt="Sequências do gerenciamento de usuários" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/user_management.jpg" alt="Sequências do gerenciamento de usuários"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div>  
+</div>
 
-<!-- 
+<!--
 @startuml
 
 actor Usuário as user
@@ -1256,8 +1256,31 @@ _conteúdo_
 ## 7.1 Desenvolvimento de Wireframes
 _conteúdo_
 
-## 7.2 Desenvolvimento de Mockups
-_conteúdo_
+## 7.2 Desenvolvimento de Mockup
+
+Um **mockup** é uma representação visual quase finalizada da interface, exibindo cores, fontes e elementos de design já definidos. Ele foi criado para validar a **aparência** e a **usabilidade** do sistema antes do desenvolvimento, garantindo alinhamento com a **identidade visual** e facilitando feedback dos envolvidos no projeto.
+
+Em questão de funcionalidade, ele segue a mesma lógica do Wireframe, portanto não iremos entrar em mais detalhes aqui.
+
+
+Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, aproximando a interface do visual final. Validamos:
+
+- **Identidade Visual**: uso de cores e logotipos oficiais.
+- **Tipografia**: fontes legíveis e hierarquia clara de títulos.
+- **Ícones e Botões**: facilitam a identificação de funções.
+- **Estrutura**: mantém a lógica dos wireframes, mas com estilo refinado.
+
+### Diferenças em relação ao Wireframe
+- Adição de cores e estilos definitivos.
+- Ícones representativos para cada função.
+- Textos mais próximos do conteúdo real.
+
+### Exemplos de Telas
+1. **Login**: aplicação das cores oficiais e logotipo.
+2. **Lista e Dashboard**: gráficos coloridos e layout responsivo.
+3. **Visualização**: detalhes em blocos, seguindo a paleta de cores.
+
+> Para mais detalhes, consulte o PDF completo dos mockups. [documento em PDF](./assets/section7/7.2_mockup/complete_mockup.pdf)
 
 ## 7.3 Guia Visual
 _conteúdo_
