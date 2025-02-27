@@ -19,7 +19,7 @@ Este documento tem como objetivo elucidar o conteúdo da pasta docs/, explicando
 
 Abaixo está a estrutura da pasta `docs/` para facilitar a navegação:
 
-```
+```text
 docs/
   ├── assets/                      # Recursos auxiliares (diagramas, logos, etc.)
   │     ...
@@ -28,10 +28,16 @@ docs/
   │     ├── development.md
   │     ├── markdown_writing.md
   │     ├── repo.md
+  │     └── git_validators/        # Validadores locais de ações no Git
+  │         ├── commit-msg
+  │         ├── pre-commit
+  │         ├── pre-merge-commit
+  │         └── pre-push
   │
   ├── installation_manual.md       # Manual de instalação
   ├── project.md                   # Documentação do projeto (negócios, banco, API, etc.)
   ├── project_management.md        # Monitoramento das sprints e riscos
+
 ```
 
 Este diagrama representa a organização dos arquivos dentro da pasta `docs/`, permitindo que os usuários localizem facilmente os documentos necessários.
@@ -40,16 +46,15 @@ Este diagrama representa a organização dos arquivos dentro da pasta `docs/`, p
 
 - [**project_management.md**](project_management.md): Documentação destinada ao monitoramento das sprints, identificação de riscos e acompanhamento do progresso do projeto.
 
-## Processo de Desenvolvimento de Software
-
-- [**standards/development.md**](./standards/development.md): Diretrizes de desenvolvimento para garantir boas práticas e coerência no código.
-- [**standards/markdown_writing.md**](./standards/markdown_writing.md): Regras para escrita em Markdown, incluindo padrões para inserção de imagens, referências e formatação geral.
-- [**standards/repo.md**](./standards/repo.md): Diretrizes para organização do repositório, incluindo padrões de Pull Requests, nomenclatura de arquivos, estruturação de diretórios, mensagens de commits, entre outros.
-
 ## Desenvolvimento do Produto
 
 - [**project.md**](project.md): Documentação completa do projeto, abrangendo análise de negócios, diagramas de banco de dados, especificações da API e demais informações essenciais.
 - [**installation_manual.md**](installation_manual.md): Manual de instalação detalhado para configurar e executar o projeto corretamente.
+
+## Padronizações e Boas práticas
+- [**standards/markdown_writing.md**](./standards/markdown_writing.md): Regras para escrita em Markdown, incluindo padrões para inserção de imagens, referências e formatação geral.
+- [**standards/repo.md**](./standards/repo.md): Diretrizes para organização do repositório, incluindo padrões de Pull Requests, nomenclatura de arquivos, estruturação de diretórios, mensagens de commits, entre outros.
+- [**standards/development.md**](./standards/development.md): Diretrizes de desenvolvimento para garantir boas práticas e coerência no código.
 
 ## Recursos
 
