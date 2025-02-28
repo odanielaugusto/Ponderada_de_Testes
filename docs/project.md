@@ -1070,17 +1070,13 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-1. **Área de destaque (imagem ou ilustração)**
-   Espaço destinado para inserir uma imagem de identidade visual do Centro Paula Sousa.
+1. **Área de destaque (imagem ou ilustração):** Espaço destinado para inserir uma imagem de identidade visual do Centro Paula Sousa.
 
-2. **Campo de entrada para e-mail**
-   Área para que o gerente insere seu endereço de e-mail.
+2. **Campo de entrada para e-mail:** Área para que o gerente insere seu endereço de e-mail.
 
-3. **Campo de entrada para senha**
-   Campo de texto onde o gerente digita sua senha. É mascarado (••••) para proteger a privacidade do usuário.
+3. **Campo de entrada para senha:** Campo de texto onde o gerente digita sua senha. É mascarado (••••) para proteger a privacidade do usuário.
 
-4. **Botão de ação (Login)**
-   Ao clicar, o sistema valida as credenciais fornecidas (e-mail e senha) e redireciona o gerente para a próxima tela, caso os dados estejam corretos.
+4. **Botão de ação (Login):** Ao clicar, o sistema valida as credenciais fornecidas (e-mail e senha) e redireciona o gerente para a próxima tela, caso os dados estejam corretos.
 
 ---
 
@@ -1097,23 +1093,20 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-5. **Área para logotipo**
-   Espaço reservado para inserir o logotipo ou nome da marca, mantendo a identidade visual do sistema.
+5. **Área para logotipo:** Espaço reservado para inserir o logotipo ou nome da marca, mantendo a identidade visual do sistema.
 
-6. **Texto ou imagem do logotipo**
-   Elemento que representa a identidade visual da marca. Pode ser clicável para redirecionar o usuário à página inicial, dependendo do projeto.
+6. **Texto ou imagem do logotipo:** Elemento que representa a identidade visual da marca. Pode ser clicável para redirecionar o usuário à página inicial, dependendo do projeto.
 
-7. **Avatar clicável**
-   Ícone que representa o usuário, geralmente localizado à direita da barra de navegação. Pode exibir um menu ao ser clicado, permitindo acesso a configurações, perfil ou logout.
+7. **Avatar clicável:** Ícone que representa o usuário, geralmente localizado à direita da barra de navegação. Pode exibir um menu ao ser clicado, permitindo acesso a perfil ou sair da conta.
 
 ---
 
-#### Lista não Preenchida
+#### Lista Não Preenchida
 
 <div align="center">
   <sub>Figura X - Wireframe da Lista não Preenchida</sub> <br>
 
-  <img src="./assets/section7/7.1_wireframe/enumerated_elements/dashboard_blank.jpg"
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/empty_list.jpg"
         alt="Wireframe da Lista não Preenchida"
         border="0"
         style="max-width: 600px; width: 100%; height: auto;">
@@ -1121,32 +1114,26 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-8. **Filtro de Instituição de Ensino (School)**
-   Área para selecionar a instituição de ensino desejada(Só aparece para Gerente Geral). Pode influenciar as listas e relatórios exibidos na tela.
+8. **Filtro de instituição de ensino:** Área para selecionar a instituição de ensino desejada (só é exibido para Gerente Geral). Isto filtra as listas e relatórios exibidos na tela.
 
-9. **Botão "Listar Alunos"**
-   Ao clicar, exibe a lista de alunos vinculados à instituição de ensino selecionada ou pré-atribuida ào gerente de unidade.
+9. **Botão "Listar Alunos":** Ao clicar, exibe a lista de alunos vinculados à instituição de ensino selecionada ou pré-atribuida ào gerente de unidade.
 
-10. **Botão "Listar Profissionais"**
-    Ao clicar, exibe a lista de profissionais (médicos, cuidadores, etc.) que realizaram atividades na instituição.
+10. **Botão "Listar Profissionais":** Ao clicar, exibe a lista de profissionais (médicos, cuidadores, etc.) que realizaram atividades na instituição.
 
-11. **Botão "Gerenciar Gerentes"**
-    Visível apenas para usuários com permissão de gerente geral. Permite visualizar e gerenciar outros gerentes.
+11. **Botão "Gerenciar Gerentes":** Visível apenas para usuários com permissão de gerente geral. Permite visualizar e gerenciar outros gerentes.
 
-12. **Barra de Filtros**
-    Localizada na parte superior da coluna central. Permite filtrar ou refinar a lista que está sendo exibida (alunos, profissionais, gerentes, etc.).
+12. **Barra de filtros:** Localizada na parte superior da coluna central. Permite filtrar ou refinar a lista que está sendo exibida (alunos, profissionais, gerentes, etc.).
 
-13. **Lista de objetos**
-    Espaço dedicado para listar Alunos, Profissionais ou gerentes, dependendo de qual botão foi clicado préviamente.
+13. **Lista de objetos:** Espaço dedicado para listar Alunos, Profissionais ou gerentes, dependendo de qual botão foi clicado préviamente.
 
 ---
 
-#### Lista informações
+#### Lista Preenchida
 
 <div align="center">
   <sub>Figura X - Wireframe da lista preenchida</sub> <br>
 
-  <img src="./assets/section7/7.1_wireframe/enumerated_elements/dashboard.jpg"
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/list.jpg"
          alt="Wireframe da lista preenchida"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
@@ -1154,11 +1141,9 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-14. **Barra de Scroll**
-    Ilustra que a lista é "scrollavel".
+14. **Barra de scroll:** Ilustra que a lista é rolável.
 
-15. **Área de Listagem / Conteúdo**
-    Exibe o resultado selecionado na primeira coluna (alunos, profissionais ou gerentes). Contem informações detalhadas, e quando clicada, leva para a tela de detalhes e gerenciamento.
+15. **Área de listagem:** Exibe o resultado selecionado na primeira coluna (alunos, profissionais ou gerentes). Contem informações detalhadas, e quando um item é clicado, leva para a página com a visão detalhada do item clicado.
 
 ---
 
@@ -1167,7 +1152,7 @@ _conteúdo_
 <div align="center">
   <sub>Figura X - Wireframe do dashboard dos alunos</sub> <br>
 
-  <img src="./assets/section7/7.1_wireframe/enumerated_elements/analytics.jpg"
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/dashboard.jpg"
          alt="Wireframe do dashboard dos alunos"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
@@ -1175,13 +1160,11 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-- Observação: Analytics só aparecem na listagem de *Alunos*
+- *Observação: Este dashboard só aparecem na listagem de Alunos*
 
-16. **Gráficos de Barras (Analytics)**
-    Mostra dados analíticos referentes aos alunos/profissionais selecionados, possibilitando uma visualização rápida de métricas (por exemplo, atendimentos realizados, condição por escola etc).
+16. **Gráficos de barras:** Mostra dados analíticos referentes aos alunos/profissionais selecionados, possibilitando uma visualização rápida de métricas (por exemplo, atendimentos realizados, condição por escola, etc).
 
-17. **Gráficos de Pizza (Analytics)**
-    Apresenta dados complementares aos gráficos de barras, permitindo comparar proporções de forma visual, de acordo com o contexto escolhido no dashboard.
+17. **Gráficos de pizza:** Apresenta dados complementares aos gráficos de barras, permitindo comparar proporções de forma visual, de acordo com o contexto escolhido no dashboard.
 
 ---
 
@@ -1198,40 +1181,88 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-18. **Informações basicas do Aluno**
-    Apresenta dados basicos, como nome, email, tecnologias assistivas etc.
-19. **Observação**
-    Observações gerais daquele aluno, cabe ao Gerente escreve-las.
-20. **Informações de Curso**
-    Dados como, cursos cursados, data de inicio e fim, turno etc.
-21. **Timeline do Aluno**
-    Atendimentos e atualizações sobre o aluno aparecerão aqui..
-22. **Detalhamento da Timeline**
-    Quando clicado em algum elemento da timeline, essa seção irá atualizar com informações complementares.
+18. **Informações básicas do aluno:** Apresenta dados básicos, como nome, e-mail, tecnologias assistivas etc.
+19. **Observação:** Observações gerais daquele aluno, cabe ao Gerente escrevê-las.
+20. **Informações de curso:** Dados como, cursos cursados, data de início e fim, turno etc.
+21. **Timeline do aluno:** Atendimentos e atualizações sobre o aluno aparecerão aqui em ordem cronológica.
+22. **Detalhamento da timeline:** Quando clicado em algum elemento da timeline, essa seção irá atualizar com informações complementares.
 
 ---
 
-#### Página do Gerente
+#### Página do Aluno (Agendamento de Assistência)
 
 <div align="center">
-  <sub>Figura X - Wireframe da Pagina de Gerente</sub> <br>
+  <sub>Figura X - Wireframe da Pagina de Aluno (Agendamento de Assistência)</sub> <br>
 
-  <img src="./assets/section7/7.1_wireframe/enumerated_elements/show_manager.jpg"
-         alt="Wireframe da Pagina de Gerente"
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/show_student_assistance.jpg"
+         alt="Wireframe da Pagina de Aluno (Agendamento de Assistência)"
          border="0"
          style="max-width: 600px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-23. **Informações do Gerente**
-    Nome, Telefone, email, etc. Tambem incluí um botão para editar informações relacionadas.
+23. **Título do modal** Título para contextualizar o usuário do que foi aberto.
+24. **Barra de progresso** Indicador do progresso de preenchimento do formulário. Então conforme o usuárioa avança no preenchimento das informação que serão divididas em etapas, isso será indicado ao usuário.
+24. **Formulário** Toda assistência tem que armazenar o profissional e uma tecnologia assistiva, então todos os dados necessários estarão reunidos aqui.
 
-24. **Unidade de Atuação**
-    Incluí onde aquele Gerente está trabalhando e informação de quantos profissionais estão atuando naquela unidade.
+---
 
-25. **Campo de Observações**
-    Serve para adicionar qualquer detalhamento necessário sobre aquele Gerente.
+#### Página do Aluno (Histórico de Cursos)
+
+<div align="center">
+  <sub>Figura X - Wireframe da Pagina de Aluno (Histórico de Cursos)</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/show_student_courses.jpg"
+         alt="Wireframe da Pagina de Aluno (Histórico de Cursos)"
+         border="0"
+         style="max-width: 600px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+26. **Botão "Ver Cursos":** Exibe uma pequena janela para visualizar o histórico de cursos e instituições pelas quais o usuário.
+27. **Botão "Ver Cursos":** Janela de visuaçização do histórico de cursos do aluno.
+
+---
+
+#### Página de um Profissional
+
+<div align="center">
+  <sub>Figura X - Wireframe da Pagina de um Profissional</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/show_professional.jpg"
+         alt="Wireframe da Pagina de um Profissional"
+         border="0"
+         style="max-width: 600px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+28. **Informações sobre o profissional:** Nome, Telefone, e-mail, etc. Tambem inclui um botão para editar informações relacionadas.
+29. **Observações sobre o profissional:** Informações gerais que podem ser úteis para identificar e entender a função daquele profisisional.
+30. **Lista de alunos:** listagem dos alunos e informações sobre a assitência que o profissional presta ao aluno.
+
+---
+
+#### Página de um Usuário
+
+<div align="center">
+  <sub>Figura X - Wireframe da Pagina de um Usuário</sub> <br>
+
+  <img src="./assets/section7/7.1_wireframe/enumerated_elements/show_user.jpg"
+         alt="Wireframe da Pagina de um Usuário"
+         border="0"
+         style="max-width: 600px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+31. **Informações do Gerente:** Nome, Telefone, e-mail, etc. Tambem inclui um botão para editar informações relacionadas.
+
+32. **Unidade de Atuação:** Informação sobre a instiruição com a qual o usuário está vinculado.
+
+33. **Histórico de ações:** Lista ordenada contendo o detalhamento das útimas ações feitas no sistema pelo usuário.
     
 ## 7.2 Desenvolvimento de Mockups
 _conteúdo_
