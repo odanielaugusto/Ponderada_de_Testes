@@ -1559,7 +1559,176 @@ _conteúdo_
 _conteúdo_
 
 ## 7.3 Guia Visual
-_conteúdo_
+
+&emsp;Para a construção de sistemas escaláveis e consistentes, é essencial estabelecer padrões a serem seguidos por todas as plataformas. Segundo SCHUHMACHER (1998), “a  eficácia da interação está intimamente ligada a forma como a informação é apresentada ou requerida do usuário”, ou seja, a experiência do usuário é diretamente influenciada pela forma como os elementos são exibidos. 
+
+&emsp;Assim, foram elaborados um guia de estilo e um design system para o presente projeto. Nesta seção, será possível encontrar a definição e explicação dos padrões criados, sendo eles: grid, paleta de cores, tipografia, iconografia, ilustrações e opções de acessibilidade. 
+
+### Grid e Baseline Grid
+
+&emsp;Definir um *grid* ajuda a organizar o conteúdo de uma página, de forma que se torna suporte para a criação de uma estrutura consistente, repetível e responsiva para o design. Nesse sentido, o Sistema Gallaudet segue uma orientação vertical feita em colunas, as quais se alteram conforme a largura do dispositivo. 
+
+&emsp;Para um melhor entendimento desta seção, abaixo há uma ilustração que indica alguns conceitos básicos de *grid*:
+
+<div align="center">
+  <sub>Figura X - Conceitos de Grid </sub> <br>
+
+  <img src="assets/section7/grid_example.png" alt="Conceitos de Grid">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Conforme ilustrado, enquanto a margem é o espaçamento dos limites da tela até as colunas, os *gutters* consistem na distância entre uma coluna e outra. Para a definição da largura das divisões, será levado em conta uma distribuição igualitária de espaço após serem definidos os outros parâmetros. 
+
+&emsp;Além disso, também foi exibido o que é o *baseline grid*, o qual pode ser entendido como o espaçamento entre os componentes. Seguindo a mesma analogia, foi definido que, para o Sistema Gallaudet, essa medida deve ser sempre múltipla de 4 em *pixels*.
+
+&emsp;O *grid* desta solução foi pensado principalmente para *notebooks* e *desktops*, pois serão os aparelhos alvo. Neles, deverão ser impostas 12 colunas de mesma espessura, com margens de 56 *pixels* e *gutters* de 32 *pixels*.  
+
+&emsp;A seguir, há as especificações de *grid* para diferentes tipos de aparelhos que poderiam ser usados para acessar o sistema:
+
+<div align="center">
+  <sub>Figura X - Definição do Grid</sub> <br>
+
+  <img src="assets/section7/grid_definition.png" alt="Definição do Grid">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+### Tipografia 
+
+&emsp;Seguindo padrões estabelecidos pelo guia de estilos para sites do Centro Paula Souza, as principais fontes a serem utilzadas são: Roboto e Roboto Slab, sendo que essa será utilizada em títulos e aquela para principalmente em corpo de texto. 
+
+<div align="center">
+  <sub>Figura X - Fontes</sub> <br>
+
+  <img src="assets/section7/fonts.png" alt="Fontes do Sistema">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Como é possível observar, o peso da fonte poderá ser de 300 a 700 (*bold*), dependendo do seu uso. Abaixo, há as configurações para a escrita de quatro tipos de título, considerando o H1 como o nível mais alto da hierarquia:
+
+<div align="center">
+  <sub>Figura X - Fonte para Títulos</sub> <br>
+
+  <img src="assets/section7/titles_pattern.png" alt="Tamanhos e pesos da fonte em títulos">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Quanto ao tamanho da fonte, é recomendado, mas não obrigatório, que ele seja escalado por múltiplos de 4 *pixels*. Além disso, deve se dar prioridade para que o texto padrão esteja em 16px, para casos específicos pode ser que esse padrão mude, mas deve sempre estar dentro da régua abaixo:
+
+<div align="center">
+  <sub>Figura X - Tamanho da Fonte</sub> <br>
+
+  <img src="assets/section7/font_sizes.png" alt="Tamanhos padrões para fonte">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Também, foram selecionadas alturas padrões para as linhas, as quais devem ser sempre múltiplas de 4px, como sugerido abaixo:
+
+<div align="center">
+  <sub>Figura X - Altura de Linha</sub> <br>
+
+  <img src="assets/section7/line_height.png" alt="Alturas para linhas">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+### Paleta de Cores
+
+&emsp;Com o objetivo de fazer com que o Sistema Gallaudet represente ao máximo o Centro Paula Souza, as cores utilizadas foram encontradas no guia de estilos da própria instituição. Nele, há diversas classificações de paletas de cores, as quais serão explicadas ao decorrer dessa seção.
+
+&emsp;A seguir, há as cores principais. Elas serão responsáveis por identificar a marca, ou seja, o usuário deverá conseguir identificar que o site pertence ao Centro Paula Souza a partir delas.
+
+<div align="center">
+  <sub>Figura X - Cores Principais</sub> <br>
+
+  <img src="assets/section7/cores_principais.png" alt="Cores Principais">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Já para contextos em que se precisa de destaque ou significado para elementos fora das cores institucionais, devem ser usadas as cores auxiliares. A título de exemplo, podem ser colocadas em gráficos ou similares. 
+
+<div align="center">
+  <sub>Figura X - Cores Auxiliares</sub> <br>
+
+  <img src="assets/section7/cores_auxiliares.png" alt="Cores Auxiliares">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Para compor os fundos e áreas neutras do site, serão utilizadas escalas de cinza. Abaixo, há os tons permitidos para esses casos:
+
+<div align="center">
+  <sub>Figura X - Cores Neutras</sub> <br>
+
+  <img src="assets/section7/cores_neutras.png" alt="Cores Neutras">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;Quando for necessário fornecer um *feedback* visual sobre o andamento de um conteúdo, deve-se avaliar qual é a mensagem que se deseja transmitir e usar uma das cores a seguir para transmiti-la:
+
+<div align="center">
+  <sub>Figura X - Cores de Feedback</sub> <br>
+
+  <img src="assets/section7/cores_feedback.png" alt="Cores de Feedback">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+### Iconografia
+
+&emsp;Ícones são elementos indispensáveis no design digital, uma vez que ajudam a ilustrar conceitos de forma universal, facilitam a acessibilidade e podem decorar páginas. Dentro do guia de estilos do Centro Paula Souza, há regras de uso para esses elementos:
+
+- Ao utilizar ícones, é importante avaliar a compatibilidade deles com a mensagem que se deseja transmitir. 
+- Reservar o uso de ícones para botões ou links que precisam de destaque. Isso ajuda a direcionar a atenção do usuário para ações importantes, como chamadas para ação ou links relevantes.
+- Não sobrecarregar a interface com muitos ícones. Quando utilizados em excesso, podem confundir o usuário e diminuir a eficácia do uso desses elementos.
+- Ícones sem um contexto claro ou sem um texto de apoio devem ser evitados. Isso pode levar à confusão e diminuir a acessibilidade da página.
+- Embora ícones possam decorar páginas e melhorar a estética, devem ser usados com moderação. O uso excessivo pode desviar a atenção do conteúdo principal e comprometer a clareza da mensagem.
+
+&emsp;Além disso, a instituição impõe a utilização de ícones do site [Font Awesome](https://fontawesome.com/icons). A padronização da fonte desses elementos garante manter a consistência de design em todo o site.Nesse sentido, foram selecionados alguns desses elementos que podem ser úteis durante o desenvolvimento do Sistema Gallaudet:
+
+<div align="center">
+  <sub>Figura X - Ícones</sub> <br>
+
+  <img src="assets/section7/icones.png" alt="Cores de Feedback">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+### Ilustrações 
+
+&emsp;Ilustrações são representações visuais que complementam o conteúdo textual, facilitando a compreensão de conceitos e funcionalidades do software. Elas transmitem ideias de forma visual, tornando o design mais acessível e intuitivo. No projeto, serão utilizadas ilustrações na forma de gráficos, que permitem visualizar e analisar dados de maneira clara e objetiva, contribuindo para a interpretação de informações complexas.
+
+&emsp;Também, poderão ser inseridos grafismos, ou seja, elementos gráficos que compõem a identidade estética. Diferentemente das ilustrações, eles atuam de maneira decorativa, reforçando a marca sem necessariamente transmitir informações diretas.
+
+&emsp;A uso tanto de ilustrações quanto de grafismos é essencial para criar uma experiência de usuário agrdável. Enquanto as ilustrações simplificam a explicação de conteúdos complexos, os grafismos promovem a coerência estética, resultando em uma interface agradável, intuitiva e que fortalece a identidade da marca.
+
+&emsp;Durante o desenvolvimento do Sistema Gallaudet, poderão ser utilizados gráficos e o grafismo abaixo, ambos reforçando a identidade visual do Centro Paula Souza:
+
+<div align="center">
+  <sub>Figura X - Grafismo do Centro Paula Souza</sub> <br>
+
+  <img src="assets/section7/grafismo.png" alt="Grafismo do Centro Paula Souza">
+
+  <sup>Fonte: [Guia de Estilos do Centro Paula Souza](https://cps.sp.gov.br/guia-estilo/index.php).</sup>
+</div>
+
+### Opções de Acessibilidade
+
+&emsp;O Design System do software foi desenvolvido com foco em acessibilidade, garantindo uma experiência intuitiva e inclusiva para todos os usuários. Para isso, foram adotadas práticas alinhadas com as recomendações das Web Content Accessibility Guidelines (WCAG), abrangendo aspectos como contraste de cores, tipografia acessível, suporte a leitores de tela e navegação por teclado, além de um eficiente sistema de feedback visual.
+
+&emsp;A acessibilidade das cores foi priorizada para garantir um contraste adequado entre os elementos da interface. Todos os textos seguem uma proporção mínima de 4.5:1 em relação ao fundo para textos normais e 3:1 para textos grandes, garatindo boa legibilidade. Além disso, elementos interativos como botões e links possuem uma clara diferenciação visual, combinando variações de cor com indicadores adicionais, como sublinhados e ícones.
+
+&emsp;A escolha tipográfica prioriza fontes de fácil leitura, como Roboto e Roboto Slab, assegurando clareza e acessibilidade. O espaçamento entre letras, linhas e parágrafos foi ajustado.
+
+&emsp;O suporte a leitores de tela foi estruturado para garantir que todas as funcionalidades sejam acessíveis. A interface aplica tags como \<h1>, \<h2> e \<p> para estruturar o conteúdo de forma compreensível para leitores de tela. Além disso, todas as imagens incluem descrições alternativas, permitindo que usuários com deficiência visual possam compreender os elementos gráficos da interface.
+
+&emsp;O sistema de feedback visual foi projetado para tornar a interação com o software mais intuitiva. Elementos interativos apresentam destaques visuais para indicar estados como carregamento, ação em andamento ou seleção de itens. As mensagens de erro e validação são exibidas de forma clara, utilizando cores, ícones e textos explicativos para orientar o usuário sobre os próximos passos.
 
 # 8. Desenvolvimento do Projeto
 _conteúdo_
