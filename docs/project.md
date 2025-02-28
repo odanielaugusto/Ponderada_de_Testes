@@ -958,13 +958,13 @@ _conteúdo_
 
 ## 7.1 Desenvolvimento de Wireframes
 
-&emsp; Para discorrer detalhadamente a respeito do wireframe, esta subseção foi divida em 2 partes: os fluxos e os elementos enumerados. a parte de fluxos tem como objetivo elaborar sobre quais telas a solução vai ter, quais as funções delas e principalmente quais são os fluxos existentes, tudo isso de modo mais geral, de uma perspectiva mais macro, enquanto que na parte de elementos enumerados, a perspectiva será mais granular, para entender quais são os elementos de cada página, quais são suas funções, etc.
+&emsp; Esta subseção está dividida em duas partes: fluxos e elementos enumerados. A seção de fluxos descreve as telas da solução, suas funções e os principais caminhos de navegação, adotando uma perspectiva macro. Já a parte de elementos enumerados analisa detalhadamente os componentes de cada página e suas respectivas funcionalidades.
 
 ### Fluxos
 
 #### Login
 
-&emsp; o fluxo, claro, começa no login, página na qual será possivel colocar as credenciais para autenticar-se e conseguir acesso à aplicação
+&emsp; O fluxo se inicia na página de login, onde o usuário insere suas credenciais para autenticação e acesso à aplicação.
 
 <div align="center">
   <sub>Figura X - Página de Login</sub> <br>
@@ -977,7 +977,9 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-&emsp; Depois de autenticado, a primeira página a ser aberta, assim como está exibido no [pdf](./assets/section7/7.1_wireframe/complete_wireframe.pdf) contendo o wireframe por completo, é a página com uma lista e uma dashborad de alunos, entretanto, antes desta etapa é possível fazer uma configuração de lista em que é possível selecionar a unidade de ensino a qual voce quer viusalizar as informações e tambeém qual informação a pessoa quer ver na lista. analise o fluxo.
+#### Configuração de Listas
+
+&emsp; Após a autenticação, a primeira página exibida contém uma lista e um dashboard de alunos. Entretanto, antes dessa etapa, o usuário pode configurar a lista, selecionando a unidade de ensino desejada e os tipos de informações a serem visualizadas.
 
 <div align="center">
   <sub>Figura X - FLuxo de Configurações de Listas</sub> <br>
@@ -990,9 +992,11 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-&emsp; Todo o fluxo dessa condifuração está exibido na imagem acima e explicado granluarmente parte de descrição enumerada de elementos.
+&emsp; O fluxo completo dessa configuração está ilustrado na imagem acima e descrito detalhadamente na seção de elementos enumerados.
 
-&emsp; O fluxo principal de mais valor para cliente, é o fluxo de alunos, por isso foi dito que ele é o primeiro a ser aberto. Abaixo é possível ver a imagem que exibe as quatro páginas deste fluxo:
+#### Fluxo de Alunos
+
+&emsp; O fluxo principal e de maior valor para o cliente é o fluxo de alunos, sendo essa a primeira interface apresentada após o login. A seguir, é possível visualizar as quatro páginas que compõem esse fluxo:
 
 <div align="center">
   <sub>Figura X - Fluxo de Alunos</sub> <br>
@@ -1005,9 +1009,11 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-&emsp; o fluxo de alunos, exibido acima, está, em primeiro, a página com a lista de lista de alunos e uma dashboard que centraliza informações e análises a respeito da distribuição dos alunos entre as instituições de ensino, à direita, tem a visualização de um aluno, chega-se nesta página quando se clica em um aluno na lista, na página à direita, a terceira página, tem um modal de agendamenteo de assistência onde será possível preencher o formulário para fornecer todas as informaçṍes de uma assistência e a última página é possível ver o componente na página no qual é possível ver o histório de ensino do aluno.
+&emsp; O fluxo inicia com uma página que apresenta a lista de alunos e um dashboard centralizando informações sobre a distribuição dos estudantes entre as instituições de ensino. À direita, há uma tela de visualização individual do aluno, acessada ao clicar em um nome na lista. A terceira página contém um modal para agendamento de assistência, permitindo o preenchimento de um formulário com informações detalhadas. Por fim, a última página exibe o histórico acadêmico do aluno.
 
-&emsp; Seguindo para o próximo fluxo, está a parte de profissionais, ou seja, as pessoas que assistem os alunos no caso de haver a necessidade da ajuda de uma pessoa, para chegar nesse fluxo, seria preciso, no configuração de lista (o componente à esquerda da lista) que foi citada brevemente no fluxo após o login, é necessário selecionar que o que será exibido são profissionais. analise as páginas deste fluxo:
+#### Fluxo de Profissionais
+
+&emsp; O fluxo de profissionais refere-se aos indivíduos que prestam assistência aos alunos. Para acessá-lo, é necessário, na configuração de lista (localizada à esquerda da lista principal), selecionar a opção de exibição de profissionais.
 
 <div align="center">
   <sub>Figura X - Fluxo de Profissionais</sub> <br>
@@ -1015,14 +1021,16 @@ _conteúdo_
   <img src="./assets/section7/7.1_wireframe/flows/professionals.jpg"
          alt="Fluxo de Profissionais"
          border="0"
-         style="max-width:950px; width: 100%; height: auto;">
+         style="max-width:800px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-&emsp; Note que é um fluxo mais simples que os do usuário porque ele não centraliza tantas informações, mas similarmente ao usuário, à esquerda tem a lista dos profissionais (sem dashboard, diferemtente dos usuários) e à direita há a página com a visualização de um funcionário, e para chegar nela, deve-se clicar num profisssional na lista de profissionais.
+&emsp; Esse fluxo é mais simples que o de alunos, pois não requer um dashboard centralizador, nem envolve etapas como a de criação de um atendimento. À esquerda, há a lista de profissionais, e à direita, a página de visualização detalhada de um profissional, acessível ao clicar em um nome na lista.
 
-&emsp; o último fluxo, em que para chegar basta clicar na configuração de lista, assim como foi explicado no fluxo anterior de profissionais, trata-se do fluxo dos usuários, ou seja, quem utiliza o sistema e pode acessá-los gerente de unidade e o gerentre geral. analise-o a seguir:
+#### Fluxo de Usuários
+
+&emsp; O último fluxo, acessível por meio da configuração de lista, refere-se aos usuários do sistema, como gerentes de unidade e gerentes gerais.
 
 <div align="center">
   <sub>Figura X - Fluxo de Usuários</sub> <br>
@@ -1030,16 +1038,16 @@ _conteúdo_
   <img src="./assets/section7/7.1_wireframe/flows/users.jpg"
          alt="Fluxo de Usuários"
          border="0"
-         style="max-width:950px; width: 100%; height: auto;">
+         style="max-width:800px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-&emsp; Novamente, assim como nos fluxos anteriores, na direita há a lista dos usuários, podendo ser filtrado de diferentes formas, mas principalemente pela unidade de ensino a qual o usuário está vinculado e, claro, em todos os fluxos, as páginas que o usuário pode acessar está limitada ao nível de permissão dele e isso envolve muito se ele está vinculado a uma unidade de ensino, por exemplo, o gerente de unidade de uma fatec X não pode ver dados da Fatec y, e, claro, a lista de usuários só são visualizáveis para gerentes administrativos, o tipo de usuário com o maior nível de acesso, que não possuem um vículo com alguma unidade de ensino específica. Para finalizar à direita está a visualização de um único usuário da aplicação.
+&emsp; Semelhante aos fluxos anteriores, a lista de usuários é apresentada à esquerda e pode ser filtrada por diferentes critérios, principalmente pela unidade de ensino à qual o usuário está vinculado. O acesso às páginas do sistema depende do nível de permissão do usuário. Por exemplo, um gerente de unidade de uma determinada Fatec não pode visualizar dados de outra Fatec. Além disso, apenas gerentes administrativos, que possuem o maior nível de acesso e não estão vinculados a uma unidade específica, podem visualizar a lista completa de usuários. À direita, há a página de visualização individual de um usuário.
 
 <br>
 
-&emsp; Para uma análise completa de todo o fluxo em detalhes, com a liberdade de aproximação e tal, ver indicações de setas e tal, acesse o [documento em PDF](./assets/section7/7.1_wireframe/complete_wireframe.pdf) disponível neste repositório.
+&emsp; Para uma análise detalhada dos fluxos, com a possibilidade de ampliar as imagens e visualizar indicações específicas, consulte o [documento em PDF](./assets/section7/7.1_wireframe/complete_wireframe.pdf) disponível neste repositório.
 
 <br>
 
