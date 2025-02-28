@@ -1556,7 +1556,7 @@ _conteúdo_
 
 ## 7.2 Desenvolvimento de Mockup
 
-Um **mockup** é uma representação visual quase finalizada da interface, exibindo cores, fontes e elementos de design já definidos. Ele foi criado para validar a **aparência** e a **usabilidade** do sistema antes do desenvolvimento, garantindo alinhamento com a **identidade visual** e facilitando feedback dos envolvidos no projeto.
+Um **mockup** é uma representação visual quase finalizada da interface do usuário, exibindo cores, fontes e elementos de design já definidos. Ele foi criado para validar a **aparência** e a **usabilidade** do sistema antes do desenvolvimento, garantindo alinhamento com a **identidade visual** e facilitando feedback dos envolvidos no projeto.
 
 Em questão de funcionalidade, ele segue a mesma lógica do Wireframe, portanto não iremos entrar em mais detalhes aqui.
 
