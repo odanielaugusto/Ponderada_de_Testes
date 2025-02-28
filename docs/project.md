@@ -50,7 +50,6 @@
 - [5. Solução Técnica (Design)](#5-solução-técnica-design)
   - [5.1 Diagrama de Componentes da UML](#51-diagrama-de-componentes-da-uml)
   - [5.2 Diagramas de Sequência da UML](#52-diagramas-de-sequência-da-uml)
-  - [5.3 Descrição Textual dos Diagramas](#53-descrição-textual-dos-diagramas)
 - [6. Mapeamento Técnico de Infraestrutura e Implantação](#6-mapeamento-técnico-de-infraestrutura-e-implantação)
   - [6.1 Diagrama de Implantação da UML](#61-diagrama-de-implantação-da-uml)
   - [6.2 Justificativa das Escolhas de Implantação](#62-justificativa-das-escolhas-de-implantação)
@@ -940,11 +939,11 @@ _conteúdo_
 - **Interface Web**: contida do *front-end*, possui interação direta com o usuário em todo o sistema, desde a primeira seção de autenticação; integra a usabilidade, layout e *design*. Pode ser construído com diferentes stacks, bibliotecas e frameworks;
 - **Autenticação de usuário**:  como parte do *middleware*, faz o gerenciamento de usuários, garantindo que apenas cadastrados utilizem o sistema e também permitindo a adição de novos utilizadores.
 - **Autorização de usuário**:  também como parte do *middleware*, a cada requisição, realiza o controle de permissões de acordo com o perfil. Cada perfil terá acesso a diferentes funcionalidades;
-- **Controllers**: relacionados ao back-end da aplicação (API interna), fazem o transporte das requisições do usuário para as camadas de Services e DAO's;
-- **Services**: também relacionada ao back-end da aplicação (API interna), contém a lógica do negócio. É responsável por realizar chamadas a DAO's e validar regras antes de persistir dados;
+- **Controllers**: relacionados ao back-end da aplicação (API interna), fazem o transporte das requisições do usuário para as camadas de Services e Repositories;
+- **Services**: também relacionada ao back-end da aplicação (API interna), contém a lógica do negócio. É responsável por realizar chamadas a Repositories e validar regras antes de persistir dados;
+- **Repositories**: a partir de Services, intermedia e controla o acesso ao banco de dados. Integra os métodos para buscar, inserir, atualizar e excluir registros.
 - **Banco de dados**: faz o armazenamento e manipulação dos dados e, independentemente da plataforma escolhida, faz a alimentação de informações do sistema. É contida de diferentes tabelas, como Alunos, Profissionais, Atendimentos, Usuários, etc.
-- **DAO's** (Data Access Objects): a partir de Services, intermedia e controla o acesso ao banco de dados. Integra os métodos para buscar, inserir, atualizar e excluir registros.
-- **Application Programming Interfaces (API's) interna e externa**: trafegam e processam as requisições de todo o sistema, através de Controllers, Services e DAO's, tanto internamente — através da alimentação dos dados intrínsecos ao sistema — quanto externamente — pela integração do Centro Paula Souza para a consulta de alunos.
+- **Application Programming Interfaces (API's) interna e externa**: trafegam e processam as requisições de todo o sistema, através de Controllers, Services e Repositories, tanto internamente — através da alimentação dos dados intrínsecos ao sistema — quanto externamente — pela integração do Centro Paula Souza para a consulta de alunos.
 
 &emsp;Dessa forma, foi elaborado o seguinte Diagrama UML, o qual demonstra a ordem de atividades e as associações entre esses componentes:
 
@@ -952,16 +951,15 @@ _conteúdo_
   <sub>Figura X - Diagrama de Componentes UML</sub> <br>
 
   <img 
-    src="./assets/diagrama_componentes.png" alt="Sequências do gerenciamento de usuários" 
-    style="max-width: 1000px; width: 100%; height: auto;">
+    src="./assets/section5/components_diagram.jpg" alt="diagrama de componentes" 
+    style="max-width: 700px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div> 
 
-&emsp;A partir do diagrama, é possível notar que o principal ponto de contato com o usuário é a Interface Web, pela qual ele executará as suas funcionalidades, assim enviando requisições para o sistema. Cada requisição é intermediada por um *middleware*, o qual faz a autenticação do usuário específico através do login e verificação de seu papel — de um gerente de unidade ou um gerente administrativo, por exemplo —, garantindo que as atividades no sistema ocorram conforme o permitido para cada tipo de usuário. Ao se obter sucesso na autenticação, as requisições são recebidas pela API interna, através dos Controllers, Services e DAO's, que fazem as operações com o banco de dados, caso necessário. Também através da API externa, há a conexão com os sistemas internos do Centro Paula Sousa, permitindo a consulta de dados dos alunos das instituições de ensino.
+&emsp;A partir do diagrama, é possível notar que o principal ponto de contato com o usuário é a Interface Web, pela qual ele executará as suas funcionalidades, assim enviando requisições para o sistema. Cada requisição é intermediada por um *middleware*, o qual faz a autenticação do usuário específico através do login e verificação de seu papel — de um gerente de unidade ou um gerente administrativo, por exemplo —, garantindo que as atividades no sistema ocorram conforme o permitido para cada tipo de usuário. Ao se obter sucesso na autenticação, as requisições são recebidas pela API interna, através dos Controllers, Services e Repositories, que fazem as operações com o banco de dados, caso necessário. Também através da API externa, há a conexão com os sistemas internos do Centro Paula Sousa, permitindo a consulta de dados dos alunos das instituições de ensino.
 
 &emsp;O recurso apresentado foi elaborado com a plataforma online [PlantUML](https://www.plantuml.com/plantuml), e demonstra de forma visualmente intuitiva tanto as interações entre os elementos principais do sistema, quanto quais sistemas são de controle interno (como a Interface Web) e externo (a API externa do CPS). Elaborar um diagrama de Componentes é extremamente importante para o entendimento fundamental da arquitetura de um sistema, evitando, dessa forma, episódios de retrabalho devido a ruídos de comunicação.
-
 
 ## 5.2 Diagramas de Sequência da UML
 &emsp;Nesta seção, são apresentados os diagramas UML de sequência, um tipo de diagrama de interação que descreve como um grupo de objetos trabalha em conjunto e em qual ordem as interações ocorrem. A elaboração desses diagramas foi baseada nas funcionalidades que agregam mais valor ao cliente, tornando sua explicação essencial. Por esse motivo, essa abordagem foi adotada na construção dos diagramas de sequência. A seguir, são listadas as funcionalidades acompanhadas de seus respectivos diagramas.
@@ -1081,7 +1079,6 @@ Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o 
 
 <!-- 
 Código PlantUML que gera o diagrama acima:
-Código PlantUML que gera o diagrama acima:
 @startuml
 
 actor Usuario
@@ -1107,8 +1104,7 @@ Repo -> DB : Consulta tabela logs_atendimentos
 DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Repo : Retorna logs
 Repo -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Business : Retorna dados
 Business -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Controller : Envia registros consolidados
-Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Retorna dados
-FE -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) Usuario : Exibe timeline do aluno
+Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Exibe timeline do aluno
 
 @enduml
 -->
@@ -1126,7 +1122,7 @@ FE -- > (Observação: foi adicionado um espaço antes de ">", senão o comentá
 
   <img 
     src="./assets/section5/5.2_sequencies_diagrams/dashboard_load.jpg" alt="Sequências do carregamento das dashboards do Gallaudet" 
-    style="max-width: 1000px; width: 100%; height: auto;">
+    style="max-width: 1100px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>  
@@ -1137,16 +1133,18 @@ Código PlantUML que gera o diagrama acima:
 
 actor "Usuário" as usuario
 participant "Front-End" as frontend
+participant "Middleware de Autenticação" as middleware
 participant "API Gallaudet" as api
 database "Banco de Dados" as db
 participant "API (externa) dos Alunos CPS" as apiAlunos
 
 usuario -> frontend : Abre o Gallaudet
-frontend -> api : Requisição para carregar Dashboard
-api -> api : Verifica role do usuário
+frontend -> middleware : Requisição para autenticação
+middleware -> middleware : Verifica credenciais e role do usuário
+middleware -> api : Encaminha requisição com role do usuário
 alt Gestora Administrativa
     api -> apiAlunos : Buscar dados de todos os alunos
-    apiAlunos -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : retornta todos os alunos
+    apiAlunos -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna todos os alunos
 else Gestora Local de Unidade
     api -> db : Buscar unidade vinculada ao usuário
     db -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna unidade
@@ -1158,14 +1156,12 @@ api -> db : Buscar dados de assistências
 db -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) api : Retorna dados
 api -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) frontend : Retorna dados processados (insights, gráficos)
 
-frontend -> usuario : Exibe dashboard e permite filtros
-
 @enduml
 -->
 
-&emsp;Uma característica notável desse diagrama é a mensagem recursiva dentro da API, utilizada para a verificação da role do usuário. Além da verificação de role, o sistema também valida a unidade vinculada ao usuário, especialmente para as Gestoras Locais de Unidade, garantindo que os dados apresentados no dashboard sejam filtrados de acordo com os acessos permitidos. Esse comportamento impede que usuários sem permissão visualizem informações de unidades às quais não pertencem.
+&emsp;Uma característica notável desse diagrama é a introdução de um middleware de autenticação, que agora centraliza a verificação de credenciais e a determinação da role do usuário antes que a requisição chegue à API. Isso garante uma separação clara entre autenticação e a lógica de negócios, melhorando a segurança e organização do sistema. Com essa abordagem, a API já recebe a requisição sabendo a role do usuário, eliminando a necessidade de uma verificação recursiva interna.
 
-&emsp;É importante destacar que essas verificações de autorização e autenticação ocorrem em praticamente todos os endpoints do sistema, sendo implementadas por um middleware de autenticação e autorização. No entanto, neste diagrama de sequência específico, optamos por evidenciar essas verificações porque são essenciais para a funcionalidade do dashboard. Diferente de outras interações onde essa verificação é uma rotina padrão e repetitiva, aqui ela define completamente o comportamento do sistema, garantindo que as informações carregadas estejam de acordo com as permissões do usuário.
+&emsp;Além disso, esse middleware assegura que todas as requisições que chegam à API já passaram por uma camada de validação. Embora essa camada esteja presente em todo o sistema, optamos por não exibi-la em outros diagramas de sequência onde sua presença era menos relevante. No entanto, neste fluxo específico, o middleware tem um papel quase central, pois os dados trazidos para a dashboard dependem inteiramente do tipo de usuário autenticado. Isso reforça a importância da autenticação e autorização na filtragem das informações apresentadas, garantindo que os usuários acessem apenas os dados aos quais têm permissão. Vale ressaltar que esse middleware já havia sido representado no diagrama de componentes. Aqui, sua exibição explícita é essencial para demonstrar como ele impacta diretamente o carregamento dos dados do dashboard.
 
 **4. Cadastro e Gestão de Usuários (RF01, RF02, RF05)**
 
@@ -1182,6 +1178,7 @@ frontend -> usuario : Exibe dashboard e permite filtros
 </div>  
 
 <!-- 
+Código PlantUML que gera o diagrama acima:
 @startuml
 
 actor Usuário as user
@@ -1202,7 +1199,6 @@ FE -> API : Solicita os registros de ações do usuário selecionado
 API -> DB : Recupera os logs de atividades associadas ao usuário
 DB -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) API : Retorna os registros de ações realizadas
 API -- > (Observação: foi adicionado um espaço antes de ">", senão o comentário seria quebrado) FE : Envia os logs do usuário
-FE -> user : Exibe a lista completa de logs do usuário
 
 == Cadastro de um novo usuário ==
 
@@ -1234,9 +1230,6 @@ end
 <br>
 
 &emsp; A criação dos diagramas presentes nesta seção foi realizada através da linguagem de marcação PlantUML, que permite gerar diagramas UML a partir de código texto, garantindo precisão e facilidade de manutenção. A renderização dos diagramas foi efetuada utilizando a ferramenta online https://plantuml.mseiche.de/, assegurando que os diagramas sigam os padrões estabelecidos pela UML. Além disso, para facilitar a compreensão e a reprodução dos diagramas, os códigos PlantUML de cada um foram disponibilizados em forma de comentários Markdown logo após a imagem correspondente.
-
-## 5.3 Descrição Textual dos Diagramas
-_conteúdo_
 
 # 6. Mapeamento Técnico de Infraestrutura e Implantação
 _conteúdo_
