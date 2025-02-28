@@ -935,6 +935,66 @@ Atributos:
 
 ## 4.2 Modelo Lógico de Dados 
 
+ No intuito de desenvolver o modelo conceitual para uma estrutura relacional determinada por tabelas, colunas e suas chaves primárias e estrangeiras, foi desenvolvido a seguinte modelagem lógica:
+
+<div align="center">
+  <sub>Figura X - Modelagem Lógica</sub> <br>
+
+  <img src="assets/section4/modelagem_logica.png" alt="Canvas MVP">
+
+  <sup>Fonte: Material produzido pelos autores (2024).</sup>
+</div>
+
+A partir dessa imagem, podemos extrair o seguinte estrutura em SQL:
+
+```sql
+CREATE TABLE User (
+    id SERIAL PRIMARY KEY,
+    senha TEXT NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Gerente Unidade', 'Gerente Administrativo', 'Assessor'))
+);
+
+CREATE TABLE LogUso (
+    id SERIAL PRIMARY KEY,
+    acao TEXT NOT NULL,
+    horario_acao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    id_user INT NOT NULL,
+    detalhe TEXT,
+    id_assistencia INT,
+    FOREIGN KEY (id_user) REFERENCES User(id),
+    FOREIGN KEY (id_assistencia) REFERENCES Assistencia(id)
+);
+
+CREATE TABLE Profissional (
+    id SERIAL PRIMARY KEY,
+    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Cuidador', 'Agente de Inclusão Escolar', 'PsiTranscritor do Sistema Brailecólogo', 'Tradutor e Intérprete de Língua Brasileira de Sinais – Libras', 'Técnico de Enfermagem')),
+    nome VARCHAR(255) NOT NULL,
+    numero_telefone VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Assistencia (
+    id SERIAL PRIMARY KEY,
+    id_profissional INT,
+    data_inicio DATE NOT NULL,
+    id_aluno INT NOT NULL,
+    FOREIGN KEY (id_profissional) REFERENCES Profissional(id)
+);
+
+CREATE TABLE TecnologiaAssistiva (
+    id SERIAL PRIMARY KEY,
+    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Lupa', 'Leitor de Tela', 'Cadeira de Rodas')) 
+);
+
+CREATE TABLE Assistencia_TecnologiaAssistiva (
+    id_assistencia INT NOT NULL,
+    id_tecnologia_assistiva INT NOT NULL,
+    PRIMARY KEY (id_assistencia, id_tecnologia_assistiva),
+    FOREIGN KEY (id_assistencia) REFERENCES Assistencia(id),
+    FOREIGN KEY (id_tecnologia_assistiva) REFERENCES TecnologiaAssistiva(id)
+);
+```
+
 ## 4.3 Modelo Físico de Dados
 _conteúdo_
 
