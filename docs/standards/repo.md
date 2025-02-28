@@ -47,6 +47,7 @@
     - [6.2.1 Nome de Pull Requests](#621-nome-de-pull-request)  
     - [6.2.2 Padrão de Escrita dos Pull Requests](#622-padrão-de-escrita-dos-pull-requests)  
     - [6.2.3 Resolução de Conflitos](#623-resolução-de-conflitos)  
+    - [6.2.4 Correção de erros de validação no PR](#624-correção-de-erros-de-validação-no-pr)  
 - [7. Padrão para Imagens](#6-padrão-para-imagens)  
 - [8. Referências](#7-referências)  
 
@@ -250,6 +251,7 @@ Para garantir a conformidade com as boas práticas de commits e nomenclatura de 
    chmod +x .git/hooks/pre-commit
    chmod +x .git/hooks/pre-merge-commit
    ```
+   *Observação: execute esses comandos no `Git Bash`*
 
 ### Importância dos validadores
 Esses validadores garantem que:
@@ -308,6 +310,47 @@ closes: [#123](link da task no trello), [#124](link da task no trello).
 5. Subir as mudanças (`git push`) para que o PR possa ser revisado e aceito sem conflitos.
 
 Essa abordagem facilita a resolução de conflitos e evita complicações ao tentar resolver diretamente na interface do GitHub.
+
+#### 6.2.4 Correção de erros de validação no PR
+Existem pipelines configurados para validar se o título do PR e o nome da branch seguem os padrões especificados.
+
+A seguir, está inserida uma imagem de exemplo, onde a validação de título do PR falhou, mas a validação do nome da branch foi bem-sucedida. 
+
+<div align="center">
+  <sub>Figura 2 - Falha na Validação de título de PR</sub> <br>
+
+  <img 
+    src="../assets/check_pr_title_failed.jpg" alt="Validação de título de PR falhou" 
+    style="max-width: 700px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+Caso um PR seja bloqueado por erro no nome da branch ou no título do PR, siga as instruções abaixo, dependendo do tipo de erro.
+
+#### Caso o erro seja no Título do PR
+Se o erro for causado pelo título do PR não seguir o padrão esperado:
+1. Feche o PR atual sem fazer merge.
+2. Abra um novo Pull Request **com o título correto**.
+   
+**Nota:** Não é necessário alterar o nome da branch. Apenas corrija o título e suba o novo PR.
+
+#### Caso o erro seja no Nome da Branch
+Se o erro for devido ao nome da branch não seguir o padrão esperado:
+1. Feche o PR atual sem fazer merge.
+2. Renomeie a branch localmente:
+   ```sh
+   git branch -m nome-antigo nome-correto
+   ```
+3. Delete a branch remota antiga:
+   ```sh
+   git push origin --delete nome-antigo
+   ```
+4. Suba a branch renomeada:
+   ```sh
+   git push origin nome-correto
+   ```
+5. Abra um novo Pull Request com a branch correta e o título adequado.
 
 ---
 
