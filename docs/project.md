@@ -813,114 +813,127 @@ _conteúdo_
 
 ## 4.1 Modelo Conceitual de Dados
 
-### Entidades, Atributos e Relações
+&emsp;Para o desenvolvimento da modelagem que guiará o projeto ao longo de todas as sprints, foi necessário compreender a maneira mais eficiente que possibilitaria uma conexão completa entre todos os dados da uma maneira ágil e eficiente, sendo considerado também que grande parte da interação no banco de dados seria permeado por meio de uma API, que recuperaria os dados relacionados aos alunos presentes no banco de dados do governo, indicado por meio do atributo ``id_aluno`` presente na entidade ``Assistencia``.
 
-#### 1. **Aluno**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Nome`
-  - `DataNascimento`
-  - `Unidade_ID` (Chave Estrangeira para `Unidade`)
-  - `Curso_ID` (Chave Estrangeira para `Curso`)
-  - `AnoMatricula`
-  - `DataMatricula`
-  - `DataPrevisaoFim`
-  - `Turno` (Manhã/Tarde/Noite/Integral/EaD)
-  - `NecessitaTecnologia` (Sim/Não)
-  - `NecessitaAcompanhamento` (Sim/Não)
-  - `Observacoes`
-- **Descrição**: Armazena informações acadêmicas e necessidades específicas dos alunos. Suporta **filtros por unidade, curso e status de atendimento**.
+&emsp;Nesse sentido, o modelo conceitual do grupo é representado pela seguinte imagem, sendo detalhado suas entidades e seus respectivos atributos logo em seguida:
 
-#### 2. **Responsavel**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Nome`
-  - `Tipo` (Mãe/Pai/Irmão/etc.)
-  - `Email`
-  - `Telefone1`
-  - `Telefone2` (Opcional)
-- **Descrição**: Responsáveis legais vinculados aos alunos. Usado para **notificações automáticas**.
+<div align="center">
+  <sub>Figura X - Modelo Conceitual</sub> <br>
 
-#### 3. **Profissional**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Nome`
-  - `Email`
-  - `Telefone`
-  - `Unidade_ID` (Chave Estrangeira para `Unidade`)
-- **Descrição**: Profissionais que realizam atendimentos. Vinculados a unidades para **gestão de acesso por gerentes**.
+  <img src="assets/section4/modelo_conceitual.png" alt="Canvas MVP">
 
-#### 4. **Atendimento**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Aluno_ID` (Chave Estrangeira para `Aluno`)
-  - `Profissional_ID` (Chave Estrangeira para `Profissional`)
-  - `DataInicio`
-  - `DataFimPrevisto`
-  - `Status` (Ativo/Em Espera/Concluído)
-  - `Observacoes`
-- **Descrição**: Registra atendimentos e **status visual**. Base para **Timeline do Aluno** e **relatórios estatísticos**.
+  <sup>Fonte: Material produzido pelos autores (2024).</sup>
+</div>
 
-#### 5. **TecnologiaAssistiva**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Tipo` (Comunicação Alternativa/Leitor de Tela/etc.)
-  - `Descricao`
-  - `DataCadastro`
-- **Descrição**: Suporta **cadastro flexível de tecnologias** e vinculação a alunos.
+### 1. **User** ### 
 
-#### 6. **NecessidadeEspecial**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Tipo` (Ex.: Deficiência Visual)
-- **Descrição**: Categorias editáveis para **filtros avançados**.
+&emsp;Representa os usuários administrativos que gerenciam o sistema.
 
-#### 7. **Unidade**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Nome`
-  - `Tipo` (ETEC/FATEC)
-- **Descrição**: Unidades administrativas do CPS. Usado em **cadastro de unidades** e dashboards.
+- Relacionamento: Um usuário pode registrar vários logs de uso.
 
-#### 8. **Curso**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Nome`
-  - `Tipo` (Nível Médio/Superior)
-- **Descrição**: Cursos ofertados. Base para **filtros por curso**.
+Atributos:
 
-#### 9. **Usuario**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Nome`
-  - `Email`
-  - `Perfil` (Gerente Geral/Gerente de Unidade/Servidor)
-  - `Unidade_ID` (Chave Estrangeira para `Unidade` - obrigatório para Gerentes de Unidade)
-- **Descrição**: Gerencia **níveis de acesso** para **cadastro de gerentes**.
+- id (PK)
 
-#### 10. **LogUso**
-- **Atributos**:
-  - `ID` (Chave Primária)
-  - `Usuario_ID` (Chave Estrangeira para `Usuario`)
-  - `Acao` (Ex.: "Cadastrou aluno")
-  - `DadosAlterados` (JSON)
-  - `DataHora`
-- **Descrição**: Registra **ações no sistema** para auditoria.
+- senha
+
+- email
+
+- tipo (enum: Gerente Unidade, Gerente Administrativo, Assessor)
+
+### 2. **LogUso** ### 
+
+&emsp;Representa os registros de interações dos usuários com o sistema.
+
+- Relacionamento: Cada log de uso é registrado por um usuário.
+
+&emsp;Cada log de uso pode estar associado a uma assistência.
+
+Atributos:
+
+- id (PK)
+
+- acao
+
+- horario_acao
+
+- id_user (FK)
+
+- detalhe
+
+- id_assistencia (FK)
+
+### 3. **Assistência** ###
+
+&emsp;Representa as assistências prestadas aos alunos com deficiência.
+
+- Relacionamentos: Cada assistência é prestada por um profissional.
+
+&emsp;Cada assistência pode estar relacionada a tecnologias assistivas.
+
+Atributos:
+
+- id (PK)
+
+- id_profissional (FK)
+
+- data_inicio
+
+- id_aluno
+
+### 4. **Profissional** ###
+
+&emsp;Representa os profissionais que prestam assistência aos alunos.
+
+- Relacionamento: Um profissional pode atender várias assistências.
+
+Atributos:
+
+- id (PK)
+
+- tipo (enum: Médico, Fisioterapeuta, Psicólogo, etc.)
+
+- nome
+
+- numero_telefone
+
+### 5. **Tecnologia Assistiva** ###
+
+&emsp;Representa os recursos assistivos utilizados pelos alunos.
+
+- Relacionamento: Uma assistência pode estar associada a várias tecnologias assistivas.
+
+Atributos:
+
+- id (PK)
+
+- tipo (enum: Lupa, Leitor de Tela, Cadeira de Rodas, etc.)
+
+### 6. **Assistencia_TecnologiaAssistiva** ###
+
+&emsp;Representa a relação entre Assistência e Tecnologia Assistiva.
+
+- Relacionamento: Uma assistência pode usar várias tecnologias assistivas.
+
+&emsp;Uma tecnologia assistiva pode ser utilizada em várias assistências.
+
+Atributos:
+
+- id_assistencia (PK, FK)
+
+- id_tecnologia_assistiva (PK, FK)
 
 
-### Relações
-| **Entidade 1**      | **Entidade 2**          | **Tipo**      | **Descrição**                                                                 |
-|----------------------|-------------------------|---------------|-------------------------------------------------------------------------------|
-| Aluno                | Responsavel             | 1:1           | Cada aluno tem um responsável principal.                                      |
-| Aluno                | Atendimento             | 1:N           | Um aluno pode ter múltiplos atendimentos.                                     |
-| Profissional         | Atendimento             | 1:N           | Um profissional pode realizar vários atendimentos.                            |
-| Aluno                | TecnologiaAssistiva     | M:N           | Tecnologias podem ser vinculadas a múltiplos alunos (via `AlunoTecnologia`). |
-| Aluno                | NecessidadeEspecial     | M:N           | Alunos podem ter múltiplas necessidades (via `AlunoNecessidade`).             |
-| Usuario              | Unidade                 | 1:N           | Gerentes de Unidade são vinculados a uma unidade específica.                  |
-| Aluno                | Curso                   | N:1           | Múltiplos alunos estão vinculados a um curso específico.                      |
-| Usuario              | LogUso                  | 1:N           | Um usuário pode gerar múltiplos registros de log de ações no sistema.         |
+## 4.1.2 Tabela de Relações entre as Entidades
 
-## 4.2 Modelo Lógico de Dados
+| **Entidade 1**     | **Entidade 2**          | **Cardinalidade** | **Descrição** |
+|--------------------|------------------------|------------------|--------------|
+| **User**          | **LogUso**              | (1,1) → (0,n)   | Um usuário pode registrar múltiplos logs de uso. |
+| **LogUso**        | **Assistência**         | (0,n) → (1,1)   | Um log de uso pode estar relacionado a uma única assistência. |
+| **Assistência**   | **Profissional**        | (0,n) → (0,1)   | Cada assistência pode ter um profissional responsável, mas um profissional pode atender várias assistências. |
+| **Assistência**   | **Tecnologia Assistiva**| (0,n) → (0,n)   | Uma assistência pode envolver várias tecnologias assistivas e cada tecnologia pode ser usada em múltiplas assistências. |
+
+## 4.2 Modelo Lógico de Dados 
 
 ## 4.3 Modelo Físico de Dados
 _conteúdo_
