@@ -813,9 +813,9 @@ _conteúdo_
 
 ## 4.1 Modelo Conceitual de Dados
 
-Para o desenvolvimento da modelagem que guiará o projeto ao longo de todas as sprints, foi necessário compreender a maneira mais eficiente que possibilitaria uma conexão completa entre todos os dados da uma maneira ágil e eficiente, sendo considerado também que grande parte da interação no banco de dados seria permeado por meio de uma API, que recuperaria os dados relacionados aos alunos presentes no banco de dados do governo, indicado por meio do atributo ``id_aluno`` presente na entidade ``Assistencia``.
+&emsp;Para o desenvolvimento da modelagem que guiará o projeto ao longo de todas as sprints, foi necessário compreender a maneira mais eficiente que possibilitaria uma conexão completa entre todos os dados da uma maneira ágil e eficiente, sendo considerado também que grande parte da interação no banco de dados seria permeado por meio de uma API, que recuperaria os dados relacionados aos alunos presentes no banco de dados do governo, indicado por meio do atributo ``id_aluno`` presente na entidade ``Assistencia``.
 
-Nesse sentido, o modelo conceitual do grupo é representado pela seguinte imagem, sendo detalhado suas entidades e seus respectivos atributos logo em seguida:
+&emsp;Nesse sentido, o modelo conceitual do grupo é representado pela seguinte imagem, sendo detalhado suas entidades e seus respectivos atributos logo em seguida:
 
 <div align="center">
   <sub>Figura X - Modelo Conceitual</sub> <br>
@@ -827,7 +827,7 @@ Nesse sentido, o modelo conceitual do grupo é representado pela seguinte imagem
 
 ### 1. **User** ### 
 
-Representa os usuários administrativos que gerenciam o sistema.
+&emsp;Representa os usuários administrativos que gerenciam o sistema.
 
 - Relacionamento: Um usuário pode registrar vários logs de uso.
 
@@ -843,11 +843,11 @@ Atributos:
 
 ### 2. **LogUso** ### 
 
-Representa os registros de interações dos usuários com o sistema.
+&emsp;Representa os registros de interações dos usuários com o sistema.
 
 - Relacionamento: Cada log de uso é registrado por um usuário.
 
-Cada log de uso pode estar associado a uma assistência.
+&emsp;Cada log de uso pode estar associado a uma assistência.
 
 Atributos:
 
@@ -865,11 +865,11 @@ Atributos:
 
 ### 3. **Assistência** ###
 
-Representa as assistências prestadas aos alunos com deficiência.
+&emsp;Representa as assistências prestadas aos alunos com deficiência.
 
 - Relacionamentos: Cada assistência é prestada por um profissional.
 
-Cada assistência pode estar relacionada a tecnologias assistivas.
+&emsp;Cada assistência pode estar relacionada a tecnologias assistivas.
 
 Atributos:
 
@@ -883,7 +883,7 @@ Atributos:
 
 ### 4. **Profissional** ###
 
-Representa os profissionais que prestam assistência aos alunos.
+&emsp;Representa os profissionais que prestam assistência aos alunos.
 
 - Relacionamento: Um profissional pode atender várias assistências.
 
@@ -899,7 +899,7 @@ Atributos:
 
 ### 5. **Tecnologia Assistiva** ###
 
-Representa os recursos assistivos utilizados pelos alunos.
+&emsp;Representa os recursos assistivos utilizados pelos alunos.
 
 - Relacionamento: Uma assistência pode estar associada a várias tecnologias assistivas.
 
@@ -911,11 +911,11 @@ Atributos:
 
 ### 6. **Assistencia_TecnologiaAssistiva** ###
 
-Representa a relação entre Assistência e Tecnologia Assistiva.
+&emsp;Representa a relação entre Assistência e Tecnologia Assistiva.
 
 - Relacionamento: Uma assistência pode usar várias tecnologias assistivas.
 
-Uma tecnologia assistiva pode ser utilizada em várias assistências.
+&emsp;Uma tecnologia assistiva pode ser utilizada em várias assistências.
 
 Atributos:
 
@@ -934,6 +934,7 @@ Atributos:
 | **Assistência**   | **Tecnologia Assistiva**| (0,n) → (0,n)   | Uma assistência pode envolver várias tecnologias assistivas e cada tecnologia pode ser usada em múltiplas assistências. |
 
 ## 4.2 Modelo Lógico de Dados 
+
  No intuito de desenvolver o modelo conceitual para uma estrutura relacional determinada por tabelas, colunas e suas chaves primárias e estrangeiras, foi desenvolvido a seguinte modelagem lógica:
 
 <div align="center">
