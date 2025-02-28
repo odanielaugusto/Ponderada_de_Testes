@@ -1023,12 +1023,12 @@ _conteúdo_
 <div align="center">
   <sub>Figura X - Diagrama de Componentes UML</sub> <br>
 
-  <img 
-    src="./assets/section5/components_diagram.jpg" alt="diagrama de componentes" 
+  <img
+    src="./assets/section5/components_diagram.jpg" alt="diagrama de componentes"
     style="max-width: 700px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div> 
+</div>
 
 &emsp;A partir do diagrama, é possível notar que o principal ponto de contato com o usuário é a Interface Web, pela qual ele executará as suas funcionalidades, assim enviando requisições para o sistema. Cada requisição é intermediada por um *middleware*, o qual faz a autenticação do usuário específico através do login e verificação de seu papel — de um gerente de unidade ou um gerente administrativo, por exemplo —, garantindo que as atividades no sistema ocorram conforme o permitido para cada tipo de usuário. Ao se obter sucesso na autenticação, as requisições são recebidas pela API interna, através dos Controllers, Services e Repositories, que fazem as operações com o banco de dados, caso necessário. Também através da API externa, há a conexão com os sistemas internos do Centro Paula Sousa, permitindo a consulta de dados dos alunos das instituições de ensino.
 
@@ -1039,19 +1039,19 @@ _conteúdo_
 
 **1. Cadastro e Gestão de Atendimentos (RF06, RF10)**
 
-&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. O diagrama a seguir ilustra esses processos, assegurando a correta gestão dos atendimentos. 
+&emsp;O Cadastro e Gestão de Atendimentos é central para o sistema, pois vincula alunos, profissionais e assistências. Garantir a criação, edição e atualização dos atendimentos de forma clara e eficiente evita falhas no acompanhamento dos alunos. O diagrama a seguir ilustra esses processos, assegurando a correta gestão dos atendimentos.
 
 <div align="center">
   <sub>Figura X - Sequências do agendamento e edição de um assistência</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/scheduling_appointment.jpg" alt="Sequências do agendamento e edição de um assistência" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/scheduling_appointment.jpg" alt="Sequências do agendamento e edição de um assistência"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div> 
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 @startuml
 
@@ -1087,11 +1087,11 @@ API -- > (Observação: foi adicionado um espaço antes de ">", senão o coment�
 @enduml
 -->
 
-&emsp;Os diagramas de sequência foram elaborados para elucidar as interações entre usuário e sistema em cada funcionalidade. No processo de agendamento de um atendimento, detalha-se desde o acesso à página do aluno até a confirmação do registro no banco de dados.  
+&emsp;Os diagramas de sequência foram elaborados para elucidar as interações entre usuário e sistema em cada funcionalidade. No processo de agendamento de um atendimento, detalha-se desde o acesso à página do aluno até a confirmação do registro no banco de dados.
 
-&emsp;No caso da edição ou cancelamento de um atendimento, o fluxo segue etapas semelhantes ao agendamento. A interação se inicia com o acesso à página do aluno, onde os dados são buscados na API externa. No entanto, como essa etapa já foi explorada no fluxo de agendamento e não revela mudanças no contexto da edição ou cancelamento, ela não foi explicitada no diagrama.  
+&emsp;No caso da edição ou cancelamento de um atendimento, o fluxo segue etapas semelhantes ao agendamento. A interação se inicia com o acesso à página do aluno, onde os dados são buscados na API externa. No entanto, como essa etapa já foi explorada no fluxo de agendamento e não revela mudanças no contexto da edição ou cancelamento, ela não foi explicitada no diagrama.
 
-&emsp;Dessa forma, o diagrama foca nas interações diretamente relacionadas à criação, edição e remoção dos atendimentos, garantindo uma visão clara dos processos e suas implicações dentro do sistema.  
+&emsp;Dessa forma, o diagrama foca nas interações diretamente relacionadas à criação, edição e remoção dos atendimentos, garantindo uma visão clara dos processos e suas implicações dentro do sistema.
 
 **2. Registro de Histórico e Logs (RF07, RF08, RF11)**
 
@@ -1100,14 +1100,14 @@ API -- > (Observação: foi adicionado um espaço antes de ">", senão o coment�
 <div align="center">
   <sub>Figura X - Sequências do registro de logs no agendamento de uma assistência</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/log_record.jpg" alt="Sequências do registro de logs no agendamento de uma assistência" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/log_record.jpg" alt="Sequências do registro de logs no agendamento de uma assistência"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div>  
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 @startuml
 
@@ -1143,14 +1143,14 @@ Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o 
 <div align="center">
   <sub>Figura X - Sequências da Visualização do log de agendamento de assistência</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/log_view.jpg" alt="Sequências da Visualização do log de agendamento de assistência" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/log_view.jpg" alt="Sequências da Visualização do log de agendamento de assistência"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div>  
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 @startuml
 
@@ -1193,14 +1193,14 @@ Controller -- > (Observação: foi adicionado um espaço antes de ">", senão o 
 <div align="center">
   <sub>Figura X - Sequências do carregamento das dashboards do Gallaudet</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/dashboard_load.jpg" alt="Sequências do carregamento das dashboards do Gallaudet" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/dashboard_load.jpg" alt="Sequências do carregamento das dashboards do Gallaudet"
     style="max-width: 1100px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div>  
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 @startuml
 
@@ -1243,14 +1243,14 @@ api -- > (Observação: foi adicionado um espaço antes de ">", senão o coment�
 <div align="center">
   <sub>Figura X - Sequências do gerenciamento de usuários</sub> <br>
 
-  <img 
-    src="./assets/section5/5.2_sequencies_diagrams/user_management.jpg" alt="Sequências do gerenciamento de usuários" 
+  <img
+    src="./assets/section5/5.2_sequencies_diagrams/user_management.jpg" alt="Sequências do gerenciamento de usuários"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
-</div>  
+</div>
 
-<!-- 
+<!--
 Código PlantUML que gera o diagrama acima:
 @startuml
 
@@ -1321,7 +1321,6 @@ _conteúdo_
 &emsp;Esta seção abrange o desenvolvimento dos wireframes e mockups de alta fidelidade, que representam a estrutura e o design visual da solução. Os wireframes estabelecem a organização dos elementos da interface, enquanto os mockups de alta fidelidade detalham o aspecto final da aplicação, incluindo cores, tipografia e componentes visuais.
 
 ## 7.1 Desenvolvimento de Wireframes
-
 &emsp; Esta subseção está dividida em duas partes: fluxos e elementos enumerados. A seção de fluxos descreve as telas da solução, suas funções e os principais caminhos de navegação, adotando uma perspectiva macro. Já a parte de elementos enumerados analisa detalhadamente os componentes de cada página e suas respectivas funcionalidades.
 
 ### Fluxos
@@ -1419,7 +1418,7 @@ _conteúdo_
 
 <br>
 
-### Descrição Enumerada dos Elementos 
+### Descrição Enumerada dos Elementos
 
 #### Login
 
@@ -1627,19 +1626,42 @@ _conteúdo_
 32. **Unidade de Atuação:** Informação sobre a instiruição com a qual o usuário está vinculado.
 
 33. **Histórico de ações:** Lista ordenada contendo o detalhamento das útimas ações feitas no sistema pelo usuário.
-    
-## 7.2 Desenvolvimento de Mockups
-_conteúdo_
+
+## 7.2 Desenvolvimento de Mockup
+
+Um **mockup** é uma representação visual quase finalizada da interface do usuário, exibindo cores, fontes e elementos de design já definidos. Ele foi criado para validar a **aparência** e a **usabilidade** do sistema antes do desenvolvimento, garantindo alinhamento com a **identidade visual** e facilitando feedback dos envolvidos no projeto.
+
+Em questão de funcionalidade, ele segue a mesma lógica do Wireframe, portanto não iremos entrar em mais detalhes aqui.
+
+
+Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, aproximando a interface do visual final. Validamos:
+
+- **Identidade Visual**: uso de cores e logotipos oficiais.
+- **Tipografia**: fontes legíveis e hierarquia clara de títulos.
+- **Ícones e Botões**: facilitam a identificação de funções.
+- **Estrutura**: mantém a lógica dos wireframes, mas com estilo refinado.
+
+### Diferenças em relação ao Wireframe
+- Adição de cores e estilos definitivos.
+- Ícones representativos para cada função.
+- Textos mais próximos do conteúdo real.
+
+### Exemplos de Telas
+1. **Login**: aplicação das cores oficiais e logotipo.
+2. **Lista e Dashboard**: gráficos coloridos e layout responsivo.
+3. **Visualização**: detalhes em blocos, seguindo a paleta de cores.
+
+> Para mais detalhes, consulte o PDF completo dos mockups. [documento em PDF](./assets/section7/7.2_mockup/complete_mockup.pdf)
 
 ## 7.3 Guia Visual
 
-&emsp;Para a construção de sistemas escaláveis e consistentes, é essencial estabelecer padrões a serem seguidos por todas as plataformas. Segundo SCHUHMACHER (1998), “a  eficácia da interação está intimamente ligada a forma como a informação é apresentada ou requerida do usuário”, ou seja, a experiência do usuário é diretamente influenciada pela forma como os elementos são exibidos. 
+&emsp;Para a construção de sistemas escaláveis e consistentes, é essencial estabelecer padrões a serem seguidos por todas as plataformas. Segundo SCHUHMACHER (1998), “a  eficácia da interação está intimamente ligada a forma como a informação é apresentada ou requerida do usuário”, ou seja, a experiência do usuário é diretamente influenciada pela forma como os elementos são exibidos.
 
-&emsp;Assim, foram elaborados um guia de estilo e um design system para o presente projeto. Nesta seção, será possível encontrar a definição e explicação dos padrões criados, sendo eles: grid, paleta de cores, tipografia, iconografia, ilustrações e opções de acessibilidade. 
+&emsp;Assim, foram elaborados um guia de estilo e um design system para o presente projeto. Nesta seção, será possível encontrar a definição e explicação dos padrões criados, sendo eles: grid, paleta de cores, tipografia, iconografia, ilustrações e opções de acessibilidade.
 
 ### Grid e Baseline Grid
 
-&emsp;Definir um *grid* ajuda a organizar o conteúdo de uma página, de forma que se torna suporte para a criação de uma estrutura consistente, repetível e responsiva para o design. Nesse sentido, o Sistema Gallaudet segue uma orientação vertical feita em colunas, as quais se alteram conforme a largura do dispositivo. 
+&emsp;Definir um *grid* ajuda a organizar o conteúdo de uma página, de forma que se torna suporte para a criação de uma estrutura consistente, repetível e responsiva para o design. Nesse sentido, o Sistema Gallaudet segue uma orientação vertical feita em colunas, as quais se alteram conforme a largura do dispositivo.
 
 &emsp;Para um melhor entendimento desta seção, abaixo há uma ilustração que indica alguns conceitos básicos de *grid*:
 
@@ -1651,11 +1673,11 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-&emsp;Conforme ilustrado, enquanto a margem é o espaçamento dos limites da tela até as colunas, os *gutters* consistem na distância entre uma coluna e outra. Para a definição da largura das divisões, será levado em conta uma distribuição igualitária de espaço após serem definidos os outros parâmetros. 
+&emsp;Conforme ilustrado, enquanto a margem é o espaçamento dos limites da tela até as colunas, os *gutters* consistem na distância entre uma coluna e outra. Para a definição da largura das divisões, será levado em conta uma distribuição igualitária de espaço após serem definidos os outros parâmetros.
 
 &emsp;Além disso, também foi exibido o que é o *baseline grid*, o qual pode ser entendido como o espaçamento entre os componentes. Seguindo a mesma analogia, foi definido que, para o Sistema Gallaudet, essa medida deve ser sempre múltipla de 4 em *pixels*.
 
-&emsp;O *grid* desta solução foi pensado principalmente para *notebooks* e *desktops*, pois serão os aparelhos alvo. Neles, deverão ser impostas 12 colunas de mesma espessura, com margens de 56 *pixels* e *gutters* de 32 *pixels*.  
+&emsp;O *grid* desta solução foi pensado principalmente para *notebooks* e *desktops*, pois serão os aparelhos alvo. Neles, deverão ser impostas 12 colunas de mesma espessura, com margens de 56 *pixels* e *gutters* de 32 *pixels*.
 
 &emsp;A seguir, há as especificações de *grid* para diferentes tipos de aparelhos que poderiam ser usados para acessar o sistema:
 
@@ -1667,9 +1689,9 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-### Tipografia 
+### Tipografia
 
-&emsp;Seguindo padrões estabelecidos pelo guia de estilos para sites do Centro Paula Souza, as principais fontes a serem utilzadas são: Roboto e Roboto Slab, sendo que essa será utilizada em títulos e aquela para principalmente em corpo de texto. 
+&emsp;Seguindo padrões estabelecidos pelo guia de estilos para sites do Centro Paula Souza, as principais fontes a serem utilzadas são: Roboto e Roboto Slab, sendo que essa será utilizada em títulos e aquela para principalmente em corpo de texto.
 
 <div align="center">
   <sub>Figura X - Fontes</sub> <br>
@@ -1723,7 +1745,7 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-&emsp;Já para contextos em que se precisa de destaque ou significado para elementos fora das cores institucionais, devem ser usadas as cores auxiliares. A título de exemplo, podem ser colocadas em gráficos ou similares. 
+&emsp;Já para contextos em que se precisa de destaque ou significado para elementos fora das cores institucionais, devem ser usadas as cores auxiliares. A título de exemplo, podem ser colocadas em gráficos ou similares.
 
 <div align="center">
   <sub>Figura X - Cores Auxiliares</sub> <br>
@@ -1757,7 +1779,7 @@ _conteúdo_
 
 &emsp;Ícones são elementos indispensáveis no design digital, uma vez que ajudam a ilustrar conceitos de forma universal, facilitam a acessibilidade e podem decorar páginas. Dentro do guia de estilos do Centro Paula Souza, há regras de uso para esses elementos:
 
-- Ao utilizar ícones, é importante avaliar a compatibilidade deles com a mensagem que se deseja transmitir. 
+- Ao utilizar ícones, é importante avaliar a compatibilidade deles com a mensagem que se deseja transmitir.
 - Reservar o uso de ícones para botões ou links que precisam de destaque. Isso ajuda a direcionar a atenção do usuário para ações importantes, como chamadas para ação ou links relevantes.
 - Não sobrecarregar a interface com muitos ícones. Quando utilizados em excesso, podem confundir o usuário e diminuir a eficácia do uso desses elementos.
 - Ícones sem um contexto claro ou sem um texto de apoio devem ser evitados. Isso pode levar à confusão e diminuir a acessibilidade da página.
@@ -1773,7 +1795,7 @@ _conteúdo_
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
-### Ilustrações 
+### Ilustrações
 
 &emsp;Ilustrações são representações visuais que complementam o conteúdo textual, facilitando a compreensão de conceitos e funcionalidades do software. Elas transmitem ideias de forma visual, tornando o design mais acessível e intuitivo. No projeto, serão utilizadas ilustrações na forma de gráficos, que permitem visualizar e analisar dados de maneira clara e objetiva, contribuindo para a interpretação de informações complexas.
 
