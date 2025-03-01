@@ -13,10 +13,22 @@ jobs:
       - name: Verificar nome do Pull Request
         run: |
           PR_TITLE="${{ github.event.pull_request.title }}"
-          echo "Título do PR: $PR_TITLE"
+          BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
+          HEAD_BRANCH="${{ github.event.pull_request.head.ref }}"
 
+          echo "Título do PR: $PR_TITLE"
+          echo "Branch de origem: $HEAD_BRANCH"
+          echo "Branch de destino: $BASE_BRANCH"
+
+          # Se for um PR da develop para main, pular a validação
+          if [[ "$HEAD_BRANCH" == "develop" && "$BASE_BRANCH" == "main" ]]; then
+            echo "✅ PR de develop para main detectado. Pulando validação do título."
+            exit 0
+          fi
+
+          # Definição do padrão semântico
           PR_PATTERN="^(feat|fix|chore|docs|style|refactor|test|perf): .*"
-          
+
           if [[ ! "$PR_TITLE" =~ $PR_PATTERN ]]; then
             echo "🚨 O título do PR não segue o padrão semântico. O título deve começar com 'feat:', 'fix:', etc."
             exit 1
