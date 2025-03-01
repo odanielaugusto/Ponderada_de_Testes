@@ -809,129 +809,124 @@ _conteúdo_
 | RNF10 | Usabilidade: Interface intuitiva e responsiva em diversos dispositivos.     | RF01, RF02, RF04, RF05, RF06, RF08, RF09, RF10, RF11, RF12 | Melhora a experiência do usuário, facilitando a interação com todas as funcionalidades.             |
 
 # 4. Modelagem de Dados
-&emsp; A modelagem de dados é um dos principais pontos da solução para a Assessoria de Inclusão do Centro Paula Souza. Com ela, será organizado de forma clara e segura informações essenciais — como alunos, responsáveis, profissionais e tecnologias assistivas — para transformar o atendimento em algo ágil, rastreável e acessível. Desde o respeito à privacidade (LGPD) até a integração com leitores de tela, garantindo que todos os servidores, inclusive aqueles com deficiência visual, possam usar o sistema com autonomia. O modelo foi desenhado para crescer junto com as necessidades do CPS, evitando gargalos e mantendo a simplicidade mesmo com novas demandas.
+&emsp;A modelagem de dados é essencial para estruturar e organizar informações dentro de um sistema. No projeto desenvolvido para o Centro Paula Souza, essa modelagem permite gerenciar alunos com deficiência, garantindo o registro detalhado de suas necessidades assistivas, alocação de profissionais especializados e monitoramento de atendimentos. Além disso, possibilita a rastreabilidade de informações essenciais, otimizando a tomada de decisões dentro das unidades de ensino. Com um banco de dados bem estruturado, o sistema assegura integridade, acessibilidade e eficiência no gerenciamento dos dados, contribuindo para uma gestão mais eficaz e adaptada às demandas específicas das instituições de ensino.
 
 ## 4.1 Modelo Conceitual de Dados
 
-&emsp;Para o desenvolvimento da modelagem que guiará o projeto ao longo de todas as sprints, foi necessário compreender a maneira mais eficiente que possibilitaria uma conexão completa entre todos os dados da uma maneira ágil e eficiente, sendo considerado também que grande parte da interação no banco de dados seria permeado por meio de uma API, que recuperaria os dados relacionados aos alunos presentes no banco de dados do governo, indicado por meio do atributo ``id_aluno`` presente na entidade ``Assistencia``.
+## *1. User (Usuário Administrativo)*
+&emsp;Representa os usuários administrativos que gerenciam o sistema, incluindo Gerente de Unidade, Gerente Administrativo e Assessor. Cada tipo de usuário tem permissões específicas, sendo o Gerente Administrativo responsável por aprovar contratações de profissionais e o Gerente de Unidade responsável pela gestão operacional.
 
-&emsp;Nesse sentido, o modelo conceitual do grupo é representado pela seguinte imagem, sendo detalhado suas entidades e seus respectivos atributos logo em seguida:
+### *Relacionamento com os Requisitos Funcionais:*
+- Atende ao *RF01* (Cadastro de Gerentes), pois é a entidade que representa os gerentes no sistema.
+- Está relacionado ao *RF07* (Registro de Logs), pois cada usuário pode registrar múltiplos logs de ações no sistema.
 
-<div align="center">
-  <sub>Figura X - Modelo Conceitual</sub> <br>
+### *Relacionamentos:*
+- Um usuário pode registrar vários logs de uso (1:N com LogUso).
 
-  <img src="assets/section4/modelo_conceitual.png" alt="Canvas MVP">
-
-  <sup>Fonte: Material produzido pelos autores (2024).</sup>
-</div>
-
-### 1. **User** ### 
-
-&emsp;Representa os usuários administrativos que gerenciam o sistema.
-
-- Relacionamento: Um usuário pode registrar vários logs de uso.
-
-Atributos:
-
+### *Atributos:*
 - id (PK)
-
 - senha
-
 - email
-
 - tipo (enum: Gerente Unidade, Gerente Administrativo, Assessor)
 
-### 2. **LogUso** ### 
+---
 
-&emsp;Representa os registros de interações dos usuários com o sistema.
+## *2. LogUso (Registro de Uso)*
+&emsp;Representa os registros de interações dos usuários com o sistema. Cada ação executada pelo usuário é registrada para fins de auditoria e rastreabilidade.
 
-- Relacionamento: Cada log de uso é registrado por um usuário.
+### *Relacionamento com os Requisitos Funcionais:*
+- Atende ao *RF07* (Registro de Logs), pois mantém os registros de todas as ações realizadas por usuários administrativos.
 
-&emsp;Cada log de uso pode estar associado a uma assistência.
+### *Relacionamentos:*
+- Cada log de uso é registrado por um usuário (N:1 com User).
+- Cada log de uso pode estar associado a uma assistência (N:1 com Assistência).
 
-Atributos:
-
+### *Atributos:*
 - id (PK)
-
 - acao
-
 - horario_acao
-
 - id_user (FK)
-
 - detalhe
-
 - id_assistencia (FK)
 
-### 3. **Assistência** ###
+---
 
-&emsp;Representa as assistências prestadas aos alunos com deficiência.
+## *3. Assistência*
+&emsp;Representa as assistências prestadas aos alunos com deficiência, podendo envolver tanto a alocação de profissionais quanto a distribuição de tecnologias assistivas.
 
-- Relacionamentos: Cada assistência é prestada por um profissional.
+### *Relacionamento com os Requisitos Funcionais:*
+- Atende ao *RF06* (Gestão de Atendimentos), pois armazena informações sobre atendimentos prestados aos alunos.
+- Relacionado ao *RF10* (Atualização de Status de Atendimento), pois permite registrar mudanças no status de cada assistência.
+- Contribui para o *RF08* (Histórico Completo do Aluno), pois mantém registros detalhados sobre a assistência recebida.
 
-&emsp;Cada assistência pode estar relacionada a tecnologias assistivas.
+### *Relacionamentos:*
+- Cada assistência é prestada por um profissional (N:1 com Profissional).
+- Cada assistência pode estar relacionada a tecnologias assistivas (N:N com Tecnologia Assistiva).
 
-Atributos:
-
+### *Atributos:*
 - id (PK)
-
 - id_profissional (FK)
-
 - data_inicio
-
 - id_aluno
 
-### 4. **Profissional** ###
+---
 
-&emsp;Representa os profissionais que prestam assistência aos alunos.
+## *4. Profissional*
+&emsp;Representa os profissionais que prestam assistência aos alunos, como médicos, fisioterapeutas e psicólogos. Esses profissionais são cadastrados pelo Gerente de Unidade e a alocação deles precisa ser aprovada pelo Gerente Administrativo.
 
-- Relacionamento: Um profissional pode atender várias assistências.
+### *Relacionamento com os Requisitos Funcionais:*
+- Atende ao *RF05* (Gestão de Profissionais), pois permite o cadastro, edição e exclusão de dados dos profissionais.
+- Relacionado ao *RF06* (Gestão de Atendimentos), pois os atendimentos precisam estar associados a um profissional.
 
-Atributos:
+### *Relacionamentos:*
+- Um profissional pode atender várias assistências (1:N com Assistência).
 
+### *Atributos:*
 - id (PK)
-
-- tipo (enum: Médico, Fisioterapeuta, Psicólogo, etc.)
-
+- tipo (enum: Médico, Fisioterapeuta, Psicólogo, etc.)
 - nome
-
 - numero_telefone
 
-### 5. **Tecnologia Assistiva** ###
+---
 
-&emsp;Representa os recursos assistivos utilizados pelos alunos.
+## *5. Tecnologia Assistiva*
+&emsp;Representa os recursos assistivos utilizados pelos alunos, como lupas, leitores de tela e cadeiras de rodas.
 
-- Relacionamento: Uma assistência pode estar associada a várias tecnologias assistivas.
+### *Relacionamento com os Requisitos Funcionais:*
+- Atende ao *RF09* (Consulta de Tecnologias Assistivas), pois permite listar e buscar tecnologias assistivas disponíveis para os alunos.
 
-Atributos:
+### *Relacionamentos:*
+- Uma assistência pode estar associada a várias tecnologias assistivas (N:N com Tecnologia Assistiva).
 
+### *Atributos:*
 - id (PK)
-
 - tipo (enum: Lupa, Leitor de Tela, Cadeira de Rodas, etc.)
 
-### 6. **Assistencia_TecnologiaAssistiva** ###
+---
 
-&emsp;Representa a relação entre Assistência e Tecnologia Assistiva.
+## *6. Assistencia_TecnologiaAssistiva*
+&emsp;Representa a relação entre Assistência e Tecnologia Assistiva, permitindo que uma assistência utilize múltiplas tecnologias assistivas e que uma tecnologia assistiva seja utilizada em múltiplas assistências.
 
-- Relacionamento: Uma assistência pode usar várias tecnologias assistivas.
+### *Relacionamento com os Requisitos Funcionais:*
+- Atende ao *RF09* (Consulta de Tecnologias Assistivas), pois permite vincular tecnologias assistivas às assistências.
 
-&emsp;Uma tecnologia assistiva pode ser utilizada em várias assistências.
+### *Relacionamentos:*
+- Uma assistência pode usar várias tecnologias assistivas (N:N com Tecnologia Assistiva).
 
-Atributos:
-
+### *Atributos:*
 - id_assistencia (PK, FK)
-
 - id_tecnologia_assistiva (PK, FK)
 
+---
 
-## 4.1.2 Tabela de Relações entre as Entidades
+## *4.1.2 Tabela de Relações entre as Entidades*
 
-| **Entidade 1**     | **Entidade 2**          | **Cardinalidade** | **Descrição** |
+| *Entidade 1*     | *Entidade 2*          | *Cardinalidade* | *Descrição* |
 |--------------------|------------------------|------------------|--------------|
-| **User**          | **LogUso**              | (1,1) → (0,n)   | Um usuário pode registrar múltiplos logs de uso. |
-| **LogUso**        | **Assistência**         | (0,n) → (1,1)   | Um log de uso pode estar relacionado a uma única assistência. |
-| **Assistência**   | **Profissional**        | (0,n) → (0,1)   | Cada assistência pode ter um profissional responsável, mas um profissional pode atender várias assistências. |
-| **Assistência**   | **Tecnologia Assistiva**| (0,n) → (0,n)   | Uma assistência pode envolver várias tecnologias assistivas e cada tecnologia pode ser usada em múltiplas assistências. |
+| *User*          | *LogUso*              | (1,1) → (0,n)   | Um usuário pode registrar múltiplos logs de uso. |
+| *LogUso*        | *Assistência*         | (0,n) → (1,1)   | Um log de uso pode estar relacionado a uma única assistência. |
+| *Assistência*   | *Profissional*        | (0,n) → (0,1)   | Cada assistência pode ter um profissional responsável, mas um profissional pode atender várias assistências. |
+| *Assistência*   | *Tecnologia Assistiva*| (0,n) → (0,n)   | Uma assistência pode envolver várias tecnologias assistivas e cada tecnologia pode ser usada em múltiplas assistências. |
 
 ## 4.2 Modelo Lógico de Dados 
 
