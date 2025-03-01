@@ -13,10 +13,10 @@ jobs:
         run: |
           BASE_BRANCH="${{ github.base_ref }}"
           HEAD_BRANCH="${{ github.head_ref }}"
-          if [[ "$BASE_BRANCH" == "main" && "$HEAD_BRANCH" != "develop" ]]; then
-            echo "🚨 Pull Requests para 'main' só são permitidos a partir de 'develop'. Fechando PR automaticamente."
+          if [[ "$BASE_BRANCH" == "main" && ! "$HEAD_BRANCH" =~ ^(develop|hotfix/.*)$ ]]; then
+            echo "🚨 Pull Requests para 'main' só são permitidos a partir de 'develop' ou 'hotfix/*'. Fechando PR automaticamente."
             gh auth login --with-token <<< "${{ secrets.PAT_TOKEN }}"
-            gh pr close "$PR_URL" -r "🚨 PRs para 'main' só podem vir de 'develop'."
+            gh pr close "$PR_URL" -r "🚨 PRs para 'main' só podem vir de 'develop' ou branches 'hotfix/*'."
           fi
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}

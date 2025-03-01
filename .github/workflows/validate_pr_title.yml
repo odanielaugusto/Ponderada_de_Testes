@@ -21,8 +21,3 @@ jobs:
             echo "🚨 O título do PR não segue o padrão semântico. O título deve começar com 'feat:', 'fix:', etc."
             exit 1
           fi
-
-    status:
-      if: failure()
-      description: "Título do PR não segue o padrão semântico"
-      state: failure
