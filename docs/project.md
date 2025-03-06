@@ -813,6 +813,14 @@ _conteúdo_
 
 ## 4.1 Modelo Conceitual de Dados
 
+<div align="center">
+  <sub>Figura X - Modelagem Conceitual</sub> <br>
+
+  <img src="assets/section4/concept_model.jpg" alt="Modelagem Conceitual">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
 ## *1. User (Usuário Administrativo)*
 &emsp;Representa os usuários administrativos que gerenciam o sistema, incluindo Gerente de Unidade, Gerente Administrativo e Assessor. Cada tipo de usuário tem permissões específicas, sendo o Gerente Administrativo responsável por aprovar contratações de profissionais e o Gerente de Unidade responsável pela gestão operacional.
 
@@ -935,9 +943,9 @@ _conteúdo_
 <div align="center">
   <sub>Figura X - Modelagem Lógica</sub> <br>
 
-  <img src="assets/section4/modelagem_logica.png" alt="Canvas MVP">
+  <img src="assets/section4/logic_model.jpg" alt="Modelagem Lógica">
 
-  <sup>Fonte: Material produzido pelos autores (2024).</sup>
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
 A partir dessa imagem, podemos extrair o seguinte estrutura em SQL:
@@ -1663,7 +1671,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Conceitos de Grid </sub> <br>
 
-  <img src="assets/section7/grid_example.png" alt="Conceitos de Grid">
+  <img src="assets/section7/7.3_visual_guide/grid_example.jpg" alt="Conceitos de Grid">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1679,7 +1687,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Definição do Grid</sub> <br>
 
-  <img src="assets/section7/grid_definition.png" alt="Definição do Grid">
+  <img src="assets/section7/7.3_visual_guide/grid_definition.jpg" alt="Definição do Grid">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1691,7 +1699,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Fontes</sub> <br>
 
-  <img src="assets/section7/fonts.png" alt="Fontes do Sistema">
+  <img src="assets/section7/7.3_visual_guide/fonts.jpg" alt="Fontes do Sistema">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1701,7 +1709,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Fonte para Títulos</sub> <br>
 
-  <img src="assets/section7/titles_pattern.png" alt="Tamanhos e pesos da fonte em títulos">
+  <img src="assets/section7/7.3_visual_guide/titles_pattern.jpg" alt="Tamanhos e pesos da fonte em títulos">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1711,7 +1719,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Tamanho da Fonte</sub> <br>
 
-  <img src="assets/section7/font_sizes.png" alt="Tamanhos padrões para fonte">
+  <img src="assets/section7/7.3_visual_guide/font_sizes.jpg" alt="Tamanhos padrões para fonte">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1721,7 +1729,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Altura de Linha</sub> <br>
 
-  <img src="assets/section7/line_height.png" alt="Alturas para linhas">
+  <img src="assets/section7/7.3_visual_guide/line_height.jpg" alt="Alturas para linhas">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1735,7 +1743,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Cores Principais</sub> <br>
 
-  <img src="assets/section7/cores_principais.png" alt="Cores Principais">
+  <img src="assets/section7/7.3_visual_guide/colors_main.jpg" alt="Cores Principais">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1745,7 +1753,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Cores Auxiliares</sub> <br>
 
-  <img src="assets/section7/cores_auxiliares.png" alt="Cores Auxiliares">
+  <img src="assets/section7/7.3_visual_guide/colors_auxiliaries.jpg" alt="Cores Auxiliares">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1755,7 +1763,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Cores Neutras</sub> <br>
 
-  <img src="assets/section7/cores_neutras.png" alt="Cores Neutras">
+  <img src="assets/section7/7.3_visual_guide/colors_neutral.jpg" alt="Cores Neutras">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1765,7 +1773,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Cores de Feedback</sub> <br>
 
-  <img src="assets/section7/cores_feedback.png" alt="Cores de Feedback">
+  <img src="assets/section7/7.3_visual_guide/colors_feedback.jpg" alt="Cores de Feedback">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1785,7 +1793,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Ícones</sub> <br>
 
-  <img src="assets/section7/icones.png" alt="Cores de Feedback">
+  <img src="assets/section7/7.3_visual_guide/icons.jpg" alt="Cores de Feedback">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
@@ -1803,7 +1811,7 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 <div align="center">
   <sub>Figura X - Grafismo do Centro Paula Souza</sub> <br>
 
-  <img src="assets/section7/grafismo.png" alt="Grafismo do Centro Paula Souza">
+  <img src="assets/section7/7.3_visual_guide/graphics.jpg" alt="Grafismo do Centro Paula Souza">
 
   <sup>Fonte: [Guia de Estilos do Centro Paula Souza](https://cps.sp.gov.br/guia-estilo/index.php).</sup>
 </div>

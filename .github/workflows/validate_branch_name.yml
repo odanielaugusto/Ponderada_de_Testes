@@ -15,10 +15,16 @@ jobs:
           BRANCH_NAME="${{ github.head_ref }}"
           echo "Nome da branch: $BRANCH_NAME"
           
-          # Defina seu padrão aqui, considerando os tipos permitidos: feature, bugfix, release, hotfix, docs, dev
-          PATTERN="^(feature|bugfix|release|hotfix|docs|dev)/.*$"
+          PATTERN="^(feature|bugfix|release|hotfix|docs|develop)/.*$"
           
+          # Verifica se o nome contém espaços
+          if [[ "$BRANCH_NAME" =~ \  ]]; then
+            echo "🚨 Nome da branch inválido: '$BRANCH_NAME'. O nome da branch não pode conter espaços."
+            exit 1
+          fi
+
+          # Verifica se o nome segue o padrão esperado
           if [[ ! "$BRANCH_NAME" =~ $PATTERN ]]; then
-            echo "🚨 Nome de branch inválido: $BRANCH_NAME. O nome da branch deve seguir o padrão: [tipo]/[finalidade]/[nome-da-branch], onde [tipo] é 'feature', 'bugfix', 'release', 'hotfix', 'docs' ou 'dev'."
+            echo "🚨 Nome de branch inválido: '$BRANCH_NAME'. O nome da branch deve seguir o padrão: [tipo]/[finalidade]/[nome-da-branch], onde [tipo] é 'feature', 'bugfix', 'release', 'hotfix', 'docs' ou 'develop'."
             exit 1
           fi
