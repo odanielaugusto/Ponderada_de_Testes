@@ -2,7 +2,7 @@
 // Responsável pela lógica de negócios. Processa dados recebidos do controller e interage com o repositório.
 // Essa camada pode validar dados ou aplicar regras de negócios antes de enviar para o repositório.
 
-import { UserRepository } from '../repositories/UserRepository';
+import { UserRepository } from '../repositories/userRepository';
 
 export class UserBusiness {
   private userRepository: UserRepository;
