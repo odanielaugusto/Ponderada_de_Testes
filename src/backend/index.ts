@@ -11,14 +11,13 @@ import dotenv from "dotenv";
 dotenv.config(); // Carrega variáveis de ambiente do .env
 
 const app = express();
-const port = 3000;
 
 const config: ConfigParams = {
   authRequired: false,
   auth0Logout: true,
-  baseURL: process.env.BASEURL,
-  clientID: process.env.CLIENTID,
-  issuerBaseURL: process.env.ISSUERBASEURL,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL,
   secret: process.env.SECRET
 };
 
