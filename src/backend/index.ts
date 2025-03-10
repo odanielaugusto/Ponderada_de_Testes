@@ -2,8 +2,9 @@
 // Este é o ponto de entrada da aplicação. Inicializa o servidor Express, configura as rotas e realiza a conexão com o banco.
 
 import express from 'express';
-import userRoutes from './routes/userRoutes';
-import { UserRepository } from './repositories/UserRepository';
+import 'dotenv/config';
+//import userRoutes from './routes/userRoutes';
+//import { UserRepository } from './repositories/UserRepository';
 
 const app = express();
 const port = 3000;
@@ -12,11 +13,11 @@ const port = 3000;
 app.use(express.json());
 
 // Conectar ao banco de dados
-const userRepository = new UserRepository();
-userRepository.connect();
+//const userRepository = new UserRepository();
+//userRepository.connect();
 
 // Usar as rotas configuradas
-app.use('/api', userRoutes);
+//app.use('/api', userRoutes);
 
 // Iniciar o servidor
 app.listen(port, () => {
