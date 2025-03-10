@@ -1,1 +1,39 @@
 @use "tailwindcss";
+
+:root {
+    --red-color: #AF2929;
+    --blue-color: #A9D0D5;
+    --pink-color: #FBEBE6;
+    --white-color: #FFF6F0;
+    --beige-color: #F5E1BC;
+    --black-color: #2D2A23;
+    --font-family: 'Roboto', sans-serif;
+}
+
+.red-custom {
+    color: var(--red-color);
+}
+
+.blue-custom {
+    color: var(--blue-color);
+}
+
+.pink-custom {
+    color: var(--pink-color);
+}
+
+.white-custom {
+    color: var(--white-color);
+}
+
+.beige-custom {
+    color: var(--beige-color);
+}
+
+.black-custom {
+    color: var(--black-color);
+}
+
+body {
+    font-family: var(--font-family);
+}
