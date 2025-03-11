@@ -16,6 +16,7 @@
             duration-200
             px-[12px]"
         id="text-input"
+        (input)="onInputChanges($event)"
         [attr.type]="type"
         [ngStyle]="{ 'width': width, 'height': height }"
     />

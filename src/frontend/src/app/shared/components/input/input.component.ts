@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,4 +13,11 @@ export class InputComponent {
   @Input() type: string = "text";
   @Input() width!: string;
   @Input() height!: string;
+
+  @Output() valueEmitted = new EventEmitter<string>;
+
+  onInputChanges(event: Event) {
+    const inputValue = (event.target as HTMLInputElement).value;
+    this.valueEmitted.emit(inputValue);
+  }
 }
