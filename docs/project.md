@@ -1318,14 +1318,14 @@ _conteúdo_
   <sub>Figura X - Diagrama de Implantação</sub> <br>
 
   <img
-    src="./assets/section6/diagramaImplantacao1.png" alt="Diagrama de Implantação"
+    src="./assets/section6/diagramaImplantacao3.png" alt="Diagrama de Implantação"
     style="max-width: 1000px; width: 100%; height: auto;">
 
   <sup>Fonte: Material produzido pelos autores (2025).</sup>
 </div>
 
 &emsp;O diagrama começa com o usuário final, que acessa o sistema via navegador em seu dispositivo, representado como um nó, pois é um ambiente de execução. O navegador também contém um artefato, pois executa os arquivos do front-end (index.html, style.css, bundle.js), inicialmente armazenados no Servidor Web, que também possui um artefato correspondente ao front-end. A diferença entre os dois é que, no servidor, esses arquivos são apenas armazenados e distribuídos, enquanto no navegador eles são interpretados e executados para exibir a interface ao usuário.<br>
-&emsp;Por seguinte, as requisições feitas no Servidor Web passam pelo Middleware, responsável por autenticação e autorização antes de serem encaminhadas à API Interna (que contém artefatos de Node.js e TypeScript) que processa a lógica do sistema. A API interna interage com o Banco de Dados, realizando operações CRUD (Create, Read, Update, Delete), e também se relaciona à API Externa do Centro Paula Souza, consultando dados dos alunos. As conexões entre os componentes são feitas por requisições HTTP e trocas de informações entre serviços.<br>
+&emsp;Por seguinte, as requisições feitas no Servidor Web são feitas para o nó de máquina virtual EC2 da AWS (Amazon Web Services), composta por mais dois nós: o Middleware *Auth0*, responsável por autenticação e autorização de requisições antes de serem encaminhadas à API Interna (que contém artefatos de Node.js e TypeScript) que processa a lógica do sistema. A API interna interage com o Banco de Dados também armazenado como instância RDS da AWS, realizando operações CRUD (Create, Read, Update, Delete), e também se relacionando à API Externa do Centro Paula Souza, responsável pela consulta de dados dos alunos. As conexões entre os componentes são feitas por requisições HTTP e trocas de informações entre serviços.<br>
 &emsp;Este diagrama também foi criado com o PlantUML e auxilia os *stakeholders* a reconhecerem a organização infraestrutural do Sistema Gallaudet.
 
 ## 6.2 Justificativa das Escolhas de Implantação
