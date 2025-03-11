@@ -13,7 +13,7 @@ import { FilterComponent } from './shared/components/filter/filter.component';
 export class AppComponent {
   title = 'gallaudet';
 
-  unidades: string[] = ['Centro de Excelência', 'Hospital da Luz', 'Hospital Santa Luzia', 'UPA Norte', 'UPA Sul'];
+  unidades: string[] = ['ETEC Teste 1', 'ETEC Teste 2', 'ETEC Teste 3', 'ETEC Teste 4', 'ETEC Teste 5'];
   unidadeSelecionada: string = '';
 
   onUnidadeSelected(unidade: string): void {
