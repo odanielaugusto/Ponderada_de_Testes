@@ -999,7 +999,76 @@ CREATE TABLE Assistencia_TecnologiaAssistiva (
 ```
 
 ## 4.3 Modelo Físico de Dados
-_conteúdo_
+## Dicionário do Banco de Dados
+&emsp;O dicionário de dados é um documento que descreve detalhadamente os aspectos e características das variáveis de um banco de dados, apresentando uma descrição de cada coluna, valores permitidos, observações pontuais e entre outras informações necessárias para um entendimento mais profundo. A partir disso, segue o dicionário de dados do projeto desenvolvido:
+### Tabela Appointment
+
+
+| Variável            | Nome Variável                                      | Tipo de Variável | Descrição                                          | Valores Permitidos | Possui Valores nulos? | Anotações                                                  |
+|---------------------|----------------------------------------------------|------------------|----------------------------------------------------|--------------------|-----------------------|------------------------------------------------------------|
+| id                  | Id único da tabela Assistencia                     | numérica         | Identificador único da assistência                 | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                       |
+| id_profissional (FK)| Id único da tabela profissional                    | numérica         | Profissional responsável pela assistência          | 1,2,3…             | não                   | Chave estrangeira para Profissional.id                    |
+| data_inicio         | Data de Início da Assistência                      | numérica         | Data de início do atendimento/assistência          | -                  | não                   | -                                                          |
+| id_aluno            | Id do aluno identificado via API governamental     | numérica         | Id dos alunos registrados no banco governamental   | 1,2,3…             | não                   | Esse id será encontrado a partir da API governamental     |
+
+**
+
+### Tabela: LogUso
+
+| Variável          | Nome Variável           | Tipo de Variável | Descrição                                        | Valores Permitidos | Possui Valores nulos? | Anotações                                                        |
+|-------------------|-------------------------|------------------|--------------------------------------------------|--------------------|-----------------------|------------------------------------------------------------------|
+| id                | id do log               | numérica         | Identificador único do log                        | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                             |
+| acao              | Ação                    | categórica       | Ação realizada pelo usuário                       | -                  | não                   | -                                                                |
+| horario_acao      | Horário da ação         | numérica         | Momento em que a ação foi executada               | -                  | não                   | -                                                                |
+| detalhe           | Detalhe da ação         | categórica       | Informações adicionais sobre o que ocorreu        | -                  | sim                   | Pode ser utilizado para logs mais detalhados                     |
+| id_user_fk        | ID do usuário (FK)      | numérica         | Referência ao usuário que executou a ação         | 1,2,3…             | não                   | Chave estrangeira para User.id                                  |
+| id_assistencia_fk | ID da assistência (FK)  | numérica         | Referência a uma assistência relacionada à ação   | 1,2,3…             | não                   | Chave estrangeira para Assistencia.id (pode ser nulo se genérico)  |
+
+### Tabela: User
+
+| Variável | Nome Variável   | Tipo de Variável | Descrição                           | Valores Permitidos | Possui Valores nulos? | Anotações                                   |
+|----------|-----------------|------------------|-------------------------------------|--------------------|-----------------------|---------------------------------------------|
+| id       | Id do Usuário   | numérica         | Identificador único do usuário       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)         |
+| senha    | Senha           | categórica       | Senha de acesso do usuário           | -                  | não                   | -                                           |
+| email    | E-mail          | categórica       | Endereço de e-mail do usuário        | -                  | não                   | Deve ser único                              |
+| tipo     | Tipo de Usuário | categórica       | Tipo de usuário que estará utilizando a aplicação | 1,2,3…  | não                   | Defina os valores de acordo com a regra de negócio |
+
+
+### Tabela: User
+
+| Variável | Nome Variável   | Tipo de Variável | Descrição                           | Valores Permitidos | Possui Valores nulos? | Anotações                                   |
+|----------|-----------------|------------------|-------------------------------------|--------------------|-----------------------|---------------------------------------------|
+| id       | Id do Usuário   | numérica         | Identificador único do usuário       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)         |
+| senha    | Senha           | categórica       | Senha de acesso do usuário           | -                  | não                   | -                                           |
+| email    | E-mail          | categórica       | Endereço de e-mail do usuário        | -                  | não                   | Deve ser único                              |
+| tipo     | Tipo de Usuário | categórica       | Tipo de usuário que estará utilizando a aplicação | 1,2,3…  | não                   | Defina os valores de acordo com a regra de negócio |
+
+
+### Tabela: Profissional
+
+| Variável | Nome Variável               | Tipo de Variável | Descrição                              | Valores Permitidos | Possui Valores nulos? | Anotações                                               |
+|----------|-----------------------------|------------------|----------------------------------------|--------------------|-----------------------|---------------------------------------------------------|
+| id       | ID do profissional          | numérica         | Identificador único do profissional      | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                    |
+| nome     | Nome do Profissional        | categórica       | Nome completo do profissional           | -                  | não                   | -                                                       |
+| telefone | Telefone do Profissional    | categórica       | Telefone para contato                    | -                  | não                   | Caso não seja obrigatório, pode aceitar nulo           |
+| id_user  | ID do usuário (FK)          | numérica         | Referência ao usuário na tabela User     | 1,2,3..            | não                   | Chave estrangeira para User.id                         |
+
+
+### Tabela: TecnologiaAssistiva
+
+| Variável | Nome Variável        | Tipo de Variável | Descrição                                      | Valores Permitidos | Possui Valores nulos? | Anotações                                      |
+|----------|----------------------|------------------|------------------------------------------------|--------------------|-----------------------|------------------------------------------------|
+| id       | ID da tecnologia     | numérica         | Identificador único da tecnologia assistiva     | 1,2,3…             | não                   | Chave primária, auto-increment (PK)           |
+| tipo     | Tipo de tecnologia   | categórica       | Classificação de qual é a tecnologia            | -                  | não                   | Ajustar valores de acordo com a regra de negócio|
+
+
+### Tabela: Assistencia_TecnologiaAssistiva
+
+| Variável               | Nome Variável                          | Tipo de Variável | Descrição                                               | Valores Permitidos | Possui Valores nulos? | Anotações                                                      |
+|------------------------|----------------------------------------|------------------|---------------------------------------------------------|--------------------|-----------------------|----------------------------------------------------------------|
+| id                     | ID da relação                          | numérica         | Identificador único da relação (Assistência x Tecnologia) | 1,2,3…         | não                   | Chave primária, auto-increment (PK)                            |
+| id_assistencia         | ID da assistência (FK)                 | numérica         | Referência à tabela Assistência                         | 1,2,3…             | não                   | Chave estrangeira para Assistencia.id                          |
+| id_tecnologiaAssistiva | ID da tecnologia assistiva (FK)        | numérica         | Referência à tabela TecnologiaAssistiva                 | 1,2,3…             | não                   | Chave estrangeira para TecnologiaAssistiva.id                  |
 
 **Nota:** Insira uma explicação e direcionamento para o readme.md da pasta database.
 
