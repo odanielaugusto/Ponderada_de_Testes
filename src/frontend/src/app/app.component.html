@@ -1,4 +1,17 @@
-<div class="">
-  <h1>Teste2</h1>
-  Teste
+<div class="h-screen w-screen">
+  <div class="container mx-auto px-4 py-8 grid grid-cols-12 grid-rows-12 gap-x-1">
+    <h1 class="text-3xl font-bold text-gray-800 mb-8">{{ title }}</h1>
+
+    <div class="bg-blue-custom p-6 rounded-lg shadow-sm mb-8 col-span-4 row-span-2 row-start-4">
+      <h2 class="text-xl font-semibold text-gray-700 mb-4">Selecione uma Unidade</h2>
+      <app-filter [placeholder]="'Selecione uma unidade'" [options]="unidades" [selectedOption]="unidadeSelecionada"
+        (optionSelected)="onUnidadeSelected($event)">
+      </app-filter>
+
+      <div *ngIf="unidadeSelecionada" class="mt-4 p-4 bg-green-50 border-l-4 border-green-500 rounded">
+        <p class="text-gray-700">Unidade selecionada: <span class="font-medium">{{ unidadeSelecionada }}</span></p>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
