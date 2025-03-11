@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,6 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() text!: string;
-  @Input() py: string = "24";
-  @Input() px: string = "80";
+  @Input() py: string = "0";
+  @Input() px: string = "0";
+  @Input() width: string = "100%";
+  @Input() height: string = "100%";
 }
