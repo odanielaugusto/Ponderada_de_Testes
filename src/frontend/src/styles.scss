@@ -62,4 +62,36 @@
 body {
     font-family: var(--font-family);
     font-size: var(--font-size);
+}:root {
+    --red-color: #AF2929;
+    --blue-color: #A9D0D5;
+    --pink-color: #FBEBE6;
+    --white-color: #FFF6F0;
+    --beige-color: #F5E1BC;
+    --black-color: #2D2A23;
+
+}
+
+.bg-red-custom {
+    background-color: var(--red-color);
+}
+
+.bg-blue-custom {
+    background-color: var(--blue-color);
+}
+
+.bg-pink-custom {
+    background-color: var(--pink-color);
+}
+
+.bg-white-custom {
+    background-color: var(--white-color);
+}
+
+.bg-beige-custom {
+    background-color: var(--beige-color);
+}
+
+.bg-black-custom {
+    background-color: var(--black-color);
 }
