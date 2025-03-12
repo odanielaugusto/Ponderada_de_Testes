@@ -1,0 +1,24 @@
+/* Estilos personalizados para a navbar */
+header {
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:focus {
+  outline: none;
+}
+
+div.absolute {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Animação do dropdown */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

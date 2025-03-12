@@ -1,1 +1,54 @@
-<p>navbar works!</p>
+<header
+  style="backdrop-filter: blur(2px)"
+  class="fixed top-0 left-0 w-full bg-gray-500/30 text-black px-10 py-4 flex justify-between items-center shadow-lg"
+>
+  <!-- Nome da Empresa com link para a Home -->
+  <div class="text-2xl font-bold">
+    <a
+      [routerLink]=""
+      class="text-black hover:tracking-wider hover:cursor-pointer transition-all duration-300"
+      >GALLAUDET</a
+    >
+  </div>
+
+  <!-- Botão do Dropdown -->
+  <div class="relative">
+    <button
+      (click)="toggleDropdown()"
+      class="flex items-center gap-2 px-4 py-2 bg-white bg-opacity-20 hover:bg-green-500 hover:cursor-pointer rounded-lg transition"
+    >
+      <span>Menu</span>
+      <svg
+        class="w-4 h-4"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        ></path>
+      </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div
+      *ngIf="isDropdownOpen"
+      class="absolute right-0 mt-1 w-40 bg-gray-100 text-black rounded-lg shadow-lg overflow-hidden"
+    >
+      <a [routerLink]=""class="block px-4 py-2 hover:bg-gray-700"
+        >Ver Perfil</a
+      >
+      <div class="h-px w-full bg-gray-400"></div>
+      <button
+        (click)="logout()"
+        class="block w-full text-left px-4 py-2 hover:bg-gray-700"
+      >
+        Sair
+      </button>
+    </div>
+  </div>
+</header>
