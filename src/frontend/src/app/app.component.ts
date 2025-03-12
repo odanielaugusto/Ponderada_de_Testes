@@ -6,7 +6,7 @@ import { ProfileCard } from './shared/components/profile_card/profile-card.compo
 
 @Component({
   selector: 'app-root',
-  standalone: true, // Adicionado standalone: true
+  standalone: true, 
   imports: [RouterOutlet, FilterComponent, CommonModule, ProfileCard],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

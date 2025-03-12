@@ -1,10 +1,10 @@
-<div class="relative w-full h-full">
-    <div class="flex justify-between items-center w-full px-4 py-2 text-left bg-pink rounded-md shadow-sm hover:outline hover:outline-red focus:outline-none cursor-pointer transition-colors duration-200"
+<div class="flex flex-col items-center justify-between relative w-[340px] h-[600px] bg-blue/20 p-6 rounded-lg shadow-xl gap-6">
+    <div class="flex justify-between items-center w-full px-4 py-2 text-left bg-pink rounded-md shadow-sm hover:outline hover:outline-red focus:outline-none cursor-pointer"
         (click)="toggleDropdown()">
         <span class="block truncate">
             {{ selectedOption || placeholder }}
         </span>
-        <span class="flex items-center ml-2 transition-transform duration-200" [ngClass]="{'rotate-180': isOpen}">
+        <span class="flex items-center ml-2 transition-transform duration-300" [ngClass]="{'rotate-180': isOpen}">
             <svg class="w-4 h-4 text-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -13,7 +13,7 @@
         </span>
     </div>
     <div *ngIf="isOpen"
-        class="absolute z-10 w-full mt-1 bg-pink rounded-md shadow-lg overflow-hidden">
+        class="absolute z-10 w-full mt-1 bg-pink rounded-md shadow-lg overflow-hidden duration-300">
         <div class="p-2 border-b border-blue">
             <input type="text" [(ngModel)]="searchText" (click)="$event.stopPropagation()" (input)="filterOptions()"
                 placeholder="Pesquisar..."
@@ -32,5 +32,20 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="h-1/3 w-full">
+        <app-button [ngClass]="{'outline-3 outline-red rounded-full': selectedButton === 'Alunos' }" (click)="selectButton('Alunos')">
+            <span>Alunos</span>
+        </app-button>
+    </div>
+    <div class="h-1/3 w-full">
+        <app-button [ngClass]="{'outline-3 outline-red rounded-full': selectedButton === 'Profissionais' }" (click)="selectButton('Profissionais')">
+            <span>Profissionais</span>
+        </app-button>
+    </div>
+    <div class="h-1/3 w-full">
+        <app-button [ngClass]="{'outline-3 outline-red rounded-full': selectedButton === 'Gerentes' }" (click)="selectButton('Gerentes')">
+            <span>Gerentes</span>
+        </app-button>
     </div>
 </div>

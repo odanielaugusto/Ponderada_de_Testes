@@ -1,6 +1,6 @@
 <div class="h-screen w-screen bg-pink flex items-center justify-center">
   <div class="flex items-satrt justify-evenly gap-20">
-    <div class="w-[340px] bg-blue/20 p-6 rounded-lg shadow-sm mb-8 h-[600px]">
+    <div class="">
       <app-filter 
         [placeholder]="'Selecione uma unidade'" 
         [options]="unidades" 
@@ -12,5 +12,6 @@
       <span class="font-medium">{{ unidadeSelecionada }}</span>
     </div>
   </div>
+  <app-profile-card></app-profile-card>
   <router-outlet></router-outlet>
 </div>

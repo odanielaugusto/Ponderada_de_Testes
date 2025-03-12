@@ -1,13 +1,13 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-button',
-  standalone: false,
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
-  @Input() text!: string;
   @Input() py: string = "0";
   @Input() px: string = "0";
   @Input() width: string = "100%";
