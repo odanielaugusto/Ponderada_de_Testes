@@ -2,10 +2,10 @@
   [ngClass]="{
     'bg-gray-300/30': !isScrolled,
     'bg-gray-300/10': isScrolled,
-    'shadow-[#00000010]': isScrolled 
+    'shadow-[#00000010]': isScrolled
   }"
   style="backdrop-filter: blur(2px)"
-  class="fixed top-0 left-0 w-full text-black px-10 py-4 shadow-lg flex justify-between items-center transition-all duration-300"
+  class="fixed top-0 left-0 w-full text-black px-10 py-4 shadow-lg flex justify-between items-center transition-all duration-300 h-18"
 >
   <!-- Nome da Empresa com link para a Home -->
   <div class="text-2xl font-bold">
@@ -24,23 +24,9 @@
   <div class="relative">
     <button
       (click)="toggleDropdown()"
-      class="flex items-center gap-2 px-4 py-2 bg-white bg-opacity-20 hover:bg-green-500 hover:cursor-pointer rounded-lg transition"
+      class="transform origin-center hover:scale-105 hover:drop-shadow-sm hover:cursor-pointer transition duration-500 ease-in-out"
     >
-      <span>Menu</span>
-      <svg
-        class="w-4 h-4"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M19 9l-7 7-7-7"
-        ></path>
-      </svg>
+      <mat-icon class="scale-150">account_circle</mat-icon>
     </button>
 
     <!-- Dropdown Menu -->
