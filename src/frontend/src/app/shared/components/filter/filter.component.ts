@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
     selector: 'app-filter',
     standalone: true,
     imports: [CommonModule, FormsModule],
-    templateUrl: './filter.component.html', // Corrigido de 'template' para 'templateUrl'
+    templateUrl: './filter.component.html', 
     styles: []
 })
 export class FilterComponent implements OnInit, OnChanges {
