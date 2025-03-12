@@ -1,6 +1,6 @@
 /* Estilos personalizados para a navbar */
 header {
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 button:focus {
@@ -21,4 +21,9 @@ div.absolute {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Efeito de transição suave para o nome da empresa */
+a {
+  transition: color 0.3s ease-in-out;
 }

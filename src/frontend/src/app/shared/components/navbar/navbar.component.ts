@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';  // Já está correto
-import { CommonModule } from '@angular/common'; // Adicione esta linha
+import { Component, HostListener } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  imports: [RouterModule, CommonModule],  // Adicione CommonModule aqui
+  imports: [RouterModule, CommonModule],
 })
 export class NavbarComponent {
   isDropdownOpen = false;
+  isScrolled = false; // Nova variável para monitorar o estado de scroll
+
+  // Detecta o evento de scroll
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    // Se o scroll for maior que 50px, define o estado de rolagem
+    this.isScrolled = window.scrollY > 50;
+  }
 
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
@@ -20,3 +28,4 @@ export class NavbarComponent {
     console.log('Usuário deslogado');
   }
 }
+  
