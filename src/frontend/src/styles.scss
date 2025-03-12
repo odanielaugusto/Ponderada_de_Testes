@@ -1,19 +1,10 @@
 @use "tailwindcss";
 
 @theme {
-    --color-red: #AF2929;
-    --color-blue: #A9D0D5;
-    --color-pink: #FBEBE6;
-    --color-white: #FFF6F0;
-    --color-beige: #F5E1BC;
-    --color-black: #2D2A23;
-}
-
-.border-black-custom {
-    border: 3px var(--black-color);
-}
-
-body {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
+  --color-red: #AF2929;
+  --color-blue: #A9D0D5;
+  --color-pink: #FBEBE6;
+  --color-white: #FFF6F0;
+  --color-beige: #F5E1BC;
+  --color-black: #2D2A23;
 }
