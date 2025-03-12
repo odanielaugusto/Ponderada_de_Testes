@@ -10,7 +10,9 @@
 # Gallaudet DB
 
 ## Visão Geral
-Este repositório contém o script SQL para a criação do banco de dados **Gallaudet DB**, que gerencia usuários administrativos, registros de uso, profissionais, atendimentos e tecnologias assistivas. O banco de dados foi modelado seguindo boas práticas de normalização e integridade referencial.
+Este diretório contém o script SQL para a criação do banco de dados **Gallaudet DB**, que gerencia usuários administrativos, registros de uso, profissionais, atendimentos e tecnologias assistivas. O banco de dados foi modelado seguindo boas práticas de normalização e integridade referencial.
+
+Outros Scripts de SQL que venham a ser criados no futuro, ficarão nessa pasta `~/src/database`
 
 ## Estrutura do Banco de Dados
 O banco de dados **Gallaudet DB** é composto pelas seguintes tabelas:
