@@ -1,5 +1,5 @@
 {
   "watch": ["src"],
-  "ext": "js,json",
-  "exec": "node -r dotenv/config src/index.js"
+  "ext": "ts",
+  "exec": "tsx src/index.ts"
 }
