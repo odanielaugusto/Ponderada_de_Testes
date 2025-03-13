@@ -12,8 +12,6 @@ import { ProfileCard } from './shared/components/profile_card/profile-card.compo
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'gallaudet';
-
   unidades: string[] = ['ETEC Teste 1', 'ETEC Teste 2', 'ETEC Teste 3', 'ETEC Teste 4', 'ETEC Teste 5'];
   unidadeSelecionada: string = '';
 

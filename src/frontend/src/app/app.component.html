@@ -1,17 +1,49 @@
 <div class="h-screen w-screen bg-pink flex items-center justify-center">
-  <div class="flex items-satrt justify-evenly gap-20">
-    <div class="">
-      <app-filter 
-        [placeholder]="'Selecione uma unidade'" 
-        [options]="unidades" 
-        [selectedOption]="unidadeSelecionada"
-        (optionSelected)="onUnidadeSelected($event)">
-      </app-filter>
-    </div>
-    <div *ngIf="unidadeSelecionada" class="h-16 text-3xl p-4 bg-pink border-l-8 border-blue rounded flex items-center justify-center">
-      <span class="font-medium">{{ unidadeSelecionada }}</span>
+  <div class="flex flex-col items-center justify-center w-full gap-10">
+    <span class="font-bold text-red text-center text-5xl">{{ unidadeSelecionada }}</span>
+    <div class="flex itens-center justify-center w-full px-16 gap-6">
+      <div class="w-1/3">
+        <app-filter [placeholder]="'Selecione uma unidade'" [options]="unidades" [selectedOption]="unidadeSelecionada"
+          (optionSelected)="onUnidadeSelected($event)">
+        </app-filter>
+      </div>
+      <div class="flex w-3/3 itens-center justify-center">
+        <div class="h-[600px] max-h-[600px] w-full bg-blue/50 p-6 rounded-lg shadow-xl overflow-y-auto flex flex-col gap-4">
+          <app-profile-card [photo]="'https://randomuser.me/api/portraits/men/1.jpg'" [name]="'Nome do Aluno'"
+            [deficiency]="'Deficiência'" [profission]="'Profissão'" [unit]="'Unidade'"
+            [assistive_technology]="'Tecnologia Assistiva'" [registration]="'Matrícula'" [course]="'Curso'">
+          </app-profile-card>
+          <app-profile-card [photo]="'https://randomuser.me/api/portraits/men/1.jpg'" [name]="'Nome do Aluno'"
+            [deficiency]="'Deficiência'" [profission]="'Profissão'" [unit]="'Unidade'"
+            [assistive_technology]="'Tecnologia Assistiva'" [registration]="'Matrícula'" [course]="'Curso'">
+          </app-profile-card>
+          <app-profile-card [photo]="'https://randomuser.me/api/portraits/men/1.jpg'" [name]="'Nome do Aluno'"
+            [deficiency]="'Deficiência'" [profission]="'Profissão'" [unit]="'Unidade'"
+            [assistive_technology]="'Tecnologia Assistiva'" [registration]="'Matrícula'" [course]="'Curso'">
+          </app-profile-card>
+          <app-profile-card [photo]="'https://randomuser.me/api/portraits/men/1.jpg'" [name]="'Nome do Aluno'"
+            [deficiency]="'Deficiência'" [profission]="'Profissão'" [unit]="'Unidade'"
+            [assistive_technology]="'Tecnologia Assistiva'" [registration]="'Matrícula'" [course]="'Curso'">
+          </app-profile-card>
+          <app-profile-card [photo]="'https://randomuser.me/api/portraits/men/1.jpg'" [name]="'Nome do Aluno'"
+            [deficiency]="'Deficiência'" [profission]="'Profissão'" [unit]="'Unidade'"
+            [assistive_technology]="'Tecnologia Assistiva'" [registration]="'Matrícula'" [course]="'Curso'">
+          </app-profile-card>
+          <app-profile-card [photo]="'https://randomuser.me/api/portraits/men/1.jpg'" [name]="'Nome do Aluno'"
+            [deficiency]="'Deficiência'" [profission]="'Profissão'" [unit]="'Unidade'"
+            [assistive_technology]="'Tecnologia Assistiva'" [registration]="'Matrícula'" [course]="'Curso'">
+          </app-profile-card>
+          <app-profile-card [photo]="'https://randomuser.me/api/portraits/men/1.jpg'" [name]="'Nome do Aluno'"
+            [deficiency]="'Deficiência'" [profission]="'Profissão'" [unit]="'Unidade'"
+            [assistive_technology]="'Tecnologia Assistiva'" [registration]="'Matrícula'" [course]="'Curso'">
+          </app-profile-card>
+          <app-profile-card [photo]="'https://randomuser.me/api/portraits/men/1.jpg'" [name]="'Nome do Aluno'"
+            [deficiency]="'Deficiência'" [profission]="'Profissão'" [unit]="'Unidade'"
+            [assistive_technology]="'Tecnologia Assistiva'" [registration]="'Matrícula'" [course]="'Curso'">
+          </app-profile-card>
+        </div>
+      </div>
     </div>
   </div>
-  <app-profile-card></app-profile-card>
   <router-outlet></router-outlet>
 </div>

@@ -8,3 +8,17 @@
   --color-beige: #F5E1BC;
   --color-black: #2D2A23;
 }
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-red);
+  border-radius: 8px;
+} 
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-pink);
+  border-radius: 8px;
+}

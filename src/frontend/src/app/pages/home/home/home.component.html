@@ -1,1 +1,28 @@
-<p>homepage works!</p>
+<div class="h-screen w-screen bg-pink flex items-center justify-center">
+    <div class="flex flex-col items-center justify-center w-full gap-10">
+        <span class="font-bold text-red text-center text-5xl">{{ unidadeSelecionada }}</span>
+        <div class="flex itens-center justify-center w-full px-16 gap-6">
+            <div class="w-1/3">
+                <app-filter [placeholder]="'Selecione uma unidade'" [options]="unidades"
+                    [selectedOption]="unidadeSelecionada" (optionSelected)="onUnidadeSelected($event)">
+                </app-filter>
+            </div>
+            <div class="flex w-3/3 itens-center justify-center">
+                <div
+                    class="h-[600px] max-h-[600px] w-full bg-blue/50 p-6 rounded-lg shadow-xl overflow-y-auto flex flex-col gap-4">
+                    <app-profile-card 
+                        [photo]={{foto}} 
+                        [name]={{nome}}
+                        [deficiency]={{deficiencia}} 
+                        [profission]={{profissao}} 
+                        [unit]={{unidadeNome}}
+                        [assistive_technology]={{tecnologiaAssistiva}} 
+                        [registration]={{matricula}} 
+                        [course]={{curso}}>
+                    </app-profile-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
