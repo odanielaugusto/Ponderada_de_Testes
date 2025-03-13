@@ -1,97 +1,12 @@
 @use "tailwindcss";
 
-:root {
-    --red-color: #AF2929;
-    --blue-color: #A9D0D5;
-    --pink-color: #FBEBE6;
-    --white-color: #FFF6F0;
-    --beige-color: #F5E1BC;
-    --black-color: #2D2A23;
-    --font-family: 'Roboto', sans-serif;
-    --font-size: 16px;
+@theme {
+  --color-red: #AF2929;
+  --color-blue: #A9D0D5;
+  --color-pink: #FBEBE6;
+  --color-white: #FFF6F0;
+  --color-beige: #F5E1BC;
+  --color-black: #2D2A23;
 }
-
-.text-red-custom {
-    color: var(--red-color);
-}
-
-.text-blue-custom {
-    color: var(--blue-color);
-}
-
-.text-pink-custom {
-    color: var(--pink-color);
-}
-
-.text-white-custom {
-    color: var(--white-color);
-}
-
-.text-beige-custom {
-    color: var(--beige-color);
-}
-
-.text-black-custom {
-    color: var(--black-color);
-}
-
-.bg-red-custom {
-    background-color: var(--red-color);
-}
-
-.bg-blue-custom {
-    background-color: var(--blue-color);
-}
-
-.bg-pink-custom {
-    background-color: var(--pink-color);
-}
-
-.bg-white-custom {
-    background-color: var(--white-color);
-}
-
-.bg-beige-custom {
-    background-color: var(--beige-color);
-}
-
-.bg-black-custom {
-    background-color: var(--black-color);
-}
-
-body {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-}:root {
-    --red-color: #AF2929;
-    --blue-color: #A9D0D5;
-    --pink-color: #FBEBE6;
-    --white-color: #FFF6F0;
-    --beige-color: #F5E1BC;
-    --black-color: #2D2A23;
-
-}
-
-.bg-red-custom {
-    background-color: var(--red-color);
-}
-
-.bg-blue-custom {
-    background-color: var(--blue-color);
-}
-
-.bg-pink-custom {
-    background-color: var(--pink-color);
-}
-
-.bg-white-custom {
-    background-color: var(--white-color);
-}
-
-.bg-beige-custom {
-    background-color: var(--beige-color);
-}
-
-.bg-black-custom {
-    background-color: var(--black-color);
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

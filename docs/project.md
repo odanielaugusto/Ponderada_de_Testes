@@ -936,7 +936,7 @@ _conteúdo_
 | *Assistência*   | *Profissional*        | (0,n) → (0,1)   | Cada assistência pode ter um profissional responsável, mas um profissional pode atender várias assistências. |
 | *Assistência*   | *Tecnologia Assistiva*| (0,n) → (0,n)   | Uma assistência pode envolver várias tecnologias assistivas e cada tecnologia pode ser usada em múltiplas assistências. |
 
-## 4.2 Modelo Lógico de Dados 
+## 4.2 Modelo Lógico de Dados
 
  No intuito de desenvolver o modelo conceitual para uma estrutura relacional determinada por tabelas, colunas e suas chaves primárias e estrangeiras, foi desenvolvido a seguinte modelagem lógica:
 
@@ -986,7 +986,7 @@ CREATE TABLE Assistencia (
 
 CREATE TABLE TecnologiaAssistiva (
     id SERIAL PRIMARY KEY,
-    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Lupa', 'Leitor de Tela', 'Cadeira de Rodas')) 
+    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Lupa', 'Leitor de Tela', 'Cadeira de Rodas'))
 );
 
 CREATE TABLE Assistencia_TecnologiaAssistiva (
@@ -999,9 +999,10 @@ CREATE TABLE Assistencia_TecnologiaAssistiva (
 ```
 
 ## 4.3 Modelo Físico de Dados
-_conteúdo_
+O modelo físico de dados é representado pelo esquema relacional implementado no banco de dados **Gallaudet DB**, conforme descrito acima. Ele define as tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, garantindo a integridade dos dados e a eficiência do armazenamento.
 
-**Nota:** Insira uma explicação e direcionamento para o readme.md da pasta database.
+**Nota:** Para mais detalhes sobre a implementação do modelo físico, consulte o arquivo `README.md` localizado no diretório `../src/database/readme.md` ou [clique aqui](../src/database/readme.md).
+
 
 # 5. Solução Técnica (Design)
 _conteúdo_
