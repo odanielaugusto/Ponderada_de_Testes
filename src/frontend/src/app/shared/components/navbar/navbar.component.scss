@@ -1,13 +1,14 @@
 /* Estilos personalizados para a navbar */
 header {
-  transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out,
+    backdrop-filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-button:focus {
+header button:focus {
   outline: none;
 }
 
-div.absolute {
+header div.absolute {
   animation: fadeIn 0.2s ease-in-out;
 }
 
@@ -15,7 +16,7 @@ div.absolute {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
@@ -23,7 +24,21 @@ div.absolute {
   }
 }
 
-/* Efeito de transição suave para o nome da empresa */
-a {
+header a {
   transition: color 0.3s ease-in-out;
+}
+
+header .account-button {
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+header .account-button-default {
+  color: black;
+}
+
+header .account-button-scrolled {
+  color: #c00023;
 }

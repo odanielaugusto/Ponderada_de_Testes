@@ -1,48 +1,72 @@
 <header
+  role="banner"
   [ngClass]="{
-    'bg-gray-300/30': !isScrolled,
+    'bg-gray-300/40': !isScrolled,
     'bg-gray-300/10': isScrolled,
     'shadow-[#00000010]': isScrolled
   }"
   style="backdrop-filter: blur(2px)"
   class="fixed top-0 left-0 w-full text-black px-10 py-4 shadow-lg flex justify-between items-center transition-all duration-300 h-18"
 >
-  <!-- Nome da Empresa com link para a Home -->
-  <div class="text-2xl font-bold">
+  <!-- Link para a Home -->
+  <div class="hover:scale-x-115 transition-all duration-500">
     <a
+      role="link"
+      aria-label="Página inicial da GALLAUDET"
       [routerLink]=""
       [ngClass]="{
-        'text-black': !isScrolled,
+        'text-gray-900': !isScrolled,
         'text-red': isScrolled
       }"
-      class="hover:tracking-wider hover:cursor-pointer transition-all duration-300"
-      >GALLAUDET</a
+      class="text-2xl font-bold hover:cursor-pointer transition-all duration-300"
     >
+      GALLAUDET
+    </a>
   </div>
 
   <!-- Botão do Dropdown -->
   <div class="relative">
     <button
       (click)="toggleDropdown()"
-      class="transform origin-center hover:scale-105 hover:drop-shadow-sm hover:cursor-pointer transition duration-500 ease-in-out"
+      (keydown)="toggleDropdown($event)"
+      tabindex="0"
+      aria-haspopup="menu"
+      [attr.aria-expanded]="isDropdownOpen"
+      aria-label="Abrir menu de usuário"
+      class="hover:scale-105 hover:drop-shadow-sm hover:cursor-pointer transition duration-500 ease-in-out leading-none flex items-center justify-center"
     >
-      <mat-icon class="scale-150">account_circle</mat-icon>
+      <mat-icon
+        class="account-button"
+        [ngClass]="
+          isScrolled ? 'account-button-scrolled' : 'account-button-default'
+        "
+        aria-hidden="true"
+      >
+        account_circle
+      </mat-icon>
     </button>
 
     <!-- Dropdown Menu -->
     <div
       *ngIf="isDropdownOpen"
-      class="absolute right-0 mt-1 w-40 bg-gray-100 text-black rounded-lg shadow-lg overflow-hidden"
+      role="menu"
+      class="absolute right-0 mt-1 bg-gray-100 text-gray-900 border border-gray-200 rounded-lg shadow-lg overflow-hidden"
     >
-      <a [routerLink]="" class="block px-4 py-2 hover:bg-gray-700"
-        >Ver Perfil</a
+      <a
+        role="menuitem"
+        [routerLink]=""
+        class="block px-4 py-2 text-nowrap hover:bg-gray-300"
       >
+        Ver Perfil
+      </a>
       <div class="h-px w-full bg-gray-400"></div>
       <button
+        role="menuitem"
         (click)="logout()"
-        class="block w-full text-left px-4 py-2 hover:bg-gray-700"
+        aria-label="Sair da conta e encerrar sessão"
+        class="block w-full text-left px-4 py-2 text-nowrap hover:bg-gray-300"
       >
-        Sair
+        Sair da Conta
       </button>
     </div>
   </div>
