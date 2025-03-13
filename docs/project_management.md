@@ -54,13 +54,26 @@
 
 
 ## 2.2 Sprint 2
-
 &ensp;Os artefatos da Sprint 2 representaram a base estrutural, ou seja, o alicerce do sistema a ser desenvolvido; isso evidenciou a necessidade um desenvolvimento bastante colaborativo e refinado. Nesse contexto, a equipe obteve sucesso em revisar os feedbacks da Sprint passada, finalizar os entregáveis sem tempo hábil e com o uso dos recursos externos disponíveis — como os conteúdos das aulas, pesquisas externas e reuniões com professores —  para o apoio nas tasks. Obteve-se uma certa evolução quanto ao aprendizado do Kanban no Trello e a utilização da ferramenta para metrificação do trabalho, entretanto, teve-se dificuldade na delimitação de processos de revisão para tasks muito granulares, que não seriam disponibilizadas em forma de Pull Requests. Para isso, a equipe decidiu utilizar os comentários da tarefa no Trello para fazer avaliações e revisões.
 
 &ensp;Outras dificuldades identificadas foram, em geral, relacionadas ao acompanhamento e utilização correta das políticas de configuração do projeto, como padrões de commits e Pull Requests, bem como se obteve pequenos erros no uso do Trello, como o andamento de cards incompletos e a atribuição incorreta de tamanho de tasks. Além disso, uma curva de aprendizado mais longa foi observada para a conclusão de entregáveis, como os diagramas de Componentes e de Sequência, bem como a Modelagem do Banco de Dados. Para isso, a equipe procurou consultar a opinião dos próprios integrantes e professores de programação para um desenvolvimento de qualidade. Como melhorias para a Sprint 3, espera-se, no geral, o uso correto dos padrões de configuração e do Trello — seja na criação inicial e manipulação de tasks — por toda a equipe. Além disso, deve-se manter o nível de empenho no aprendizado necessário para a elaboração de entregáveis.
 
 ## 2.3 Sprint 3
-_conteúdo_
+
+## 2.3 Sprint 3
+
+&ensp; A Sprint 3 apresentou desafios significativos devido ao feriado de Carnaval, que impactou diretamente a produtividade e o ritmo de desenvolvimento. A equipe perdeu três dias completos na primeira semana e, mesmo nos dias subsequentes, houve dificuldades, pois alguns integrantes ainda estavam em viagem, o que comprometeu a sincronia do trabalho. 
+
+&ensp; Outro ponto de atenção foi a falta de sincronização entre as tarefas. Como muitas atividades dependiam da finalização de outras, houve momentos de ociosidade para alguns membros da equipe, prejudicando o fluxo contínuo de desenvolvimento. Além disso, observou-se que as exigências dos artefatos não foram devidamente fixadas, o que resultou em um alinhamento menos preciso sobre os requisitos e critérios de aceitação das entregas.
+
+&ensp; Apesar dessas dificuldades, a equipe demonstrou grande resiliência e capacidade de reação. Mesmo com um início de Sprint impactado pelo feriado, o grupo rapidamente retomou o ritmo e mostrou um comprometimento notável para garantir um volume significativo de entregas dentro do prazo. A participação ativa de todos os membros contribuiu para a conclusão das atividades planejadas, reforçando o espírito colaborativo da equipe.
+
+&ensp; Além disso, a Sprint 3 evidenciou o alto nível técnico do time, que conseguiu lidar com as demandas complexas e intensas da Sprint com eficiência. A capacidade de adaptação e a busca por soluções rápidas foram pontos fortes que ajudaram a mitigar os impactos do atraso inicial. Essa Sprint também foi essencial para que o grupo ganhasse tração nas stacks utilizadas, especialmente no Angular, tecnologia com a qual nenhum membro do time tinha experiência prévia. Além disso, os projetos foram devidamente criados, estruturados e já estão rodando, com o banco de dados devidamente conectado.
+
+&ensp; Para a próxima Sprint, algumas melhorias serão implementadas para evitar desafios semelhantes. Primeiramente, será feito um planejamento mais rigoroso para considerar possíveis períodos de baixa produtividade devido a feriados, redistribuindo melhor as tarefas para minimizar impactos. Além disso, será reforçado o acompanhamento da dependência entre as atividades, garantindo um fluxo de trabalho mais fluido. Por fim, o grupo se compromete a documentar com mais clareza as exigências dos artefatos, assegurando que todos os membros compreendam e sigam os requisitos necessários para cada entrega.
+
+&ensp; Com essas ações, espera-se que a Sprint 4 ocorra com maior previsibilidade, eficiência e alinhamento entre os membros da equipe, mantendo os pontos fortes observados e mitigando os desafios enfrentados nesta Sprint. Além disso, espera-se que essa Sprint seja ainda mais produtiva e fluida, uma vez que a base estrutural do projeto já foi estabelecida e a equipe ganhou mais experiência com as stacks utilizadas.
+
 
 ## 2.4 Sprint 4
 _conteúdo_
