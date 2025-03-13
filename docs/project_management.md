@@ -60,8 +60,6 @@
 
 ## 2.3 Sprint 3
 
-## 2.3 Sprint 3
-
 &ensp; A Sprint 3 apresentou desafios significativos devido ao feriado de Carnaval, que impactou diretamente a produtividade e o ritmo de desenvolvimento. A equipe perdeu três dias completos na primeira semana e, mesmo nos dias subsequentes, houve dificuldades, pois alguns integrantes ainda estavam em viagem, o que comprometeu a sincronia do trabalho. 
 
 &ensp; Outro ponto de atenção foi a falta de sincronização entre as tarefas. Como muitas atividades dependiam da finalização de outras, houve momentos de ociosidade para alguns membros da equipe, prejudicando o fluxo contínuo de desenvolvimento. Além disso, observou-se que as exigências dos artefatos não foram devidamente fixadas, o que resultou em um alinhamento menos preciso sobre os requisitos e critérios de aceitação das entregas.
