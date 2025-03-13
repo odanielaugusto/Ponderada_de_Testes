@@ -1,8 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-button',
-  standalone: false,
+  standalone: true,
+  imports: [NgStyle],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss'
 })
