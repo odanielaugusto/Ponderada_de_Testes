@@ -4,7 +4,6 @@ import { InputComponent } from '../../../shared/components/input/input.component
 
 @Component({
   selector: 'app-login',
-  imports: [ButtonComponent, InputComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
