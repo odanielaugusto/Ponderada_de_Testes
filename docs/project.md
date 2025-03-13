@@ -1876,7 +1876,13 @@ _conteúdo_
 _conteúdo_
 
 ## 9.3 Testes de Usabilidade
-_conteúdo_
+
+&emsp;Para a realização dos testes de usabilidade, serão considerados diferentes perfis. As diferentes características foram selecionadas com base nas personas produzidas anteriormente, visando simular ao máximo os diferentes usuários finais. Assim sendo, o grupo dará prioridade para testar a aplicação com pessoas que possuem as seguintes características:
+
+- Idade acima de 35 anos
+- Trabalho na ramo educacional e/ou de inclusão
+- Média ou baixa fluência tecnológica
+- Convívio diário com análise de dados ou gestão de pessoas
 
 ## 9.3.1 Planejamento
 
