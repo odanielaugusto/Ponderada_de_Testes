@@ -1,9 +1,11 @@
 import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-input',
-  imports: [CommonModule],
+  imports: [CommonModule, NgStyle],
+  standalone: true,
   templateUrl: './input.component.html',
   styleUrl: './input.component.scss'
 })
