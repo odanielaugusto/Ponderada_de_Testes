@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FilterComponent } from './shared/components/filter/filter.component';
-import { ProfileCard } from './shared/components/profile_card/profile-card.component';
+import { HomeComponent } from './pages/home/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true, 
-  imports: [RouterOutlet, FilterComponent, CommonModule, ProfileCard],
+  imports: [RouterOutlet, CommonModule, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -17,6 +16,5 @@ export class AppComponent {
 
   onUnidadeSelected(unidade: string): void {
     this.unidadeSelecionada = unidade;
-    console.log('Unidade selecionada:', unidade);
   }
 }
