@@ -1,16 +1,2 @@
-<div class="h-screen w-screen bg-pink flex items-center justify-center">
-  <div class="flex items-satrt justify-evenly gap-20">
-    <div class="w-[340px] bg-blue/20 p-6 rounded-lg shadow-sm mb-8 h-[600px]">
-      <app-filter 
-        [placeholder]="'Selecione uma unidade'" 
-        [options]="unidades" 
-        [selectedOption]="unidadeSelecionada"
-        (optionSelected)="onUnidadeSelected($event)">
-      </app-filter>
-    </div>
-    <div *ngIf="unidadeSelecionada" class="h-16 text-3xl p-4 bg-pink border-l-8 border-blue rounded flex items-center justify-center">
-      <span class="font-medium">{{ unidadeSelecionada }}</span>
-    </div>
-  </div>
-  <router-outlet></router-outlet>
-</div>
+<app-navbar></app-navbar> <!-- Navbar -->
+<router-outlet></router-outlet>
