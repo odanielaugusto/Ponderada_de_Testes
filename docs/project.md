@@ -1859,7 +1859,6 @@ _conteúdo_
 _conteúdo_
 
 ## 9.1 Testes Funcionais
-_conteúdo_
 
 ## 9.1.1 Planejamento
 _conteúdo_
@@ -1880,7 +1879,109 @@ _conteúdo_
 _conteúdo_
 
 ## 9.3.1 Planejamento
-_conteúdo_
+
+&emsp;Antes de iniciar os testes de usabilidade, é necessário preparar o ambiente em que será realizado o experimento. Para isso, é importante tornar de fácil acesso todas as ferramentas que serão utilizadas, como, por exemplo, a planilha de anotações do grupo. Nela, haverão colunas com as perguntas que devem ser feitas e um espaço para observações. Assim, garante uma melhor organização e controle das respostas.
+
+&emsp;Além disso, é imprescindível que o dispositivo em que os testes serão realizados esteja em conformidade com alguns requisitos. Principalmente, a aplicação Web desenvolvida deve estar acessível pelo *local host* ou algum serviço de hospedagem, e aberta na primeira tela em que o usuário mexerá. Também, a máquina deverá conter algum software para a gravação da tela préviamente configurado, o qual será utilizado para coletar dados e fazer conclusões após os testes. É importante ressaltar que o vídeo só poderá ser registrado a partir do momento em que o usuário teste for avisado sobre esse ato, podendo ser solicitado, até, a gravação da conversa e das expressões faciais.
+
+&emsp;Ao assegurar que todos os pré-requisitos foram cumpridos, o usuário poderá ser chamado e se iniciará a triagem. Esse primeiro momento é necessário para coletar dados demográficos, essenciais para o mapeamento dos tipos de usuários e suas dificuldades específicas. Assim, as seguintes perguntas devem ser feitas: 
+
+- Qual é o seu nome?
+- Qual é a sua idade?
+- Qual é o seu nível de escolaridade?
+- Qual é a sua ocupação?
+
+&emsp;Após coletar esses dados, o entrevistador iniciará a fase de pré-teste, quando será viável entender melhor a familiaridade do usuário com *softwares*. Esse processo é importante para identificar a origem das possíveis dificuldades que ele terá durante os testes. Nesse contexto, o integrante do grupo responsável por conduzir o experimento deverá fornecer um breve contexto do projeto, explicando as motivações de seu desenvolvimento, como será utilizado e quem é o publico-alvo. Logo depois dessa breve introdução, fará mais algumas perguntas:
+
+**Teste com funcionário da Assessoria de Inclusão do Centro Paula Souza:**
+
+- Qual a sua experiência em trabalhar com inclusão de alunos PCD?
+- Quais são os maiores desafios que você enfrenta ao monitorar o progresso e as necessidades de alunos PCD?
+- Quais informações sobre os alunos PCD são mais importantes para você monitorar?
+- Quais relatórios ou análises você precisa gerar regularmente sobre o progresso dos alunos PCD?
+- O que você espera que este software faça por você?
+- Quais problemas específicos você espera que este software resolva?
+
+**Teste com pessoas que não são nosso usuário final:**
+
+- Você já trabalhou com algum software de monitoramento ou gerenciamento de dados antes? Se sim, qual?
+- Em uma escala de 1 a 5 (1 sendo "nunca usei" e 5 sendo "uso com frequência"), com que frequência você usa softwares com gráficos e visualização de dados?
+- Você tem alguma familiaridade com o termo "PCD" (Pessoa com Deficiência)? 
+- Você consegue imaginar quais tipos de informações seriam importantes para monitorar o progresso de um aluno com deficiência em um ambiente escolar?
+- Com base no que você sabe sobre o software, o que você espera conseguir fazer com ele?
+- Quais tarefas você imagina que seriam possíveis de realizar usando este software?
+
+&emsp;A partir deste momento, a tela poderá ser gravada, pois os comandos de teste serão dados e é importante registrar a pessoa interagindo com a aplicação. Porém, antes de dar início ao teste em si, quem estiver conduzindo deverá explicar qual papel a pessoa está representando, podendo ser gerente de unidade ou gerente administrativo, e, se necessário, explicar o que esse cargo faz e como utilizaria a aplicação.
+
+&emsp;Como essa etapa concluída, o primeiro comando pode ser dado. Os cenários de usabilidade devem seguir uma ordem pré-estabelecida, pois garantem uma curva de crescimento gradual. Assim, abaixo há as terefas que devem ser cumpridas:
+
+**Gerente de unidade**
+
+1. **Listar alunos:** visualizar alunos PCD registrados na unidade
+7. **Busca com filtro:** pesquisar algum aluno a partir do filtro de busca
+2. **Visualizar detalhes do aluno:** acessar os detalhes de algum aluno PCD matriculado na unidade
+3. **Cadastro tecnologia assistiva:** cadastrar uma nova tecnologia assistiva
+4. **Alocamento de profissionais:** conectar profissional ao aluno com deficiência
+5. **Alocamento de tecnologias assistivas:** conectar tecnologia assistiva ao aluno com deficiência
+6. **Editar agendamento:** editar alocação de profissionais e tecnologias assistivas
+8. **Login:** o usuário consegue fazer login? Consegue fazer login de forma rápida? Consegue entender as opções de autenticação?
+
+**Gerente administrativo**
+
+1. **Listar alunos:** visualizar alunos PCD registrados na unidade
+7. **Busca com filtro:** pesquisar algum aluno a partir do filtro de busca
+2. **Visualizar detalhes do aluno:** acessar os detalhes de algum aluno PCD matriculado na unidade
+3. **Cadastro tecnologia assistiva:** cadastrar uma nova tecnologia assistiva
+4. **Alocamento de profissionais:** conectar profissional ao aluno com deficiência
+5. **Alocamento de tecnologias assistivas:** conectar tecnologia assistiva ao aluno com deficiência
+6. **Editar agendamento:** editar alocação de profissionais e tecnologias assistivas
+8. **Cadastro Profissional:** cadastrar um novo profissional
+9. **Login:** o usuário consegue fazer login? Consegue fazer login de forma rápida? Consegue entender as opções de autenticação?
+
+&emsp;Durante todo o processo, deverá ter algum integrante da equipe anotando as respostas dadas às perguntas e outras informações, como: observações feitas pelo usuário e as palavras-chave mais utilizadas por ele. Tempo demorado para cada realizar cada tarefa e outros dados técnicos poderão ser identificados a partir da gravação de tela, não sendo recomendado a coletânea deles durante o período de teste. 
+
+&emsp;Como última etapa para o teste de usabilidade, há mais algumas perguntas, que serão feitas com o objetivo de entender o nível de satisfação do usuário com a aplicação. Dessa forma, a seguir há as questões a serem respondidas nessa fase de pós-teste:
+
+**Teste com Funcionário da Assessoria de Inclusão do Centro Paula Souza:**
+
+- Este software atende às suas necessidades de monitoramento de alunos PCD? Por quê?
+- Quais funcionalidades do software você achou mais úteis para o seu trabalho?
+- Quais funcionalidades do software você achou desnecessárias ou pouco úteis?
+- O software considera as necessidades específicas de diferentes tipos de deficiência?
+- Este software te ajuda a tomar decisões mais informadas sobre o suporte aos alunos PCD?
+- Quais funcionalidades você adicionaria ao software para torná-lo ainda mais útil?
+- Você tem alguma sugestão para tornar o software mais fácil de usar ou mais acessível?
+
+**Teste com Pessoas que não são o Usuário Final:**
+
+- Você acha que o software é intuitivo? Por quê?
+- Você teve alguma dificuldade para encontrar as informações que precisava?
+- Você achou o design do software agradável e fácil de entender?
+- As cores e os ícones foram úteis ou confusos?
+- O que você mudaria no software para torná-lo mais fácil de usar?
+- Se você pudesse adicionar uma nova funcionalidade ao software, qual seria?
+
+&emsp;Para avaliação dos testes, serão utilizadas tanto métricas quantitativas quanto qualitativas. É possível que algumas só consigam ser calculadas após a visualização das gravações; nesses casos, a equipe também deve avaliar. Abaixo, há as métricas que serão utilizadas:
+
+**Métricas Quantitativas**
+
+- **Taxa de Sucesso de Tarefas:** mede o percentual de tarefas concluídas com sucesso pelos usuários.
+  - **Exemplo:** quantos usuários conseguiram completar a tarefa sem erro?
+- **Tempo para Concluir Tarefas:** avalia quanto tempo os usuários levam para completar uma tarefa específica.
+- **Taxa de Erros (Error Rate):** quantifica os erros cometidos pelos usuários ao realizar tarefas.
+  - **Exemplo:** quantas vezes os usuários clicaram no botão errado?
+- **Número de Passos Necessários:** mede a quantidade de ações realizadas para completar uma tarefa.
+- **Taxa de Abandono:** mede o número de usuários que desistem antes de concluir uma tarefa.
+
+**Métricas Qualitativas**
+
+- **Feedback Verbal:** comentários espontâneos dos usuários durante o teste.
+  - **Exemplo:** "achei confuso encontrar o menu principal"
+- **Satisfação por Tarefa:** após cada tarefa, perguntar ao usuário como ele se sentiu ao realizá-la.
+  - Usar escalas simples, como: "fácil", "moderado" ou "difícil".
+- **Mapeamento de Problemas de Usabilidade:** documente problemas encontrados, categorizando-os por gravidade e frequência.
+  - **Exemplo:** "usuários frequentemente não encontram a funcionalidade X"
+- **Análise Emocional:** avalie as emoções dos usuários durante o teste (ex.: frustração, satisfação).
 
 ## 9.3.2 Resultados
 _conteúdo_
