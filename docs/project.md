@@ -1939,31 +1939,94 @@ _conteúdo_
 _conteúdo_
 
 # 9. Planejamento e Execução de Testes
-_conteúdo_
+
+&emsp;Esta seção documenta o planejamento de testes relacionados ao desenvolvimento do Sistema Gallaudet, na intenção de impor métodos que verifiquem se a solução, como desejado, oferecerá funcionalidades efetivas e direcionadas às necessidades dos *stakeholders*. 
 
 ## 9.1 Testes Funcionais
-_conteúdo_
+
+&emsp;Esta seção trata especificamente da testagem das ações do sistema, ou seja, das suas funcionalidades oferecidas.
 
 ## 9.1.1 Planejamento
-_conteúdo_
+
+| **ID do Teste** | **Requisito Funcional (RF)** | **Propósito do Teste** | **Instruções de Execução** | **Cenários** | **Abrangência** |
+|------------------|------------------------------|-------------------------|----------------------------|--------------|------------------|
+| **TF01** | RF01 – Cadastro de Gerentes | Validar se o sistema permite o cadastro de Gerente Geral e Gerente de Unidade, com validação de dados obrigatórios. | 1. Acessar a tela de cadastro de usuários. <br> 2. Preencher os campos obrigatórios (CPF, e-mail, tipo de gerente, etc.). <br> 3. Submeter o formulário. | **Positivo**: Log e notificação recebida, informando que o usuário cadastrado com sucesso. <br> **Negativo**: Cadastro falha devido a campos obrigatórios não preenchidos. | Testar com diferentes tipos de gerentes (Geral e Unidade). |
+| **TF02** | RF02 – Cadastro de Unidade de Ensino | Verificar se o sistema permite o cadastro de Unidades de Ensino com informações completas. | 1. Acessar a tela de cadastro de unidades. <br> 2. Preencher os campos (nome, endereço, contato). <br> 3. Submeter o formulário. | **Positivo**: Log e notificação: Unidade cadastrada com sucesso. <br> **Negativo**: Cadastro falha devido a campos obrigatórios não preenchidos. | Testar com diferentes combinações de dados (obrigatórios + opcionais | apenas obrigatórios | apenas opcionais). |
+| **TF03** | RF04 – Dashboard de Alunos | Verificar se o sistema exibe um dashboard com informações dos alunos, incluindo filtros e buscas avançadas. | 1. Acessar o dashboard. <br> 2. Aplicar filtros (ex: nome, status de atendimento). <br> 3. Verificar os dados retornados. | **Positivo**: Dados são exibidos corretamente conforme os filtros. <br> **Negativo**: Dados não são exibidos ou filtros não funcionam. | Testar com diferentes combinações de filtros. |
+| **TF04** | RF05 – Gestão de Profissionais | Validar se o sistema permite o cadastro, edição e exclusão de profissionais. | 1. Acessar a tela de gestão de profissionais. <br> 2. Cadastrar um profissional. <br> 3. Editar e excluir o profissional. | **Positivo**: Log e notificação: Profissional cadastrado, editado e excluído com sucesso. <br> **Negativo**: Operações falham devido a dados inválidos ou permissões insuficientes. | Testar com acesso de Gerente Geral e Gerente de Unidade. |
+| **TF05** | RF06 – Gestão de Atendimentos | Verificar se o sistema permite a inclusão, edição e exclusão de registros de atendimentos. | 1. Acessar a tela de gestão de atendimentos. <br> 2. Criar um novo atendimento. <br> 3. Editar e excluir o atendimento. | **Positivo**: Log e notificação: Atendimento registrado, editado e excluído com sucesso. <br> **Negativo**: Operações falham devido a dados inválidos. | Testar com diferentes combinações de dados. |
+| **TF06** | RF07 – Registro de Logs | Validar se o sistema registra logs das ações dos usuários. | 1. Executar ações como cadastro, edição ou exclusão. <br> 2. Verificar os logs gerados. | **Positivo**: Logs são gerados corretamente. <br> **Negativo**: Logs não são gerados para ações críticas. | Testar com diferentes tipos de ações. |
+| **TF07** | RF08 – Histórico Completo do Aluno | Verificar se o sistema exibe o histórico completo do aluno. | 1. Acessar o perfil do aluno. <br> 2. Visualizar o histórico. | **Positivo**: Histórico exibe todas as interações e atendimentos. <br> **Negativo**: Histórico não exibe informações completas. | Testar com diferentes tipos de alunos, que precisam e não precisam de atendimentos especializados. |
+| **TF08** | RF11 – Exibição da Timeline do Aluno | Validar se o sistema exibe a timeline do aluno com registros cronológicos. | 1. Acessar o perfil do aluno. <br> 2. Visualizar a timeline. | **Positivo**: Timeline exibe registros de forma cronológica. <br> **Negativo**: Timeline não exibe registros ou exibe fora de ordem. | Testar com alunos que possuem diferentes quantidades de registros. |
+| **TF09** | RF12 – Envio de Notificações | Verificar se o sistema envia notificações sobre eventos relevantes. | 1. Criar um novo atendimento ou evento. <br> 2. Verificar se a notificação foi enviada. | **Positivo**: Notificação é enviada corretamente. <br> **Negativo**: Notificação não é enviada ou é enviada incorretamente. | Testar com diferentes tipos de eventos e meios de notificação (e-mail, push). |
 
 ## 9.1.2 Resultados
 _conteúdo_
 
 ## 9.2 Testes de RNFs
-_conteúdo_
+
+&emsp;Esta seção trata especificamente da testagem das circunstâncias e restrições as quais o sistema deve obedecer, visando um aprimoramento de segurança, integridade e usabilidade.
 
 ## 9.2.1 Planejamento
-_conteúdo_
+
+| **ID do Teste** | **Requisito Não Funcional (RNF)** | **Propósito do Teste** | **Instruções de Execução** | **Cenários** | **Abrangência** | **Tipo de Teste** |
+|------------------|-----------------------------------|-------------------------|----------------------------|--------------|------------------|--------------------|
+| **TRNF01** | RNF01 – Acessibilidade | Verificar se o sistema é compatível com leitores de tela. | 1. Utilizar um leitor de tela (ex: NVDA). <br> 2. Navegar por todas as funcionalidades do sistema. | **Positivo**: Leitor de tela descreve corretamente os elementos. <br> **Negativo**: Elementos não são anunciados corretamente. | Testar em diferentes navegadores e dispositivos. | Teste de Componentes |
+| **TRNF02** | RNF05 – Desempenho | Validar se o sistema atende ao tempo de resposta esperado. | 1. Utilizar ferramenta de teste de carga (ex: JMeter). <br> 2. Simular 1.000 usuários simultâneos. <br> 3. Medir o tempo de resposta. | **Positivo**: Tempo de resposta é inferior a 2 segundos. <br> **Negativo**: Tempo de resposta excede 2 segundos. | Testar em diferentes operações (cadastro, consulta, relatórios). | Teste de Integração |
+| **TRNF03** | RNF06 – Disponibilidade | Verificar se o sistema está disponível durante o horário comercial. | 1. Monitorar o sistema durante o horário comercial. <br> 2. Simular falhas e verificar a recuperação. | **Positivo**: Sistema está disponível 98% do tempo. <br> **Negativo**: Sistema fica inativo por mais de 2% do tempo. | Testar em diferentes dias da semana. | Teste de Integração |
 
 ## 9.2.2 Resultados
 _conteúdo_
 
 ## 9.3 Testes de Usabilidade
-_conteúdo_
+
+&emsp;Esta seção trata especificamente da testagem do sistema pelos usuários, registrando suas percepções, comportamentos e considerações.
 
 ## 9.3.1 Planejamento
-_conteúdo_
+
+### **Preparação**
+- **Participantes**: 5 usuários externos, incluindo:
+  - 2 servidores da Assessoria de Inclusão.
+  - 1 pessoa com deficiência visual que utiliza leitor de tela.
+  - 2 usuários leigos (sem experiência prévia com o sistema).
+- **Ferramentas**:
+  - Protótipo funcional da solução.
+  - Leitor de tela (ex: NVDA).
+  - Formulário de feedback para coleta de dados.
+- **Duração**: máximo de 30-45 minutos por participante.
+
+## **Critérios de Avaliação**
+
+| **Critério** | **Descrição** | **Métricas** |
+|--------------|---------------|--------------|
+| **Eficácia** | Capacidade do usuário de realizar as tarefas com sucesso. | - Taxa de conclusão das tarefas. <br> - Número de erros cometidos. |
+| **Eficiência** | Tempo e esforço necessários para realizar as tarefas. | - Tempo médio para conclusão de cada tarefa. <br> - Número de cliques ou passos necessários. |
+| **Satisfação** | Percepção do usuário sobre a usabilidade e experiência geral. | - Respostas às perguntas de feedback. <br> - Pontuação em escala de satisfação (ex: 1 a 5). |
+
+### **Atividades e Perguntas**
+
+| **Etapa** | **Atividade** | **Critérios Medidos** | **Comandos e Perguntas** |
+|-----------|---------------|-----------------------|--------------------------|
+| **1. Introdução** | Apresentar o sistema e explicar o objetivo do teste. | - | - "Você utilizará um sistema de gestão de atendimentos para a Assessoria de Inclusão. Vamos realizar algumas tarefas para avaliar a usabilidade." |
+| **2. Visualização de alunos de uma unidade** | Verificar se o usuário consegue visualizar os alunos a partir de uma unidade de ensino. | **Eficácia**: O usuário consegue realizar a busca? <br> **Eficiência**: Quanto tempo leva? | - "Tente visualizar quais são os alunos de qualquer Instituição de Ensino cadastrada aqui" <br> **Pergunta**: "Você sente que conseguiu completar a busca pelos alunos? O que poderia ser melhorado nessa experiência?" |
+| **3. Consulta de Histórico do Aluno** | Verificar se o usuário consegue consultar o histórico de um aluno. | **Eficácia**: O usuário encontra o histórico? <br> **Eficiência**: Quanto tempo leva? | - "Consulte o histórico de um aluno específico. Utilize os filtros disponíveis." <br> **Pergunta**: "A interface de consulta é clara? Os filtros são intuitivos?" |
+| **4. Gestão de Atendimentos** | Verificar se o usuário consegue criar e editar um atendimento. | **Eficácia**: O usuário consegue criar/editar um atendimento? <br> **Eficiência**: Quanto tempo leva? | - "Crie um novo atendimento para um aluno. Em seguida, edite o status do atendimento." <br> **Pergunta**: "Foi fácil criar e editar um atendimento? O que poderia ser melhorado?" |
+| **5. Consulta de Tecnologias Assistivas** | Verificar se o usuário consegue buscar e vincular tecnologias assistivas a um aluno. | **Eficácia**: O usuário encontra e vincula a tecnologia correta? <br> **Eficiência**: Quanto tempo leva? | - "Busque uma tecnologia assistiva e vincule-a a um aluno." <br> **Pergunta**: "A busca e o vínculo de tecnologias foram intuitivos? O que poderia ser melhorado?" |
+| **6. Navegação com Leitor de Tela** | Verificar se o sistema é acessível para usuários com deficiência visual. | **Eficácia**: O leitor de tela descreve corretamente os elementos? <br> **Satisfação**: O usuário se sente confortável utilizando o sistema? | - "Navegue pelo sistema utilizando o leitor de tela. Realize uma consulta de histórico e vincule uma tecnologia assistiva." <br> **Pergunta**: "Para você fez sentido o caminho até conseguir vincular uma tecnologia? Você encontrou alguma dificuldade em algum momento?" |
+| **7. Feedback Final** | Coletar a percepção geral do usuário sobre o sistema. | **Satisfação**: O usuário está satisfeito com a experiência? | - "O que você achou da experiência geral com o sistema?" <br> - "Quais são os pontos fortes e fracos do sistema?" <br> - "Você recomendaria este sistema para outros usuários? Por quê?" |
+
+
+## **Análise e Consolidação dos Resultados**
+
+### **Coleta de Dados**
+- Registrar o tempo de execução de cada tarefa.
+- Anotar erros cometidos e dificuldades encontradas.
+- Coletar feedbacks qualitativos dos participantes.
+
+### **Consolidação**
+- Calcular métricas de eficácia e eficiência.
+- Identificar padrões nos feedbacks qualitativos.
+- Priorizar melhorias com base nos resultados.
 
 ## 9.3.2 Resultados
 _conteúdo_
