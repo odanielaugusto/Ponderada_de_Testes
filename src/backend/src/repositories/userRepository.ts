@@ -2,7 +2,7 @@
 // // Responsável pela interação direta com o banco de dados (PostgreSQL).
 // // Este repositório lida com as operações de CRUD relacionadas ao modelo "User".
 
-// import { Client } from 'pg'; // Supondo que você vai usar a biblioteca 'pg' para PostgreSQL.
+// import gallaudetDb from "../config/db.js";
 
 // export class UserRepository {
 //   private client: Client;

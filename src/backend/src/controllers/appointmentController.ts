@@ -1,5 +1,4 @@
 // // src/controllers/AppointmentController.ts
-//import pool from "../config/renderClient.js";
 // // Responsável por lidar com as requisições HTTP relacionadas aos agendamentos.
 // // Este controlador vai receber as requisições e chamar a lógica de negócios para agendamentos.
 
