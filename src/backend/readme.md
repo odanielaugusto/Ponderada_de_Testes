@@ -52,6 +52,8 @@ src/
 │
 ├── utils/              # Funções auxiliares
 │
+├── externalServices/   # Acesso a componentes externos
+│
 ├── index.ts            # Arquivo principal que inicializa o servidor
 ├── tsconfig.json       # Configurações do TypeScript
 └── .env                # Variáveis de ambiente

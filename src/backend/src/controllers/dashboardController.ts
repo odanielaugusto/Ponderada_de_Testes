@@ -1,5 +1,4 @@
 // // src/controllers/DashboardController.ts
-//import pool from "../config/renderClient.js";
 // // Responsável por lidar com as requisições HTTP relacionadas ao dashboard.
 // // Este controlador vai lidar com a lógica de negócios relacionada à visualização de dados e relatórios.
 
