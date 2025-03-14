@@ -1379,13 +1379,23 @@ end
 _conteúdo_
 
 ## 6.1 Diagrama de Implantação da UML
-_conteúdo_
 
-## 6.2 Justificativa das Escolhas de Implantação
-_conteúdo_
+&emsp;Diferentemente dos Diagramas UML de Componentes e de Sequência, apresentados nas subseções anteriores, o Diagrama de Implantação UML evidencia a infraestrutura do Sistema Gallaudet, ou seja, suas características e relações hardware-software (Silva, 2017). Dessa forma, tem-se o recurso elaborado pela equipe:
 
-## 6.3 Considerações sobre Desempenho e Segurança
-_conteúdo_
+<div align="center">
+  <sub>Figura X - Diagrama de Implantação</sub> <br>
+
+  <img
+    src="./assets/section6/diagramaImplantacao3.png" alt="Diagrama de Implantação"
+    style="max-width: 1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;O diagrama começa com o usuário final, que acessa o sistema via navegador em seu dispositivo, representado como um nó, pois é um ambiente de execução. O navegador também contém um artefato, pois executa os arquivos do front-end (index.html, style.css, bundle.js), inicialmente armazenados no Servidor Web, que também possui um artefato correspondente ao front-end. A diferença entre os dois é que, no servidor, esses arquivos são apenas armazenados e distribuídos, enquanto no navegador eles são interpretados e executados para exibir a interface ao usuário.<br>
+&emsp;Por seguinte, as requisições feitas no Servidor Web são feitas para o nó de máquina virtual EC2 da AWS (Amazon Web Services), composta por mais dois nós: o Middleware *Auth0*, responsável por autenticação e autorização de requisições antes de serem encaminhadas à API Interna (que contém artefatos de Node.js e TypeScript) que processa a lógica do sistema. A API interna interage com o Banco de Dados também armazenado como instância RDS da AWS, realizando operações CRUD (Create, Read, Update, Delete), e também se relacionando à API Externa do Centro Paula Souza, responsável pela consulta de dados dos alunos. As conexões entre os componentes são feitas por requisições HTTP e trocas de informações entre serviços.<br>
+&emsp;Este diagrama também foi criado com o PlantUML e auxilia os *stakeholders* a reconhecerem a organização infraestrutural do Sistema Gallaudet. Vale ressaltar que o planejamento da implantação também foi elaborado em razão dos Requisitos Não Funcionais (RNFs) definidos.<br>
+&emsp;A portabilidade do Sistema Gallaudet (RNF02) é assegurada pela implantação em nuvem, usando AWS EC2, tanto para o front-end quanto o back-end, bem como o AWS RDS para o banco de dados; assim, permite-se uma flexibilidade de uso entre diferentes dispositivos (RNF06). A segurança de dados (RNF03) é reforçada pelo Middleware Auth0 para autenticação de usuários e pelos controles de acesso da AWS. A confiabilidade (RNF04) é garantida pelo registro de logs no servidor de aplicação, enquanto o desempenho (RNF05) é otimizado pela arquitetura modular e processamento eficiente no EC2, além de que a escalabilidade (RNF07) é garantida pelo aumento da capacidade do EC2 conforme necessário. A manutenibilidade (RNF08) é favorecida pela separação em camadas, como business, controllers e repositories para back-end, que é separado do front-end (camada de apresentação) e do banco de dados. A interoperabilidade (RNF09) é viabilizada pela comunicação da API interna com a API externa do CPS via RESTful, e por fim, a usabilidade (RNF10) é aprimorada pelo carregamento otimizado da aplicação e pelo front-end/UX Design, os quais tornam satisfatória e ágil a utilização do sistema.
 
 # 7. Projeto Visual da Solução
 
