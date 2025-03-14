@@ -808,6 +808,89 @@ _conteúdo_
 | RNF09 | Interoperabilidade: Integração via APIs padronizadas com outros sistemas.   | RF03                                      | Assegura troca de dados eficiente e segura com sistemas externos.                                  |
 | RNF10 | Usabilidade: Interface intuitiva e responsiva em diversos dispositivos.     | RF01, RF02, RF04, RF05, RF06, RF08, RF09, RF10, RF11, RF12 | Melhora a experiência do usuário, facilitando a interação com todas as funcionalidades.             |
 
+### Revisão dos Requisitos Não Funcionais
+
+&emsp;Esta subseção inclui a reanálise dos requisitos não funcionais apresentados anteriormente, considerando o caráter de evolução do planejamento e implementação do projeto observado na Sprint 3. A seguir, tem-se um maior detalhamento de abrangência de cenários de teste, sejam eles positivos ou negativos.
+
+#### **RNF01 – Acessibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF01** | O sistema deve ser compatível com leitores de tela, em especial o NVDA, comumente utilizados pelos servidores do Centro Paula Souza, e seguir as diretrizes WCAG 2.1 nível AA. | - Realizar testes manuais de navegação com leitores de tela. <br><br> - Verificar taxa de acessibilidade através de testes do Lighthouse no navegador. | **Positivo**: O leitor de tela descreve corretamente todos os elementos da interface, conseguindo informar conteúdo de imagens, textos, funcionalidades de recursos em tela como botões, seções, hiperlinks, etc. <br> **Negativo**: Alguns elementos em tela não são anunciado pelo leitor de tela, ou possuem conteúdo vazio. <br> **Abrangência**: Testar para os mesmos leitores de tela, em diferentes navegadores e dispositivos. |
+
+---
+
+#### **RNF02 – Portabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF02** | O sistema deve poder ser implantado em diversos ambientes de nuvem (AWS, Azure, Google Cloud, etc.) sem alterações significativas, através de suas camadas, garantindo modularidade. | - Realizar a implantação do sistema em diferentes provedores de nuvem. <br><br> - Verificar funcionamento em diferentes dispositivos e sistemas operacionais, como Linux e Windows. | **Positivo**: Todos os módulos do sistema (front-end, back-end, conexões com API's externas, etc.), quando configurados para cada provedor de nuvem, funcionam com sucesso, mantendo os dados íntegros e confiáveis. <br> **Negativo**: Há erros na infraestrutura base na implementação em diferentes provedores de nuvem / Em determinados provedores, o código começa a gerar erros. <br> **Abrangência**: Testar em diferentes ferramentas de conteinerização, como o Docker. |
+
+---
+
+#### **RNF03 – Segurança de Dados**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF03** | O sistema deve seguir as diretrizes da LGPD, incluindo criptografia de dados sensíveis, controle de acesso baseado em roles (responsabilidades, como Gerente de Unidade e Gerente Administrativo) e proteção contra vulnerabilidades comuns, como vazamento de dados e ataques externos. | - Realizar testes de segurança para verificar criptografia, controle de acesso e logs de auditoria. <br><br> - Utilizar ferramentas de análise de vulnerabilidades, como OWASP ZAP e Nessus. | **Positivo**: Dados sensíveis são criptografados em repouso e em trânsito. <br> **Negativo**: Um usuário consegue acessar dados ou páginas sem permissão adequada / Usuários não cadastrados conseguem ter acesso ao sistema. <br> **Abrangência**: Testar em diferentes cenários de ataque (ex: SQL Injection, XSS). |
+
+---
+
+#### **RNF04 – Confiabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF04** | O sistema deve registrar logs detalhados sobre ações críticas realizadas, armazenados de forma segura e disponíveis para auditoria por pelo menos 5 anos. | - Verificar se os logs são gerados corretamente e armazenados de forma segura. | **Positivo**: Logs são gerados e armazenados corretamente após cada ação. <br> **Negativo**: Logs não são gerados para uma operação crítica. <br> **Abrangência**: Testar em diferentes níveis de carga e cenários de falha. |
+
+---
+
+#### **RNF05 – Desempenho**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF05** | O sistema deve garantir um tempo de resposta inferior a 2 segundos para 95% das requisições, mesmo sob carga normal de uso (ex: 1.000 usuários simultâneos). | - Realizar testes de carga (ex: com JMeter ou Gatling) para medir o tempo de resposta. | **Positivo**: O sistema atende ao tempo de resposta esperado sob carga normal. <br> **Negativo**: O tempo de resposta excede 2 segundos ou mais sob carga normal. <br> **Abrangência**: Testar em diferentes tipos de operações, como consulta de alunos em uma instituição, cadastro de atendimento, de profissional, etc. |
+
+---
+
+#### **RNF06 – Disponibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF06** | O sistema deve garantir uma disponibilidade de **98% em torno do horário comercial** (ex: das 7h às 20h, de segunda-feira a sábado). Assim, garante-se um tempo considerável de uso do sistema, e fora desse período, ele pode estar indisponível para manutenção ou atualizações. | - Monitorar a disponibilidade do sistema durante o horário comercial. <br> - Simular falhas e verificar a recuperação automática dentro do período de funcionamento. | **Positivo**: O sistema está disponível durante 98% do horário comercial. <br> **Negativo**: O sistema fica inativo por mais de 2% do horário comercial. <br> **Abrangência**: Testar em diferentes dias da semana e horários comerciais. |
+
+---
+
+#### **RNF07 – Escalabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF07** | O sistema deve ser capaz de escalar horizontalmente para suportar um aumento de até 10x no número de usuários e requisições sem degradação do desempenho. | - Realizar testes de escalabilidade para verificar suporte a aumento de carga. | **Positivo**: O sistema mantém o desempenho ao escalar horizontalmente. <br> **Negativo**: O desempenho degrada após a adição de novos nós. <br> **Abrangência**: Testar em diferentes cenários de carga (ex: aumento gradual, pico súbito). |
+
+---
+
+#### **RNF08 – Manutenibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF08** | O código do sistema deve ser modular, bem documentado, comentado e seguir boas práticas de desenvolvimento, garantindo facilidade de entendimento e manutenção. | - Analisar padrões de código em revisões para garantir boas práticas. | **Positivo**: Uma nova funcionalidade é adicionada sem impactar o sistema existente. <br> **Negativo**: Uma correção introduz novos bugs críticos. <br> **Abrangência**: Testar em diferentes módulos do sistema. |
+
+---
+
+#### **RNF09 – Interoperabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF09** | O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs). | - Realizar testes de integração com APIs externas. | **Positivo**: A integração com um sistema externo funciona corretamente. <br> **Negativo**: A integração falha devido a incompatibilidade de formatos de dados. <br> **Abrangência**: Testar com diferentes sistemas e formatos de dados. |
+
+---
+
+#### **RNF10 – Usabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF10** | A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile). | - Realizar testes de usabilidade com usuários reais. | **Positivo**: Usuários conseguem realizar tarefas sem dificuldade. <br> **Negativo**: Usuários encontram dificuldades para navegar ou realizar tarefas. <br> **Abrangência**: Testar em diferentes dispositivos e navegadores. |
+
+
 # 4. Modelagem de Dados
 &emsp;A modelagem de dados é essencial para estruturar e organizar informações dentro de um sistema. No projeto desenvolvido para o Centro Paula Souza, essa modelagem permite gerenciar alunos com deficiência, garantindo o registro detalhado de suas necessidades assistivas, alocação de profissionais especializados e monitoramento de atendimentos. Além disso, possibilita a rastreabilidade de informações essenciais, otimizando a tomada de decisões dentro das unidades de ensino. Com um banco de dados bem estruturado, o sistema assegura integridade, acessibilidade e eficiência no gerenciamento dos dados, contribuindo para uma gestão mais eficaz e adaptada às demandas específicas das instituições de ensino.
 
@@ -1933,138 +2016,93 @@ _conteúdo_
 _conteúdo_
 
 # 9. Planejamento e Execução de Testes
-_conteúdo_
+
+&emsp;Esta seção documenta o planejamento de testes relacionados ao desenvolvimento do Sistema Gallaudet, na intenção de impor métodos que verifiquem se a solução, como desejado, oferecerá funcionalidades efetivas e direcionadas às necessidades dos *stakeholders*. 
 
 ## 9.1 Testes Funcionais
 
+&emsp;Esta seção trata especificamente da testagem das ações do sistema, ou seja, das suas funcionalidades oferecidas.
+
 ## 9.1.1 Planejamento
-_conteúdo_
+
+| **ID do Teste** | **Requisito Funcional (RF)** | **Propósito do Teste** | **Instruções de Execução** | **Cenários** | **Abrangência** |
+|------------------|------------------------------|-------------------------|----------------------------|--------------|------------------|
+| **TF01** | RF01 – Cadastro de Gerentes | Validar se o sistema permite o cadastro de Gerente Geral e Gerente de Unidade, com validação de dados obrigatórios. | 1. Acessar a tela de cadastro de usuários. <br> 2. Preencher os campos obrigatórios (CPF, e-mail, tipo de gerente, etc.). <br> 3. Submeter o formulário. | **Positivo**: Log e notificação recebida, informando que o usuário cadastrado com sucesso. <br> **Negativo**: Cadastro falha devido a campos obrigatórios não preenchidos. | Testar com diferentes tipos de gerentes (Geral e Unidade). |
+| **TF02** | RF02 – Cadastro de Unidade de Ensino | Verificar se o sistema permite o cadastro de Unidades de Ensino com informações completas. | 1. Acessar a tela de cadastro de unidades. <br> 2. Preencher os campos (nome, endereço, contato). <br> 3. Submeter o formulário. | **Positivo**: Log e notificação: Unidade cadastrada com sucesso. <br> **Negativo**: Cadastro falha devido a campos obrigatórios não preenchidos. | Testar com diferentes combinações de dados (obrigatórios + opcionais | apenas obrigatórios | apenas opcionais). |
+| **TF03** | RF04 – Dashboard de Alunos | Verificar se o sistema exibe um dashboard com informações dos alunos, incluindo filtros e buscas avançadas. | 1. Acessar o dashboard. <br> 2. Aplicar filtros (ex: nome, status de atendimento). <br> 3. Verificar os dados retornados. | **Positivo**: Dados são exibidos corretamente conforme os filtros. <br> **Negativo**: Dados não são exibidos ou filtros não funcionam. | Testar com diferentes combinações de filtros. |
+| **TF04** | RF05 – Gestão de Profissionais | Validar se o sistema permite o cadastro, edição e exclusão de profissionais. | 1. Acessar a tela de gestão de profissionais. <br> 2. Cadastrar um profissional. <br> 3. Editar e excluir o profissional. | **Positivo**: Log e notificação: Profissional cadastrado, editado e excluído com sucesso. <br> **Negativo**: Operações falham devido a dados inválidos ou permissões insuficientes. | Testar com acesso de Gerente Geral e Gerente de Unidade. |
+| **TF05** | RF06 – Gestão de Atendimentos | Verificar se o sistema permite a inclusão, edição e exclusão de registros de atendimentos. | 1. Acessar a tela de gestão de atendimentos. <br> 2. Criar um novo atendimento. <br> 3. Editar e excluir o atendimento. | **Positivo**: Log e notificação: Atendimento registrado, editado e excluído com sucesso. <br> **Negativo**: Operações falham devido a dados inválidos. | Testar com diferentes combinações de dados. |
+| **TF06** | RF07 – Registro de Logs | Validar se o sistema registra logs das ações dos usuários. | 1. Executar ações como cadastro, edição ou exclusão. <br> 2. Verificar os logs gerados. | **Positivo**: Logs são gerados corretamente. <br> **Negativo**: Logs não são gerados para ações críticas. | Testar com diferentes tipos de ações. |
+| **TF07** | RF08 – Histórico Completo do Aluno | Verificar se o sistema exibe o histórico completo do aluno. | 1. Acessar o perfil do aluno. <br> 2. Visualizar o histórico. | **Positivo**: Histórico exibe todas as interações e atendimentos. <br> **Negativo**: Histórico não exibe informações completas. | Testar com diferentes tipos de alunos, que precisam e não precisam de atendimentos especializados. |
+| **TF08** | RF11 – Exibição da Timeline do Aluno | Validar se o sistema exibe a timeline do aluno com registros cronológicos. | 1. Acessar o perfil do aluno. <br> 2. Visualizar a timeline. | **Positivo**: Timeline exibe registros de forma cronológica. <br> **Negativo**: Timeline não exibe registros ou exibe fora de ordem. | Testar com alunos que possuem diferentes quantidades de registros. |
+| **TF09** | RF12 – Envio de Notificações | Verificar se o sistema envia notificações sobre eventos relevantes. | 1. Criar um novo atendimento ou evento. <br> 2. Verificar se a notificação foi enviada. | **Positivo**: Notificação é enviada corretamente. <br> **Negativo**: Notificação não é enviada ou é enviada incorretamente. | Testar com diferentes tipos de eventos e meios de notificação (e-mail, push). |
 
 ## 9.1.2 Resultados
 _conteúdo_
 
 ## 9.2 Testes de RNFs
-_conteúdo_
+
+&emsp;Esta seção trata especificamente da testagem das circunstâncias e restrições as quais o sistema deve obedecer, visando um aprimoramento de segurança, integridade e usabilidade.
 
 ## 9.2.1 Planejamento
-_conteúdo_
+
+| **ID do Teste** | **Requisito Não Funcional (RNF)** | **Propósito do Teste** | **Instruções de Execução** | **Cenários** | **Abrangência** | **Tipo de Teste** |
+|------------------|-----------------------------------|-------------------------|----------------------------|--------------|------------------|--------------------|
+| **TRNF01** | RNF01 – Acessibilidade | Verificar se o sistema é compatível com leitores de tela. | 1. Utilizar um leitor de tela (ex: NVDA). <br> 2. Navegar por todas as funcionalidades do sistema. | **Positivo**: Leitor de tela descreve corretamente os elementos. <br> **Negativo**: Elementos não são anunciados corretamente. | Testar em diferentes navegadores e dispositivos. | Teste de Componentes |
+| **TRNF02** | RNF05 – Desempenho | Validar se o sistema atende ao tempo de resposta esperado. | 1. Utilizar ferramenta de teste de carga (ex: JMeter). <br> 2. Simular 1.000 usuários simultâneos. <br> 3. Medir o tempo de resposta. | **Positivo**: Tempo de resposta é inferior a 2 segundos. <br> **Negativo**: Tempo de resposta excede 2 segundos. | Testar em diferentes operações (cadastro, consulta, relatórios). | Teste de Integração |
+| **TRNF03** | RNF06 – Disponibilidade | Verificar se o sistema está disponível durante o horário comercial. | 1. Monitorar o sistema durante o horário comercial. <br> 2. Simular falhas e verificar a recuperação. | **Positivo**: Sistema está disponível 98% do tempo. <br> **Negativo**: Sistema fica inativo por mais de 2% do tempo. | Testar em diferentes dias da semana. | Teste de Integração |
 
 ## 9.2.2 Resultados
 _conteúdo_
 
 ## 9.3 Testes de Usabilidade
 
-&emsp;Para a realização dos testes de usabilidade, serão considerados diferentes perfis. As diferentes características foram selecionadas com base nas personas produzidas anteriormente, visando simular ao máximo os diferentes usuários finais. Assim sendo, o grupo dará prioridade para testar a aplicação com pessoas que possuem as seguintes características:
-
-- Idade acima de 35 anos
-- Trabalho na ramo educacional e/ou de inclusão
-- Média ou baixa fluência tecnológica
-- Convívio diário com análise de dados ou gestão de pessoas
+&emsp;Esta seção trata especificamente da testagem do sistema pelos usuários, registrando suas percepções, comportamentos e considerações.
 
 ## 9.3.1 Planejamento
 
-&emsp;Antes de iniciar os testes de usabilidade, é necessário preparar o ambiente em que será realizado o experimento. Para isso, é importante tornar de fácil acesso todas as ferramentas que serão utilizadas, como, por exemplo, a planilha de anotações do grupo. Nela, haverão colunas com as perguntas que devem ser feitas e um espaço para observações. Assim, garante uma melhor organização e controle das respostas.
+### **Preparação**
+- **Participantes**: 5 usuários externos, incluindo:
+  - 2 servidores da Assessoria de Inclusão.
+  - 1 pessoa com deficiência visual que utiliza leitor de tela.
+  - 2 usuários leigos (sem experiência prévia com o sistema).
+- **Ferramentas**:
+  - Protótipo funcional da solução.
+  - Leitor de tela (ex: NVDA).
+  - Formulário de feedback para coleta de dados.
+- **Duração**: máximo de 30-45 minutos por participante.
 
-&emsp;Além disso, é imprescindível que o dispositivo em que os testes serão realizados esteja em conformidade com alguns requisitos. Principalmente, a aplicação Web desenvolvida deve estar acessível pelo *local host* ou algum serviço de hospedagem, e aberta na primeira tela em que o usuário mexerá. Também, a máquina deverá conter algum software para a gravação da tela préviamente configurado, o qual será utilizado para coletar dados e fazer conclusões após os testes. É importante ressaltar que o vídeo só poderá ser registrado a partir do momento em que o usuário teste for avisado sobre esse ato, podendo ser solicitado, até, a gravação da conversa e das expressões faciais.
+## **Critérios de Avaliação**
 
-&emsp;Ao assegurar que todos os pré-requisitos foram cumpridos, o usuário poderá ser chamado e se iniciará a triagem. Esse primeiro momento é necessário para coletar dados demográficos, essenciais para o mapeamento dos tipos de usuários e suas dificuldades específicas. Assim, as seguintes perguntas devem ser feitas: 
+| **Critério** | **Descrição** | **Métricas** |
+|--------------|---------------|--------------|
+| **Eficácia** | Capacidade do usuário de realizar as tarefas com sucesso. | - Taxa de conclusão das tarefas. <br> - Número de erros cometidos. |
+| **Eficiência** | Tempo e esforço necessários para realizar as tarefas. | - Tempo médio para conclusão de cada tarefa. <br> - Número de cliques ou passos necessários. |
+| **Satisfação** | Percepção do usuário sobre a usabilidade e experiência geral. | - Respostas às perguntas de feedback. <br> - Pontuação em escala de satisfação (ex: 1 a 5). |
 
-- Qual é o seu nome?
-- Qual é a sua idade?
-- Qual é o seu nível de escolaridade?
-- Qual é a sua ocupação?
+### **Atividades e Perguntas**
 
-&emsp;Após coletar esses dados, o entrevistador iniciará a fase de pré-teste, quando será viável entender melhor a familiaridade do usuário com *softwares*. Esse processo é importante para identificar a origem das possíveis dificuldades que ele terá durante os testes. Nesse contexto, o integrante do grupo responsável por conduzir o experimento deverá fornecer um breve contexto do projeto, explicando as motivações de seu desenvolvimento, como será utilizado e quem é o publico-alvo. Logo depois dessa breve introdução, fará mais algumas perguntas:
+| **Etapa** | **Atividade** | **Critérios Medidos** | **Comandos e Perguntas** |
+|-----------|---------------|-----------------------|--------------------------|
+| **1. Introdução** | Apresentar o sistema e explicar o objetivo do teste. | - | - "Você utilizará um sistema de gestão de atendimentos para a Assessoria de Inclusão. Vamos realizar algumas tarefas para avaliar a usabilidade." |
+| **2. Visualização de alunos de uma unidade** | Verificar se o usuário consegue visualizar os alunos a partir de uma unidade de ensino. | **Eficácia**: O usuário consegue realizar a busca? <br> **Eficiência**: Quanto tempo leva? | - "Tente visualizar quais são os alunos de qualquer Instituição de Ensino cadastrada aqui" <br> **Pergunta**: "Você sente que conseguiu completar a busca pelos alunos? O que poderia ser melhorado nessa experiência?" |
+| **3. Consulta de Histórico do Aluno** | Verificar se o usuário consegue consultar o histórico de um aluno. | **Eficácia**: O usuário encontra o histórico? <br> **Eficiência**: Quanto tempo leva? | - "Consulte o histórico de um aluno específico. Utilize os filtros disponíveis." <br> **Pergunta**: "A interface de consulta é clara? Os filtros são intuitivos?" |
+| **4. Gestão de Atendimentos** | Verificar se o usuário consegue criar e editar um atendimento. | **Eficácia**: O usuário consegue criar/editar um atendimento? <br> **Eficiência**: Quanto tempo leva? | - "Crie um novo atendimento para um aluno. Em seguida, edite o status do atendimento." <br> **Pergunta**: "Foi fácil criar e editar um atendimento? O que poderia ser melhorado?" |
+| **5. Consulta de Tecnologias Assistivas** | Verificar se o usuário consegue buscar e vincular tecnologias assistivas a um aluno. | **Eficácia**: O usuário encontra e vincula a tecnologia correta? <br> **Eficiência**: Quanto tempo leva? | - "Busque uma tecnologia assistiva e vincule-a a um aluno." <br> **Pergunta**: "A busca e o vínculo de tecnologias foram intuitivos? O que poderia ser melhorado?" |
+| **6. Navegação com Leitor de Tela** | Verificar se o sistema é acessível para usuários com deficiência visual. | **Eficácia**: O leitor de tela descreve corretamente os elementos? <br> **Satisfação**: O usuário se sente confortável utilizando o sistema? | - "Navegue pelo sistema utilizando o leitor de tela. Realize uma consulta de histórico e vincule uma tecnologia assistiva." <br> **Pergunta**: "Para você fez sentido o caminho até conseguir vincular uma tecnologia? Você encontrou alguma dificuldade em algum momento?" |
+| **7. Feedback Final** | Coletar a percepção geral do usuário sobre o sistema. | **Satisfação**: O usuário está satisfeito com a experiência? | - "O que você achou da experiência geral com o sistema?" <br> - "Quais são os pontos fortes e fracos do sistema?" <br> - "Você recomendaria este sistema para outros usuários? Por quê?" |
 
-**Teste com funcionário da Assessoria de Inclusão do Centro Paula Souza:**
+## **Análise e Consolidação dos Resultados**
 
-- Qual a sua experiência em trabalhar com inclusão de alunos PCD?
-- Quais são os maiores desafios que você enfrenta ao monitorar o progresso e as necessidades de alunos PCD?
-- Quais informações sobre os alunos PCD são mais importantes para você monitorar?
-- Quais relatórios ou análises você precisa gerar regularmente sobre o progresso dos alunos PCD?
-- O que você espera que este software faça por você?
-- Quais problemas específicos você espera que este software resolva?
+### **Coleta de Dados**
+- Registrar o tempo de execução de cada tarefa.
+- Anotar erros cometidos e dificuldades encontradas.
+- Coletar feedbacks qualitativos dos participantes.
 
-**Teste com pessoas que não são nosso usuário final:**
-
-- Você já trabalhou com algum software de monitoramento ou gerenciamento de dados antes? Se sim, qual?
-- Em uma escala de 1 a 5 (1 sendo "nunca usei" e 5 sendo "uso com frequência"), com que frequência você usa softwares com gráficos e visualização de dados?
-- Você tem alguma familiaridade com o termo "PCD" (Pessoa com Deficiência)? 
-- Você consegue imaginar quais tipos de informações seriam importantes para monitorar o progresso de um aluno com deficiência em um ambiente escolar?
-- Com base no que você sabe sobre o software, o que você espera conseguir fazer com ele?
-- Quais tarefas você imagina que seriam possíveis de realizar usando este software?
-
-&emsp;A partir deste momento, a tela poderá ser gravada, pois os comandos de teste serão dados e é importante registrar a pessoa interagindo com a aplicação. Porém, antes de dar início ao teste em si, quem estiver conduzindo deverá explicar qual papel a pessoa está representando, podendo ser gerente de unidade ou gerente administrativo, e, se necessário, explicar o que esse cargo faz e como utilizaria a aplicação.
-
-&emsp;Como essa etapa concluída, o primeiro comando pode ser dado. Os cenários de usabilidade devem seguir uma ordem pré-estabelecida, pois garantem uma curva de crescimento gradual. Assim, abaixo há as terefas que devem ser cumpridas:
-
-**Gerente de unidade**
-
-1. **Listar alunos:** visualizar alunos PCD registrados na unidade
-7. **Busca com filtro:** pesquisar algum aluno a partir do filtro de busca
-2. **Visualizar detalhes do aluno:** acessar os detalhes de algum aluno PCD matriculado na unidade
-3. **Cadastro tecnologia assistiva:** cadastrar uma nova tecnologia assistiva
-4. **Alocamento de profissionais:** conectar profissional ao aluno com deficiência
-5. **Alocamento de tecnologias assistivas:** conectar tecnologia assistiva ao aluno com deficiência
-6. **Editar agendamento:** editar alocação de profissionais e tecnologias assistivas
-8. **Login:** o usuário consegue fazer login? Consegue fazer login de forma rápida? Consegue entender as opções de autenticação?
-
-**Gerente administrativo**
-
-1. **Listar alunos:** visualizar alunos PCD registrados na unidade
-7. **Busca com filtro:** pesquisar algum aluno a partir do filtro de busca
-2. **Visualizar detalhes do aluno:** acessar os detalhes de algum aluno PCD matriculado na unidade
-3. **Cadastro tecnologia assistiva:** cadastrar uma nova tecnologia assistiva
-4. **Alocamento de profissionais:** conectar profissional ao aluno com deficiência
-5. **Alocamento de tecnologias assistivas:** conectar tecnologia assistiva ao aluno com deficiência
-6. **Editar agendamento:** editar alocação de profissionais e tecnologias assistivas
-8. **Cadastro Profissional:** cadastrar um novo profissional
-9. **Login:** o usuário consegue fazer login? Consegue fazer login de forma rápida? Consegue entender as opções de autenticação?
-
-&emsp;Durante todo o processo, deverá ter algum integrante da equipe anotando as respostas dadas às perguntas e outras informações, como: observações feitas pelo usuário e as palavras-chave mais utilizadas por ele. Tempo demorado para cada realizar cada tarefa e outros dados técnicos poderão ser identificados a partir da gravação de tela, não sendo recomendado a coletânea deles durante o período de teste. 
-
-&emsp;Como última etapa para o teste de usabilidade, há mais algumas perguntas, que serão feitas com o objetivo de entender o nível de satisfação do usuário com a aplicação. Dessa forma, a seguir há as questões a serem respondidas nessa fase de pós-teste:
-
-**Teste com Funcionário da Assessoria de Inclusão do Centro Paula Souza:**
-
-- Este software atende às suas necessidades de monitoramento de alunos PCD? Por quê?
-- Quais funcionalidades do software você achou mais úteis para o seu trabalho?
-- Quais funcionalidades do software você achou desnecessárias ou pouco úteis?
-- O software considera as necessidades específicas de diferentes tipos de deficiência?
-- Este software te ajuda a tomar decisões mais informadas sobre o suporte aos alunos PCD?
-- Quais funcionalidades você adicionaria ao software para torná-lo ainda mais útil?
-- Você tem alguma sugestão para tornar o software mais fácil de usar ou mais acessível?
-
-**Teste com Pessoas que não são o Usuário Final:**
-
-- Você acha que o software é intuitivo? Por quê?
-- Você teve alguma dificuldade para encontrar as informações que precisava?
-- Você achou o design do software agradável e fácil de entender?
-- As cores e os ícones foram úteis ou confusos?
-- O que você mudaria no software para torná-lo mais fácil de usar?
-- Se você pudesse adicionar uma nova funcionalidade ao software, qual seria?
-
-&emsp;Para avaliação dos testes, serão utilizadas tanto métricas quantitativas quanto qualitativas. É possível que algumas só consigam ser calculadas após a visualização das gravações; nesses casos, a equipe também deve avaliar. Abaixo, há as métricas que serão utilizadas:
-
-**Métricas Quantitativas**
-
-- **Taxa de Sucesso de Tarefas:** mede o percentual de tarefas concluídas com sucesso pelos usuários.
-  - **Exemplo:** quantos usuários conseguiram completar a tarefa sem erro?
-- **Tempo para Concluir Tarefas:** avalia quanto tempo os usuários levam para completar uma tarefa específica.
-- **Taxa de Erros (Error Rate):** quantifica os erros cometidos pelos usuários ao realizar tarefas.
-  - **Exemplo:** quantas vezes os usuários clicaram no botão errado?
-- **Número de Passos Necessários:** mede a quantidade de ações realizadas para completar uma tarefa.
-- **Taxa de Abandono:** mede o número de usuários que desistem antes de concluir uma tarefa.
-
-**Métricas Qualitativas**
-
-- **Feedback Verbal:** comentários espontâneos dos usuários durante o teste.
-  - **Exemplo:** "achei confuso encontrar o menu principal"
-- **Satisfação por Tarefa:** após cada tarefa, perguntar ao usuário como ele se sentiu ao realizá-la.
-  - Usar escalas simples, como: "fácil", "moderado" ou "difícil".
-- **Mapeamento de Problemas de Usabilidade:** documente problemas encontrados, categorizando-os por gravidade e frequência.
-  - **Exemplo:** "usuários frequentemente não encontram a funcionalidade X"
-- **Análise Emocional:** avalie as emoções dos usuários durante o teste (ex.: frustração, satisfação).
+### **Consolidação**
+- Calcular métricas de eficácia e eficiência.
+- Identificar padrões nos feedbacks qualitativos.
+- Priorizar melhorias com base nos resultados.
 
 ## 9.3.2 Resultados
 _conteúdo_
