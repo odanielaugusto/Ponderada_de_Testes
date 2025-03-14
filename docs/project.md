@@ -936,7 +936,7 @@ _conteúdo_
 | *Assistência*   | *Profissional*        | (0,n) → (0,1)   | Cada assistência pode ter um profissional responsável, mas um profissional pode atender várias assistências. |
 | *Assistência*   | *Tecnologia Assistiva*| (0,n) → (0,n)   | Uma assistência pode envolver várias tecnologias assistivas e cada tecnologia pode ser usada em múltiplas assistências. |
 
-## 4.2 Modelo Lógico de Dados 
+## 4.2 Modelo Lógico de Dados
 
  No intuito de desenvolver o modelo conceitual para uma estrutura relacional determinada por tabelas, colunas e suas chaves primárias e estrangeiras, foi desenvolvido a seguinte modelagem lógica:
 
@@ -986,7 +986,7 @@ CREATE TABLE Assistencia (
 
 CREATE TABLE TecnologiaAssistiva (
     id SERIAL PRIMARY KEY,
-    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Lupa', 'Leitor de Tela', 'Cadeira de Rodas')) 
+    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Lupa', 'Leitor de Tela', 'Cadeira de Rodas'))
 );
 
 CREATE TABLE Assistencia_TecnologiaAssistiva (
@@ -999,6 +999,7 @@ CREATE TABLE Assistencia_TecnologiaAssistiva (
 ```
 
 ## 4.3 Modelo Físico de Dados
+
 ## Dicionário do Banco de Dados
 &emsp;O dicionário de dados é um documento que descreve detalhadamente os aspectos e características das variáveis de um banco de dados, apresentando uma descrição de cada coluna, valores permitidos, observações pontuais e entre outras informações necessárias para um entendimento mais profundo. A partir disso, segue o dicionário de dados do projeto desenvolvido:
 
@@ -1063,8 +1064,12 @@ CREATE TABLE Assistencia_TecnologiaAssistiva (
 | id_assistence_fk       | ID da assistência (FK)                 | numérica         | Referência à tabela Assistência                         | 1,2,3…             | não                   | Chave estrangeira para `Assistence.id`                          |
 | id_assistance_fk       | ID da tecnologia assistiva (FK)        | numérica         | Referência à tabela Tecnologia Assistiva                 | 1,2,3…             | não                   | Chave estrangeira para `Technology_assistance.id`                  |
 
+=======
+O modelo físico de dados é representado pelo esquema relacional implementado no banco de dados **Gallaudet DB**, conforme descrito acima. Ele define as tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, garantindo a integridade dos dados e a eficiência do armazenamento.
 
-**Nota:** Insira uma explicação e direcionamento para o readme.md da pasta database.
+**Nota:** Para mais detalhes sobre a implementação do modelo físico, consulte o arquivo `README.md` localizado no diretório `../src/database/readme.md` ou [clique aqui](../src/database/readme.md).
+
+
 
 # 5. Solução Técnica (Design)
 _conteúdo_
