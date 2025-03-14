@@ -999,9 +999,76 @@ CREATE TABLE Assistencia_TecnologiaAssistiva (
 ```
 
 ## 4.3 Modelo Físico de Dados
+
+## Dicionário do Banco de Dados
+&emsp;O dicionário de dados é um documento que descreve detalhadamente os aspectos e características das variáveis de um banco de dados, apresentando uma descrição de cada coluna, valores permitidos, observações pontuais e entre outras informações necessárias para um entendimento mais profundo. A partir disso, segue o dicionário de dados do projeto desenvolvido:
+
+
+
+### Tabela: `User`
+
+| Variável           | Nome Variável   | Tipo de Variável | Descrição                           | Valores Permitidos | Possui Valores nulos? | Anotações                                   |
+|--------------------|-----------------|------------------|-------------------------------------|--------------------|-----------------------|---------------------------------------------|
+| id                 | Id do Usuário   | numérica         | Identificador único do usuário       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)         |
+| password           | Senha           | categórica       | Senha de acesso do usuário           | -                  | não                   | -                                           |
+| email              | E-mail          | categórica       | Endereço de e-mail do usuário        | -                  | não                   | Deve ser único                              |
+| type               | Tipo de Usuário | categórica       | Tipo de usuário que estará utilizando a aplicação | 'Gerente Unidade', 'Gerente Administrativo' | não | Defina os valores de acordo com a regra de negócio |
+| institution_id     | Id da instituição | numérica | Referência à instituição associada ao usuário | 1, 2, 3… | sim | Pode ser nulo se não houver associação |
+
+### Tabela: `Log_usage`
+
+| Variável         | Nome Variável           | Tipo de Variável | Descrição                                        | Valores Permitidos | Possui Valores nulos? | Anotações                                                        |
+|------------------|-------------------------|------------------|--------------------------------------------------|--------------------|-----------------------|------------------------------------------------------------------|
+| id               | Id do log               | numérica         | Identificador único do log                       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                             |
+| action           | Ação                    | categórica       | Ação realizada pelo usuário                      | -                  | não                   | -                                                                |
+| action_time      | Horário da ação         | numérica         | Momento em que a ação foi executada              | -                  | não                   | -                                                                |
+| details          | Detalhe da ação         | categórica       | Informações adicionais sobre o que ocorreu       | -                  | sim                   | Pode ser utilizado para logs mais detalhados                     |
+| user_id_fk       | ID do usuário (FK)      | numérica         | Referência ao usuário que executou a ação        | 1,2,3…             | não                   | Chave estrangeira para `User.id`                                  |
+| appointment_id_fk| ID da assistência (FK)  | numérica         | Referência a uma assistência relacionada à ação  | 1,2,3…             | sim                   | Chave estrangeira para `appointment.id` (pode ser nulo se genérico)  |
+
+### Tabela: `Professional`
+
+| Variável         | Nome Variável         | Tipo de Variável | Descrição                              | Valores Permitidos | Possui Valores nulos? | Anotações                                               |
+|------------------|-----------------------|------------------|----------------------------------------|--------------------|-----------------------|---------------------------------------------------------|
+| id               | ID do profissional     | numérica         | Identificador único do profissional     | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                    |
+| name             | Nome do profissional   | categórica       | Nome completo do profissional           | -                  | não                   | -                                                       |
+| phone_number     | Telefone do profissional | categórica    | Telefone para contato                  | -                  | sim                   | Caso não seja obrigatório, pode aceitar nulo           |
+| user_id_fk       | ID do usuário (FK)     | numérica         | Referência ao usuário na tabela `User`  | 1,2,3…             | não                   | Chave estrangeira para `User.id`                        |
+
+### Tabela: `Assistive_technology`
+
+| Variável         | Nome Variável       | Tipo de Variável | Descrição                                      | Valores Permitidos | Possui Valores nulos? | Anotações                                      |
+|------------------|---------------------|------------------|------------------------------------------------|--------------------|-----------------------|------------------------------------------------|
+| id               | ID da tecnologia    | numérica         | Identificador único da tecnologia assistiva     | 1,2,3…             | não                   | Chave primária, auto-increment (PK)           |
+| type             | Tipo de tecnologia  | categórica       | Classificação de qual é a tecnologia            | 'Lupa', 'Leitor de Tela', 'Cadeira de Rodas'  | não                   | Ajustar valores de acordo com a regra de negócio|
+| description      | Descrição da tecnologia | categórica    | Descrição detalhada da tecnologia assistiva     | -                  | sim                   | -                                              |
+
+### Tabela: `Appointment`
+
+| Variável              | Nome Variável                     | Tipo de Variável | Descrição                                        | Valores Permitidos | Possui Valores nulos? | Anotações                                      |
+|-----------------------|-----------------------------------|------------------|--------------------------------------------------|--------------------|-----------------------|------------------------------------------------|
+| id                    | Id do atendimento                | numérica         | Identificador único do atendimento               | 1,2,3…             | não                   | Chave primária, auto-increment (PK)           |
+| professional_id_fk    | ID do profissional (FK)           | numérica         | Referência ao profissional responsável           | 1,2,3…             | sim                   | Chave estrangeira para `Professional.id`      |
+| student_id            | ID do aluno                       | numérica         | Referência ao aluno atendido                     | 1,2,3…             | não                   | -                                              |
+| assistive_technology_id_fk | ID da tecnologia assistiva (FK) | numérica         | Referência à tecnologia assistiva utilizada      | 1,2,3…             | sim                   | Chave estrangeira para `Assistive_technology.id` |
+| start_date            | Data de início                    | data             | Data de início do atendimento/assistência        | -                  | não                   | -                                              |
+| end_date              | Data de término                   | data             | Data de término do atendimento                   | -                  | sim                   | Pode ser nulo se o atendimento estiver ativo    |
+| description           | Descrição do atendimento          | texto            | Descrição do atendimento                        | -                  | sim                   | -                                              |
+| status                | Status do atendimento             | categórica       | Status do atendimento (Ativo, Finalizado, Cancelado, Pausado) | 'Ativo', 'Finalizado', 'Cancelado', 'Pausado' | não | - |
+
+### Tabela: `Assistive_technology`
+
+| Variável               | Nome Variável                          | Tipo de Variável | Descrição                                               | Valores Permitidos | Possui Valores nulos? | Anotações                                                      |
+|------------------------|----------------------------------------|------------------|---------------------------------------------------------|--------------------|-----------------------|----------------------------------------------------------------|
+| id                     | ID da relação                          | numérica         | Identificador único da relação (Assistência x Tecnologia) | 1,2,3…         | não                   | Chave primária, auto-increment (PK)                            |
+| id_assistence_fk       | ID da assistência (FK)                 | numérica         | Referência à tabela Assistência                         | 1,2,3…             | não                   | Chave estrangeira para `Assistence.id`                          |
+| id_assistance_fk       | ID da tecnologia assistiva (FK)        | numérica         | Referência à tabela Tecnologia Assistiva                 | 1,2,3…             | não                   | Chave estrangeira para `Technology_assistance.id`                  |
+
+=======
 O modelo físico de dados é representado pelo esquema relacional implementado no banco de dados **Gallaudet DB**, conforme descrito acima. Ele define as tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, garantindo a integridade dos dados e a eficiência do armazenamento.
 
 **Nota:** Para mais detalhes sobre a implementação do modelo físico, consulte o arquivo `README.md` localizado no diretório `../src/database/readme.md` ou [clique aqui](../src/database/readme.md).
+
 
 
 # 5. Solução Técnica (Design)
