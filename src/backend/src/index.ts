@@ -7,13 +7,14 @@ import appointmentRoutes from "./routes/appointmentRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import professionalRoutes from "./routes/professionalRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
-import { auth, ConfigParams } from "express-openid-connect";
+import { auth, ConfigParams } from "express-openid-connect"; // Importação necessária para o funcionamento do Auth0
 
 dotenv.config();
 
 const app = express();  
 app.use(express.json());
 
+// Configurações para a autenticação de login com o Auth0
 const config: ConfigParams = {
   authRequired: false,
   auth0Logout: true,

@@ -4,7 +4,7 @@ import { Router } from "express";
 
 const router = Router();
 
-// Rota protegida para verificar se o usuário está autenticado
+// Rota protegida para verificar se o usuário está autenticado ou não.
 router.get("/", (req: any, res: any) => {
     if (!req.oidc || !req.oidc.isAuthenticated()) {
       return res.send("Logged out");
