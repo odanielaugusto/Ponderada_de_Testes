@@ -808,6 +808,89 @@ _conteúdo_
 | RNF09 | Interoperabilidade: Integração via APIs padronizadas com outros sistemas.   | RF03                                      | Assegura troca de dados eficiente e segura com sistemas externos.                                  |
 | RNF10 | Usabilidade: Interface intuitiva e responsiva em diversos dispositivos.     | RF01, RF02, RF04, RF05, RF06, RF08, RF09, RF10, RF11, RF12 | Melhora a experiência do usuário, facilitando a interação com todas as funcionalidades.             |
 
+### Revisão dos Requisitos Não Funcionais
+
+&emsp;Esta subseção inclui a reanálise dos requisitos não funcionais apresentados anteriormente, considerando o caráter de evolução do planejamento e implementação do projeto observado na Sprint 3. A seguir, tem-se um maior detalhamento de abrangência de cenários de teste, sejam eles positivos ou negativos.
+
+#### **RNF01 – Acessibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF01** | O sistema deve ser compatível com leitores de tela, em especial o NVDA, comumente utilizados pelos servidores do Centro Paula Souza, e seguir as diretrizes WCAG 2.1 nível AA. | - Realizar testes manuais de navegação com leitores de tela. <br><br> - Verificar taxa de acessibilidade através de testes do Lighthouse no navegador. | **Positivo**: O leitor de tela descreve corretamente todos os elementos da interface, conseguindo informar conteúdo de imagens, textos, funcionalidades de recursos em tela como botões, seções, hiperlinks, etc. <br> **Negativo**: Alguns elementos em tela não são anunciado pelo leitor de tela, ou possuem conteúdo vazio. <br> **Abrangência**: Testar para os mesmos leitores de tela, em diferentes navegadores e dispositivos. |
+
+---
+
+#### **RNF02 – Portabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF02** | O sistema deve poder ser implantado em diversos ambientes de nuvem (AWS, Azure, Google Cloud, etc.) sem alterações significativas, através de suas camadas, garantindo modularidade. | - Realizar a implantação do sistema em diferentes provedores de nuvem. <br><br> - Verificar funcionamento em diferentes dispositivos e sistemas operacionais, como Linux e Windows. | **Positivo**: Todos os módulos do sistema (front-end, back-end, conexões com API's externas, etc.), quando configurados para cada provedor de nuvem, funcionam com sucesso, mantendo os dados íntegros e confiáveis. <br> **Negativo**: Há erros na infraestrutura base na implementação em diferentes provedores de nuvem / Em determinados provedores, o código começa a gerar erros. <br> **Abrangência**: Testar em diferentes ferramentas de conteinerização, como o Docker. |
+
+---
+
+#### **RNF03 – Segurança de Dados**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF03** | O sistema deve seguir as diretrizes da LGPD, incluindo criptografia de dados sensíveis, controle de acesso baseado em roles (responsabilidades, como Gerente de Unidade e Gerente Administrativo) e proteção contra vulnerabilidades comuns, como vazamento de dados e ataques externos. | - Realizar testes de segurança para verificar criptografia, controle de acesso e logs de auditoria. <br><br> - Utilizar ferramentas de análise de vulnerabilidades, como OWASP ZAP e Nessus. | **Positivo**: Dados sensíveis são criptografados em repouso e em trânsito. <br> **Negativo**: Um usuário consegue acessar dados ou páginas sem permissão adequada / Usuários não cadastrados conseguem ter acesso ao sistema. <br> **Abrangência**: Testar em diferentes cenários de ataque (ex: SQL Injection, XSS). |
+
+---
+
+#### **RNF04 – Confiabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF04** | O sistema deve registrar logs detalhados sobre ações críticas realizadas, armazenados de forma segura e disponíveis para auditoria por pelo menos 5 anos. | - Verificar se os logs são gerados corretamente e armazenados de forma segura. | **Positivo**: Logs são gerados e armazenados corretamente após cada ação. <br> **Negativo**: Logs não são gerados para uma operação crítica. <br> **Abrangência**: Testar em diferentes níveis de carga e cenários de falha. |
+
+---
+
+#### **RNF05 – Desempenho**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF05** | O sistema deve garantir um tempo de resposta inferior a 2 segundos para 95% das requisições, mesmo sob carga normal de uso (ex: 1.000 usuários simultâneos). | - Realizar testes de carga (ex: com JMeter ou Gatling) para medir o tempo de resposta. | **Positivo**: O sistema atende ao tempo de resposta esperado sob carga normal. <br> **Negativo**: O tempo de resposta excede 2 segundos ou mais sob carga normal. <br> **Abrangência**: Testar em diferentes tipos de operações, como consulta de alunos em uma instituição, cadastro de atendimento, de profissional, etc. |
+
+---
+
+#### **RNF06 – Disponibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF06** | O sistema deve garantir uma disponibilidade de **98% em torno do horário comercial** (ex: das 7h às 20h, de segunda-feira a sábado). Assim, garante-se um tempo considerável de uso do sistema, e fora desse período, ele pode estar indisponível para manutenção ou atualizações. | - Monitorar a disponibilidade do sistema durante o horário comercial. <br> - Simular falhas e verificar a recuperação automática dentro do período de funcionamento. | **Positivo**: O sistema está disponível durante 98% do horário comercial. <br> **Negativo**: O sistema fica inativo por mais de 2% do horário comercial. <br> **Abrangência**: Testar em diferentes dias da semana e horários comerciais. |
+
+---
+
+#### **RNF07 – Escalabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF07** | O sistema deve ser capaz de escalar horizontalmente para suportar um aumento de até 10x no número de usuários e requisições sem degradação do desempenho. | - Realizar testes de escalabilidade para verificar suporte a aumento de carga. | **Positivo**: O sistema mantém o desempenho ao escalar horizontalmente. <br> **Negativo**: O desempenho degrada após a adição de novos nós. <br> **Abrangência**: Testar em diferentes cenários de carga (ex: aumento gradual, pico súbito). |
+
+---
+
+#### **RNF08 – Manutenibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF08** | O código do sistema deve ser modular, bem documentado, comentado e seguir boas práticas de desenvolvimento, garantindo facilidade de entendimento e manutenção. | - Analisar padrões de código em revisões para garantir boas práticas. | **Positivo**: Uma nova funcionalidade é adicionada sem impactar o sistema existente. <br> **Negativo**: Uma correção introduz novos bugs críticos. <br> **Abrangência**: Testar em diferentes módulos do sistema. |
+
+---
+
+#### **RNF09 – Interoperabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF09** | O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs). | - Realizar testes de integração com APIs externas. | **Positivo**: A integração com um sistema externo funciona corretamente. <br> **Negativo**: A integração falha devido a incompatibilidade de formatos de dados. <br> **Abrangência**: Testar com diferentes sistemas e formatos de dados. |
+
+---
+
+#### **RNF10 – Usabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF10** | A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile). | - Realizar testes de usabilidade com usuários reais. | **Positivo**: Usuários conseguem realizar tarefas sem dificuldade. <br> **Negativo**: Usuários encontram dificuldades para navegar ou realizar tarefas. <br> **Abrangência**: Testar em diferentes dispositivos e navegadores. |
+
+
 # 4. Modelagem de Dados
 &emsp;A modelagem de dados é essencial para estruturar e organizar informações dentro de um sistema. No projeto desenvolvido para o Centro Paula Souza, essa modelagem permite gerenciar alunos com deficiência, garantindo o registro detalhado de suas necessidades assistivas, alocação de profissionais especializados e monitoramento de atendimentos. Além disso, possibilita a rastreabilidade de informações essenciais, otimizando a tomada de decisões dentro das unidades de ensino. Com um banco de dados bem estruturado, o sistema assegura integridade, acessibilidade e eficiência no gerenciamento dos dados, contribuindo para uma gestão mais eficaz e adaptada às demandas específicas das instituições de ensino.
 
