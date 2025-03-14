@@ -1,4 +1,5 @@
 // // src/controllers/ProfessionalController.ts
+//import pool from "../config/renderClient.js";
 // // Responsável por lidar com as requisições HTTP relacionadas aos profissionais.
 // // Este controlador vai receber as requisições e chamar a lógica de negócios para os profissionais.
 
