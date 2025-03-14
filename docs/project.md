@@ -1001,74 +1001,68 @@ CREATE TABLE Assistencia_TecnologiaAssistiva (
 ## 4.3 Modelo Físico de Dados
 ## Dicionário do Banco de Dados
 &emsp;O dicionário de dados é um documento que descreve detalhadamente os aspectos e características das variáveis de um banco de dados, apresentando uma descrição de cada coluna, valores permitidos, observações pontuais e entre outras informações necessárias para um entendimento mais profundo. A partir disso, segue o dicionário de dados do projeto desenvolvido:
-### Tabela Appointment
 
 
-| Variável            | Nome Variável                                      | Tipo de Variável | Descrição                                          | Valores Permitidos | Possui Valores nulos? | Anotações                                                  |
-|---------------------|----------------------------------------------------|------------------|----------------------------------------------------|--------------------|-----------------------|------------------------------------------------------------|
-| id                  | Id único da tabela Assistencia                     | numérica         | Identificador único da assistência                 | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                       |
-| id_profissional (FK)| Id único da tabela profissional                    | numérica         | Profissional responsável pela assistência          | 1,2,3…             | não                   | Chave estrangeira para Profissional.id                    |
-| data_inicio         | Data de Início da Assistência                      | numérica         | Data de início do atendimento/assistência          | -                  | não                   | -                                                          |
-| id_aluno            | Id do aluno identificado via API governamental     | numérica         | Id dos alunos registrados no banco governamental   | 1,2,3…             | não                   | Esse id será encontrado a partir da API governamental     |
 
-**
+### Tabela: `User`
 
-### Tabela: LogUso
+| Variável           | Nome Variável   | Tipo de Variável | Descrição                           | Valores Permitidos | Possui Valores nulos? | Anotações                                   |
+|--------------------|-----------------|------------------|-------------------------------------|--------------------|-----------------------|---------------------------------------------|
+| id                 | Id do Usuário   | numérica         | Identificador único do usuário       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)         |
+| password           | Senha           | categórica       | Senha de acesso do usuário           | -                  | não                   | -                                           |
+| email              | E-mail          | categórica       | Endereço de e-mail do usuário        | -                  | não                   | Deve ser único                              |
+| type               | Tipo de Usuário | categórica       | Tipo de usuário que estará utilizando a aplicação | 'Gerente Unidade', 'Gerente Administrativo' | não | Defina os valores de acordo com a regra de negócio |
+| institution_id     | Id da instituição | numérica | Referência à instituição associada ao usuário | 1, 2, 3… | sim | Pode ser nulo se não houver associação |
 
-| Variável          | Nome Variável           | Tipo de Variável | Descrição                                        | Valores Permitidos | Possui Valores nulos? | Anotações                                                        |
-|-------------------|-------------------------|------------------|--------------------------------------------------|--------------------|-----------------------|------------------------------------------------------------------|
-| id                | id do log               | numérica         | Identificador único do log                        | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                             |
-| acao              | Ação                    | categórica       | Ação realizada pelo usuário                       | -                  | não                   | -                                                                |
-| horario_acao      | Horário da ação         | numérica         | Momento em que a ação foi executada               | -                  | não                   | -                                                                |
-| detalhe           | Detalhe da ação         | categórica       | Informações adicionais sobre o que ocorreu        | -                  | sim                   | Pode ser utilizado para logs mais detalhados                     |
-| id_user_fk        | ID do usuário (FK)      | numérica         | Referência ao usuário que executou a ação         | 1,2,3…             | não                   | Chave estrangeira para User.id                                  |
-| id_assistencia_fk | ID da assistência (FK)  | numérica         | Referência a uma assistência relacionada à ação   | 1,2,3…             | não                   | Chave estrangeira para Assistencia.id (pode ser nulo se genérico)  |
+### Tabela: `Log_usage`
 
-### Tabela: User
+| Variável         | Nome Variável           | Tipo de Variável | Descrição                                        | Valores Permitidos | Possui Valores nulos? | Anotações                                                        |
+|------------------|-------------------------|------------------|--------------------------------------------------|--------------------|-----------------------|------------------------------------------------------------------|
+| id               | Id do log               | numérica         | Identificador único do log                       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                             |
+| action           | Ação                    | categórica       | Ação realizada pelo usuário                      | -                  | não                   | -                                                                |
+| action_time      | Horário da ação         | numérica         | Momento em que a ação foi executada              | -                  | não                   | -                                                                |
+| details          | Detalhe da ação         | categórica       | Informações adicionais sobre o que ocorreu       | -                  | sim                   | Pode ser utilizado para logs mais detalhados                     |
+| user_id_fk       | ID do usuário (FK)      | numérica         | Referência ao usuário que executou a ação        | 1,2,3…             | não                   | Chave estrangeira para `User.id`                                  |
+| appointment_id_fk| ID da assistência (FK)  | numérica         | Referência a uma assistência relacionada à ação  | 1,2,3…             | sim                   | Chave estrangeira para `appointment.id` (pode ser nulo se genérico)  |
 
-| Variável | Nome Variável   | Tipo de Variável | Descrição                           | Valores Permitidos | Possui Valores nulos? | Anotações                                   |
-|----------|-----------------|------------------|-------------------------------------|--------------------|-----------------------|---------------------------------------------|
-| id       | Id do Usuário   | numérica         | Identificador único do usuário       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)         |
-| senha    | Senha           | categórica       | Senha de acesso do usuário           | -                  | não                   | -                                           |
-| email    | E-mail          | categórica       | Endereço de e-mail do usuário        | -                  | não                   | Deve ser único                              |
-| tipo     | Tipo de Usuário | categórica       | Tipo de usuário que estará utilizando a aplicação | 1,2,3…  | não                   | Defina os valores de acordo com a regra de negócio |
+### Tabela: `Professional`
 
+| Variável         | Nome Variável         | Tipo de Variável | Descrição                              | Valores Permitidos | Possui Valores nulos? | Anotações                                               |
+|------------------|-----------------------|------------------|----------------------------------------|--------------------|-----------------------|---------------------------------------------------------|
+| id               | ID do profissional     | numérica         | Identificador único do profissional     | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                    |
+| name             | Nome do profissional   | categórica       | Nome completo do profissional           | -                  | não                   | -                                                       |
+| phone_number     | Telefone do profissional | categórica    | Telefone para contato                  | -                  | sim                   | Caso não seja obrigatório, pode aceitar nulo           |
+| user_id_fk       | ID do usuário (FK)     | numérica         | Referência ao usuário na tabela `User`  | 1,2,3…             | não                   | Chave estrangeira para `User.id`                        |
 
-### Tabela: User
+### Tabela: `Assistive_technology`
 
-| Variável | Nome Variável   | Tipo de Variável | Descrição                           | Valores Permitidos | Possui Valores nulos? | Anotações                                   |
-|----------|-----------------|------------------|-------------------------------------|--------------------|-----------------------|---------------------------------------------|
-| id       | Id do Usuário   | numérica         | Identificador único do usuário       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)         |
-| senha    | Senha           | categórica       | Senha de acesso do usuário           | -                  | não                   | -                                           |
-| email    | E-mail          | categórica       | Endereço de e-mail do usuário        | -                  | não                   | Deve ser único                              |
-| tipo     | Tipo de Usuário | categórica       | Tipo de usuário que estará utilizando a aplicação | 1,2,3…  | não                   | Defina os valores de acordo com a regra de negócio |
+| Variável         | Nome Variável       | Tipo de Variável | Descrição                                      | Valores Permitidos | Possui Valores nulos? | Anotações                                      |
+|------------------|---------------------|------------------|------------------------------------------------|--------------------|-----------------------|------------------------------------------------|
+| id               | ID da tecnologia    | numérica         | Identificador único da tecnologia assistiva     | 1,2,3…             | não                   | Chave primária, auto-increment (PK)           |
+| type             | Tipo de tecnologia  | categórica       | Classificação de qual é a tecnologia            | 'Lupa', 'Leitor de Tela', 'Cadeira de Rodas'  | não                   | Ajustar valores de acordo com a regra de negócio|
+| description      | Descrição da tecnologia | categórica    | Descrição detalhada da tecnologia assistiva     | -                  | sim                   | -                                              |
 
+### Tabela: `Appointment`
 
-### Tabela: Profissional
+| Variável              | Nome Variável                     | Tipo de Variável | Descrição                                        | Valores Permitidos | Possui Valores nulos? | Anotações                                      |
+|-----------------------|-----------------------------------|------------------|--------------------------------------------------|--------------------|-----------------------|------------------------------------------------|
+| id                    | Id do atendimento                | numérica         | Identificador único do atendimento               | 1,2,3…             | não                   | Chave primária, auto-increment (PK)           |
+| professional_id_fk    | ID do profissional (FK)           | numérica         | Referência ao profissional responsável           | 1,2,3…             | sim                   | Chave estrangeira para `Professional.id`      |
+| student_id            | ID do aluno                       | numérica         | Referência ao aluno atendido                     | 1,2,3…             | não                   | -                                              |
+| assistive_technology_id_fk | ID da tecnologia assistiva (FK) | numérica         | Referência à tecnologia assistiva utilizada      | 1,2,3…             | sim                   | Chave estrangeira para `Assistive_technology.id` |
+| start_date            | Data de início                    | data             | Data de início do atendimento/assistência        | -                  | não                   | -                                              |
+| end_date              | Data de término                   | data             | Data de término do atendimento                   | -                  | sim                   | Pode ser nulo se o atendimento estiver ativo    |
+| description           | Descrição do atendimento          | texto            | Descrição do atendimento                        | -                  | sim                   | -                                              |
+| status                | Status do atendimento             | categórica       | Status do atendimento (Ativo, Finalizado, Cancelado, Pausado) | 'Ativo', 'Finalizado', 'Cancelado', 'Pausado' | não | - |
 
-| Variável | Nome Variável               | Tipo de Variável | Descrição                              | Valores Permitidos | Possui Valores nulos? | Anotações                                               |
-|----------|-----------------------------|------------------|----------------------------------------|--------------------|-----------------------|---------------------------------------------------------|
-| id       | ID do profissional          | numérica         | Identificador único do profissional      | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                    |
-| nome     | Nome do Profissional        | categórica       | Nome completo do profissional           | -                  | não                   | -                                                       |
-| telefone | Telefone do Profissional    | categórica       | Telefone para contato                    | -                  | não                   | Caso não seja obrigatório, pode aceitar nulo           |
-| id_user  | ID do usuário (FK)          | numérica         | Referência ao usuário na tabela User     | 1,2,3..            | não                   | Chave estrangeira para User.id                         |
-
-
-### Tabela: TecnologiaAssistiva
-
-| Variável | Nome Variável        | Tipo de Variável | Descrição                                      | Valores Permitidos | Possui Valores nulos? | Anotações                                      |
-|----------|----------------------|------------------|------------------------------------------------|--------------------|-----------------------|------------------------------------------------|
-| id       | ID da tecnologia     | numérica         | Identificador único da tecnologia assistiva     | 1,2,3…             | não                   | Chave primária, auto-increment (PK)           |
-| tipo     | Tipo de tecnologia   | categórica       | Classificação de qual é a tecnologia            | -                  | não                   | Ajustar valores de acordo com a regra de negócio|
-
-
-### Tabela: Assistencia_TecnologiaAssistiva
+### Tabela: `Assistive_technology`
 
 | Variável               | Nome Variável                          | Tipo de Variável | Descrição                                               | Valores Permitidos | Possui Valores nulos? | Anotações                                                      |
 |------------------------|----------------------------------------|------------------|---------------------------------------------------------|--------------------|-----------------------|----------------------------------------------------------------|
 | id                     | ID da relação                          | numérica         | Identificador único da relação (Assistência x Tecnologia) | 1,2,3…         | não                   | Chave primária, auto-increment (PK)                            |
-| id_assistencia         | ID da assistência (FK)                 | numérica         | Referência à tabela Assistência                         | 1,2,3…             | não                   | Chave estrangeira para Assistencia.id                          |
-| id_tecnologiaAssistiva | ID da tecnologia assistiva (FK)        | numérica         | Referência à tabela TecnologiaAssistiva                 | 1,2,3…             | não                   | Chave estrangeira para TecnologiaAssistiva.id                  |
+| id_assistence_fk       | ID da assistência (FK)                 | numérica         | Referência à tabela Assistência                         | 1,2,3…             | não                   | Chave estrangeira para `Assistence.id`                          |
+| id_assistance_fk       | ID da tecnologia assistiva (FK)        | numérica         | Referência à tabela Tecnologia Assistiva                 | 1,2,3…             | não                   | Chave estrangeira para `Technology_assistance.id`                  |
+
 
 **Nota:** Insira uma explicação e direcionamento para o readme.md da pasta database.
 
