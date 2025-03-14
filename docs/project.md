@@ -1150,7 +1150,7 @@ CREATE TABLE Assistencia_TecnologiaAssistiva (
 =======
 O modelo físico de dados é representado pelo esquema relacional implementado no banco de dados **Gallaudet DB**, conforme descrito acima. Ele define as tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, garantindo a integridade dos dados e a eficiência do armazenamento.
 
-**Nota:** Para mais detalhes sobre a implementação do modelo físico, consulte o arquivo `README.md` localizado no diretório `../src/database/readme.md` ou [clique aqui](../src/database/readme.md).
+**Nota:** Para mais detalhes sobre a implementação do modelo físico e dados iniciais, consulte o arquivo `README.md` localizado no diretório `../src/database/readme.md` ou [clique aqui](../src/database/readme.md).
 
 
 
