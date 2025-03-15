@@ -808,6 +808,89 @@ _conteúdo_
 | RNF09 | Interoperabilidade: Integração via APIs padronizadas com outros sistemas.   | RF03                                      | Assegura troca de dados eficiente e segura com sistemas externos.                                  |
 | RNF10 | Usabilidade: Interface intuitiva e responsiva em diversos dispositivos.     | RF01, RF02, RF04, RF05, RF06, RF08, RF09, RF10, RF11, RF12 | Melhora a experiência do usuário, facilitando a interação com todas as funcionalidades.             |
 
+### Revisão dos Requisitos Não Funcionais
+
+&emsp;Esta subseção inclui a reanálise dos requisitos não funcionais apresentados anteriormente, considerando o caráter de evolução do planejamento e implementação do projeto observado na Sprint 3. A seguir, tem-se um maior detalhamento de abrangência de cenários de teste, sejam eles positivos ou negativos.
+
+#### **RNF01 – Acessibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF01** | O sistema deve ser compatível com leitores de tela, em especial o NVDA, comumente utilizados pelos servidores do Centro Paula Souza, e seguir as diretrizes WCAG 2.1 nível AA. | - Realizar testes manuais de navegação com leitores de tela. <br><br> - Verificar taxa de acessibilidade através de testes do Lighthouse no navegador. | **Positivo**: O leitor de tela descreve corretamente todos os elementos da interface, conseguindo informar conteúdo de imagens, textos, funcionalidades de recursos em tela como botões, seções, hiperlinks, etc. <br> **Negativo**: Alguns elementos em tela não são anunciado pelo leitor de tela, ou possuem conteúdo vazio. <br> **Abrangência**: Testar para os mesmos leitores de tela, em diferentes navegadores e dispositivos. |
+
+---
+
+#### **RNF02 – Portabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF02** | O sistema deve poder ser implantado em diversos ambientes de nuvem (AWS, Azure, Google Cloud, etc.) sem alterações significativas, através de suas camadas, garantindo modularidade. | - Realizar a implantação do sistema em diferentes provedores de nuvem. <br><br> - Verificar funcionamento em diferentes dispositivos e sistemas operacionais, como Linux e Windows. | **Positivo**: Todos os módulos do sistema (front-end, back-end, conexões com API's externas, etc.), quando configurados para cada provedor de nuvem, funcionam com sucesso, mantendo os dados íntegros e confiáveis. <br> **Negativo**: Há erros na infraestrutura base na implementação em diferentes provedores de nuvem / Em determinados provedores, o código começa a gerar erros. <br> **Abrangência**: Testar em diferentes ferramentas de conteinerização, como o Docker. |
+
+---
+
+#### **RNF03 – Segurança de Dados**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF03** | O sistema deve seguir as diretrizes da LGPD, incluindo criptografia de dados sensíveis, controle de acesso baseado em roles (responsabilidades, como Gerente de Unidade e Gerente Administrativo) e proteção contra vulnerabilidades comuns, como vazamento de dados e ataques externos. | - Realizar testes de segurança para verificar criptografia, controle de acesso e logs de auditoria. <br><br> - Utilizar ferramentas de análise de vulnerabilidades, como OWASP ZAP e Nessus. | **Positivo**: Dados sensíveis são criptografados em repouso e em trânsito. <br> **Negativo**: Um usuário consegue acessar dados ou páginas sem permissão adequada / Usuários não cadastrados conseguem ter acesso ao sistema. <br> **Abrangência**: Testar em diferentes cenários de ataque (ex: SQL Injection, XSS). |
+
+---
+
+#### **RNF04 – Confiabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF04** | O sistema deve registrar logs detalhados sobre ações críticas realizadas, armazenados de forma segura e disponíveis para auditoria por pelo menos 5 anos. | - Verificar se os logs são gerados corretamente e armazenados de forma segura. | **Positivo**: Logs são gerados e armazenados corretamente após cada ação. <br> **Negativo**: Logs não são gerados para uma operação crítica. <br> **Abrangência**: Testar em diferentes níveis de carga e cenários de falha. |
+
+---
+
+#### **RNF05 – Desempenho**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF05** | O sistema deve garantir um tempo de resposta inferior a 2 segundos para 95% das requisições, mesmo sob carga normal de uso (ex: 1.000 usuários simultâneos). | - Realizar testes de carga (ex: com JMeter ou Gatling) para medir o tempo de resposta. | **Positivo**: O sistema atende ao tempo de resposta esperado sob carga normal. <br> **Negativo**: O tempo de resposta excede 2 segundos ou mais sob carga normal. <br> **Abrangência**: Testar em diferentes tipos de operações, como consulta de alunos em uma instituição, cadastro de atendimento, de profissional, etc. |
+
+---
+
+#### **RNF06 – Disponibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF06** | O sistema deve garantir uma disponibilidade de **98% em torno do horário comercial** (ex: das 7h às 20h, de segunda-feira a sábado). Assim, garante-se um tempo considerável de uso do sistema, e fora desse período, ele pode estar indisponível para manutenção ou atualizações. | - Monitorar a disponibilidade do sistema durante o horário comercial. <br> - Simular falhas e verificar a recuperação automática dentro do período de funcionamento. | **Positivo**: O sistema está disponível durante 98% do horário comercial. <br> **Negativo**: O sistema fica inativo por mais de 2% do horário comercial. <br> **Abrangência**: Testar em diferentes dias da semana e horários comerciais. |
+
+---
+
+#### **RNF07 – Escalabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF07** | O sistema deve ser capaz de escalar horizontalmente para suportar um aumento de até 10x no número de usuários e requisições sem degradação do desempenho. | - Realizar testes de escalabilidade para verificar suporte a aumento de carga. | **Positivo**: O sistema mantém o desempenho ao escalar horizontalmente. <br> **Negativo**: O desempenho degrada após a adição de novos nós. <br> **Abrangência**: Testar em diferentes cenários de carga (ex: aumento gradual, pico súbito). |
+
+---
+
+#### **RNF08 – Manutenibilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF08** | O código do sistema deve ser modular, bem documentado, comentado e seguir boas práticas de desenvolvimento, garantindo facilidade de entendimento e manutenção. | - Analisar padrões de código em revisões para garantir boas práticas. | **Positivo**: Uma nova funcionalidade é adicionada sem impactar o sistema existente. <br> **Negativo**: Uma correção introduz novos bugs críticos. <br> **Abrangência**: Testar em diferentes módulos do sistema. |
+
+---
+
+#### **RNF09 – Interoperabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF09** | O sistema deve ser capaz de se integrar com outros sistemas acadêmicos do CPS via APIs padronizadas (ex: RESTful APIs). | - Realizar testes de integração com APIs externas. | **Positivo**: A integração com um sistema externo funciona corretamente. <br> **Negativo**: A integração falha devido a incompatibilidade de formatos de dados. <br> **Abrangência**: Testar com diferentes sistemas e formatos de dados. |
+
+---
+
+#### **RNF10 – Usabilidade**
+
+| **Requisito** | **Descrição** | **Teste Associado** | **Cenários** |
+|---------------|---------------|----------------------|---------------|
+| **RNF10** | A interface do sistema deve ser intuitiva e fácil de usar, com design responsivo que funcione bem em diferentes dispositivos (desktop, tablet, mobile). | - Realizar testes de usabilidade com usuários reais. | **Positivo**: Usuários conseguem realizar tarefas sem dificuldade. <br> **Negativo**: Usuários encontram dificuldades para navegar ou realizar tarefas. <br> **Abrangência**: Testar em diferentes dispositivos e navegadores. |
+
+
 # 4. Modelagem de Dados
 &emsp;A modelagem de dados é essencial para estruturar e organizar informações dentro de um sistema. No projeto desenvolvido para o Centro Paula Souza, essa modelagem permite gerenciar alunos com deficiência, garantindo o registro detalhado de suas necessidades assistivas, alocação de profissionais especializados e monitoramento de atendimentos. Além disso, possibilita a rastreabilidade de informações essenciais, otimizando a tomada de decisões dentro das unidades de ensino. Com um banco de dados bem estruturado, o sistema assegura integridade, acessibilidade e eficiência no gerenciamento dos dados, contribuindo para uma gestão mais eficaz e adaptada às demandas específicas das instituições de ensino.
 
@@ -936,7 +1019,7 @@ _conteúdo_
 | *Assistência*   | *Profissional*        | (0,n) → (0,1)   | Cada assistência pode ter um profissional responsável, mas um profissional pode atender várias assistências. |
 | *Assistência*   | *Tecnologia Assistiva*| (0,n) → (0,n)   | Uma assistência pode envolver várias tecnologias assistivas e cada tecnologia pode ser usada em múltiplas assistências. |
 
-## 4.2 Modelo Lógico de Dados 
+## 4.2 Modelo Lógico de Dados
 
  No intuito de desenvolver o modelo conceitual para uma estrutura relacional determinada por tabelas, colunas e suas chaves primárias e estrangeiras, foi desenvolvido a seguinte modelagem lógica:
 
@@ -986,7 +1069,7 @@ CREATE TABLE Assistencia (
 
 CREATE TABLE TecnologiaAssistiva (
     id SERIAL PRIMARY KEY,
-    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Lupa', 'Leitor de Tela', 'Cadeira de Rodas')) 
+    tipo VARCHAR(50) NOT NULL CHECK (tipo IN ('Lupa', 'Leitor de Tela', 'Cadeira de Rodas'))
 );
 
 CREATE TABLE Assistencia_TecnologiaAssistiva (
@@ -999,9 +1082,77 @@ CREATE TABLE Assistencia_TecnologiaAssistiva (
 ```
 
 ## 4.3 Modelo Físico de Dados
-_conteúdo_
 
-**Nota:** Insira uma explicação e direcionamento para o readme.md da pasta database.
+## Dicionário do Banco de Dados
+&emsp;O dicionário de dados é um documento que descreve detalhadamente os aspectos e características das variáveis de um banco de dados, apresentando uma descrição de cada coluna, valores permitidos, observações pontuais e entre outras informações necessárias para um entendimento mais profundo. A partir disso, segue o dicionário de dados do projeto desenvolvido:
+
+
+
+### Tabela: `User`
+
+| Variável           | Nome Variável   | Tipo de Variável | Descrição                           | Valores Permitidos | Possui Valores nulos? | Anotações                                   |
+|--------------------|-----------------|------------------|-------------------------------------|--------------------|-----------------------|---------------------------------------------|
+| id                 | Id do Usuário   | numérica         | Identificador único do usuário       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)         |
+| password           | Senha           | categórica       | Senha de acesso do usuário           | -                  | não                   | -                                           |
+| email              | E-mail          | categórica       | Endereço de e-mail do usuário        | -                  | não                   | Deve ser único                              |
+| type               | Tipo de Usuário | categórica       | Tipo de usuário que estará utilizando a aplicação | 'Gerente Unidade', 'Gerente Administrativo' | não | Defina os valores de acordo com a regra de negócio |
+| institution_id     | Id da instituição | numérica | Referência à instituição associada ao usuário | 1, 2, 3… | sim | Pode ser nulo se não houver associação |
+
+### Tabela: `Log_usage`
+
+| Variável         | Nome Variável           | Tipo de Variável | Descrição                                        | Valores Permitidos | Possui Valores nulos? | Anotações                                                        |
+|------------------|-------------------------|------------------|--------------------------------------------------|--------------------|-----------------------|------------------------------------------------------------------|
+| id               | Id do log               | numérica         | Identificador único do log                       | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                             |
+| action           | Ação                    | categórica       | Ação realizada pelo usuário                      | -                  | não                   | -                                                                |
+| action_time      | Horário da ação         | numérica         | Momento em que a ação foi executada              | -                  | não                   | -                                                                |
+| details          | Detalhe da ação         | categórica       | Informações adicionais sobre o que ocorreu       | -                  | sim                   | Pode ser utilizado para logs mais detalhados                     |
+| user_id_fk       | ID do usuário (FK)      | numérica         | Referência ao usuário que executou a ação        | 1,2,3…             | não                   | Chave estrangeira para `User.id`                                  |
+| appointment_id_fk| ID da assistência (FK)  | numérica         | Referência a uma assistência relacionada à ação  | 1,2,3…             | sim                   | Chave estrangeira para `appointment.id` (pode ser nulo se genérico)  |
+
+### Tabela: `Professional`
+
+| Variável         | Nome Variável         | Tipo de Variável | Descrição                              | Valores Permitidos | Possui Valores nulos? | Anotações                                               |
+|------------------|-----------------------|------------------|----------------------------------------|--------------------|-----------------------|---------------------------------------------------------|
+| id               | ID do profissional     | numérica         | Identificador único do profissional     | 1,2,3…             | não                   | Chave primária, auto-increment (PK)                    |
+| name             | Nome do profissional   | categórica       | Nome completo do profissional           | -                  | não                   | -                                                       |
+| phone_number     | Telefone do profissional | categórica    | Telefone para contato                  | -                  | sim                   | Caso não seja obrigatório, pode aceitar nulo           |
+| user_id_fk       | ID do usuário (FK)     | numérica         | Referência ao usuário na tabela `User`  | 1,2,3…             | não                   | Chave estrangeira para `User.id`                        |
+
+### Tabela: `Assistive_technology`
+
+| Variável         | Nome Variável       | Tipo de Variável | Descrição                                      | Valores Permitidos | Possui Valores nulos? | Anotações                                      |
+|------------------|---------------------|------------------|------------------------------------------------|--------------------|-----------------------|------------------------------------------------|
+| id               | ID da tecnologia    | numérica         | Identificador único da tecnologia assistiva     | 1,2,3…             | não                   | Chave primária, auto-increment (PK)           |
+| type             | Tipo de tecnologia  | categórica       | Classificação de qual é a tecnologia            | 'Lupa', 'Leitor de Tela', 'Cadeira de Rodas'  | não                   | Ajustar valores de acordo com a regra de negócio|
+| description      | Descrição da tecnologia | categórica    | Descrição detalhada da tecnologia assistiva     | -                  | sim                   | -                                              |
+
+### Tabela: `Appointment`
+
+| Variável              | Nome Variável                     | Tipo de Variável | Descrição                                        | Valores Permitidos | Possui Valores nulos? | Anotações                                      |
+|-----------------------|-----------------------------------|------------------|--------------------------------------------------|--------------------|-----------------------|------------------------------------------------|
+| id                    | Id do atendimento                | numérica         | Identificador único do atendimento               | 1,2,3…             | não                   | Chave primária, auto-increment (PK)           |
+| professional_id_fk    | ID do profissional (FK)           | numérica         | Referência ao profissional responsável           | 1,2,3…             | sim                   | Chave estrangeira para `Professional.id`      |
+| student_id            | ID do aluno                       | numérica         | Referência ao aluno atendido                     | 1,2,3…             | não                   | -                                              |
+| assistive_technology_id_fk | ID da tecnologia assistiva (FK) | numérica         | Referência à tecnologia assistiva utilizada      | 1,2,3…             | sim                   | Chave estrangeira para `Assistive_technology.id` |
+| start_date            | Data de início                    | data             | Data de início do atendimento/assistência        | -                  | não                   | -                                              |
+| end_date              | Data de término                   | data             | Data de término do atendimento                   | -                  | sim                   | Pode ser nulo se o atendimento estiver ativo    |
+| description           | Descrição do atendimento          | texto            | Descrição do atendimento                        | -                  | sim                   | -                                              |
+| status                | Status do atendimento             | categórica       | Status do atendimento (Ativo, Finalizado, Cancelado, Pausado) | 'Ativo', 'Finalizado', 'Cancelado', 'Pausado' | não | - |
+
+### Tabela: `Assistive_technology`
+
+| Variável               | Nome Variável                          | Tipo de Variável | Descrição                                               | Valores Permitidos | Possui Valores nulos? | Anotações                                                      |
+|------------------------|----------------------------------------|------------------|---------------------------------------------------------|--------------------|-----------------------|----------------------------------------------------------------|
+| id                     | ID da relação                          | numérica         | Identificador único da relação (Assistência x Tecnologia) | 1,2,3…         | não                   | Chave primária, auto-increment (PK)                            |
+| id_assistence_fk       | ID da assistência (FK)                 | numérica         | Referência à tabela Assistência                         | 1,2,3…             | não                   | Chave estrangeira para `Assistence.id`                          |
+| id_assistance_fk       | ID da tecnologia assistiva (FK)        | numérica         | Referência à tabela Tecnologia Assistiva                 | 1,2,3…             | não                   | Chave estrangeira para `Technology_assistance.id`                  |
+
+=======
+O modelo físico de dados é representado pelo esquema relacional implementado no banco de dados **Gallaudet DB**, conforme descrito acima. Ele define as tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, garantindo a integridade dos dados e a eficiência do armazenamento.
+
+**Nota:** Para mais detalhes sobre a implementação do modelo físico e dados iniciais, consulte o arquivo `README.md` localizado no diretório `../src/database/readme.md` ou [clique aqui](../src/database/readme.md).
+
+
 
 # 5. Solução Técnica (Design)
 _conteúdo_
@@ -1311,13 +1462,23 @@ end
 _conteúdo_
 
 ## 6.1 Diagrama de Implantação da UML
-_conteúdo_
 
-## 6.2 Justificativa das Escolhas de Implantação
-_conteúdo_
+&emsp;Diferentemente dos Diagramas UML de Componentes e de Sequência, apresentados nas subseções anteriores, o Diagrama de Implantação UML evidencia a infraestrutura do Sistema Gallaudet, ou seja, suas características e relações hardware-software (Silva, 2017). Dessa forma, tem-se o recurso elaborado pela equipe:
 
-## 6.3 Considerações sobre Desempenho e Segurança
-_conteúdo_
+<div align="center">
+  <sub>Figura X - Diagrama de Implantação</sub> <br>
+
+  <img
+    src="./assets/section6/diagramaImplantacao3.png" alt="Diagrama de Implantação"
+    style="max-width: 1000px; width: 100%; height: auto;">
+
+  <sup>Fonte: Material produzido pelos autores (2025).</sup>
+</div>
+
+&emsp;O diagrama começa com o usuário final, que acessa o sistema via navegador em seu dispositivo, representado como um nó, pois é um ambiente de execução. O navegador também contém um artefato, pois executa os arquivos do front-end (index.html, style.css, bundle.js), inicialmente armazenados no Servidor Web, que também possui um artefato correspondente ao front-end. A diferença entre os dois é que, no servidor, esses arquivos são apenas armazenados e distribuídos, enquanto no navegador eles são interpretados e executados para exibir a interface ao usuário.<br>
+&emsp;Por seguinte, as requisições feitas no Servidor Web são feitas para o nó de máquina virtual EC2 da AWS (Amazon Web Services), composta por mais dois nós: o Middleware *Auth0*, responsável por autenticação e autorização de requisições antes de serem encaminhadas à API Interna (que contém artefatos de Node.js e TypeScript) que processa a lógica do sistema. A API interna interage com o Banco de Dados também armazenado como instância RDS da AWS, realizando operações CRUD (Create, Read, Update, Delete), e também se relacionando à API Externa do Centro Paula Souza, responsável pela consulta de dados dos alunos. As conexões entre os componentes são feitas por requisições HTTP e trocas de informações entre serviços.<br>
+&emsp;Este diagrama também foi criado com o PlantUML e auxilia os *stakeholders* a reconhecerem a organização infraestrutural do Sistema Gallaudet. Vale ressaltar que o planejamento da implantação também foi elaborado em razão dos Requisitos Não Funcionais (RNFs) definidos.<br>
+&emsp;A portabilidade do Sistema Gallaudet (RNF02) é assegurada pela implantação em nuvem, usando AWS EC2, tanto para o front-end quanto o back-end, bem como o AWS RDS para o banco de dados; assim, permite-se uma flexibilidade de uso entre diferentes dispositivos (RNF06). A segurança de dados (RNF03) é reforçada pelo Middleware Auth0 para autenticação de usuários e pelos controles de acesso da AWS. A confiabilidade (RNF04) é garantida pelo registro de logs no servidor de aplicação, enquanto o desempenho (RNF05) é otimizado pela arquitetura modular e processamento eficiente no EC2, além de que a escalabilidade (RNF07) é garantida pelo aumento da capacidade do EC2 conforme necessário. A manutenibilidade (RNF08) é favorecida pela separação em camadas, como business, controllers e repositories para back-end, que é separado do front-end (camada de apresentação) e do banco de dados. A interoperabilidade (RNF09) é viabilizada pela comunicação da API interna com a API externa do CPS via RESTful, e por fim, a usabilidade (RNF10) é aprimorada pelo carregamento otimizado da aplicação e pelo front-end/UX Design, os quais tornam satisfatória e ágil a utilização do sistema.
 
 # 7. Projeto Visual da Solução
 
@@ -1914,31 +2075,93 @@ _conteúdo_
 _conteúdo_
 
 # 9. Planejamento e Execução de Testes
-_conteúdo_
+
+&emsp;Esta seção documenta o planejamento de testes relacionados ao desenvolvimento do Sistema Gallaudet, na intenção de impor métodos que verifiquem se a solução, como desejado, oferecerá funcionalidades efetivas e direcionadas às necessidades dos *stakeholders*. 
 
 ## 9.1 Testes Funcionais
-_conteúdo_
+
+&emsp;Esta seção trata especificamente da testagem das ações do sistema, ou seja, das suas funcionalidades oferecidas.
 
 ## 9.1.1 Planejamento
-_conteúdo_
+
+| **ID do Teste** | **Requisito Funcional (RF)** | **Propósito do Teste** | **Instruções de Execução** | **Cenários** | **Abrangência** |
+|------------------|------------------------------|-------------------------|----------------------------|--------------|------------------|
+| **TF01** | RF01 – Cadastro de Gerentes | Validar se o sistema permite o cadastro de Gerente Geral e Gerente de Unidade, com validação de dados obrigatórios. | 1. Acessar a tela de cadastro de usuários. <br> 2. Preencher os campos obrigatórios (CPF, e-mail, tipo de gerente, etc.). <br> 3. Submeter o formulário. | **Positivo**: Log e notificação recebida, informando que o usuário cadastrado com sucesso. <br> **Negativo**: Cadastro falha devido a campos obrigatórios não preenchidos. | Testar com diferentes tipos de gerentes (Geral e Unidade). |
+| **TF02** | RF02 – Cadastro de Unidade de Ensino | Verificar se o sistema permite o cadastro de Unidades de Ensino com informações completas. | 1. Acessar a tela de cadastro de unidades. <br> 2. Preencher os campos (nome, endereço, contato). <br> 3. Submeter o formulário. | **Positivo**: Log e notificação: Unidade cadastrada com sucesso. <br> **Negativo**: Cadastro falha devido a campos obrigatórios não preenchidos. | Testar com diferentes combinações de dados (obrigatórios + opcionais | apenas obrigatórios | apenas opcionais). |
+| **TF03** | RF04 – Dashboard de Alunos | Verificar se o sistema exibe um dashboard com informações dos alunos, incluindo filtros e buscas avançadas. | 1. Acessar o dashboard. <br> 2. Aplicar filtros (ex: nome, status de atendimento). <br> 3. Verificar os dados retornados. | **Positivo**: Dados são exibidos corretamente conforme os filtros. <br> **Negativo**: Dados não são exibidos ou filtros não funcionam. | Testar com diferentes combinações de filtros. |
+| **TF04** | RF05 – Gestão de Profissionais | Validar se o sistema permite o cadastro, edição e exclusão de profissionais. | 1. Acessar a tela de gestão de profissionais. <br> 2. Cadastrar um profissional. <br> 3. Editar e excluir o profissional. | **Positivo**: Log e notificação: Profissional cadastrado, editado e excluído com sucesso. <br> **Negativo**: Operações falham devido a dados inválidos ou permissões insuficientes. | Testar com acesso de Gerente Geral e Gerente de Unidade. |
+| **TF05** | RF06 – Gestão de Atendimentos | Verificar se o sistema permite a inclusão, edição e exclusão de registros de atendimentos. | 1. Acessar a tela de gestão de atendimentos. <br> 2. Criar um novo atendimento. <br> 3. Editar e excluir o atendimento. | **Positivo**: Log e notificação: Atendimento registrado, editado e excluído com sucesso. <br> **Negativo**: Operações falham devido a dados inválidos. | Testar com diferentes combinações de dados. |
+| **TF06** | RF07 – Registro de Logs | Validar se o sistema registra logs das ações dos usuários. | 1. Executar ações como cadastro, edição ou exclusão. <br> 2. Verificar os logs gerados. | **Positivo**: Logs são gerados corretamente. <br> **Negativo**: Logs não são gerados para ações críticas. | Testar com diferentes tipos de ações. |
+| **TF07** | RF08 – Histórico Completo do Aluno | Verificar se o sistema exibe o histórico completo do aluno. | 1. Acessar o perfil do aluno. <br> 2. Visualizar o histórico. | **Positivo**: Histórico exibe todas as interações e atendimentos. <br> **Negativo**: Histórico não exibe informações completas. | Testar com diferentes tipos de alunos, que precisam e não precisam de atendimentos especializados. |
+| **TF08** | RF11 – Exibição da Timeline do Aluno | Validar se o sistema exibe a timeline do aluno com registros cronológicos. | 1. Acessar o perfil do aluno. <br> 2. Visualizar a timeline. | **Positivo**: Timeline exibe registros de forma cronológica. <br> **Negativo**: Timeline não exibe registros ou exibe fora de ordem. | Testar com alunos que possuem diferentes quantidades de registros. |
+| **TF09** | RF12 – Envio de Notificações | Verificar se o sistema envia notificações sobre eventos relevantes. | 1. Criar um novo atendimento ou evento. <br> 2. Verificar se a notificação foi enviada. | **Positivo**: Notificação é enviada corretamente. <br> **Negativo**: Notificação não é enviada ou é enviada incorretamente. | Testar com diferentes tipos de eventos e meios de notificação (e-mail, push). |
 
 ## 9.1.2 Resultados
 _conteúdo_
 
 ## 9.2 Testes de RNFs
-_conteúdo_
+
+&emsp;Esta seção trata especificamente da testagem das circunstâncias e restrições as quais o sistema deve obedecer, visando um aprimoramento de segurança, integridade e usabilidade.
 
 ## 9.2.1 Planejamento
-_conteúdo_
+
+| **ID do Teste** | **Requisito Não Funcional (RNF)** | **Propósito do Teste** | **Instruções de Execução** | **Cenários** | **Abrangência** | **Tipo de Teste** |
+|------------------|-----------------------------------|-------------------------|----------------------------|--------------|------------------|--------------------|
+| **TRNF01** | RNF01 – Acessibilidade | Verificar se o sistema é compatível com leitores de tela. | 1. Utilizar um leitor de tela (ex: NVDA). <br> 2. Navegar por todas as funcionalidades do sistema. | **Positivo**: Leitor de tela descreve corretamente os elementos. <br> **Negativo**: Elementos não são anunciados corretamente. | Testar em diferentes navegadores e dispositivos. | Teste de Componentes |
+| **TRNF02** | RNF05 – Desempenho | Validar se o sistema atende ao tempo de resposta esperado. | 1. Utilizar ferramenta de teste de carga (ex: JMeter). <br> 2. Simular 1.000 usuários simultâneos. <br> 3. Medir o tempo de resposta. | **Positivo**: Tempo de resposta é inferior a 2 segundos. <br> **Negativo**: Tempo de resposta excede 2 segundos. | Testar em diferentes operações (cadastro, consulta, relatórios). | Teste de Integração |
+| **TRNF03** | RNF06 – Disponibilidade | Verificar se o sistema está disponível durante o horário comercial. | 1. Monitorar o sistema durante o horário comercial. <br> 2. Simular falhas e verificar a recuperação. | **Positivo**: Sistema está disponível 98% do tempo. <br> **Negativo**: Sistema fica inativo por mais de 2% do tempo. | Testar em diferentes dias da semana. | Teste de Integração |
 
 ## 9.2.2 Resultados
 _conteúdo_
 
 ## 9.3 Testes de Usabilidade
-_conteúdo_
+
+&emsp;Esta seção trata especificamente da testagem do sistema pelos usuários, registrando suas percepções, comportamentos e considerações.
 
 ## 9.3.1 Planejamento
-_conteúdo_
+
+### **Preparação**
+- **Participantes**: 5 usuários externos, incluindo:
+  - 2 servidores da Assessoria de Inclusão.
+  - 1 pessoa com deficiência visual que utiliza leitor de tela.
+  - 2 usuários leigos (sem experiência prévia com o sistema).
+- **Ferramentas**:
+  - Protótipo funcional da solução.
+  - Leitor de tela (ex: NVDA).
+  - Formulário de feedback para coleta de dados.
+- **Duração**: máximo de 30-45 minutos por participante.
+
+## **Critérios de Avaliação**
+
+| **Critério** | **Descrição** | **Métricas** |
+|--------------|---------------|--------------|
+| **Eficácia** | Capacidade do usuário de realizar as tarefas com sucesso. | - Taxa de conclusão das tarefas. <br> - Número de erros cometidos. |
+| **Eficiência** | Tempo e esforço necessários para realizar as tarefas. | - Tempo médio para conclusão de cada tarefa. <br> - Número de cliques ou passos necessários. |
+| **Satisfação** | Percepção do usuário sobre a usabilidade e experiência geral. | - Respostas às perguntas de feedback. <br> - Pontuação em escala de satisfação (ex: 1 a 5). |
+
+### **Atividades e Perguntas**
+
+| **Etapa** | **Atividade** | **Critérios Medidos** | **Comandos e Perguntas** |
+|-----------|---------------|-----------------------|--------------------------|
+| **1. Introdução** | Apresentar o sistema e explicar o objetivo do teste. | - | - "Você utilizará um sistema de gestão de atendimentos para a Assessoria de Inclusão. Vamos realizar algumas tarefas para avaliar a usabilidade." |
+| **2. Visualização de alunos de uma unidade** | Verificar se o usuário consegue visualizar os alunos a partir de uma unidade de ensino. | **Eficácia**: O usuário consegue realizar a busca? <br> **Eficiência**: Quanto tempo leva? | - "Tente visualizar quais são os alunos de qualquer Instituição de Ensino cadastrada aqui" <br> **Pergunta**: "Você sente que conseguiu completar a busca pelos alunos? O que poderia ser melhorado nessa experiência?" |
+| **3. Consulta de Histórico do Aluno** | Verificar se o usuário consegue consultar o histórico de um aluno. | **Eficácia**: O usuário encontra o histórico? <br> **Eficiência**: Quanto tempo leva? | - "Consulte o histórico de um aluno específico. Utilize os filtros disponíveis." <br> **Pergunta**: "A interface de consulta é clara? Os filtros são intuitivos?" |
+| **4. Gestão de Atendimentos** | Verificar se o usuário consegue criar e editar um atendimento. | **Eficácia**: O usuário consegue criar/editar um atendimento? <br> **Eficiência**: Quanto tempo leva? | - "Crie um novo atendimento para um aluno. Em seguida, edite o status do atendimento." <br> **Pergunta**: "Foi fácil criar e editar um atendimento? O que poderia ser melhorado?" |
+| **5. Consulta de Tecnologias Assistivas** | Verificar se o usuário consegue buscar e vincular tecnologias assistivas a um aluno. | **Eficácia**: O usuário encontra e vincula a tecnologia correta? <br> **Eficiência**: Quanto tempo leva? | - "Busque uma tecnologia assistiva e vincule-a a um aluno." <br> **Pergunta**: "A busca e o vínculo de tecnologias foram intuitivos? O que poderia ser melhorado?" |
+| **6. Navegação com Leitor de Tela** | Verificar se o sistema é acessível para usuários com deficiência visual. | **Eficácia**: O leitor de tela descreve corretamente os elementos? <br> **Satisfação**: O usuário se sente confortável utilizando o sistema? | - "Navegue pelo sistema utilizando o leitor de tela. Realize uma consulta de histórico e vincule uma tecnologia assistiva." <br> **Pergunta**: "Para você fez sentido o caminho até conseguir vincular uma tecnologia? Você encontrou alguma dificuldade em algum momento?" |
+| **7. Feedback Final** | Coletar a percepção geral do usuário sobre o sistema. | **Satisfação**: O usuário está satisfeito com a experiência? | - "O que você achou da experiência geral com o sistema?" <br> - "Quais são os pontos fortes e fracos do sistema?" <br> - "Você recomendaria este sistema para outros usuários? Por quê?" |
+
+## **Análise e Consolidação dos Resultados**
+
+### **Coleta de Dados**
+- Registrar o tempo de execução de cada tarefa.
+- Anotar erros cometidos e dificuldades encontradas.
+- Coletar feedbacks qualitativos dos participantes.
+
+### **Consolidação**
+- Calcular métricas de eficácia e eficiência.
+- Identificar padrões nos feedbacks qualitativos.
+- Priorizar melhorias com base nos resultados.
 
 ## 9.3.2 Resultados
 _conteúdo_

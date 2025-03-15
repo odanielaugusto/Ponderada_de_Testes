@@ -1,5 +1,5 @@
   // // src/controllers/UserController.ts
-  // // Responsável por lidar com as requisições HTTP.
+  //import pool from "../config/renderClient.js";
   // // Este controlador vai receber as requisições e chamar a lógica de negócios (Business).
 
   // import { Request, Response } from 'express';

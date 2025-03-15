@@ -2,7 +2,7 @@
 // // Responsável pela interação direta com o banco de dados (PostgreSQL).
 // // Este repositório lida com as operações de CRUD relacionadas ao modelo "Appointment" (Atendimento).
 
-// import { Client } from 'pg';
+// import gallaudetDb from "../config/db.js";
 
 // export class AppointmentRepository {
 //   private client: Client;
