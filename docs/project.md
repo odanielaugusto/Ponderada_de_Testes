@@ -2096,15 +2096,220 @@ app.use("/", authRoutes);
 &emsp;Como próximos passos para a Sprint 4, a equipe pretende aprimorar essa implementação, definindo as políticas de papéis de diferentes usuários do sistema, como Gerentes de Unidade, Gerentes Administrativos ou Acessores de Inclusão. Em adição, também serão feitos aprimoramentos nessa integração e testes unitários, garantindo segurança e integridade em relação aos acessos do Sistema Gallaudet.
 
 ## 8.1 Arquitetura de Codificação e Estrutura de Diretórios
-_conteúdo_
+
+O Sistema Gallaudet adota uma arquitetura cliente-servidor, com separação clara entre frontend e backend, seguindo padrões modernos de desenvolvimento web. Esta abordagem facilita a manutenção, escalabilidade e a clara separação de responsabilidades entre as camadas da aplicação, alinhando-se com o diagrama de componentes UML apresentado na seção 5.1.
+
+### Visão Geral da Arquitetura
+
+A arquitetura do sistema está estruturada em componentes bem definidos, conforme detalhado no diagrama de componentes e implantação:
+
+1. **Frontend (Interface do Usuário)**: 
+   - Desenvolvido em Angular 17
+   - Responsável pela interação com o usuário, apresentação visual e experiência de navegação
+   - Implementa o design system e diretrizes de acessibilidade definidas na seção 7
+
+2. **Backend (API Interna)**:
+   - Desenvolvido em Node.js com TypeScript
+   - Segue uma arquitetura em camadas: Controllers, Services e Repositories
+   - Gerencia a lógica de negócio e processamento de dados
+
+3. **Middleware de Autenticação**:
+   - Integração com Auth0 para gerenciamento de identidade
+   - Controle de autenticação e autorização com base em papéis de usuário
+   - Proteção de rotas e recursos sensíveis
+
+4. **Integração Externa**:
+   - Conexão com sistemas do Centro Paula Souza para obtenção de dados dos alunos
+   - Simulação de API externa para desenvolvimento e testes
+
+5. **Persistência de Dados**:
+   - Banco de dados PostgreSQL para armazenamento persistente
+   - Modelagem seguindo o schema definido na seção 4
+
+### Estrutura de Diretórios
+
+A organização de arquivos e pastas do projeto foi cuidadosamente planejada para refletir a separação de responsabilidades e facilitar a manutenção. A estrutura principal é a seguinte:
+
+```
+gallaudet/
+├── src/
+│   ├── frontend/               # Aplicação Angular
+│   │   ├── app/
+│   │   │   ├── components/     # Componentes reutilizáveis
+│   │   │   │   ├── navbar/     # Barra de navegação
+│   │   │   │   ├── cards/      # Cards de apresentação de dados
+│   │   │   │   ├── forms/      # Formulários reutilizáveis
+│   │   │   │   └── dialogs/    # Modais e diálogos
+│   │   │   ├── pages/          # Páginas da aplicação
+│   │   │   │   ├── home/       # Página inicial
+│   │   │   │   ├── student/    # Visualização de alunos
+│   │   │   │   ├── professional/# Gestão de profissionais
+│   │   │   │   └── user/       # Gestão de usuários
+│   │   │   ├── services/       # Serviços para comunicação com API
+│   │   │   ├── models/         # Interfaces e tipos de dados
+│   │   │   ├── guards/         # Guardas de rotas para controle de acesso
+│   │   │   └── shared/         # Elementos compartilhados
+│   │   ├── assets/             # Recursos estáticos
+│   │   │   ├── images/         # Imagens e ícones
+│   │   │   ├── styles/         # Estilos globais
+│   │   │   └── fonts/          # Fontes personalizadas
+│   │   └── environments/       # Configurações por ambiente
+│   │
+│   ├── backend/                # API em Node.js com TypeScript
+│   │   ├── src/
+│   │   │   ├── controllers/    # Controladores da API
+│   │   │   │   ├── userController.ts
+│   │   │   │   ├── studentController.ts
+│   │   │   │   └── appointmentController.ts
+│   │   │   ├── services/       # Lógica de negócio
+│   │   │   ├── repositories/   # Acesso ao banco de dados
+│   │   │   ├── middlewares/    # Middlewares da aplicação
+│   │   │   │   ├── auth.ts     # Middleware de autenticação
+│   │   │   │   └── logging.ts  # Middleware de registro de logs
+│   │   │   ├── routes/         # Definição de rotas
+│   │   │   │   ├── authRoutes.ts
+│   │   │   │   ├── userRoutes.ts
+│   │   │   │   └── studentRoutes.ts
+│   │   │   ├── models/         # Modelos de dados
+│   │   │   └── types/          # Tipagens TypeScript
+│   │   ├── tests/              # Testes automatizados
+│   │   └── config/             # Configurações
+│   │
+│   └── database/               # Scripts e migrações
+│       ├── migrations/         # Evolução do schema
+│       └── seeds/              # Dados iniciais para testes
+│
+├── docs/                       # Documentação
+├── .env.example                # Template de variáveis de ambiente
+└── README.md                   # Documentação principal
+```
+
+### Padrões de Codificação
+
+O desenvolvimento segue padrões específicos para garantir a manutenibilidade, legibilidade e qualidade do código:
+
+1. **Frontend (Angular)**:
+   - Arquitetura baseada em componentes, seguindo o padrão de design do Angular
+   - Uso extensivo de TypeScript para tipagem estática e detecção precoce de erros
+   - Serviços para encapsular lógica de negócio e comunicação com APIs
+   - Módulos organizados por funcionalidade para facilitar lazy loading
+   - Componentes acessíveis com suporte a ARIA e navegação por teclado
+   - Estilização modular com SCSS seguindo as diretrizes do guia visual da seção 7.3
+
+2. **Backend (Node.js/TypeScript)**:
+   - Arquitetura em camadas claramente separadas (Controllers → Services → Repositories)
+   - RESTful API com endpoints semânticos e versionados
+   - Validação robusta de dados de entrada para prevenir vulnerabilidades
+   - Tratamento centralizado de erros com respostas HTTP apropriadas
+   - Logging estruturado para auditoria e depuração
+   - Implementação de cache para otimizar consultas frequentes
+
+3. **Padrões comuns a todo o projeto**:
+   - Nomenclatura clara e consistente usando camelCase para variáveis/métodos e PascalCase para classes
+   - Documentação de código com JSDoc/TSDoc para facilitar entendimento
+   - Aplicação de princípios SOLID para código extensível e manutenível
+   - Controle de versão com Git, seguindo Conventional Commits para mensagens padronizadas
+   - Testes automatizados para garantir funcionalidade e prevenir regressões
 
 ## 8.2 Desenvolvimento de Features
-_conteúdo_
 
-**Nota:** Insira uma explicação de entregas em cada Sprint.
+O desenvolvimento do Sistema Gallaudet segue o sequenciamento e priorização de entregas estabelecidos na seção 2.7.2, com foco em agregar valor de forma incremental ao longo das sprints. Cada ciclo de desenvolvimento é planejado para entregar um conjunto coeso de funcionalidades que atendam aos requisitos funcionais e não funcionais especificados.
 
-## 8.2.1 Sprint 3
-_conteúdo_
+As funcionalidades são implementadas com base nos wireframes e mockups desenvolvidos na seção 7, garantindo consistência visual e experiência do usuário. O desenvolvimento é guiado pelos diagramas UML elaborados nas seções 5 e 6, que definem a arquitetura e o fluxo de dados do sistema.
+
+**Nota:** A seguir apresentamos uma explicação detalhada das entregas da Sprint 3, que representa o início da implementação técnica do projeto.
+
+### 8.2.1 Sprint 3
+
+A Sprint 3 marcou o início da fase de implementação do Sistema Gallaudet, estabelecendo as fundações técnicas e arquiteturais sobre as quais as próximas funcionalidades serão construídas. Esta etapa foi fundamental para validar conceitos de design, definir padrões de desenvolvimento e iniciar a implementação das funcionalidades prioritárias.
+
+#### Principais Entregas
+
+1. **Configuração do Ambiente de Desenvolvimento**:
+   - Inicialização do projeto Angular para o frontend
+   - Configuração do ambiente Node.js/Express com TypeScript para o backend
+   - Implementação do sistema de controle de versão com Git
+   - Configuração de linters e formatadores de código (ESLint, Prettier)
+   - Estruturação inicial do projeto seguindo as melhores práticas
+
+2. **Implementação da Autenticação com Auth0**:
+   - Configuração do tenant e aplicativo na plataforma Auth0
+   - Definição de URLs de callback e logout
+   - Integração do SDK `express-openid-connect` no backend
+   - Implementação das rotas de autenticação
+   - Teste e validação do fluxo de login/logout
+
+3. **Desenvolvimento do Frontend Básico**:
+   - Implementação da página home com layout responsivo
+   - Criação de componentes reutilizáveis (navbar, cards, etc.)
+   - Desenvolvimento de cards para visualização de alunos
+   - Implementação do campo de pesquisa para filtrar alunos por nome
+   - Aplicação inicial do guia visual definido na seção 7.3
+
+4. **Estruturação do Backend**:
+   - Implementação da arquitetura em camadas (Controllers, Services, Repositories)
+   - Configuração inicial do sistema de rotas
+   - Integração do middleware de autenticação
+   - Definição de endpoints básicos para consulta de dados
+
+5. **Configuração Inicial do Banco de Dados**:
+   - Definição do schema baseado no modelo físico (seção 4.3)
+   - Configuração da conexão com o banco de dados
+   - Criação de migrations iniciais
+   - Implementação de repositórios para acesso aos dados
+
+#### Relação com Requisitos
+
+As entregas da Sprint 3 atendem parcialmente aos seguintes requisitos:
+
+- **RF04 (Dashboard de Alunos)**: Início da implementação com a criação da página home e cards de alunos.
+- **RNF01 (Acessibilidade)**: Aplicação de princípios básicos de acessibilidade na interface.
+- **RNF03 (Segurança de Dados)**: Implementação do sistema de autenticação com Auth0.
+- **RNF10 (Usabilidade)**: Desenvolvimento da interface seguindo o guia visual estabelecido.
+
+#### Desafios e Soluções
+
+**Desafio 1: Integração do Auth0**
+- **Problema**: A configuração inicial do Auth0 apresentou desafios na definição do fluxo de autenticação e autorização.
+- **Solução**: Utilização da documentação oficial e implementação do SDK, com personalização das rotas e callbacks para atender às necessidades específicas do projeto.
+
+**Desafio 2: Estruturação do Projeto Angular**
+- **Problema**: Definir uma estrutura de diretórios e componentes que facilitasse a manutenção e evolução do sistema.
+- **Solução**: Adoção de uma arquitetura modular, com componentes reutilizáveis e separação clara de responsabilidades, seguindo as melhores práticas do Angular.
+
+**Desafio 3: Acessibilidade no Frontend**
+- **Problema**: Implementar uma interface que atendesse aos requisitos de acessibilidade, especialmente para usuários com deficiência visual.
+- **Solução**: Uso de elementos HTML semânticos, atributos ARIA e testes preliminares com leitores de tela, além da aderência às diretrizes WCAG.
+
+#### Funcionalidade de Pesquisa de Alunos
+
+Uma das entregas importantes da Sprint 3 foi a implementação da funcionalidade de pesquisa de alunos, que permite filtrar a lista de alunos exibida na página home. Esta funcionalidade foi desenvolvida utilizando recursos do Angular, como o pipe `filter`, e irá consumir dados da API do backend.
+
+```typescript
+
+    filterOptions(): void {
+        if (!this.searchText.trim()) {
+            this.filteredOptions = [...this.options];
+            return;
+        }
+
+        const search = this.searchText.toLowerCase().trim();
+        this.filteredOptions = this.options.filter(option =>
+            option.toLowerCase().includes(search)
+        );
+    }
+
+    selectOption(option: string): void {
+        this.selectedOption = option;
+        this.optionSelected.emit(option);
+        this.isOpen = false;
+    }
+
+```
+
+Os avanços alcançados na Sprint 3 estabeleceram uma base sólida para o desenvolvimento contínuo do projeto nas próximas sprints, com o foco na expansão das funcionalidades e na implementação completa dos requisitos definidos. A estrutura estabelecida permite que as futuras entregas sejam construídas sobre uma arquitetura robusta e bem definida, facilitando a manutenção e evolução do sistema.
+
+[Video demonstrativo](https://www.youtube.com/watch?v=0huIgidDL1A)
 
 ## 8.2.2 Sprint 4
 _conteúdo_
