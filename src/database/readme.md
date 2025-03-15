@@ -98,3 +98,19 @@ Registra tecnologias assistivas disponíveis.
 | id | SERIAL PRIMARY KEY | Identificador único da tecnologia assistiva |
 | type | VARCHAR(50) NOT NULL | Tipo de tecnologia assistiva |
 | description | TEXT NULL | Descrição da tecnologia assistiva |
+
+### Dados Iniciais (Seed)
+O script `02_initial_data.sql` popula o banco com dados fictícios para desenvolvimento e teste.
+
+### Como Utilizar
+1. **Criação do Banco e Tabelas:**
+   É necessário que tenha o banco criádo antes de rodar os dados iniciais
+2. **Inserir Dados Iniciais:**
+   ```sh
+   \i src/database/initial_data.sql
+   ```
+
+### Informações Importantes
+- Execute a criação de tabelas antes do seed.
+- Dados fictícios que podem ser personalizado de acordo com a necessidade no arquivo 02_initial_data.sql.
+- Importante para testar as funcionalidades corretamente.

@@ -2,7 +2,7 @@
 // // Responsável por armazenar logs de ações relacionadas a atendimentos.
 // // Este repositório registra eventos que ocorrem em um atendimento, como criação, atualização ou cancelamento.
 
-// import { Client } from 'pg';
+// import gallaudetDb from "../config/db.js";
 
 // export class LogAppointmentRepository {
 //   private client: Client;
