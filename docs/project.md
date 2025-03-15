@@ -1990,7 +1990,66 @@ Esta etapa aplica cores, fontes e ícones ao layout definido nos wireframes, apr
 &emsp;O sistema de feedback visual foi projetado para tornar a interação com o software mais intuitiva. Elementos interativos apresentam destaques visuais para indicar estados como carregamento, ação em andamento ou seleção de itens. As mensagens de erro e validação são exibidas de forma clara, utilizando cores, ícones e textos explicativos para orientar o usuário sobre os próximos passos.
 
 # 8. Desenvolvimento do Projeto
-_conteúdo_
+
+### Desenvolvimento da Integração com Auth0
+
+&emsp;A integração do Auth0 no projeto foi desenvolvida para gerenciar a autenticação e autorização de usuários do Sistema Gallaudet, em que diferentes usuários terão diferentes responsabilidades e usos em relação ao sistema. Inicialmente, foi configurado um tenant na plataforma do [Auth0](https://auth0.com/) e registramos um novo aplicativo, definindo URL's de callback e logout, as quais, a princípio, não possuem especificações rígidas devido ao desenvolvimento do projeto ainda se encontrar embrionário, sem rotas definidas, portanto, essas URL's ficaram disponíveis, por padrão, na porta 3000.
+
+<div align="center">
+  <sub>Figura X - Configuração do Auth0</sub> <br>
+
+  <img src="assets/section8/config_auth0.png" width=70% alt="Configuração do Auth0">
+
+  <sup>Fonte: autoria própria.</sup>
+</div>
+
+&emsp;No backend, no arquivo index.ts, o SDK `express-openid-connect` foi implementado para o redirecionamento para a página de login ao se acessar o endpoint `/login`, recurso oferecido pelo Auth0 que permite o login de usuários por email-senha e através de contas Google. O código implementado também permite a configuração de proteção de todas as rotas do sistema, caso desejado pela equipe. Foram criadas, na pasta `src/backend/src/routes` foi criado o arquivo que reúne as rotas de autenticação de login (authRoutes.js), garantindo maior organização na infraestrutura da feature. A seguir, seguem os códigos implementados para a integração do Auth0 para a proteção de acessos do Sistema Gallaudet.
+
+```typescript
+// src/backend/src/routes/authRoutes.ts
+
+// Rotas de autenticação de usuário
+
+import { Router } from "express";
+
+const router = Router();
+
+// Rota protegida para verificar se o usuário está autenticado ou não.
+router.get("/", (req: any, res: any) => {
+    if (!req.oidc || !req.oidc.isAuthenticated()) {
+      return res.send("Logged out");
+    }
+    res.send("Logged in");
+  });
+
+  export default router;
+
+```
+
+```typescript
+// src/backend/src/index.ts
+
+import { auth, ConfigParams } from "express-openid-connect"; // Importação necessária para o funcionamento do Auth0
+
+// Configurações para a autenticação de login com o Auth0
+const config: ConfigParams = {
+  authRequired: false,
+  auth0Logout: true,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL,
+  secret: process.env.SECRET
+};
+
+// Middleware do Auth0 para autenticação
+app.use(auth(config));
+
+// Usar as rotas configuradas
+app.use("/", authRoutes); 
+
+```
+
+&emsp;Como próximos passos para a Sprint 4, a equipe pretende aprimorar essa implementação, definindo as políticas de papéis de diferentes usuários do sistema, como Gerentes de Unidade, Gerentes Administrativos ou Acessores de Inclusão. Em adição, também serão feitos aprimoramentos nessa integração e testes unitários, garantindo segurança e integridade em relação aos acessos do Sistema Gallaudet.
 
 ## 8.1 Arquitetura de Codificação e Estrutura de Diretórios
 _conteúdo_
