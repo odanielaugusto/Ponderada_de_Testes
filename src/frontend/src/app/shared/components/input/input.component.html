@@ -1,20 +1,20 @@
-<div class="flex flex-col gap-[8px]">
+<div class="flex flex-col gap-2">
     <label 
-    class="pl-[12px] leading-none red-custom font-black" 
+    class="pl-3 leading-none red-custom font-black" 
     id="label" 
     for="text-input">
         {{ label }}
     </label>
     <input 
-        class="bg-(--pink-color) 
+        class="bg-pink
             rounded-xl
             border-2
-            border-(--pink-color)
-            focus:border-(--red-color)
+            border-pink
+            focus:border-red
             outline-none
             transition-all
             duration-200
-            px-[12px]"
+            px-3"
         id="text-input"
         (input)="onInputChanges($event)"
         [attr.type]="type"

@@ -1,11 +1,12 @@
 import { Component, Input, Output, EventEmitter, HostListener, OnInit, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ButtonComponent} from '../button/button.component';
 
 @Component({
     selector: 'app-filter',
     standalone: true,
-    imports: [CommonModule, FormsModule],
+    imports: [CommonModule, FormsModule, ButtonComponent],
     templateUrl: './filter.component.html', 
     styles: []
 })
@@ -18,6 +19,7 @@ export class FilterComponent implements OnInit, OnChanges {
     isOpen: boolean = false;
     searchText: string = '';
     filteredOptions: string[] = [];
+    selectedButton: string = '';
 
     ngOnInit(): void {
         this.filteredOptions = [...this.options];
@@ -52,6 +54,10 @@ export class FilterComponent implements OnInit, OnChanges {
         this.selectedOption = option;
         this.optionSelected.emit(option);
         this.isOpen = false;
+    }
+
+    selectButton(button: string): void {
+        this.selectedButton = button;
     }
 
     // Fecha o dropdown se o usuário clicar fora dele
